@@ -1,0 +1,8 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "JCoder58",
+    "classifications": [ "UE4", "Game", "Class" ],
+    "identity": "JCoder58.UE4.Game",
+    "name": "Unreal Engine 4 DotNet Game",
+    "shortName": "dotnetgame"
+  }

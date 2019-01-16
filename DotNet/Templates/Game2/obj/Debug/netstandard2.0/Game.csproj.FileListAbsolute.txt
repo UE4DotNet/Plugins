@@ -1,0 +1,12 @@
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\bin\Debug\netstandard2.0\Game.deps.json
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\bin\Debug\netstandard2.0\Game.dll
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\bin\Debug\netstandard2.0\Game.pdb
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\bin\Debug\netstandard2.0\UE4DotNet.dll
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\bin\Debug\netstandard2.0\UE4DotNet.pdb
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\obj\Debug\netstandard2.0\Game.csprojAssemblyReference.cache
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\obj\Debug\netstandard2.0\Game.csproj.CoreCompileInputs.cache
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\obj\Debug\netstandard2.0\Game.AssemblyInfoInputs.cache
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\obj\Debug\netstandard2.0\Game.AssemblyInfo.cs
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\obj\Debug\netstandard2.0\Game.csproj.CopyComplete
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\obj\Debug\netstandard2.0\Game.dll
+C:\AEngine\UE4DotNetSamples\Plugins\UE4DotNetEditor\Templates\Game\obj\Debug\netstandard2.0\Game.pdb
