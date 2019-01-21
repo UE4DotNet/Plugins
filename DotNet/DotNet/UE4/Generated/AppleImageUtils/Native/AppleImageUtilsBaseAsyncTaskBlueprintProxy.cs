@@ -25,15 +25,17 @@ namespace UE4.AppleImageUtils.Native {
                 CreateProxyObjectForConvertToHEIF_ptr = Main.GetMethodUFunction(AppleImageUtilsBaseAsyncTaskBlueprintProxy.StaticClass, "CreateProxyObjectForConvertToHEIF");
             }
 
-            internal static unsafe AppleImageUtilsBaseAsyncTaskBlueprintProxy Invoke(Texture SourceImage, int Quality, bool bWantColor, bool bUseGpu) {
-                long* p = stackalloc long[] {0L,0L,0L,0L};
+            internal static unsafe AppleImageUtilsBaseAsyncTaskBlueprintProxy Invoke(Texture SourceImage, int Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = SourceImage;
                 *((int*)(b+8)) = Quality;
                 *((bool*)(b+12)) = bWantColor;
                 *((bool*)(b+13)) = bUseGpu;
+                *((float*)(b+16)) = Scale;
+                *(b+20) = (byte)Rotate;
                 Main.GetProcessEvent(AppleImageUtilsBaseAsyncTaskBlueprintProxy.DefaultObject, CreateProxyObjectForConvertToHEIF_ptr, new IntPtr(p)); ;
-                return *((IntPtr*)(b+16));
+                return *((IntPtr*)(b+24));
             }
         }
         internal struct CreateProxyObjectForConvertToJPEG_method {
@@ -42,15 +44,17 @@ namespace UE4.AppleImageUtils.Native {
                 CreateProxyObjectForConvertToJPEG_ptr = Main.GetMethodUFunction(AppleImageUtilsBaseAsyncTaskBlueprintProxy.StaticClass, "CreateProxyObjectForConvertToJPEG");
             }
 
-            internal static unsafe AppleImageUtilsBaseAsyncTaskBlueprintProxy Invoke(Texture SourceImage, int Quality, bool bWantColor, bool bUseGpu) {
-                long* p = stackalloc long[] {0L,0L,0L,0L};
+            internal static unsafe AppleImageUtilsBaseAsyncTaskBlueprintProxy Invoke(Texture SourceImage, int Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = SourceImage;
                 *((int*)(b+8)) = Quality;
                 *((bool*)(b+12)) = bWantColor;
                 *((bool*)(b+13)) = bUseGpu;
+                *((float*)(b+16)) = Scale;
+                *(b+20) = (byte)Rotate;
                 Main.GetProcessEvent(AppleImageUtilsBaseAsyncTaskBlueprintProxy.DefaultObject, CreateProxyObjectForConvertToJPEG_ptr, new IntPtr(p)); ;
-                return *((IntPtr*)(b+16));
+                return *((IntPtr*)(b+24));
             }
         }
         internal struct CreateProxyObjectForConvertToPNG_method {
@@ -59,14 +63,16 @@ namespace UE4.AppleImageUtils.Native {
                 CreateProxyObjectForConvertToPNG_ptr = Main.GetMethodUFunction(AppleImageUtilsBaseAsyncTaskBlueprintProxy.StaticClass, "CreateProxyObjectForConvertToPNG");
             }
 
-            internal static unsafe AppleImageUtilsBaseAsyncTaskBlueprintProxy Invoke(Texture SourceImage, bool bWantColor, bool bUseGpu) {
-                long* p = stackalloc long[] {0L,0L,0L,0L};
+            internal static unsafe AppleImageUtilsBaseAsyncTaskBlueprintProxy Invoke(Texture SourceImage, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = SourceImage;
                 *((bool*)(b+8)) = bWantColor;
                 *((bool*)(b+9)) = bUseGpu;
+                *((float*)(b+12)) = Scale;
+                *(b+16) = (byte)Rotate;
                 Main.GetProcessEvent(AppleImageUtilsBaseAsyncTaskBlueprintProxy.DefaultObject, CreateProxyObjectForConvertToPNG_ptr, new IntPtr(p)); ;
-                return *((IntPtr*)(b+16));
+                return *((IntPtr*)(b+24));
             }
         }
         internal struct CreateProxyObjectForConvertToTIFF_method {
@@ -75,14 +81,16 @@ namespace UE4.AppleImageUtils.Native {
                 CreateProxyObjectForConvertToTIFF_ptr = Main.GetMethodUFunction(AppleImageUtilsBaseAsyncTaskBlueprintProxy.StaticClass, "CreateProxyObjectForConvertToTIFF");
             }
 
-            internal static unsafe AppleImageUtilsBaseAsyncTaskBlueprintProxy Invoke(Texture SourceImage, bool bWantColor, bool bUseGpu) {
-                long* p = stackalloc long[] {0L,0L,0L,0L};
+            internal static unsafe AppleImageUtilsBaseAsyncTaskBlueprintProxy Invoke(Texture SourceImage, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = SourceImage;
                 *((bool*)(b+8)) = bWantColor;
                 *((bool*)(b+9)) = bUseGpu;
+                *((float*)(b+12)) = Scale;
+                *(b+16) = (byte)Rotate;
                 Main.GetProcessEvent(AppleImageUtilsBaseAsyncTaskBlueprintProxy.DefaultObject, CreateProxyObjectForConvertToTIFF_ptr, new IntPtr(p)); ;
-                return *((IntPtr*)(b+16));
+                return *((IntPtr*)(b+24));
             }
         }
     }

@@ -44,6 +44,7 @@ namespace UE4.UMG {
             get {return Main.GetGetBoolPropertyByName(this, "bLegacyFinishOnStop"); }
             set {Main.SetGetBoolPropertyByName(this, "bLegacyFinishOnStop", value); }
         }
+         //TODO: string FString DisplayLabel
         static WidgetAnimation() {
             StaticClass = Main.GetClass("WidgetAnimation");
         }

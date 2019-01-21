@@ -11,25 +11,25 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1792 )]
+    [StructLayout( LayoutKind.Explicit, Size=1776 )]
     internal unsafe struct SplineComponent_fields {
-        [FieldOffset(1520)] public SplineCurves SplineCurves;
-        [FieldOffset(1716)] public int ReparamStepsPerSegment;
-        [FieldOffset(1720)] public float Duration;
-        [FieldOffset(1724)] public bool bStationaryEndpoints;
-        [FieldOffset(1725)] public bool bSplineHasBeenEdited;
-        [FieldOffset(1726)] public bool bModifiedByConstructionScript;
-        [FieldOffset(1727)] public bool bInputSplinePointsToConstructionScript;
-        [FieldOffset(1728)] public bool bDrawDebug;
-        [FieldOffset(1729)] public bool bClosedLoop;
-        [FieldOffset(1730)] public bool bLoopPositionOverride;
-        [FieldOffset(1732)] public float LoopPosition;
-        [FieldOffset(1736)] public Vector DefaultUpVector;
-        [FieldOffset(1748)] public LinearColor EditorUnselectedSplineSegmentColor;
-        [FieldOffset(1764)] public LinearColor EditorSelectedSplineSegmentColor;
-        [FieldOffset(1780)] public bool bAllowDiscontinuousSpline;
-        [FieldOffset(1781)] public bool bShouldVisualizeScale;
-        [FieldOffset(1784)] public float ScaleVisualizationWidth;
+        [FieldOffset(1504)] public SplineCurves SplineCurves;
+        [FieldOffset(1700)] public int ReparamStepsPerSegment;
+        [FieldOffset(1704)] public float Duration;
+        [FieldOffset(1708)] public bool bStationaryEndpoints;
+        [FieldOffset(1709)] public bool bSplineHasBeenEdited;
+        [FieldOffset(1710)] public bool bModifiedByConstructionScript;
+        [FieldOffset(1711)] public bool bInputSplinePointsToConstructionScript;
+        [FieldOffset(1712)] public bool bDrawDebug;
+        [FieldOffset(1713)] public bool bClosedLoop;
+        [FieldOffset(1714)] public bool bLoopPositionOverride;
+        [FieldOffset(1716)] public float LoopPosition;
+        [FieldOffset(1720)] public Vector DefaultUpVector;
+        [FieldOffset(1732)] public LinearColor EditorUnselectedSplineSegmentColor;
+        [FieldOffset(1748)] public LinearColor EditorSelectedSplineSegmentColor;
+        [FieldOffset(1764)] public bool bAllowDiscontinuousSpline;
+        [FieldOffset(1765)] public bool bShouldVisualizeScale;
+        [FieldOffset(1768)] public float ScaleVisualizationWidth;
     }
     internal unsafe struct SplineComponent_methods {
         internal struct AddPoint_method {

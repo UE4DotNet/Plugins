@@ -13,7 +13,7 @@ namespace UE4.MagicLeap {
     ///<summary>The states of a raycast result.</summary>
     public enum ERaycastResultState {
         RequestFailed = 0x00000000, 
-        NoCollission = 0x00000001, 
+        NoCollision = 0x00000001, 
         HitUnobserved = 0x00000002, 
         HitObserved = 0x00000003, 
         ERaycastResultState_MAX = 0x00000004

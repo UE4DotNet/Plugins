@@ -11,43 +11,43 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=888 )]
+    [StructLayout( LayoutKind.Explicit, Size=840 )]
     internal unsafe struct StaticMesh_fields {
         [FieldOffset(88)] public NativeArray SourceModels;
         [FieldOffset(104)]  public IntPtr  MeshDescriptions;
         [FieldOffset(112)] public MeshSectionInfoMap SectionInfoMap;
         [FieldOffset(192)] public MeshSectionInfoMap OriginalSectionInfoMap;
         [FieldOffset(272)] public Name LODGroup;
-        [FieldOffset(284)] public bool bAutoComputeLODScreenSize;
-        [FieldOffset(288)] public int ImportVersion;
-        [FieldOffset(296)] public NativeArray MaterialRemapIndexPerImportVersion;
-        [FieldOffset(312)] public int LightmapUVVersion;
-        [FieldOffset(320)] public PerPlatformInt MinLOD;
+        [FieldOffset(284)] public int ImportVersion;
+        [FieldOffset(288)] public NativeArray MaterialRemapIndexPerImportVersion;
+        [FieldOffset(304)] public int LightmapUVVersion;
+        [FieldOffset(308)] public bool bAutoComputeLODScreenSize;
+        [FieldOffset(328)] public PerPlatformInt MinLOD;
+        [FieldOffset(416)] public float LpvBiasMultiplier;
         [FieldOffset(424)] public NativeArray StaticMaterials;
         [FieldOffset(440)] public float LightmapUVDensity;
         [FieldOffset(444)] public int LightMapResolution;
         [FieldOffset(448)] public int LightMapCoordinateIndex;
         [FieldOffset(452)] public float DistanceFieldSelfShadowBias;
-        [FieldOffset(456)] public bool bGenerateMeshDistanceField;
-        [FieldOffset(464)]  public IntPtr  BodySetup;
-        [FieldOffset(472)] public int LODForCollision;
-        [FieldOffset(476)] public bool bHasNavigationData;
-        [FieldOffset(476)] public bool bSupportUniformlyDistributedSampling;
-        [FieldOffset(480)] public float LpvBiasMultiplier;
-        [FieldOffset(484)] public bool bAllowCPUAccess;
-        [FieldOffset(512)]  public IntPtr  AssetImportData;
-        [FieldOffset(552)]  public IntPtr  ThumbnailInfo;
-        [FieldOffset(560)] public AssetEditorOrbitCameraPosition EditorCameraPosition;
-        [FieldOffset(600)] public bool bCustomizedCollision;
-        [FieldOffset(604)] public int LODForOccluderMesh;
-        [FieldOffset(632)] public NativeArray Sockets;
-        [FieldOffset(664)] public Vector PositiveBoundsExtension;
-        [FieldOffset(676)] public Vector NegativeBoundsExtension;
-        [FieldOffset(688)] public BoxSphereBounds ExtendedBounds;
-        [FieldOffset(784)] public int ElementToIgnoreForTexFactor;
-        [FieldOffset(792)] public NativeArray AssetUserData;
-        [FieldOffset(816)]  public IntPtr  EditableMesh;
-        [FieldOffset(824)]  public IntPtr  NavCollision;
+        [FieldOffset(456)]  public IntPtr  BodySetup;
+        [FieldOffset(464)] public int LODForCollision;
+        [FieldOffset(468)] public bool bGenerateMeshDistanceField;
+        [FieldOffset(468)] public bool bHasNavigationData;
+        [FieldOffset(468)] public bool bSupportUniformlyDistributedSampling;
+        [FieldOffset(468)] public bool bAllowCPUAccess;
+        [FieldOffset(480)]  public IntPtr  AssetImportData;
+        [FieldOffset(520)]  public IntPtr  ThumbnailInfo;
+        [FieldOffset(528)] public AssetEditorOrbitCameraPosition EditorCameraPosition;
+        [FieldOffset(568)] public bool bCustomizedCollision;
+        [FieldOffset(572)] public int LODForOccluderMesh;
+        [FieldOffset(592)] public NativeArray Sockets;
+        [FieldOffset(624)] public Vector PositiveBoundsExtension;
+        [FieldOffset(636)] public Vector NegativeBoundsExtension;
+        [FieldOffset(648)] public BoxSphereBounds ExtendedBounds;
+        [FieldOffset(744)] public int ElementToIgnoreForTexFactor;
+        [FieldOffset(752)] public NativeArray AssetUserData;
+        [FieldOffset(768)]  public IntPtr  EditableMesh;
+        [FieldOffset(776)]  public IntPtr  NavCollision;
     }
     internal unsafe struct StaticMesh_methods {
         internal struct GetBoundingBox_method {

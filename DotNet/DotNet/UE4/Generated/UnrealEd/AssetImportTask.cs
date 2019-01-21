@@ -36,6 +36,11 @@ namespace UE4.UnrealEd {
             set {AssetImportTask_ptr->Options = value;}
         }
          //TODO: array not UObject TArray ImportedObjectPaths
+        ///<summary>Imported object</summary>
+        public unsafe UObject Result {
+            get {return AssetImportTask_ptr->Result;}
+            set {AssetImportTask_ptr->Result = value;}
+        }
         static AssetImportTask() {
             StaticClass = Main.GetClass("AssetImportTask");
         }

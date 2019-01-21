@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2096 )]
+    [StructLayout( LayoutKind.Explicit, Size=2064 )]
     internal unsafe struct CameraComponent_fields {
         [FieldOffset(624)] public float FieldOfView;
         [FieldOffset(628)] public float OrthoWidth;
@@ -22,10 +22,10 @@ namespace UE4.Engine.Native {
         [FieldOffset(644)] public bool bUseFieldOfViewForLOD;
         [FieldOffset(644)] public bool bLockToHmd;
         [FieldOffset(644)] public bool bUsePawnControlRotation;
-        [FieldOffset(648)] public byte ProjectionMode;
-        [FieldOffset(652)] public float PostProcessBlendWeight;
-        [FieldOffset(656)] public PostProcessSettings PostProcessSettings;
-        [FieldOffset(1976)]  public IntPtr  CameraMesh;
+        [FieldOffset(645)] public byte ProjectionMode;
+        [FieldOffset(656)]  public IntPtr  CameraMesh;
+        [FieldOffset(720)] public float PostProcessBlendWeight;
+        [FieldOffset(768)] public PostProcessSettings PostProcessSettings;
     }
     internal unsafe struct CameraComponent_methods {
         internal struct AddOrUpdateBlendable_method {
@@ -50,7 +50,7 @@ namespace UE4.Engine.Native {
             }
 
             internal static unsafe MinimalViewInfo Invoke(IntPtr obj, float DeltaTime) {
-                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((float*)(b+0)) = DeltaTime;
                 Main.GetProcessEvent(obj, GetCameraView_ptr, new IntPtr(p)); ;

@@ -23,6 +23,7 @@ namespace UE4.UMG {
         ///<remarks>
         ///Depending on how the slate object is used
         ///this event may be called multiple times due to adding and removing from the hierarchy.
+        ///If you need a true called-once-when-created event, use OnInitialized.
         ///</remarks>
         public event Construct_delegate Construct;
         public delegate void Construct_delegate();
@@ -179,6 +180,17 @@ namespace UE4.UMG {
         public delegate EventReply OnFocusReceived_delegate(Geometry MyGeometry, FocusEvent InFocusEvent, EventReply ReturnValue);
         internal EventReply on_OnFocusReceived(Geometry MyGeometry, FocusEvent InFocusEvent, EventReply ReturnValue) =>
             OnFocusReceived != null ? OnFocusReceived(MyGeometry, InFocusEvent, ReturnValue) : ReturnValue;
+
+
+        ///<summary>Called once only at game time on non-template instances.</summary>
+        ///<remarks>
+        ///While Construct/Destruct pertain to the underlying Slate, this is called only once for the UUserWidget.
+        ///If you have one-time things to establish up-front (like binding callbacks to events on BindWidget properties), do so here.
+        ///</remarks>
+        public event OnInitialized_delegate OnInitialized;
+        public delegate void OnInitialized_delegate();
+        internal void on_OnInitialized() =>
+            OnInitialized?.Invoke();
 
 
         ///<summary>
@@ -408,6 +420,20 @@ namespace UE4.UMG {
         public delegate (PointerEvent, EventReply) OnTouchEnded_delegate(Geometry MyGeometry, PointerEvent InTouchEvent, EventReply ReturnValue);
         internal (PointerEvent, EventReply) on_OnTouchEnded(Geometry MyGeometry, PointerEvent InTouchEvent, EventReply ReturnValue) =>
             OnTouchEnded != null ? OnTouchEnded(MyGeometry, InTouchEvent, ReturnValue) : (InTouchEvent, ReturnValue);
+
+
+        ///<summary>
+        ///Called when a touchpad force has changed (user pressed down harder or let up)
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param MyGeometry    The geometry of the widget receiving the event.
+        ///@param InTouchEvent   The touch event generated
+        ///</remarks>
+        public event OnTouchForceChanged_delegate OnTouchForceChanged;
+        public delegate (PointerEvent, EventReply) OnTouchForceChanged_delegate(Geometry MyGeometry, PointerEvent InTouchEvent, EventReply ReturnValue);
+        internal (PointerEvent, EventReply) on_OnTouchForceChanged(Geometry MyGeometry, PointerEvent InTouchEvent, EventReply ReturnValue) =>
+            OnTouchForceChanged != null ? OnTouchForceChanged(MyGeometry, InTouchEvent, ReturnValue) : (InTouchEvent, ReturnValue);
 
 
         ///<summary>Called when the user performs a gesture on trackpad.</summary>
@@ -878,6 +904,7 @@ namespace UE4.UMG {
             UserWidget_events.OnDrop_event.Setup();
             UserWidget_events.OnFocusLost_event.Setup();
             UserWidget_events.OnFocusReceived_event.Setup();
+            UserWidget_events.OnInitialized_event.Setup();
             UserWidget_events.OnKeyChar_event.Setup();
             UserWidget_events.OnKeyDown_event.Setup();
             UserWidget_events.OnKeyUp_event.Setup();
@@ -895,6 +922,7 @@ namespace UE4.UMG {
             UserWidget_events.OnPreviewMouseButtonDown_event.Setup();
             UserWidget_events.OnRemovedFromFocusPath_event.Setup();
             UserWidget_events.OnTouchEnded_event.Setup();
+            UserWidget_events.OnTouchForceChanged_event.Setup();
             UserWidget_events.OnTouchGesture_event.Setup();
             UserWidget_events.OnTouchMoved_event.Setup();
             UserWidget_events.OnTouchStarted_event.Setup();

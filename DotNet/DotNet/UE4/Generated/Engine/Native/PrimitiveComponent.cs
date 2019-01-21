@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1520 )]
+    [StructLayout( LayoutKind.Explicit, Size=1504 )]
     internal unsafe struct PrimitiveComponent_fields {
         [FieldOffset(632)] public float MinDrawDistance;
         [FieldOffset(636)] public float LDMaxDrawDistance;
@@ -62,10 +62,11 @@ namespace UE4.Engine.Native {
         [FieldOffset(677)] public bool bIgnoreRadialImpulse;
         [FieldOffset(677)] public bool bIgnoreRadialForce;
         [FieldOffset(677)] public bool bApplyImpulseOnDamage;
+        [FieldOffset(677)] public bool bReplicatePhysicsToAutonomousProxy;
         [FieldOffset(677)] public bool AlwaysLoadOnClient;
         [FieldOffset(677)] public bool AlwaysLoadOnServer;
         [FieldOffset(677)] public bool bUseEditorCompositing;
-        [FieldOffset(677)] public bool bRenderCustomDepth;
+        [FieldOffset(678)] public bool bRenderCustomDepth;
         [FieldOffset(679)] public byte bHasCustomNavigableGeometry;
         [FieldOffset(682)] public byte CanCharacterStepUpOn;
         [FieldOffset(683)] public LightingChannels LightingChannels;
@@ -81,21 +82,21 @@ namespace UE4.Engine.Native {
         [FieldOffset(736)] public NativeArray MoveIgnoreActors;
         [FieldOffset(752)] public NativeArray MoveIgnoreComponents;
         [FieldOffset(800)] public BodyInstance BodyInstance;
-        [FieldOffset(1184)] byte OnComponentHit; //TODO: multicast delegate FComponentHitSignature OnComponentHit
-        [FieldOffset(1200)] byte OnComponentBeginOverlap; //TODO: multicast delegate FComponentBeginOverlapSignature OnComponentBeginOverlap
-        [FieldOffset(1216)] byte OnComponentEndOverlap; //TODO: multicast delegate FComponentEndOverlapSignature OnComponentEndOverlap
-        [FieldOffset(1232)] byte OnComponentWake; //TODO: multicast delegate FComponentWakeSignature OnComponentWake
-        [FieldOffset(1248)] byte OnComponentSleep; //TODO: multicast delegate FComponentSleepSignature OnComponentSleep
-        [FieldOffset(1280)] byte OnBeginCursorOver; //TODO: multicast delegate FComponentBeginCursorOverSignature OnBeginCursorOver
-        [FieldOffset(1296)] byte OnEndCursorOver; //TODO: multicast delegate FComponentEndCursorOverSignature OnEndCursorOver
-        [FieldOffset(1312)] byte OnClicked; //TODO: multicast delegate FComponentOnClickedSignature OnClicked
-        [FieldOffset(1328)] byte OnReleased; //TODO: multicast delegate FComponentOnReleasedSignature OnReleased
-        [FieldOffset(1344)] byte OnInputTouchBegin; //TODO: multicast delegate FComponentOnInputTouchBeginSignature OnInputTouchBegin
-        [FieldOffset(1360)] byte OnInputTouchEnd; //TODO: multicast delegate FComponentOnInputTouchEndSignature OnInputTouchEnd
-        [FieldOffset(1376)] byte OnInputTouchEnter; //TODO: multicast delegate FComponentBeginTouchOverSignature OnInputTouchEnter
-        [FieldOffset(1392)] byte OnInputTouchLeave; //TODO: multicast delegate FComponentEndTouchOverSignature OnInputTouchLeave
-        [FieldOffset(1424)]  public IntPtr  LODParentPrimitive;
-        [FieldOffset(1432)] public PrimitiveComponentPostPhysicsTickFunction PostPhysicsComponentTick;
+        [FieldOffset(1168)] byte OnComponentHit; //TODO: multicast delegate FComponentHitSignature OnComponentHit
+        [FieldOffset(1184)] byte OnComponentBeginOverlap; //TODO: multicast delegate FComponentBeginOverlapSignature OnComponentBeginOverlap
+        [FieldOffset(1200)] byte OnComponentEndOverlap; //TODO: multicast delegate FComponentEndOverlapSignature OnComponentEndOverlap
+        [FieldOffset(1216)] byte OnComponentWake; //TODO: multicast delegate FComponentWakeSignature OnComponentWake
+        [FieldOffset(1232)] byte OnComponentSleep; //TODO: multicast delegate FComponentSleepSignature OnComponentSleep
+        [FieldOffset(1264)] byte OnBeginCursorOver; //TODO: multicast delegate FComponentBeginCursorOverSignature OnBeginCursorOver
+        [FieldOffset(1280)] byte OnEndCursorOver; //TODO: multicast delegate FComponentEndCursorOverSignature OnEndCursorOver
+        [FieldOffset(1296)] byte OnClicked; //TODO: multicast delegate FComponentOnClickedSignature OnClicked
+        [FieldOffset(1312)] byte OnReleased; //TODO: multicast delegate FComponentOnReleasedSignature OnReleased
+        [FieldOffset(1328)] byte OnInputTouchBegin; //TODO: multicast delegate FComponentOnInputTouchBeginSignature OnInputTouchBegin
+        [FieldOffset(1344)] byte OnInputTouchEnd; //TODO: multicast delegate FComponentOnInputTouchEndSignature OnInputTouchEnd
+        [FieldOffset(1360)] byte OnInputTouchEnter; //TODO: multicast delegate FComponentBeginTouchOverSignature OnInputTouchEnter
+        [FieldOffset(1376)] byte OnInputTouchLeave; //TODO: multicast delegate FComponentEndTouchOverSignature OnInputTouchLeave
+        [FieldOffset(1408)]  public IntPtr  LODParentPrimitive;
+        [FieldOffset(1416)] public PrimitiveComponentPostPhysicsTickFunction PostPhysicsComponentTick;
     }
     internal unsafe struct PrimitiveComponent_methods {
         internal struct AddAngularImpulse_method {
@@ -806,6 +807,24 @@ namespace UE4.Engine.Native {
                 return *((bool*)(b+8));
             }
         }
+        internal struct K2_BoxOverlapComponent_method {
+            static internal IntPtr K2_BoxOverlapComponent_ptr;
+            static K2_BoxOverlapComponent_method() {
+                K2_BoxOverlapComponent_ptr = Main.GetMethodUFunction(PrimitiveComponent.StaticClass, "K2_BoxOverlapComponent");
+            }
+
+            internal static unsafe (Vector, Vector, Name, HitResult, bool) Invoke(IntPtr obj, Vector InBoxCentre, Box InBox, bool bTraceComplex, bool bShowTrace, bool bPersistentShowTrace) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Vector*)(b+0)) = InBoxCentre;
+                *((Box*)(b+12)) = InBox;
+                *((bool*)(b+40)) = bTraceComplex;
+                *((bool*)(b+41)) = bShowTrace;
+                *((bool*)(b+42)) = bPersistentShowTrace;
+                Main.GetProcessEvent(obj, K2_BoxOverlapComponent_ptr, new IntPtr(p)); ;
+                return (*((Vector*)(b+44)),*((Vector*)(b+56)),*((Name*)(b+68)),*((HitResult*)(b+80)),*((bool*)(b+224)));
+            }
+        }
         internal struct K2_IsCollisionEnabled_method {
             static internal IntPtr K2_IsCollisionEnabled_ptr;
             static K2_IsCollisionEnabled_method() {
@@ -851,15 +870,53 @@ namespace UE4.Engine.Native {
                 K2_LineTraceComponent_ptr = Main.GetMethodUFunction(PrimitiveComponent.StaticClass, "K2_LineTraceComponent");
             }
 
-            internal static unsafe (Vector, Vector, Name, HitResult, bool) Invoke(IntPtr obj, Vector TraceStart, Vector TraceEnd, bool bTraceComplex, bool bShowTrace) {
+            internal static unsafe (Vector, Vector, Name, HitResult, bool) Invoke(IntPtr obj, Vector TraceStart, Vector TraceEnd, bool bTraceComplex, bool bShowTrace, bool bPersistentShowTrace) {
                 long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((Vector*)(b+0)) = TraceStart;
                 *((Vector*)(b+12)) = TraceEnd;
                 *((bool*)(b+24)) = bTraceComplex;
                 *((bool*)(b+25)) = bShowTrace;
+                *((bool*)(b+26)) = bPersistentShowTrace;
                 Main.GetProcessEvent(obj, K2_LineTraceComponent_ptr, new IntPtr(p)); ;
                 return (*((Vector*)(b+28)),*((Vector*)(b+40)),*((Name*)(b+52)),*((HitResult*)(b+64)),*((bool*)(b+208)));
+            }
+        }
+        internal struct K2_SphereOverlapComponent_method {
+            static internal IntPtr K2_SphereOverlapComponent_ptr;
+            static K2_SphereOverlapComponent_method() {
+                K2_SphereOverlapComponent_ptr = Main.GetMethodUFunction(PrimitiveComponent.StaticClass, "K2_SphereOverlapComponent");
+            }
+
+            internal static unsafe (Vector, Vector, Name, HitResult, bool) Invoke(IntPtr obj, Vector InSphereCentre, float InSphereRadius, bool bTraceComplex, bool bShowTrace, bool bPersistentShowTrace) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Vector*)(b+0)) = InSphereCentre;
+                *((float*)(b+12)) = InSphereRadius;
+                *((bool*)(b+16)) = bTraceComplex;
+                *((bool*)(b+17)) = bShowTrace;
+                *((bool*)(b+18)) = bPersistentShowTrace;
+                Main.GetProcessEvent(obj, K2_SphereOverlapComponent_ptr, new IntPtr(p)); ;
+                return (*((Vector*)(b+20)),*((Vector*)(b+32)),*((Name*)(b+44)),*((HitResult*)(b+56)),*((bool*)(b+200)));
+            }
+        }
+        internal struct K2_SphereTraceComponent_method {
+            static internal IntPtr K2_SphereTraceComponent_ptr;
+            static K2_SphereTraceComponent_method() {
+                K2_SphereTraceComponent_ptr = Main.GetMethodUFunction(PrimitiveComponent.StaticClass, "K2_SphereTraceComponent");
+            }
+
+            internal static unsafe (Vector, Vector, Name, HitResult, bool) Invoke(IntPtr obj, Vector TraceStart, Vector TraceEnd, float SphereRadius, bool bTraceComplex, bool bShowTrace, bool bPersistentShowTrace) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Vector*)(b+0)) = TraceStart;
+                *((Vector*)(b+12)) = TraceEnd;
+                *((float*)(b+24)) = SphereRadius;
+                *((bool*)(b+28)) = bTraceComplex;
+                *((bool*)(b+29)) = bShowTrace;
+                *((bool*)(b+30)) = bPersistentShowTrace;
+                Main.GetProcessEvent(obj, K2_SphereTraceComponent_ptr, new IntPtr(p)); ;
+                return (*((Vector*)(b+32)),*((Vector*)(b+44)),*((Name*)(b+56)),*((HitResult*)(b+68)),*((bool*)(b+212)));
             }
         }
         internal struct PutRigidBodyToSleep_method {

@@ -256,6 +256,19 @@ namespace UE4.AIModule.Native {
                 Main.GetProcessEvent(obj, SetMoveBlockDetection_ptr, new IntPtr(p)); ;
             }
         }
+        internal struct SetPathFollowingComponent_method {
+            static internal IntPtr SetPathFollowingComponent_ptr;
+            static SetPathFollowingComponent_method() {
+                SetPathFollowingComponent_ptr = Main.GetMethodUFunction(AIController.StaticClass, "SetPathFollowingComponent");
+            }
+
+            internal static unsafe void Invoke(IntPtr obj, PathFollowingComponent NewPFComponent) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = NewPFComponent;
+                Main.GetProcessEvent(obj, SetPathFollowingComponent_ptr, new IntPtr(p)); ;
+            }
+        }
         internal struct UnclaimTaskResource_method {
             static internal IntPtr UnclaimTaskResource_ptr;
             static UnclaimTaskResource_method() {

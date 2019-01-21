@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.MeshEditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1920 )]
+    [StructLayout( LayoutKind.Explicit, Size=1904 )]
     internal unsafe struct OverlayComponent_fields {
-        [FieldOffset(1560)]  public IntPtr  LineMaterial;
-        [FieldOffset(1568)]  public IntPtr  PointMaterial;
-        [FieldOffset(1576)] public BoxSphereBounds Bounds;
-        [FieldOffset(1604)] public bool bBoundsDirty;
+        [FieldOffset(1544)]  public IntPtr  LineMaterial;
+        [FieldOffset(1552)]  public IntPtr  PointMaterial;
+        [FieldOffset(1560)] public BoxSphereBounds Bounds;
+        [FieldOffset(1588)] public bool bBoundsDirty;
     }
     internal unsafe struct OverlayComponent_methods {
     }

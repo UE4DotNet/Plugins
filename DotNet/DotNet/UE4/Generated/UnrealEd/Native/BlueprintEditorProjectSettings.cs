@@ -11,11 +11,13 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=88 )]
+    [StructLayout( LayoutKind.Explicit, Size=120 )]
     internal unsafe struct BlueprintEditorProjectSettings_fields {
         [FieldOffset(80)] public bool bDisableCompilationManager;
         [FieldOffset(80)] public bool bForceAllDependenciesToRecompile;
         [FieldOffset(80)] public bool bValidateUnloadedSoftActorReferences;
+        [FieldOffset(88)] public NativeArray DisabledCompilerMessagesExceptEditor;
+        [FieldOffset(104)] public NativeArray DisabledCompilerMessages;
     }
     internal unsafe struct BlueprintEditorProjectSettings_methods {
     }

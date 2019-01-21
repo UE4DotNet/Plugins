@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1144 )]
+    [StructLayout( LayoutKind.Explicit, Size=1136 )]
     internal unsafe struct SkeletalMesh_fields {
         [FieldOffset(104)]  public IntPtr  Skeleton;
         [FieldOffset(112)] public BoxSphereBounds ImportedBounds;
@@ -20,37 +20,37 @@ namespace UE4.Engine.Native {
         [FieldOffset(180)] public Vector NegativeBoundsExtension;
         [FieldOffset(192)] public NativeArray Materials;
         [FieldOffset(208)] public NativeArray SkelMirrorTable;
-        [FieldOffset(224)] public byte SkelMirrorAxis;
-        [FieldOffset(225)] public byte SkelMirrorFlipAxis;
-        [FieldOffset(232)] public NativeArray LODInfo;
-        [FieldOffset(248)] public PerPlatformInt MinLod;
-        [FieldOffset(336)]  public IntPtr  LODSettings;
-        [FieldOffset(344)] public bool bUseFullPrecisionUVs;
-        [FieldOffset(344)] public bool bUseHighPrecisionTangentBasis;
-        [FieldOffset(344)] public bool bHasBeenSimplified;
-        [FieldOffset(344)] public bool bHasVertexColors;
-        [FieldOffset(348)] public FGuid VertexColorGuid;
-        [FieldOffset(364)] public bool bEnablePerPolyCollision;
-        [FieldOffset(368)]  public IntPtr  BodySetup;
-        [FieldOffset(376)]  public IntPtr  PhysicsAsset;
-        [FieldOffset(384)]  public IntPtr  ShadowPhysicsAsset;
-        [FieldOffset(392)] public NativeArray NodeMappingData;
-        [FieldOffset(408)]  public IntPtr  AssetImportData;
-        [FieldOffset(448)]  public IntPtr  ThumbnailInfo;
-        [FieldOffset(456)] public bool bHasCustomDefaultEditorCamera;
-        [FieldOffset(460)] public Vector DefaultEditorCameraLocation;
-        [FieldOffset(472)] public Rotator DefaultEditorCameraRotation;
-        [FieldOffset(484)] public Vector DefaultEditorCameraLookAt;
-        [FieldOffset(496)] public float DefaultEditorCameraOrthoZoom;
-        [FieldOffset(504)] public PreviewAssetAttachContainer PreviewAttachedAssetContainer;
-        [FieldOffset(528)] public NativeArray MorphTargets;
-        [FieldOffset(912)] public float FloorOffset;
-        [FieldOffset(920)] public NativeArray RetargetBasePose;
-        [FieldOffset(952)] public IntPtr PostProcessAnimBlueprint;
-        [FieldOffset(960)] public NativeArray MeshClothingAssets;
-        [FieldOffset(976)] public SkeletalMeshSamplingInfo SamplingInfo;
-        [FieldOffset(1024)] public NativeArray AssetUserData;
-        [FieldOffset(1064)] public NativeArray Sockets;
+        [FieldOffset(224)] public NativeArray LODInfo;
+        [FieldOffset(240)] public PerPlatformInt MinLod;
+        [FieldOffset(328)]  public IntPtr  LODSettings;
+        [FieldOffset(336)] public byte SkelMirrorAxis;
+        [FieldOffset(337)] public byte SkelMirrorFlipAxis;
+        [FieldOffset(338)] public bool bUseFullPrecisionUVs;
+        [FieldOffset(338)] public bool bUseHighPrecisionTangentBasis;
+        [FieldOffset(338)] public bool bHasBeenSimplified;
+        [FieldOffset(338)] public bool bHasVertexColors;
+        [FieldOffset(338)] public bool bEnablePerPolyCollision;
+        [FieldOffset(340)] public FGuid VertexColorGuid;
+        [FieldOffset(360)]  public IntPtr  BodySetup;
+        [FieldOffset(368)]  public IntPtr  PhysicsAsset;
+        [FieldOffset(376)]  public IntPtr  ShadowPhysicsAsset;
+        [FieldOffset(384)] public NativeArray NodeMappingData;
+        [FieldOffset(400)]  public IntPtr  AssetImportData;
+        [FieldOffset(440)]  public IntPtr  ThumbnailInfo;
+        [FieldOffset(448)] public bool bHasCustomDefaultEditorCamera;
+        [FieldOffset(452)] public Vector DefaultEditorCameraLocation;
+        [FieldOffset(464)] public Rotator DefaultEditorCameraRotation;
+        [FieldOffset(476)] public Vector DefaultEditorCameraLookAt;
+        [FieldOffset(488)] public float DefaultEditorCameraOrthoZoom;
+        [FieldOffset(496)] public PreviewAssetAttachContainer PreviewAttachedAssetContainer;
+        [FieldOffset(520)] public NativeArray MorphTargets;
+        [FieldOffset(904)] public float FloorOffset;
+        [FieldOffset(912)] public NativeArray RetargetBasePose;
+        [FieldOffset(944)] public IntPtr PostProcessAnimBlueprint;
+        [FieldOffset(952)] public NativeArray MeshClothingAssets;
+        [FieldOffset(968)] public SkeletalMeshSamplingInfo SamplingInfo;
+        [FieldOffset(1016)] public NativeArray AssetUserData;
+        [FieldOffset(1056)] public NativeArray Sockets;
     }
     internal unsafe struct SkeletalMesh_methods {
         internal struct FindSocket_method {

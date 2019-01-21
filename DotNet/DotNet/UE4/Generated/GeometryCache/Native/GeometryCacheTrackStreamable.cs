@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.GeometryCache.Native {
-    [StructLayout( LayoutKind.Explicit, Size=432 )]
+    [StructLayout( LayoutKind.Explicit, Size=424 )]
     internal unsafe struct GeometryCacheTrackStreamable_fields {
         [FieldOffset(104)]  public IntPtr  Codec;
-        [FieldOffset(424)] public float StartSampleTime;
+        [FieldOffset(416)] public float StartSampleTime;
     }
     internal unsafe struct GeometryCacheTrackStreamable_methods {
     }

@@ -12,13 +12,15 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Input Alpha Bool Blend</summary>
-        [StructLayout( LayoutKind.Explicit, Size=88 )]
+        [StructLayout( LayoutKind.Explicit, Size=80 )]
         public unsafe struct InputAlphaBoolBlend {
             [FieldOffset(0)] public float BlendInTime;
 
             [FieldOffset(4)] public float BlendOutTime;
 
             [FieldOffset(8)] byte BlendOption; //TODO: enum EAlphaBlendOption BlendOption
+
+            [FieldOffset(9)] public bool bInitialized;
 
             [FieldOffset(16)] 
             private IntPtr  CustomCurve_field;
@@ -30,8 +32,6 @@ namespace UE4.Engine{
 
             ///<summary>Alpha Blend</summary>
             [FieldOffset(24)] AlphaBlend AlphaBlend;
-
-            [FieldOffset(80)] public bool bInitialized;
 
         }
 }

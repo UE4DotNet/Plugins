@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Minimal View Info</summary>
-        [StructLayout( LayoutKind.Explicit, Size=1392 )]
+        [StructLayout( LayoutKind.Explicit, Size=1360 )]
         public unsafe struct MinimalViewInfo {
             ///<summary>Location</summary>
             [FieldOffset(0)] Vector Location;
@@ -44,7 +44,7 @@ namespace UE4.Engine{
             [FieldOffset(64)] PostProcessSettings PostProcessSettings;
 
             ///<summary>Off-axis / off-center projection offset as proportion of screen dimensions</summary>
-            [FieldOffset(1376)] Vector2D OffCenterProjectionOffset;
+            [FieldOffset(1344)] Vector2D OffCenterProjectionOffset;
 
         }
 }

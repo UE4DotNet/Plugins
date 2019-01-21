@@ -13,20 +13,20 @@ using UE4.Native;
 namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=656 )]
     internal unsafe struct Texture2D_fields {
-        [FieldOffset(520)] public int StreamingIndex;
-        [FieldOffset(524)] public int LevelIndex;
-        [FieldOffset(528)] public int FirstResourceMemMip;
-        [FieldOffset(532)] public bool bTemporarilyDisableStreaming;
-        [FieldOffset(532)] public bool bIsStreamable;
-        [FieldOffset(532)] public bool bHasStreamingUpdatePending;
-        [FieldOffset(532)] public bool bForceMiplevelsToBeResident;
-        [FieldOffset(532)] public bool bIgnoreStreamingMipBias;
-        [FieldOffset(532)] public bool bGlobalForceMipLevelsToBeResident;
-        [FieldOffset(532)] public bool bHasBeenPaintedInEditor;
-        [FieldOffset(533)] public byte AddressX;
-        [FieldOffset(534)] public byte AddressY;
-        [FieldOffset(536)] public IntPoint ImportedSize;
-        [FieldOffset(544)] public double ForceMipLevelsToBeResidentTimestamp;
+        [FieldOffset(512)] public int StreamingIndex;
+        [FieldOffset(516)] public int LevelIndex;
+        [FieldOffset(520)] public int FirstResourceMemMip;
+        [FieldOffset(524)] public bool bTemporarilyDisableStreaming;
+        [FieldOffset(524)] public bool bIsStreamable;
+        [FieldOffset(524)] public bool bHasStreamingUpdatePending;
+        [FieldOffset(524)] public bool bForceMiplevelsToBeResident;
+        [FieldOffset(524)] public bool bIgnoreStreamingMipBias;
+        [FieldOffset(524)] public bool bGlobalForceMipLevelsToBeResident;
+        [FieldOffset(524)] public bool bHasBeenPaintedInEditor;
+        [FieldOffset(525)] public byte AddressX;
+        [FieldOffset(526)] public byte AddressY;
+        [FieldOffset(528)] public IntPoint ImportedSize;
+        [FieldOffset(536)] public double ForceMipLevelsToBeResidentTimestamp;
     }
     internal unsafe struct Texture2D_methods {
         internal struct Blueprint_GetSizeX_method {

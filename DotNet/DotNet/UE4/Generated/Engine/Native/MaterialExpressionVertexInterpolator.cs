@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=248 )]
+    [StructLayout( LayoutKind.Explicit, Size=280 )]
     internal unsafe struct MaterialExpressionVertexInterpolator_fields {
         [FieldOffset(176)] public ExpressionInput Input;
     }

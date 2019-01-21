@@ -15,13 +15,7 @@ namespace UE4.MovieSceneTracks{
         [StructLayout( LayoutKind.Explicit, Size=208 )]
         public unsafe struct MovieSceneEventSectionTemplate {
             ///<summary>Event Data</summary>
-            [FieldOffset(32)] MovieSceneEventSectionData EventData;
-
-            [FieldOffset(184)] byte EventReceivers; //TODO: array TArray EventReceivers
-
-            [FieldOffset(200)] public bool bFireEventsWhenForwards;
-
-            [FieldOffset(200)] public bool bFireEventsWhenBackwards;
+            [FieldOffset(56)] MovieSceneEventSectionData EventData;
 
         }
 }

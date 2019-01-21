@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.MRMesh.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1600 )]
+    [StructLayout( LayoutKind.Explicit, Size=1584 )]
     internal unsafe struct MRMeshComponent_fields {
-        [FieldOffset(1528)]  public IntPtr  Material;
-        [FieldOffset(1536)] public bool bCreateMeshProxySections;
-        [FieldOffset(1537)] public bool bUpdateNavMeshOnMeshUpdate;
-        [FieldOffset(1544)] public NativeArray BodySetups;
+        [FieldOffset(1512)]  public IntPtr  Material;
+        [FieldOffset(1520)] public bool bCreateMeshProxySections;
+        [FieldOffset(1521)] public bool bUpdateNavMeshOnMeshUpdate;
+        [FieldOffset(1528)] public NativeArray BodySetups;
     }
     internal unsafe struct MRMeshComponent_methods {
         internal struct Clear_method {

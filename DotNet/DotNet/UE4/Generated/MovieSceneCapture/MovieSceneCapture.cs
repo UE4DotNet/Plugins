@@ -15,15 +15,41 @@ using UE4.MovieSceneCapture.Native;
 namespace UE4.MovieSceneCapture {
     ///<summary>Class responsible for capturing scene data</summary>
     public unsafe partial class MovieSceneCapture : UObject  {
-        ///<summary>The type of capture protocol to use</summary>
-        public unsafe CaptureProtocolID CaptureType {
-            get {return MovieSceneCapture_ptr->CaptureType;}
-            set {MovieSceneCapture_ptr->CaptureType = value;}
+
+        ///<summary>Get Audio Capture Protocol</summary>
+        public MovieSceneCaptureProtocolBase GetAudioCaptureProtocol()  => 
+            MovieSceneCapture_methods.GetAudioCaptureProtocol_method.Invoke(ObjPointer);
+
+        ///<summary>Access the capture protocol we are using</summary>
+        public MovieSceneCaptureProtocolBase GetImageCaptureProtocol()  => 
+            MovieSceneCapture_methods.GetImageCaptureProtocol_method.Invoke(ObjPointer);
+
+        ///<summary>Set Audio Capture Protocol Type</summary>
+        public void SetAudioCaptureProtocolType(SubclassOf<MovieSceneCaptureProtocolBase> ProtocolType)  => 
+            MovieSceneCapture_methods.SetAudioCaptureProtocolType_method.Invoke(ObjPointer, ProtocolType);
+
+        ///<summary>Set Image Capture Protocol Type</summary>
+        public void SetImageCaptureProtocolType(SubclassOf<MovieSceneCaptureProtocolBase> ProtocolType)  => 
+            MovieSceneCapture_methods.SetImageCaptureProtocolType_method.Invoke(ObjPointer, ProtocolType);
+        ///<summary>The type of capture protocol to use for image data</summary>
+        public unsafe SoftClassPath ImageCaptureProtocolType {
+            get {return MovieSceneCapture_ptr->ImageCaptureProtocolType;}
+            set {MovieSceneCapture_ptr->ImageCaptureProtocolType = value;}
         }
-        ///<summary>Settings specific to the capture protocol</summary>
-        public unsafe MovieSceneCaptureProtocolSettings ProtocolSettings {
-            get {return MovieSceneCapture_ptr->ProtocolSettings;}
-            set {MovieSceneCapture_ptr->ProtocolSettings = value;}
+        ///<summary>The type of capture protocol to use for audio data. Requires experimental audio mixer (launch editor via with -audiomixer).</summary>
+        public unsafe SoftClassPath AudioCaptureProtocolType {
+            get {return MovieSceneCapture_ptr->AudioCaptureProtocolType;}
+            set {MovieSceneCapture_ptr->AudioCaptureProtocolType = value;}
+        }
+        ///<summary>Capture protocol responsible for actually capturing frame data</summary>
+        public unsafe MovieSceneImageCaptureProtocolBase ImageCaptureProtocol {
+            get {return MovieSceneCapture_ptr->ImageCaptureProtocol;}
+            set {MovieSceneCapture_ptr->ImageCaptureProtocol = value;}
+        }
+        ///<summary>Audio Capture Protocol</summary>
+        public unsafe MovieSceneAudioCaptureProtocolBase AudioCaptureProtocol {
+            get {return MovieSceneCapture_ptr->AudioCaptureProtocol;}
+            set {MovieSceneCapture_ptr->AudioCaptureProtocol = value;}
         }
         ///<summary>Settings that define how to capture</summary>
         public unsafe MovieSceneCaptureSettings Settings {

@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=672 )]
+    [StructLayout( LayoutKind.Explicit, Size=656 )]
     internal unsafe struct ShadowMapTexture2D_fields {
-        [FieldOffset(656)] public byte ShadowmapFlags;
+        [FieldOffset(648)] public byte ShadowmapFlags;
     }
     internal unsafe struct ShadowMapTexture2D_methods {
     }

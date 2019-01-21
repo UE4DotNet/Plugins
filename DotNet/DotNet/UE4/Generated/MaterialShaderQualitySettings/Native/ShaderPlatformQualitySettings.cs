@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.MaterialShaderQualitySettings.Native {
-    [StructLayout( LayoutKind.Explicit, Size=80 )]
+    [StructLayout( LayoutKind.Explicit, Size=96 )]
     internal unsafe struct ShaderPlatformQualitySettings_fields {
         [FieldOffset(56)] public MaterialQualityOverrides QualityOverrides;
     }

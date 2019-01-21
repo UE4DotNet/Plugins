@@ -41,6 +41,10 @@ namespace UE4.Engine {
             set {EdGraphNode_ptr->AdvancedPinDisplay = value;}
         }
          //TODO: enum ENodeEnabledState EnabledState
+        public bool bDisplayAsDisabled {
+            get {return Main.GetGetBoolPropertyByName(this, "bDisplayAsDisabled"); }
+            set {Main.SetGetBoolPropertyByName(this, "bDisplayAsDisabled", value); }
+        }
         public bool bUserSetEnabledState {
             get {return Main.GetGetBoolPropertyByName(this, "bUserSetEnabledState"); }
             set {Main.SetGetBoolPropertyByName(this, "bUserSetEnabledState", value); }

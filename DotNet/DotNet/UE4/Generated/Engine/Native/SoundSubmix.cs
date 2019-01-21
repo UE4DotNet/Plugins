@@ -11,16 +11,46 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=144 )]
+    [StructLayout( LayoutKind.Explicit, Size=152 )]
     internal unsafe struct SoundSubmix_fields {
         [FieldOffset(56)] public NativeArray ChildSubmixes;
         [FieldOffset(72)]  public IntPtr  ParentSubmix;
         [FieldOffset(88)] byte ChannelFormat; //TODO: enum ESubmixChannelFormat ChannelFormat
         [FieldOffset(96)] public NativeArray SubmixEffectChain;
         [FieldOffset(112)]  public IntPtr  AmbisonicsPluginSettings;
-        [FieldOffset(120)] byte OnSubmixRecordedFileDone; //TODO: multicast delegate FOnSubmixRecordedFileDone OnSubmixRecordedFileDone
+        [FieldOffset(120)] public int EnvelopeFollowerAttackTime;
+        [FieldOffset(124)] public int EnvelopeFollowerReleaseTime;
+        [FieldOffset(128)] byte OnSubmixRecordedFileDone; //TODO: multicast delegate FOnSubmixRecordedFileDone OnSubmixRecordedFileDone
     }
     internal unsafe struct SoundSubmix_methods {
+        internal struct AddEnvelopeFollowerDelegate_method {
+            static internal IntPtr AddEnvelopeFollowerDelegate_ptr;
+            static AddEnvelopeFollowerDelegate_method() {
+                AddEnvelopeFollowerDelegate_ptr = Main.GetMethodUFunction(SoundSubmix.StaticClass, "AddEnvelopeFollowerDelegate");
+            }
+
+            internal static unsafe void Invoke(IntPtr obj, UObject WorldContextObject, byte OnSubmixEnvelopeBP /*TODO: delegate FOnSubmixEnvelopeBP */) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = WorldContextObject;
+                throw new NotImplementedException(); //TODO: delegate FOnSubmixEnvelopeBP OnSubmixEnvelopeBP
+                Main.GetProcessEvent(obj, AddEnvelopeFollowerDelegate_ptr, new IntPtr(p)); ;
+                 //TODO: delegate FOnSubmixEnvelopeBP OnSubmixEnvelopeBP
+            }
+        }
+        internal struct StartEnvelopeFollowing_method {
+            static internal IntPtr StartEnvelopeFollowing_ptr;
+            static StartEnvelopeFollowing_method() {
+                StartEnvelopeFollowing_ptr = Main.GetMethodUFunction(SoundSubmix.StaticClass, "StartEnvelopeFollowing");
+            }
+
+            internal static unsafe void Invoke(IntPtr obj, UObject WorldContextObject) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = WorldContextObject;
+                Main.GetProcessEvent(obj, StartEnvelopeFollowing_ptr, new IntPtr(p)); ;
+            }
+        }
         internal struct StartRecordingOutput_method {
             static internal IntPtr StartRecordingOutput_ptr;
             static StartRecordingOutput_method() {
@@ -33,6 +63,19 @@ namespace UE4.Engine.Native {
                 *((IntPtr*)(b+0)) = WorldContextObject;
                 *((float*)(b+8)) = ExpectedDuration;
                 Main.GetProcessEvent(obj, StartRecordingOutput_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct StopEnvelopeFollowing_method {
+            static internal IntPtr StopEnvelopeFollowing_ptr;
+            static StopEnvelopeFollowing_method() {
+                StopEnvelopeFollowing_ptr = Main.GetMethodUFunction(SoundSubmix.StaticClass, "StopEnvelopeFollowing");
+            }
+
+            internal static unsafe void Invoke(IntPtr obj, UObject WorldContextObject) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = WorldContextObject;
+                Main.GetProcessEvent(obj, StopEnvelopeFollowing_ptr, new IntPtr(p)); ;
             }
         }
         internal struct StopRecordingOutput_method {

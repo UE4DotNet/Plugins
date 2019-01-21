@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.LevelSequence.Native {
-    [StructLayout( LayoutKind.Explicit, Size=864 )]
+    [StructLayout( LayoutKind.Explicit, Size=928 )]
     internal unsafe struct LevelSequenceBurnIn_fields {
-        [FieldOffset(768)] public LevelSequencePlayerSnapshot FrameInformation;
-        [FieldOffset(856)]  public IntPtr  LevelSequenceActor;
+        [FieldOffset(784)] public LevelSequencePlayerSnapshot FrameInformation;
+        [FieldOffset(920)]  public IntPtr  LevelSequenceActor;
     }
     internal unsafe struct LevelSequenceBurnIn_methods {
     }

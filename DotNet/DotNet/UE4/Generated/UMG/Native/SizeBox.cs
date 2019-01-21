@@ -11,22 +11,22 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=456 )]
+    [StructLayout( LayoutKind.Explicit, Size=472 )]
     internal unsafe struct SizeBox_fields {
-        [FieldOffset(408)] public bool bOverride_WidthOverride;
-        [FieldOffset(408)] public bool bOverride_HeightOverride;
-        [FieldOffset(408)] public bool bOverride_MinDesiredWidth;
-        [FieldOffset(408)] public bool bOverride_MinDesiredHeight;
-        [FieldOffset(408)] public bool bOverride_MaxDesiredWidth;
-        [FieldOffset(408)] public bool bOverride_MaxDesiredHeight;
-        [FieldOffset(408)] public bool bOverride_MaxAspectRatio;
-        [FieldOffset(412)] public float WidthOverride;
-        [FieldOffset(416)] public float HeightOverride;
-        [FieldOffset(420)] public float MinDesiredWidth;
-        [FieldOffset(424)] public float MinDesiredHeight;
-        [FieldOffset(428)] public float MaxDesiredWidth;
-        [FieldOffset(432)] public float MaxDesiredHeight;
-        [FieldOffset(436)] public float MaxAspectRatio;
+        [FieldOffset(424)] public bool bOverride_WidthOverride;
+        [FieldOffset(424)] public bool bOverride_HeightOverride;
+        [FieldOffset(424)] public bool bOverride_MinDesiredWidth;
+        [FieldOffset(424)] public bool bOverride_MinDesiredHeight;
+        [FieldOffset(424)] public bool bOverride_MaxDesiredWidth;
+        [FieldOffset(424)] public bool bOverride_MaxDesiredHeight;
+        [FieldOffset(424)] public bool bOverride_MaxAspectRatio;
+        [FieldOffset(428)] public float WidthOverride;
+        [FieldOffset(432)] public float HeightOverride;
+        [FieldOffset(436)] public float MinDesiredWidth;
+        [FieldOffset(440)] public float MinDesiredHeight;
+        [FieldOffset(444)] public float MaxDesiredWidth;
+        [FieldOffset(448)] public float MaxDesiredHeight;
+        [FieldOffset(452)] public float MaxAspectRatio;
     }
     internal unsafe struct SizeBox_methods {
         internal struct ClearHeightOverride_method {

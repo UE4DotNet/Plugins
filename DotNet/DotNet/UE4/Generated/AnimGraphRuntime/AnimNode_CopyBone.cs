@@ -13,21 +13,21 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Simple controller to copy a bone's transform to another one.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=416 )]
+        [StructLayout( LayoutKind.Explicit, Size=392 )]
         public unsafe struct AnimNode_CopyBone {
             ///<summary>Source Bone Name to get transform from</summary>
-            [FieldOffset(360)] BoneReference SourceBone;
+            [FieldOffset(336)] BoneReference SourceBone;
 
             ///<summary>Name of bone to control. This is the main bone chain to modify from. *</summary>
-            [FieldOffset(384)] BoneReference TargetBone;
+            [FieldOffset(360)] BoneReference TargetBone;
 
-            [FieldOffset(408)] public bool bCopyTranslation;
+            [FieldOffset(384)] public bool bCopyTranslation;
 
-            [FieldOffset(409)] public bool bCopyRotation;
+            [FieldOffset(385)] public bool bCopyRotation;
 
-            [FieldOffset(410)] public bool bCopyScale;
+            [FieldOffset(386)] public bool bCopyScale;
 
-            [FieldOffset(411)] public byte ControlSpace;
+            [FieldOffset(387)] public byte ControlSpace;
 
         }
 }

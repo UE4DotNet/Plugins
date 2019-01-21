@@ -15,13 +15,13 @@ class DOTNET_API UDotNetConfig : public UObject
 	GENERATED_BODY()
 
 public:
-	// Name of DotNet DLL to load
-	UPROPERTY(config, EditAnywhere, Category = StartUp)
-	FString DLLGameFileName;
+	//// Name of DotNet DLL to load
+	//UPROPERTY(config, EditAnywhere, Category = StartUp)
+	//FString DLLGameFileName;
 
-	// fully qualified function name (namespace.className.function()) */
-	UPROPERTY(config, EditAnywhere, Category = StartUp)
-		FString GameInstanceClass;
+	//// fully qualified function name (namespace.className.function()) */
+	//UPROPERTY(config, EditAnywhere, Category = StartUp)
+	//	FString GameInstanceClass;
 
 	// Argument passed to Start Function
 	UPROPERTY(config, EditAnywhere, Category = StartUp)

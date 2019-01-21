@@ -28,6 +28,8 @@ namespace UE4.UnrealEd {
             get {return Main.GetGetBoolPropertyByName(this, "bValidateUnloadedSoftActorReferences"); }
             set {Main.SetGetBoolPropertyByName(this, "bValidateUnloadedSoftActorReferences", value); }
         }
+         //TODO: array not UObject TArray DisabledCompilerMessagesExceptEditor
+         //TODO: array not UObject TArray DisabledCompilerMessages
         static BlueprintEditorProjectSettings() {
             StaticClass = Main.GetClass("BlueprintEditorProjectSettings");
         }

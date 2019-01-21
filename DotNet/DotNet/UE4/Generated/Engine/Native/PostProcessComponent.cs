@@ -11,14 +11,14 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1968 )]
+    [StructLayout( LayoutKind.Explicit, Size=1936 )]
     internal unsafe struct PostProcessComponent_fields {
         [FieldOffset(640)] public PostProcessSettings Settings;
-        [FieldOffset(1952)] public float Priority;
-        [FieldOffset(1956)] public float BlendRadius;
-        [FieldOffset(1960)] public float BlendWeight;
-        [FieldOffset(1964)] public bool bEnabled;
-        [FieldOffset(1964)] public bool bUnbound;
+        [FieldOffset(1920)] public float Priority;
+        [FieldOffset(1924)] public float BlendRadius;
+        [FieldOffset(1928)] public float BlendWeight;
+        [FieldOffset(1932)] public bool bEnabled;
+        [FieldOffset(1932)] public bool bUnbound;
     }
     internal unsafe struct PostProcessComponent_methods {
         internal struct AddOrUpdateBlendable_method {

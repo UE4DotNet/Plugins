@@ -11,18 +11,18 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=928 )]
+    [StructLayout( LayoutKind.Explicit, Size=960 )]
     internal unsafe struct ListView_fields {
-        [FieldOffset(808)] public byte SelectionMode;
-        [FieldOffset(809)] byte ConsumeMouseWheel; //TODO: enum EConsumeMouseWheel ConsumeMouseWheel
-        [FieldOffset(810)] public bool bClearSelectionOnClick;
-        [FieldOffset(812)] public float EntrySpacing;
-        [FieldOffset(816)] public NativeArray ListItems;
-        [FieldOffset(848)] byte BP_OnItemClicked; //TODO: multicast delegate FSimpleListItemEventDynamic BP_OnItemClicked
-        [FieldOffset(864)] byte BP_OnItemDoubleClicked; //TODO: multicast delegate FSimpleListItemEventDynamic BP_OnItemDoubleClicked
-        [FieldOffset(880)] byte BP_OnItemIsHoveredChanged; //TODO: multicast delegate FOnItemIsHoveredChangedDynamic BP_OnItemIsHoveredChanged
-        [FieldOffset(896)] byte BP_OnItemSelectionChanged; //TODO: multicast delegate FOnListItemSelectionChangedDynamic BP_OnItemSelectionChanged
-        [FieldOffset(912)] byte BP_OnItemScrolledIntoView; //TODO: multicast delegate FOnListItemScrolledIntoViewDynamic BP_OnItemScrolledIntoView
+        [FieldOffset(840)] public byte SelectionMode;
+        [FieldOffset(841)] byte ConsumeMouseWheel; //TODO: enum EConsumeMouseWheel ConsumeMouseWheel
+        [FieldOffset(842)] public bool bClearSelectionOnClick;
+        [FieldOffset(844)] public float EntrySpacing;
+        [FieldOffset(848)] public NativeArray ListItems;
+        [FieldOffset(880)] byte BP_OnItemClicked; //TODO: multicast delegate FSimpleListItemEventDynamic BP_OnItemClicked
+        [FieldOffset(896)] byte BP_OnItemDoubleClicked; //TODO: multicast delegate FSimpleListItemEventDynamic BP_OnItemDoubleClicked
+        [FieldOffset(912)] byte BP_OnItemIsHoveredChanged; //TODO: multicast delegate FOnItemIsHoveredChangedDynamic BP_OnItemIsHoveredChanged
+        [FieldOffset(928)] byte BP_OnItemSelectionChanged; //TODO: multicast delegate FOnListItemSelectionChangedDynamic BP_OnItemSelectionChanged
+        [FieldOffset(944)] byte BP_OnItemScrolledIntoView; //TODO: multicast delegate FOnListItemScrolledIntoViewDynamic BP_OnItemScrolledIntoView
     }
     internal unsafe struct ListView_methods {
         internal struct AddItem_method {

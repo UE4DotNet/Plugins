@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=360 )]
+    [StructLayout( LayoutKind.Explicit, Size=352 )]
     internal unsafe struct RotatingMovementComponent_fields {
-        [FieldOffset(328)] public Rotator RotationRate;
-        [FieldOffset(340)] public Vector PivotTranslation;
-        [FieldOffset(352)] public bool bRotationInLocalSpace;
+        [FieldOffset(320)] public Rotator RotationRate;
+        [FieldOffset(332)] public Vector PivotTranslation;
+        [FieldOffset(344)] public bool bRotationInLocalSpace;
     }
     internal unsafe struct RotatingMovementComponent_methods {
     }

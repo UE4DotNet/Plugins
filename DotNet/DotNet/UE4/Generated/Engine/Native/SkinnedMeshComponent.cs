@@ -11,37 +11,37 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2000 )]
+    [StructLayout( LayoutKind.Explicit, Size=1904 )]
     internal unsafe struct SkinnedMeshComponent_fields {
-        [FieldOffset(1560)]  public IntPtr  SkeletalMesh;
-        [FieldOffset(1568)] byte MasterPoseComponent; //TODO: weak object TWeakObjectPtr<USkinnedMeshComponent> MasterPoseComponent
-        [FieldOffset(1840)]  public IntPtr  PhysicsAssetOverride;
-        [FieldOffset(1848)] public int ForcedLodModel;
-        [FieldOffset(1852)] public bool bOverrideMinLod;
-        [FieldOffset(1856)] public int MinLodModel;
-        [FieldOffset(1872)] public float StreamingDistanceMultiplier;
-        [FieldOffset(1880)] public NativeArray LODInfo;
-        [FieldOffset(1912)] public byte MeshComponentUpdateFlag;
-        [FieldOffset(1913)] public bool bUseBoundsFromMasterPoseComponent;
-        [FieldOffset(1913)] public bool bForceWireframe;
-        [FieldOffset(1913)] public bool bDisableMorphTarget;
-        [FieldOffset(1913)] public bool bHideSkin;
-        [FieldOffset(1913)] public bool bPerBoneMotionBlur;
-        [FieldOffset(1913)] public bool bComponentUseFixedSkelBounds;
-        [FieldOffset(1913)] public bool bConsiderAllBodiesForBounds;
-        [FieldOffset(1916)] public bool bSyncAttachParentLOD;
-        [FieldOffset(1920)] public bool bCanHighlightSelectedSections;
-        [FieldOffset(1920)] public bool bRecentlyRendered;
-        [FieldOffset(1920)] public bool bCastCapsuleDirectShadow;
-        [FieldOffset(1920)] public bool bCastCapsuleIndirectShadow;
-        [FieldOffset(1920)] public bool bCPUSkinning;
-        [FieldOffset(1920)] public bool bEnableUpdateRateOptimizations;
-        [FieldOffset(1920)] public bool bDisplayDebugUpdateRateOptimizations;
-        [FieldOffset(1920)] public bool bRenderStatic;
-        [FieldOffset(1921)] public bool bCachedLocalBoundsUpToDate;
-        [FieldOffset(1921)] public bool bForceMeshObjectUpdate;
-        [FieldOffset(1936)] public float CapsuleIndirectShadowMinVisibility;
-        [FieldOffset(1940)] public BoxSphereBounds CachedLocalBounds;
+        [FieldOffset(1544)]  public IntPtr  SkeletalMesh;
+        [FieldOffset(1552)] byte MasterPoseComponent; //TODO: weak object TWeakObjectPtr<USkinnedMeshComponent> MasterPoseComponent
+        [FieldOffset(1752)]  public IntPtr  PhysicsAssetOverride;
+        [FieldOffset(1760)] public int ForcedLodModel;
+        [FieldOffset(1764)] public int MinLodModel;
+        [FieldOffset(1780)] public float StreamingDistanceMultiplier;
+        [FieldOffset(1784)] public NativeArray LODInfo;
+        [FieldOffset(1816)] byte VisibilityBasedAnimTickOption; //TODO: enum EVisibilityBasedAnimTickOption VisibilityBasedAnimTickOption
+        [FieldOffset(1832)] public bool bOverrideMinLod;
+        [FieldOffset(1832)] public bool bUseBoundsFromMasterPoseComponent;
+        [FieldOffset(1832)] public bool bForceWireframe;
+        [FieldOffset(1832)] public bool bDisableMorphTarget;
+        [FieldOffset(1832)] public bool bHideSkin;
+        [FieldOffset(1832)] public bool bPerBoneMotionBlur;
+        [FieldOffset(1833)] public bool bComponentUseFixedSkelBounds;
+        [FieldOffset(1833)] public bool bConsiderAllBodiesForBounds;
+        [FieldOffset(1833)] public bool bSyncAttachParentLOD;
+        [FieldOffset(1833)] public bool bCanHighlightSelectedSections;
+        [FieldOffset(1833)] public bool bRecentlyRendered;
+        [FieldOffset(1833)] public bool bCastCapsuleDirectShadow;
+        [FieldOffset(1833)] public bool bCastCapsuleIndirectShadow;
+        [FieldOffset(1833)] public bool bCPUSkinning;
+        [FieldOffset(1834)] public bool bEnableUpdateRateOptimizations;
+        [FieldOffset(1834)] public bool bDisplayDebugUpdateRateOptimizations;
+        [FieldOffset(1834)] public bool bRenderStatic;
+        [FieldOffset(1834)] public bool bCachedLocalBoundsUpToDate;
+        [FieldOffset(1834)] public bool bForceMeshObjectUpdate;
+        [FieldOffset(1836)] public float CapsuleIndirectShadowMinVisibility;
+        [FieldOffset(1848)] public BoxSphereBounds CachedLocalBounds;
     }
     internal unsafe struct SkinnedMeshComponent_methods {
         internal struct BoneIsChildOf_method {
@@ -127,6 +127,21 @@ namespace UE4.Engine.Native {
                 *((int*)(b+0)) = BoneIndex;
                 Main.GetProcessEvent(obj, GetBoneName_ptr, new IntPtr(p)); ;
                 return *((Name*)(b+4));
+            }
+        }
+        internal struct GetDeltaTransformFromRefPose_method {
+            static internal IntPtr GetDeltaTransformFromRefPose_ptr;
+            static GetDeltaTransformFromRefPose_method() {
+                GetDeltaTransformFromRefPose_ptr = Main.GetMethodUFunction(SkinnedMeshComponent.StaticClass, "GetDeltaTransformFromRefPose");
+            }
+
+            internal static unsafe Transform Invoke(IntPtr obj, Name BoneName, Name BaseName) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Name*)(b+0)) = BoneName;
+                *((Name*)(b+12)) = BaseName;
+                Main.GetProcessEvent(obj, GetDeltaTransformFromRefPose_ptr, new IntPtr(p)); ;
+                return *((Transform*)(b+32));
             }
         }
         internal struct GetNumBones_method {

@@ -12,16 +12,16 @@ using UE4.Native;
 using UE4.InputCore;
 
 namespace UE4.BlueprintGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=312 )]
+    [StructLayout( LayoutKind.Explicit, Size=320 )]
     internal unsafe struct K2Node_InputKey_fields {
-        [FieldOffset(208)] public Key InputKey;
-        [FieldOffset(240)] public bool bConsumeInput;
-        [FieldOffset(240)] public bool bExecuteWhenPaused;
-        [FieldOffset(240)] public bool bOverrideParentBinding;
-        [FieldOffset(240)] public bool bControl;
-        [FieldOffset(240)] public bool bAlt;
-        [FieldOffset(240)] public bool bShift;
-        [FieldOffset(240)] public bool bCommand;
+        [FieldOffset(216)] public Key InputKey;
+        [FieldOffset(248)] public bool bConsumeInput;
+        [FieldOffset(248)] public bool bExecuteWhenPaused;
+        [FieldOffset(248)] public bool bOverrideParentBinding;
+        [FieldOffset(248)] public bool bControl;
+        [FieldOffset(248)] public bool bAlt;
+        [FieldOffset(248)] public bool bShift;
+        [FieldOffset(248)] public bool bCommand;
     }
     internal unsafe struct K2Node_InputKey_methods {
     }

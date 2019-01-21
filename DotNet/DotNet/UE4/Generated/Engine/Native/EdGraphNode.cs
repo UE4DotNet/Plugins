@@ -20,11 +20,12 @@ namespace UE4.Engine.Native {
         [FieldOffset(100)] public int NodeHeight;
         [FieldOffset(104)] public byte AdvancedPinDisplay;
         [FieldOffset(105)] byte EnabledState; //TODO: enum ENodeEnabledState EnabledState
+        [FieldOffset(107)] public bool bDisplayAsDisabled;
         [FieldOffset(107)] public bool bUserSetEnabledState;
         [FieldOffset(107)] public bool bCanResizeNode;
         [FieldOffset(107)] public bool bHasCompilerMessage;
-        [FieldOffset(107)] public bool bCommentBubblePinned;
-        [FieldOffset(107)] public bool bCommentBubbleVisible;
+        [FieldOffset(108)] public bool bCommentBubblePinned;
+        [FieldOffset(108)] public bool bCommentBubbleVisible;
         [FieldOffset(108)] public bool bCommentBubbleMakeVisible;
         [FieldOffset(108)] public bool bCanRenameNode;
         [FieldOffset(112)] byte NodeUpgradeMessage; //TODO: text FText NodeUpgradeMessage

@@ -11,11 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.TimeManagement.Native {
-    [StructLayout( LayoutKind.Explicit, Size=72 )]
+    [StructLayout( LayoutKind.Explicit, Size=64 )]
     internal unsafe struct TimeSynchronizationSource_fields {
         [FieldOffset(56)] public bool bUseForSynchronization;
-        [FieldOffset(60)] public int NumberOfExtraBufferedFrame;
-        [FieldOffset(64)] public float TimeDelay;
+        [FieldOffset(60)] public int FrameOffset;
     }
     internal unsafe struct TimeSynchronizationSource_methods {
     }

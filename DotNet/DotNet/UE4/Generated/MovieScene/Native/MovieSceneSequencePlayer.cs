@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.MovieScene.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2032 )]
+    [StructLayout( LayoutKind.Explicit, Size=2008 )]
     internal unsafe struct MovieSceneSequencePlayer_fields {
         [FieldOffset(896)] byte OnPlay; //TODO: multicast delegate FOnMovieSceneSequencePlayerEvent OnPlay
         [FieldOffset(912)] byte OnPlayReverse; //TODO: multicast delegate FOnMovieSceneSequencePlayerEvent OnPlayReverse
@@ -25,6 +25,7 @@ namespace UE4.MovieScene.Native {
         [FieldOffset(1004)] public int DurationFrames;
         [FieldOffset(1008)] public int CurrentNumLoops;
         [FieldOffset(1032)] public MovieSceneSequencePlaybackSettings PlaybackSettings;
+        [FieldOffset(1096)] public MovieSceneRootEvaluationTemplateInstance RootTemplateInstance;
     }
     internal unsafe struct MovieSceneSequencePlayer_methods {
         internal struct ChangePlaybackDirection_method {
@@ -143,6 +144,21 @@ namespace UE4.MovieScene.Native {
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(obj, GetLength_ptr, new IntPtr(p)); ;
                 return *((float*)(b+0));
+            }
+        }
+        internal struct GetObjectBindings_method {
+            static internal IntPtr GetObjectBindings_ptr;
+            static GetObjectBindings_method() {
+                GetObjectBindings_ptr = Main.GetMethodUFunction(MovieSceneSequencePlayer.StaticClass, "GetObjectBindings");
+            }
+
+            internal static unsafe IReadOnlyCollection<MovieSceneObjectBindingID> Invoke(IntPtr obj, UObject InObject) {
+                long* p = stackalloc long[] {0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = InObject;
+                Main.GetProcessEvent(obj, GetObjectBindings_ptr, new IntPtr(p)); ;
+                 //TODO: array TArray ReturnValue
+                return UObject.ToUnmangedCollection<MovieSceneObjectBindingID>(b+8);
             }
         }
         internal struct GetPlaybackEnd_method {

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1440 )]
+    [StructLayout( LayoutKind.Explicit, Size=1408 )]
     internal unsafe struct CameraAnim_fields {
         [FieldOffset(56)]  public IntPtr  CameraInterpGroup;
         [FieldOffset(64)]  public IntPtr  PreviewInterpGroup;
@@ -21,7 +21,7 @@ namespace UE4.Engine.Native {
         [FieldOffset(104)] public bool bRelativeToInitialFOV;
         [FieldOffset(108)] public float BaseFOV;
         [FieldOffset(112)] public PostProcessSettings BasePostProcessSettings;
-        [FieldOffset(1424)] public float BasePostProcessBlendWeight;
+        [FieldOffset(1392)] public float BasePostProcessBlendWeight;
     }
     internal unsafe struct CameraAnim_methods {
     }

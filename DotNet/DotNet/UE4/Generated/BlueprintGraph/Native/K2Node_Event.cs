@@ -12,13 +12,13 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.BlueprintGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=368 )]
+    [StructLayout( LayoutKind.Explicit, Size=376 )]
     internal unsafe struct K2Node_Event_fields {
-        [FieldOffset(256)] public MemberReference EventReference;
-        [FieldOffset(312)] public bool bOverrideFunction;
-        [FieldOffset(312)] public bool bInternalEvent;
-        [FieldOffset(316)] public Name CustomFunctionName;
-        [FieldOffset(328)] byte FunctionFlags; //TODO: numeric uint32 FunctionFlags
+        [FieldOffset(264)] public MemberReference EventReference;
+        [FieldOffset(320)] public bool bOverrideFunction;
+        [FieldOffset(320)] public bool bInternalEvent;
+        [FieldOffset(324)] public Name CustomFunctionName;
+        [FieldOffset(336)] byte FunctionFlags; //TODO: numeric uint32 FunctionFlags
     }
     internal unsafe struct K2Node_Event_methods {
     }

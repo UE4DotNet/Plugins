@@ -56,5 +56,22 @@ namespace UE4.Engine.Native {
         }
     }
     internal unsafe struct Exporter_events {
+        [StructLayout( LayoutKind.Explicit, Size=16 )]
+        internal unsafe struct ScriptRunAssetExportTask_event {
+            private static DelegateHolder<NativeFuncDelegate> ScriptRunAssetExportTask_link;
+            private static unsafe void ScriptRunAssetExportTask_process_event(IntPtr context, Frame* theStack, IntPtr result) {
+                var obj = UObject.Make<Exporter>(context);
+                var b = (byte*) theStack->Locals;
+
+                obj.on_ScriptRunAssetExportTask(UObject.Make<AssetExportTask>(*(IntPtr*)(b+0)), *(bool*)(b+8));
+            }
+            internal static void Setup() {
+                ScriptRunAssetExportTask_link = new DelegateHolder<NativeFuncDelegate>(ScriptRunAssetExportTask_process_event);
+                var uf = Main.GetUFunction("ScriptRunAssetExportTask");
+                var func = UObject.Make<Function>(uf);
+                func.SetFlags(func.GetFlags() | EFunctionFlags.FUNC_Native);
+                func.SetNativeFunc(Marshal.GetFunctionPointerForDelegate(ScriptRunAssetExportTask_link.Delegate));
+            }
+        }
     }
 }

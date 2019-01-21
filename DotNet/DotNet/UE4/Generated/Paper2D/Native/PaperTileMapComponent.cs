@@ -11,17 +11,17 @@ using UE4.Native;
 
 
 namespace UE4.Paper2D.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1664 )]
+    [StructLayout( LayoutKind.Explicit, Size=1648 )]
     internal unsafe struct PaperTileMapComponent_fields {
-        [FieldOffset(1608)] public LinearColor TileMapColor;
-        [FieldOffset(1624)] public int UseSingleLayerIndex;
-        [FieldOffset(1628)] public bool bUseSingleLayer;
-        [FieldOffset(1640)]  public IntPtr  TileMap;
-        [FieldOffset(1648)] public bool bShowPerTileGridWhenSelected;
-        [FieldOffset(1649)] public bool bShowPerLayerGridWhenSelected;
-        [FieldOffset(1650)] public bool bShowOutlineWhenUnselected;
-        [FieldOffset(1651)] public bool bShowPerTileGridWhenUnselected;
-        [FieldOffset(1652)] public bool bShowPerLayerGridWhenUnselected;
+        [FieldOffset(1592)] public LinearColor TileMapColor;
+        [FieldOffset(1608)] public int UseSingleLayerIndex;
+        [FieldOffset(1612)] public bool bUseSingleLayer;
+        [FieldOffset(1624)]  public IntPtr  TileMap;
+        [FieldOffset(1632)] public bool bShowPerTileGridWhenSelected;
+        [FieldOffset(1633)] public bool bShowPerLayerGridWhenSelected;
+        [FieldOffset(1634)] public bool bShowOutlineWhenUnselected;
+        [FieldOffset(1635)] public bool bShowPerTileGridWhenUnselected;
+        [FieldOffset(1636)] public bool bShowPerLayerGridWhenUnselected;
     }
     internal unsafe struct PaperTileMapComponent_methods {
         internal struct AddNewLayer_method {

@@ -11,13 +11,14 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=952 )]
+    [StructLayout( LayoutKind.Explicit, Size=968 )]
     internal unsafe struct WidgetAnimation_fields {
         [FieldOffset(888)] byte OnAnimationStarted; //TODO: multicast delegate FOnWidgetAnimationPlaybackStatusChanged OnAnimationStarted
         [FieldOffset(904)] byte OnAnimationFinished; //TODO: multicast delegate FOnWidgetAnimationPlaybackStatusChanged OnAnimationFinished
         [FieldOffset(920)]  public IntPtr  UMovieScene;
         [FieldOffset(928)] public NativeArray AnimationBindings;
         [FieldOffset(944)] public bool bLegacyFinishOnStop;
+        [FieldOffset(952)] byte DisplayLabel; //TODO: string FString DisplayLabel
     }
     internal unsafe struct WidgetAnimation_methods {
         internal struct GetEndTime_method {

@@ -12,44 +12,44 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1856 )]
+    [StructLayout( LayoutKind.Explicit, Size=1840 )]
     internal unsafe struct WidgetComponent_fields {
-        [FieldOffset(1560)] byte Space; //TODO: enum EWidgetSpace Space
-        [FieldOffset(1561)] byte TimingPolicy; //TODO: enum EWidgetTimingPolicy TimingPolicy
-        [FieldOffset(1568)] public IntPtr WidgetClass;
-        [FieldOffset(1576)] public IntPoint DrawSize;
-        [FieldOffset(1584)] public bool bManuallyRedraw;
-        [FieldOffset(1585)] public bool bRedrawRequested;
-        [FieldOffset(1588)] public float RedrawTime;
-        [FieldOffset(1600)] public IntPoint CurrentDrawSize;
-        [FieldOffset(1608)] public bool bDrawAtDesiredSize;
-        [FieldOffset(1612)] public Vector2D Pivot;
-        [FieldOffset(1620)] public bool bReceiveHardwareInput;
-        [FieldOffset(1621)] public bool bWindowFocusable;
-        [FieldOffset(1622)] public bool bApplyGammaCorrection;
-        [FieldOffset(1624)]  public IntPtr  OwnerPlayer;
-        [FieldOffset(1632)] public LinearColor BackgroundColor;
-        [FieldOffset(1648)] public LinearColor TintColorAndOpacity;
-        [FieldOffset(1664)] public float OpacityFromTexture;
-        [FieldOffset(1668)] byte BlendMode; //TODO: enum EWidgetBlendMode BlendMode
-        [FieldOffset(1669)] public bool bIsTwoSided;
-        [FieldOffset(1670)] public bool TickWhenOffscreen;
-        [FieldOffset(1672)]  public IntPtr  Widget;
-        [FieldOffset(1712)]  public IntPtr  BodySetup;
-        [FieldOffset(1720)]  public IntPtr  TranslucentMaterial;
-        [FieldOffset(1728)]  public IntPtr  TranslucentMaterial_OneSided;
-        [FieldOffset(1736)]  public IntPtr  OpaqueMaterial;
-        [FieldOffset(1744)]  public IntPtr  OpaqueMaterial_OneSided;
-        [FieldOffset(1752)]  public IntPtr  MaskedMaterial;
-        [FieldOffset(1760)]  public IntPtr  MaskedMaterial_OneSided;
-        [FieldOffset(1768)]  public IntPtr  RenderTarget;
-        [FieldOffset(1776)]  public IntPtr  MaterialInstance;
-        [FieldOffset(1784)] public bool bAddedToScreen;
-        [FieldOffset(1785)] public bool bEditTimeUsable;
-        [FieldOffset(1788)] public Name SharedLayerName;
-        [FieldOffset(1800)] public int LayerZOrder;
-        [FieldOffset(1804)] byte GeometryMode; //TODO: enum EWidgetGeometryMode GeometryMode
-        [FieldOffset(1808)] public float CylinderArcAngle;
+        [FieldOffset(1544)] byte Space; //TODO: enum EWidgetSpace Space
+        [FieldOffset(1545)] byte TimingPolicy; //TODO: enum EWidgetTimingPolicy TimingPolicy
+        [FieldOffset(1552)] public IntPtr WidgetClass;
+        [FieldOffset(1560)] public IntPoint DrawSize;
+        [FieldOffset(1568)] public bool bManuallyRedraw;
+        [FieldOffset(1569)] public bool bRedrawRequested;
+        [FieldOffset(1572)] public float RedrawTime;
+        [FieldOffset(1584)] public IntPoint CurrentDrawSize;
+        [FieldOffset(1592)] public bool bDrawAtDesiredSize;
+        [FieldOffset(1596)] public Vector2D Pivot;
+        [FieldOffset(1604)] public bool bReceiveHardwareInput;
+        [FieldOffset(1605)] public bool bWindowFocusable;
+        [FieldOffset(1606)] public bool bApplyGammaCorrection;
+        [FieldOffset(1608)]  public IntPtr  OwnerPlayer;
+        [FieldOffset(1616)] public LinearColor BackgroundColor;
+        [FieldOffset(1632)] public LinearColor TintColorAndOpacity;
+        [FieldOffset(1648)] public float OpacityFromTexture;
+        [FieldOffset(1652)] byte BlendMode; //TODO: enum EWidgetBlendMode BlendMode
+        [FieldOffset(1653)] public bool bIsTwoSided;
+        [FieldOffset(1654)] public bool TickWhenOffscreen;
+        [FieldOffset(1656)]  public IntPtr  Widget;
+        [FieldOffset(1696)]  public IntPtr  BodySetup;
+        [FieldOffset(1704)]  public IntPtr  TranslucentMaterial;
+        [FieldOffset(1712)]  public IntPtr  TranslucentMaterial_OneSided;
+        [FieldOffset(1720)]  public IntPtr  OpaqueMaterial;
+        [FieldOffset(1728)]  public IntPtr  OpaqueMaterial_OneSided;
+        [FieldOffset(1736)]  public IntPtr  MaskedMaterial;
+        [FieldOffset(1744)]  public IntPtr  MaskedMaterial_OneSided;
+        [FieldOffset(1752)]  public IntPtr  RenderTarget;
+        [FieldOffset(1760)]  public IntPtr  MaterialInstance;
+        [FieldOffset(1768)] public bool bAddedToScreen;
+        [FieldOffset(1769)] public bool bEditTimeUsable;
+        [FieldOffset(1772)] public Name SharedLayerName;
+        [FieldOffset(1784)] public int LayerZOrder;
+        [FieldOffset(1788)] byte GeometryMode; //TODO: enum EWidgetGeometryMode GeometryMode
+        [FieldOffset(1792)] public float CylinderArcAngle;
     }
     internal unsafe struct WidgetComponent_methods {
         internal struct GetDrawSize_method {

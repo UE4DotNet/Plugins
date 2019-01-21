@@ -15,6 +15,7 @@ namespace UE4.Engine {
         DoNotLock = 0x00000000, 
         LockOnCapture = 0x00000001, 
         LockAlways = 0x00000002, 
-        EMouseLockMode_MAX = 0x00000003
+        LockInFullscreen = 0x00000003, 
+        EMouseLockMode_MAX = 0x00000004
     }
 }

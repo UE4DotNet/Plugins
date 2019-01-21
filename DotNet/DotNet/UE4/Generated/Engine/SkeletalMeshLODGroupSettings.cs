@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Skeletal Mesh LODGroup Settings</summary>
-        [StructLayout( LayoutKind.Explicit, Size=184 )]
+        [StructLayout( LayoutKind.Explicit, Size=168 )]
         public unsafe struct SkeletalMeshLODGroupSettings {
             ///<summary>The screen sizes to use for the respective LOD level</summary>
             [FieldOffset(0)] PerPlatformFloat ScreenSize;

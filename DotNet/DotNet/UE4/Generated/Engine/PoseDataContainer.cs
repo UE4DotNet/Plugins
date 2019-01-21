@@ -17,11 +17,11 @@ namespace UE4.Engine{
         public unsafe struct PoseDataContainer {
             [FieldOffset(0)] byte PoseNames; //TODO: array TArray PoseNames
 
-            [FieldOffset(16)] byte Poses; //TODO: array TArray Poses
+            [FieldOffset(16)] byte Tracks; //TODO: array TArray Tracks
 
-            [FieldOffset(32)] byte Tracks; //TODO: array TArray Tracks
+            [FieldOffset(32)] byte TrackMap; //TODO: map TMap TrackMap
 
-            [FieldOffset(48)] byte TrackMap; //TODO: map TMap TrackMap
+            [FieldOffset(112)] byte Poses; //TODO: array TArray Poses
 
             [FieldOffset(128)] byte Curves; //TODO: array TArray Curves
 

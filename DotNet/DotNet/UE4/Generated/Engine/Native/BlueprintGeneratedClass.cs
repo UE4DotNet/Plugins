@@ -11,20 +11,19 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1376 )]
+    [StructLayout( LayoutKind.Explicit, Size=1392 )]
     internal unsafe struct BlueprintGeneratedClass_fields {
-        [FieldOffset(552)] public int NumReplicatedProperties;
-        [FieldOffset(556)] public bool bHasNativizedParent;
-        [FieldOffset(560)] public NativeArray DynamicBindingObjects;
-        [FieldOffset(576)] public NativeArray ComponentTemplates;
-        [FieldOffset(592)] public NativeArray Timelines;
-        [FieldOffset(608)]  public IntPtr  SimpleConstructionScript;
-        [FieldOffset(616)]  public IntPtr  InheritableComponentHandler;
-        [FieldOffset(624)]  public IntPtr  UberGraphFramePointerProperty;
-        [FieldOffset(632)]  public IntPtr  UberGraphFunction;
-        [FieldOffset(656)]  public IntPtr  OverridenArchetypeForCDO;
-        [FieldOffset(664)] byte PropertyGuids; //TODO: map TMap PropertyGuids
-        [FieldOffset(744)] byte CookedComponentInstancingData; //TODO: map TMap CookedComponentInstancingData
+        [FieldOffset(568)] public int NumReplicatedProperties;
+        [FieldOffset(572)] public bool bHasNativizedParent;
+        [FieldOffset(576)] public NativeArray DynamicBindingObjects;
+        [FieldOffset(592)] public NativeArray ComponentTemplates;
+        [FieldOffset(608)] public NativeArray Timelines;
+        [FieldOffset(624)]  public IntPtr  SimpleConstructionScript;
+        [FieldOffset(632)]  public IntPtr  InheritableComponentHandler;
+        [FieldOffset(640)]  public IntPtr  UberGraphFunction;
+        [FieldOffset(672)]  public IntPtr  OverridenArchetypeForCDO;
+        [FieldOffset(680)] byte PropertyGuids; //TODO: map TMap PropertyGuids
+        [FieldOffset(760)] byte CookedComponentInstancingData; //TODO: map TMap CookedComponentInstancingData
     }
     internal unsafe struct BlueprintGeneratedClass_methods {
     }

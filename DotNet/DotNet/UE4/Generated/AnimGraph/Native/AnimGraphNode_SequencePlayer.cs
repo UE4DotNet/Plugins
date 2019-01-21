@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=616 )]
+    [StructLayout( LayoutKind.Explicit, Size=600 )]
     internal unsafe struct AnimGraphNode_SequencePlayer_fields {
         [FieldOffset(288)] public AnimNode_SequencePlayer Node;
     }

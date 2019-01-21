@@ -11,7 +11,6 @@ using UE4.Native;
 
 #pragma warning disable CS0108
 using UE4.DatasmithContent.Native;
-using UE4.Engine;
 
 namespace UE4.DatasmithContent {
     ///<summary>Datasmith Scene Component Template</summary>
@@ -26,11 +25,8 @@ namespace UE4.DatasmithContent {
             get {return DatasmithSceneComponentTemplate_ptr->Mobility;}
             set {DatasmithSceneComponentTemplate_ptr->Mobility = value;}
         }
-        ///<summary>Attach Parent</summary>
-        public unsafe SceneComponent AttachParent {
-            get {return DatasmithSceneComponentTemplate_ptr->AttachParent;}
-            set {DatasmithSceneComponentTemplate_ptr->AttachParent = value;}
-        }
+         //TODO: soft object TSoftObjectPtr<USceneComponent> AttachParent
+         //TODO: set TSet Tags
         static DatasmithSceneComponentTemplate() {
             StaticClass = Main.GetClass("DatasmithSceneComponentTemplate");
         }

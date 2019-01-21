@@ -18,23 +18,23 @@ namespace UE4.AnimGraphRuntime{
         ///based on HandFKWeight. (0 = favor left hand, 1 = favor right hand, 0.5 = equal weight).
         ///This is used so characters of different proportions can handle the same props.
         ///</remarks>
-        [StructLayout( LayoutKind.Explicit, Size=480 )]
+        [StructLayout( LayoutKind.Explicit, Size=456 )]
         public unsafe struct AnimNode_HandIKRetargeting {
             ///<summary>Bone for Right Hand FK</summary>
-            [FieldOffset(360)] BoneReference RightHandFK;
+            [FieldOffset(336)] BoneReference RightHandFK;
 
             ///<summary>Bone for Left Hand FK</summary>
-            [FieldOffset(384)] BoneReference LeftHandFK;
+            [FieldOffset(360)] BoneReference LeftHandFK;
 
             ///<summary>Bone for Right Hand IK</summary>
-            [FieldOffset(408)] BoneReference RightHandIK;
+            [FieldOffset(384)] BoneReference RightHandIK;
 
             ///<summary>Bone for Left Hand IK</summary>
-            [FieldOffset(432)] BoneReference LeftHandIK;
+            [FieldOffset(408)] BoneReference LeftHandIK;
 
-            [FieldOffset(456)] byte IKBonesToMove; //TODO: array TArray IKBonesToMove
+            [FieldOffset(432)] byte IKBonesToMove; //TODO: array TArray IKBonesToMove
 
-            [FieldOffset(472)] public float HandFKWeight;
+            [FieldOffset(448)] public float HandFKWeight;
 
         }
 }

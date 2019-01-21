@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.CoreUObject.Native {
-    [StructLayout( LayoutKind.Explicit, Size=656 )]
+    [StructLayout( LayoutKind.Explicit, Size=672 )]
     internal unsafe struct DynamicClass_fields {
     }
     internal unsafe struct DynamicClass_methods {

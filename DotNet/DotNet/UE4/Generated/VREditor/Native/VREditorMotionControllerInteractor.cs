@@ -11,17 +11,17 @@ using UE4.Native;
 
 
 namespace UE4.VREditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1424 )]
+    [StructLayout( LayoutKind.Explicit, Size=1440 )]
     internal unsafe struct VREditorMotionControllerInteractor_fields {
-        [FieldOffset(1240)]  public IntPtr  MotionControllerComponent;
-        [FieldOffset(1248)]  public IntPtr  HandMeshComponent;
-        [FieldOffset(1256)]  public IntPtr  LaserSplineComponent;
-        [FieldOffset(1264)] public NativeArray LaserSplineMeshComponents;
-        [FieldOffset(1280)]  public IntPtr  LaserPointerMID;
-        [FieldOffset(1288)]  public IntPtr  TranslucentLaserPointerMID;
-        [FieldOffset(1296)]  public IntPtr  HoverMeshComponent;
-        [FieldOffset(1304)]  public IntPtr  HoverPointLightComponent;
-        [FieldOffset(1312)]  public IntPtr  HandMeshMID;
+        [FieldOffset(1264)]  public IntPtr  MotionControllerComponent;
+        [FieldOffset(1272)]  public IntPtr  HandMeshComponent;
+        [FieldOffset(1280)]  public IntPtr  LaserSplineComponent;
+        [FieldOffset(1288)] public NativeArray LaserSplineMeshComponents;
+        [FieldOffset(1304)]  public IntPtr  LaserPointerMID;
+        [FieldOffset(1312)]  public IntPtr  TranslucentLaserPointerMID;
+        [FieldOffset(1320)]  public IntPtr  HoverMeshComponent;
+        [FieldOffset(1328)]  public IntPtr  HoverPointLightComponent;
+        [FieldOffset(1336)]  public IntPtr  HandMeshMID;
     }
     internal unsafe struct VREditorMotionControllerInteractor_methods {
     }

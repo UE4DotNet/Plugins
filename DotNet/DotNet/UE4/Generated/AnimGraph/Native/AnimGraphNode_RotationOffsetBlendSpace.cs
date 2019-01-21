@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=936 )]
+    [StructLayout( LayoutKind.Explicit, Size=920 )]
     internal unsafe struct AnimGraphNode_RotationOffsetBlendSpace_fields {
         [FieldOffset(288)] public AnimNode_RotationOffsetBlendSpace Node;
     }

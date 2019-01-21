@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=6456 )]
+    [StructLayout( LayoutKind.Explicit, Size=6496 )]
     internal unsafe struct SimulatedClientNetConnection_fields {
     }
     internal unsafe struct SimulatedClientNetConnection_methods {

@@ -11,8 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.Engine{
-        ///<summary>Pointer to Uber Graph Frame</summary>
-        [StructLayout( LayoutKind.Explicit, Size=8 )]
+        ///<summary>WARNING: Following struct layout definition repeated in ScriptCore.</summary>
+        ///<remarks>
+        ///cpp as
+        ///FPointerToUberGraphFrameCoreUObject to work around reflection generation issues:
+        ///</remarks>
+        [StructLayout( LayoutKind.Explicit, Size=16 )]
         public unsafe struct PointerToUberGraphFrame {
         }
 }

@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=736 )]
+    [StructLayout( LayoutKind.Explicit, Size=784 )]
     internal unsafe struct SoundSourceBus_fields {
-        [FieldOffset(712)] byte SourceBusChannels; //TODO: enum ESourceBusChannels SourceBusChannels
-        [FieldOffset(716)] public float SourceBusDuration;
-        [FieldOffset(720)] public bool bAutoDeactivateWhenSilent;
+        [FieldOffset(760)] byte SourceBusChannels; //TODO: enum ESourceBusChannels SourceBusChannels
+        [FieldOffset(764)] public float SourceBusDuration;
+        [FieldOffset(768)] public bool bAutoDeactivateWhenSilent;
     }
     internal unsafe struct SoundSourceBus_methods {
     }

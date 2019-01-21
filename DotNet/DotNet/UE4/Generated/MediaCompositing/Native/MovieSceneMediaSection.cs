@@ -11,13 +11,15 @@ using UE4.Native;
 
 
 namespace UE4.MediaCompositing.Native {
-    [StructLayout( LayoutKind.Explicit, Size=360 )]
+    [StructLayout( LayoutKind.Explicit, Size=368 )]
     internal unsafe struct MovieSceneMediaSection_fields {
-        [FieldOffset(312)] byte Proxy; //TODO: string FString Proxy
-        [FieldOffset(328)]  public IntPtr  MediaSoundComponent;
-        [FieldOffset(336)]  public IntPtr  MediaTexture;
-        [FieldOffset(344)]  public IntPtr  MediaSource;
-        [FieldOffset(352)] public float ThumbnailReferenceOffset;
+        [FieldOffset(312)]  public IntPtr  MediaSource;
+        [FieldOffset(320)] public bool bLooping;
+        [FieldOffset(328)]  public IntPtr  MediaTexture;
+        [FieldOffset(336)]  public IntPtr  MediaSoundComponent;
+        [FieldOffset(344)] public bool bUseExternalMediaPlayer;
+        [FieldOffset(352)]  public IntPtr  ExternalMediaPlayer;
+        [FieldOffset(360)] public float ThumbnailReferenceOffset;
     }
     internal unsafe struct MovieSceneMediaSection_methods {
     }

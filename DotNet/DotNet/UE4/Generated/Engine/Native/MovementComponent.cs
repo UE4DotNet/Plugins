@@ -11,20 +11,22 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=328 )]
+    [StructLayout( LayoutKind.Explicit, Size=320 )]
     internal unsafe struct MovementComponent_fields {
         [FieldOffset(256)]  public IntPtr  UpdatedComponent;
         [FieldOffset(264)]  public IntPtr  UpdatedPrimitive;
         [FieldOffset(276)] public Vector Velocity;
-        [FieldOffset(288)] public bool bConstrainToPlane;
-        [FieldOffset(288)] public bool bSnapToPlaneAtStart;
-        [FieldOffset(292)] byte PlaneConstraintAxisSetting; //TODO: enum EPlaneConstraintAxisSetting PlaneConstraintAxisSetting
-        [FieldOffset(296)] public Vector PlaneConstraintNormal;
-        [FieldOffset(308)] public Vector PlaneConstraintOrigin;
-        [FieldOffset(320)] public bool bUpdateOnlyIfRendered;
-        [FieldOffset(320)] public bool bAutoUpdateTickRegistration;
-        [FieldOffset(320)] public bool bTickBeforeOwner;
-        [FieldOffset(320)] public bool bAutoRegisterUpdatedComponent;
+        [FieldOffset(288)] public Vector PlaneConstraintNormal;
+        [FieldOffset(300)] public Vector PlaneConstraintOrigin;
+        [FieldOffset(312)] public bool bUpdateOnlyIfRendered;
+        [FieldOffset(312)] public bool bAutoUpdateTickRegistration;
+        [FieldOffset(312)] public bool bTickBeforeOwner;
+        [FieldOffset(312)] public bool bAutoRegisterUpdatedComponent;
+        [FieldOffset(312)] public bool bConstrainToPlane;
+        [FieldOffset(312)] public bool bSnapToPlaneAtStart;
+        [FieldOffset(312)] public bool bAutoRegisterPhysicsVolumeUpdates;
+        [FieldOffset(312)] public bool bComponentShouldUpdatePhysicsVolume;
+        [FieldOffset(316)] byte PlaneConstraintAxisSetting; //TODO: enum EPlaneConstraintAxisSetting PlaneConstraintAxisSetting
     }
     internal unsafe struct MovementComponent_methods {
         internal struct ConstrainDirectionToPlane_method {

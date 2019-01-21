@@ -11,16 +11,16 @@ using UE4.Native;
 
 
 namespace UE4.ClothingSystemRuntime.Native {
-    [StructLayout( LayoutKind.Explicit, Size=376 )]
+    [StructLayout( LayoutKind.Explicit, Size=392 )]
     internal unsafe struct ClothingAsset_fields {
         [FieldOffset(88)]  public IntPtr  PhysicsAsset;
         [FieldOffset(96)] public ClothConfig ClothConfig;
-        [FieldOffset(296)] public NativeArray LodData;
-        [FieldOffset(312)] public NativeArray LodMap;
-        [FieldOffset(328)] public NativeArray UsedBoneNames;
-        [FieldOffset(344)] public NativeArray UsedBoneIndices;
-        [FieldOffset(360)] public int ReferenceBoneIndex;
-        [FieldOffset(368)]  public IntPtr  CustomData;
+        [FieldOffset(312)] public NativeArray LodData;
+        [FieldOffset(328)] public NativeArray LodMap;
+        [FieldOffset(344)] public NativeArray UsedBoneNames;
+        [FieldOffset(360)] public NativeArray UsedBoneIndices;
+        [FieldOffset(376)] public int ReferenceBoneIndex;
+        [FieldOffset(384)]  public IntPtr  CustomData;
     }
     internal unsafe struct ClothingAsset_methods {
     }

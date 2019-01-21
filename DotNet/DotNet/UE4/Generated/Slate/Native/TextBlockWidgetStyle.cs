@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.Slate.Native {
-    [StructLayout( LayoutKind.Explicit, Size=616 )]
+    [StructLayout( LayoutKind.Explicit, Size=624 )]
     internal unsafe struct TextBlockWidgetStyle_fields {
         [FieldOffset(64)] public TextBlockStyle TextBlockStyle;
     }

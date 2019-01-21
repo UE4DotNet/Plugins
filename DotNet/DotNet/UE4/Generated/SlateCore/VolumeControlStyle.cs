@@ -12,25 +12,25 @@ using UE4.Native;
 
 namespace UE4.SlateCore{
         ///<summary>Represents the appearance of an SVolumeControl</summary>
-        [StructLayout( LayoutKind.Explicit, Size=1464 )]
+        [StructLayout( LayoutKind.Explicit, Size=1784 )]
         public unsafe struct VolumeControlStyle {
             ///<summary>The style of the volume control slider</summary>
             [FieldOffset(8)] SliderStyle SliderStyle;
 
             ///<summary>Image to use when the volume is set to high</summary>
-            [FieldOffset(664)] SlateBrush HighVolumeImage;
+            [FieldOffset(984)] SlateBrush HighVolumeImage;
 
             ///<summary>Image to use when the volume is set to mid-range</summary>
-            [FieldOffset(824)] SlateBrush MidVolumeImage;
+            [FieldOffset(1144)] SlateBrush MidVolumeImage;
 
             ///<summary>Image to use when the volume is set to low</summary>
-            [FieldOffset(984)] SlateBrush LowVolumeImage;
+            [FieldOffset(1304)] SlateBrush LowVolumeImage;
 
             ///<summary>Image to use when the volume is set to off</summary>
-            [FieldOffset(1144)] SlateBrush NoVolumeImage;
+            [FieldOffset(1464)] SlateBrush NoVolumeImage;
 
             ///<summary>Image to use when the volume is muted</summary>
-            [FieldOffset(1304)] SlateBrush MutedImage;
+            [FieldOffset(1624)] SlateBrush MutedImage;
 
         }
 }

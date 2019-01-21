@@ -201,6 +201,10 @@ namespace UE4.UnrealEd {
             get {return Main.GetGetBoolPropertyByName(this, "bSquelchTransactionNotification"); }
             set {Main.SetGetBoolPropertyByName(this, "bSquelchTransactionNotification", value); }
         }
+        public bool bNotifyUndoRedoSelectionChange {
+            get {return Main.GetGetBoolPropertyByName(this, "bNotifyUndoRedoSelectionChange"); }
+            set {Main.SetGetBoolPropertyByName(this, "bNotifyUndoRedoSelectionChange", value); }
+        }
         ///<summary>The PlayerStart class used when spawning the player at the current camera location.</summary>
         public unsafe SubclassOf<NavigationObjectBase> PlayFromHerePlayerStartClass {
             get {return EditorEngine_ptr->PlayFromHerePlayerStartClass;}

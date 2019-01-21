@@ -13,19 +13,19 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Simple controller that multiplies scalar value to the translation/rotation/scale of a single bone.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=416 )]
+        [StructLayout( LayoutKind.Explicit, Size=392 )]
         public unsafe struct AnimNode_RotationMultiplier {
             ///<summary>Name of bone to control. This is the main bone chain to modify from.</summary>
-            [FieldOffset(360)] BoneReference TargetBone;
+            [FieldOffset(336)] BoneReference TargetBone;
 
             ///<summary>Source to get transform from</summary>
-            [FieldOffset(384)] BoneReference SourceBone;
+            [FieldOffset(360)] BoneReference SourceBone;
 
-            [FieldOffset(408)] public float Multiplier;
+            [FieldOffset(384)] public float Multiplier;
 
-            [FieldOffset(412)] public byte RotationAxisToRefer;
+            [FieldOffset(388)] public byte RotationAxisToRefer;
 
-            [FieldOffset(413)] public bool bIsAdditive;
+            [FieldOffset(389)] public bool bIsAdditive;
 
         }
 }

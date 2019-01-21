@@ -18,6 +18,32 @@ namespace UE4.UnrealEd {
     ///An object responsible for creating and importing new objects.
     ///</summary>
     public unsafe partial class Factory : UObject  {
+
+        ///<summary>Whether the specified file can be imported by this factory.</summary>
+        ///<remarks>
+        ///(Implemented in script)
+        ///
+        ///@return true if the file is supported, false otherwise.
+        ///</remarks>
+        public event ScriptFactoryCanImport_delegate ScriptFactoryCanImport;
+        public delegate bool ScriptFactoryCanImport_delegate(string Filename, bool ReturnValue);
+        internal bool on_ScriptFactoryCanImport(string Filename, bool ReturnValue) =>
+            ScriptFactoryCanImport != null ? ScriptFactoryCanImport(Filename, ReturnValue) : ReturnValue;
+
+
+        ///<summary>
+        ///Import object(s) using a task via script
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param InTask
+        ///@return True if script implements
+        ///</remarks>
+        public event ScriptFactoryCreateFile_delegate ScriptFactoryCreateFile;
+        public delegate bool ScriptFactoryCreateFile_delegate(AssetImportTask InTask, bool ReturnValue);
+        internal bool on_ScriptFactoryCreateFile(AssetImportTask InTask, bool ReturnValue) =>
+            ScriptFactoryCreateFile != null ? ScriptFactoryCreateFile(InTask, ReturnValue) : ReturnValue;
+
         public bool bCreateNew {
             get {return Main.GetGetBoolPropertyByName(this, "bCreateNew"); }
             set {Main.SetGetBoolPropertyByName(this, "bCreateNew", value); }
@@ -72,6 +98,8 @@ namespace UE4.UnrealEd {
         }
         static Factory() {
             StaticClass = Main.GetClass("Factory");
+            Factory_events.ScriptFactoryCanImport_event.Setup();
+            Factory_events.ScriptFactoryCreateFile_event.Setup();
         }
         internal unsafe Factory_fields* Factory_ptr => (Factory_fields*) ObjPointer.ToPointer();
 

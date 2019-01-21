@@ -322,6 +322,7 @@ namespace UE4.UMG {
             set {Widget_ptr->DesignerFlags = value;}
         }
          //TODO: string FString DisplayLabel
+         //TODO: string FString CategoryName
         static Widget() {
             StaticClass = Main.GetClass("Widget");
         }

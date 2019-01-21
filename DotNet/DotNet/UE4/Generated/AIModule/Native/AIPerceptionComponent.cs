@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.AIModule.Native {
-    [StructLayout( LayoutKind.Explicit, Size=472 )]
+    [StructLayout( LayoutKind.Explicit, Size=464 )]
     internal unsafe struct AIPerceptionComponent_fields {
         [FieldOffset(256)] public NativeArray SensesConfig;
         [FieldOffset(272)] public IntPtr DominantSense;

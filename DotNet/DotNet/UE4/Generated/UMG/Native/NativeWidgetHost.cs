@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=400 )]
+    [StructLayout( LayoutKind.Explicit, Size=416 )]
     internal unsafe struct NativeWidgetHost_fields {
     }
     internal unsafe struct NativeWidgetHost_methods {

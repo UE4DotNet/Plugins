@@ -11,6 +11,7 @@ using UE4.Native;
 
 #pragma warning disable CS0108
 using UE4.MediaAssets.Native;
+using UE4.MediaUtils;
 
 namespace UE4.MediaAssets {
     ///<summary>Implements a media player asset that can play movies and other media sources.</summary>
@@ -438,6 +439,21 @@ namespace UE4.MediaAssets {
         ///</remarks>
         public bool OpenSource(MediaSource MediaSource)  => 
             MediaPlayer_methods.OpenSource_method.Invoke(ObjPointer, MediaSource);
+
+        ///<summary>Open the specified media source with supplied options applied.</summary>
+        ///<remarks>
+        ///A return value of true indicates that the player will attempt to open
+        ///the media, but it may fail to do so later for other reasons, i.e. if
+        ///a connection to the media server timed out. Use the OnMediaOpened and
+        ///OnMediaOpenFailed delegates to detect if and when the media is ready!
+        ///
+        ///@param MediaSource The media source to open.
+        ///@param Options The media player options to apply.
+        ///@return true if the source will be opened, false otherwise.
+        ///@see Close, OpenFile, OpenPlaylist, OpenPlaylistIndex, OpenUrl, Reopen
+        ///</remarks>
+        public bool OpenSourceWithOptions(MediaSource MediaSource, MediaPlayerOptions Options)  => 
+            MediaPlayer_methods.OpenSourceWithOptions_method.Invoke(ObjPointer, MediaSource, Options);
 
         ///<summary>Opens the specified media URL.</summary>
         ///<remarks>

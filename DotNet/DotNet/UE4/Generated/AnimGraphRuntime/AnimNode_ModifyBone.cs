@@ -13,31 +13,31 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Simple controller that replaces or adds to the translation/rotation of a single bone.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=432 )]
+        [StructLayout( LayoutKind.Explicit, Size=408 )]
         public unsafe struct AnimNode_ModifyBone {
             ///<summary>Name of bone to control. This is the main bone chain to modify from. *</summary>
-            [FieldOffset(360)] BoneReference BoneToModify;
+            [FieldOffset(336)] BoneReference BoneToModify;
 
             ///<summary>New translation of bone to apply.</summary>
-            [FieldOffset(384)] Vector Translation;
+            [FieldOffset(360)] Vector Translation;
 
             ///<summary>New rotation of bone to apply.</summary>
-            [FieldOffset(396)] Rotator Rotation;
+            [FieldOffset(372)] Rotator Rotation;
 
             ///<summary>New Scale of bone to apply. This is only worldspace.</summary>
-            [FieldOffset(408)] Vector Scale;
+            [FieldOffset(384)] Vector Scale;
 
-            [FieldOffset(420)] public byte TranslationMode;
+            [FieldOffset(396)] public byte TranslationMode;
 
-            [FieldOffset(421)] public byte RotationMode;
+            [FieldOffset(397)] public byte RotationMode;
 
-            [FieldOffset(422)] public byte ScaleMode;
+            [FieldOffset(398)] public byte ScaleMode;
 
-            [FieldOffset(423)] public byte TranslationSpace;
+            [FieldOffset(399)] public byte TranslationSpace;
 
-            [FieldOffset(424)] public byte RotationSpace;
+            [FieldOffset(400)] public byte RotationSpace;
 
-            [FieldOffset(425)] public byte ScaleSpace;
+            [FieldOffset(401)] public byte ScaleSpace;
 
         }
 }

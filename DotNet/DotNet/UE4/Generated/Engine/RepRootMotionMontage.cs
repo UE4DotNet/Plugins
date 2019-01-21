@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Replicated data when playing a root motion montage.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=352 )]
+        [StructLayout( LayoutKind.Explicit, Size=344 )]
         public unsafe struct RepRootMotionMontage {
             [FieldOffset(0)] public bool bIsActive;
 
@@ -50,10 +50,10 @@ namespace UE4.Engine{
             [FieldOffset(72)] RootMotionSourceGroup AuthoritativeRootMotion;
 
             ///<summary>Acceleration</summary>
-            [FieldOffset(328)] Vector_NetQuantize10 Acceleration;
+            [FieldOffset(320)] Vector_NetQuantize10 Acceleration;
 
             ///<summary>Velocity</summary>
-            [FieldOffset(340)] Vector_NetQuantize10 LinearVelocity;
+            [FieldOffset(332)] Vector_NetQuantize10 LinearVelocity;
 
         }
 }

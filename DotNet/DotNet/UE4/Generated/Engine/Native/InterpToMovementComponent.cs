@@ -11,20 +11,20 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=488 )]
+    [StructLayout( LayoutKind.Explicit, Size=480 )]
     internal unsafe struct InterpToMovementComponent_fields {
-        [FieldOffset(328)] public float Duration;
-        [FieldOffset(332)] public bool bPauseOnImpact;
-        [FieldOffset(336)] byte BehaviourType; //TODO: enum EInterpToBehaviourType BehaviourType
-        [FieldOffset(340)] public bool bForceSubStepping;
-        [FieldOffset(344)] byte OnInterpToReverse; //TODO: multicast delegate FOnInterpToReverseDelegate OnInterpToReverse
-        [FieldOffset(360)] byte OnInterpToStop; //TODO: multicast delegate FOnInterpToStopDelegate OnInterpToStop
-        [FieldOffset(376)] byte OnWaitBeginDelegate; //TODO: multicast delegate FOnInterpToWaitBeginDelegate OnWaitBeginDelegate
-        [FieldOffset(392)] byte OnWaitEndDelegate; //TODO: multicast delegate FOnInterpToWaitEndDelegate OnWaitEndDelegate
-        [FieldOffset(408)] byte OnResetDelegate; //TODO: multicast delegate FOnInterpToResetDelegate OnResetDelegate
-        [FieldOffset(424)] public float MaxSimulationTimeStep;
-        [FieldOffset(428)] public int MaxSimulationIterations;
-        [FieldOffset(432)] public NativeArray ControlPoints;
+        [FieldOffset(320)] public float Duration;
+        [FieldOffset(324)] public bool bPauseOnImpact;
+        [FieldOffset(328)] byte BehaviourType; //TODO: enum EInterpToBehaviourType BehaviourType
+        [FieldOffset(332)] public bool bForceSubStepping;
+        [FieldOffset(336)] byte OnInterpToReverse; //TODO: multicast delegate FOnInterpToReverseDelegate OnInterpToReverse
+        [FieldOffset(352)] byte OnInterpToStop; //TODO: multicast delegate FOnInterpToStopDelegate OnInterpToStop
+        [FieldOffset(368)] byte OnWaitBeginDelegate; //TODO: multicast delegate FOnInterpToWaitBeginDelegate OnWaitBeginDelegate
+        [FieldOffset(384)] byte OnWaitEndDelegate; //TODO: multicast delegate FOnInterpToWaitEndDelegate OnWaitEndDelegate
+        [FieldOffset(400)] byte OnResetDelegate; //TODO: multicast delegate FOnInterpToResetDelegate OnResetDelegate
+        [FieldOffset(416)] public float MaxSimulationTimeStep;
+        [FieldOffset(420)] public int MaxSimulationIterations;
+        [FieldOffset(424)] public NativeArray ControlPoints;
     }
     internal unsafe struct InterpToMovementComponent_methods {
         internal struct FinaliseControlPoints_method {

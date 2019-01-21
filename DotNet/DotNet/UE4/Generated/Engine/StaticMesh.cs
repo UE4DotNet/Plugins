@@ -58,11 +58,7 @@ namespace UE4.Engine {
         public int GetNumSections(int InLOD)  => 
             StaticMesh_methods.GetNumSections_method.Invoke(ObjPointer, InLOD);
 
-        ///<summary>
-        ///Sets a Material given a Material Index
-        ///@
-        ///</summary>
-        ///<remarks>note Only available in editor.</remarks>
+        ///<summary>Sets a Material given a Material Index</summary>
         public void SetMaterial(int MaterialIndex, MaterialInterface NewMaterial)  => 
             StaticMesh_methods.SetMaterial_method.Invoke(ObjPointer, MaterialIndex, NewMaterial);
          //TODO: array not UObject TArray SourceModels
@@ -94,10 +90,6 @@ namespace UE4.Engine {
             get {return StaticMesh_ptr->LODGroup;}
             set {StaticMesh_ptr->LODGroup = value;}
         }
-        public bool bAutoComputeLODScreenSize {
-            get {return Main.GetGetBoolPropertyByName(this, "bAutoComputeLODScreenSize"); }
-            set {Main.SetGetBoolPropertyByName(this, "bAutoComputeLODScreenSize", value); }
-        }
         ///<summary>The last import version</summary>
         public unsafe int ImportVersion {
             get {return StaticMesh_ptr->ImportVersion;}
@@ -109,10 +101,18 @@ namespace UE4.Engine {
             get {return StaticMesh_ptr->LightmapUVVersion;}
             set {StaticMesh_ptr->LightmapUVVersion = value;}
         }
+        public bool bAutoComputeLODScreenSize {
+            get {return Main.GetGetBoolPropertyByName(this, "bAutoComputeLODScreenSize"); }
+            set {Main.SetGetBoolPropertyByName(this, "bAutoComputeLODScreenSize", value); }
+        }
         ///<summary>Minimum LOD to use for rendering.  This is the default setting for the mesh and can be overridden by component settings.</summary>
         public unsafe PerPlatformInt MinLOD {
             get {return StaticMesh_ptr->MinLOD;}
             set {StaticMesh_ptr->MinLOD = value;}
+        }
+        ///<summary>Bias multiplier for Light Propagation Volume lighting</summary>
+        public unsafe float LpvBiasMultiplier {
+            get {return StaticMesh_ptr->LpvBiasMultiplier;}
         }
          //TODO: array not UObject TArray StaticMaterials
         ///<summary>Lightmap UVDensity</summary>
@@ -135,10 +135,6 @@ namespace UE4.Engine {
             get {return StaticMesh_ptr->DistanceFieldSelfShadowBias;}
             set {StaticMesh_ptr->DistanceFieldSelfShadowBias = value;}
         }
-        public bool bGenerateMeshDistanceField {
-            get {return Main.GetGetBoolPropertyByName(this, "bGenerateMeshDistanceField"); }
-            set {Main.SetGetBoolPropertyByName(this, "bGenerateMeshDistanceField", value); }
-        }
         ///<summary>Physics data.</summary>
         public unsafe BodySetup BodySetup {
             get {return StaticMesh_ptr->BodySetup;}
@@ -153,6 +149,10 @@ namespace UE4.Engine {
             get {return StaticMesh_ptr->LODForCollision;}
             set {StaticMesh_ptr->LODForCollision = value;}
         }
+        public bool bGenerateMeshDistanceField {
+            get {return Main.GetGetBoolPropertyByName(this, "bGenerateMeshDistanceField"); }
+            set {Main.SetGetBoolPropertyByName(this, "bGenerateMeshDistanceField", value); }
+        }
         public bool bHasNavigationData {
             get {return Main.GetGetBoolPropertyByName(this, "bHasNavigationData"); }
             set {Main.SetGetBoolPropertyByName(this, "bHasNavigationData", value); }
@@ -160,10 +160,6 @@ namespace UE4.Engine {
         public bool bSupportUniformlyDistributedSampling {
             get {return Main.GetGetBoolPropertyByName(this, "bSupportUniformlyDistributedSampling"); }
             set {Main.SetGetBoolPropertyByName(this, "bSupportUniformlyDistributedSampling", value); }
-        }
-        ///<summary>Bias multiplier for Light Propagation Volume lighting</summary>
-        public unsafe float LpvBiasMultiplier {
-            get {return StaticMesh_ptr->LpvBiasMultiplier;}
         }
         public bool bAllowCPUAccess {
             get {return Main.GetGetBoolPropertyByName(this, "bAllowCPUAccess"); }

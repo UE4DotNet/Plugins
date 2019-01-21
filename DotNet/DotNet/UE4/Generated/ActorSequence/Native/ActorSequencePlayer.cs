@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.ActorSequence.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2032 )]
+    [StructLayout( LayoutKind.Explicit, Size=2008 )]
     internal unsafe struct ActorSequencePlayer_fields {
     }
     internal unsafe struct ActorSequencePlayer_methods {

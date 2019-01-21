@@ -17,6 +17,21 @@ namespace UE4.HeadMountedDisplay {
     ///<summary>Head Mounted Display Function Library</summary>
     public unsafe partial class HeadMountedDisplayFunctionLibrary : BlueprintFunctionLibrary  {
 
+        ///<summary>
+        ///Called to calibrate the offset transform between an external tracking source and the internal tracking source
+        ///(e.
+        ///</summary>
+        ///<remarks>
+        ///g. mocap tracker to and HMD tracker).  This should be called once per session, or when the physical relationship
+        ///between the external tracker and internal tracker changes (e.g. it was bumped or reattached).  After calibration,
+        ///calling UpdateExternalTrackingPosition will try to correct the internal tracker to the calibrated offset to prevent
+        ///drift between the two systems
+        ///
+        ///@param ExternalTrackingTransform              The transform in world-coordinates, of the reference marker of the external tracking system
+        ///</remarks>
+        public static void CalibrateExternalTrackingToHMD(Transform ExternalTrackingTransform)  => 
+            HeadMountedDisplayFunctionLibrary_methods.CalibrateExternalTrackingToHMD_method.Invoke(ExternalTrackingTransform);
+
         ///<summary>Switches to/from using HMD and stereo rendering.</summary>
         ///<remarks>
         ///@param bEnable                       (in) 'true' to enable HMD / stereo; 'false' otherwise
@@ -242,8 +257,8 @@ namespace UE4.HeadMountedDisplay {
         ///@param        bDrawEyeFirst: if true the eye is drawn before the texture, if false the reverse.
         ///@param        bClearBlack: if true the render target will be drawn black before either rect is drawn.
         ///</remarks>
-        public static void SetSpectatorScreenModeTexturePlusEyeLayout(Vector2D EyeRectMin, Vector2D EyeRectMax, Vector2D TextureRectMin, Vector2D TextureRectMax, bool bDrawEyeFirst, bool bClearBlack)  => 
-            HeadMountedDisplayFunctionLibrary_methods.SetSpectatorScreenModeTexturePlusEyeLayout_method.Invoke(EyeRectMin, EyeRectMax, TextureRectMin, TextureRectMax, bDrawEyeFirst, bClearBlack);
+        public static void SetSpectatorScreenModeTexturePlusEyeLayout(Vector2D EyeRectMin, Vector2D EyeRectMax, Vector2D TextureRectMin, Vector2D TextureRectMax, bool bDrawEyeFirst, bool bClearBlack, bool bUseAlpha)  => 
+            HeadMountedDisplayFunctionLibrary_methods.SetSpectatorScreenModeTexturePlusEyeLayout_method.Invoke(EyeRectMin, EyeRectMax, TextureRectMin, TextureRectMax, bDrawEyeFirst, bClearBlack, bUseAlpha);
 
         ///<summary>
         ///Change the texture displayed on the social screen
@@ -264,6 +279,18 @@ namespace UE4.HeadMountedDisplay {
         ///<remarks>param NewScale       Specifies how many Unreal units correspond to one meter in the real world</remarks>
         public static void SetWorldToMetersScale(UObject WorldContext, float NewScale)  => 
             HeadMountedDisplayFunctionLibrary_methods.SetWorldToMetersScale_method.Invoke(WorldContext, NewScale);
+
+        ///<summary>Called after calibration to attempt to pull the internal tracker (e.</summary>
+        ///<remarks>
+        ///g. HMD tracking) in line with the external tracker
+        ///(e.g. mocap tracker).  This will set the internal tracker's base offset and rotation to match and realign the two systems.
+        ///This can be called every tick, or whenever realignment is desired.  Note that this may cause choppy movement if the two
+        ///systems diverge relative to each other, or a big jump if called infrequently when there has been significant drift
+        ///
+        ///@param ExternalTrackingTransform              The transform in world-coordinates, of the reference marker of the external tracking system
+        ///</remarks>
+        public static void UpdateExternalTrackingHMDPosition(Transform ExternalTrackingTransform)  => 
+            HeadMountedDisplayFunctionLibrary_methods.UpdateExternalTrackingHMDPosition_method.Invoke(ExternalTrackingTransform);
         static HeadMountedDisplayFunctionLibrary() {
             StaticClass = Main.GetClass("HeadMountedDisplayFunctionLibrary");
         }

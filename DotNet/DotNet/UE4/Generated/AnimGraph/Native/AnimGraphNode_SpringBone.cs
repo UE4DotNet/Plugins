@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=864 )]
+    [StructLayout( LayoutKind.Explicit, Size=840 )]
     internal unsafe struct AnimGraphNode_SpringBone_fields {
         [FieldOffset(272)] public AnimNode_SpringBone Node;
     }

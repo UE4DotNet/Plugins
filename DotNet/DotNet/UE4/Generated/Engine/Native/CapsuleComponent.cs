@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1568 )]
+    [StructLayout( LayoutKind.Explicit, Size=1552 )]
     internal unsafe struct CapsuleComponent_fields {
-        [FieldOffset(1552)] public float CapsuleHalfHeight;
-        [FieldOffset(1556)] public float CapsuleRadius;
+        [FieldOffset(1528)] public float CapsuleHalfHeight;
+        [FieldOffset(1532)] public float CapsuleRadius;
     }
     internal unsafe struct CapsuleComponent_methods {
         internal struct GetScaledCapsuleHalfHeight_method {

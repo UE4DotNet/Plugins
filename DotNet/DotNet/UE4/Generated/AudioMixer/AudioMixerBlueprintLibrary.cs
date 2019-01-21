@@ -33,6 +33,10 @@ namespace UE4.AudioMixer {
         public static int GetNumberOfEntriesInSourceEffectChain(UObject WorldContextObject, SoundEffectSourcePresetChain PresetChain)  => 
             AudioMixerBlueprintLibrary_methods.GetNumberOfEntriesInSourceEffectChain_method.Invoke(WorldContextObject, PresetChain);
 
+        ///<summary>Pause recording audio, without finalizing the recording to disk. By leaving the Submix To Record field blank, you can record the master output of the game.</summary>
+        public static void PauseRecordingOutput(UObject WorldContextObject, SoundSubmix SubmixToPause)  => 
+            AudioMixerBlueprintLibrary_methods.PauseRecordingOutput_method.Invoke(WorldContextObject, SubmixToPause);
+
         ///<summary>Removes a submix effect preset from the master submix.</summary>
         public static void RemoveMasterSubmixEffect(UObject WorldContextObject, SoundEffectSubmixPreset SubmixEffectPreset)  => 
             AudioMixerBlueprintLibrary_methods.RemoveMasterSubmixEffect_method.Invoke(WorldContextObject, SubmixEffectPreset);
@@ -40,6 +44,10 @@ namespace UE4.AudioMixer {
         ///<summary>Adds source effect entry to preset chain. Only affects the instance of preset chain.</summary>
         public static void RemoveSourceEffectFromPresetChain(UObject WorldContextObject, SoundEffectSourcePresetChain PresetChain, int EntryIndex)  => 
             AudioMixerBlueprintLibrary_methods.RemoveSourceEffectFromPresetChain_method.Invoke(WorldContextObject, PresetChain, EntryIndex);
+
+        ///<summary>Resume recording audio after pausing. By leaving the Submix To Record field blank, you can record the master output of the game.</summary>
+        public static void ResumeRecordingOutput(UObject WorldContextObject, SoundSubmix SubmixToPause)  => 
+            AudioMixerBlueprintLibrary_methods.ResumeRecordingOutput_method.Invoke(WorldContextObject, SubmixToPause);
 
         ///<summary>Set whether or not to bypass the effect at the source effect chain index.</summary>
         public static void SetBypassSourceEffectChainEntry(UObject WorldContextObject, SoundEffectSourcePresetChain PresetChain, int EntryIndex, bool bBypassed)  => 
@@ -49,7 +57,7 @@ namespace UE4.AudioMixer {
         public static void StartRecordingOutput(UObject WorldContextObject, float ExpectedDuration, SoundSubmix SubmixToRecord)  => 
             AudioMixerBlueprintLibrary_methods.StartRecordingOutput_method.Invoke(WorldContextObject, ExpectedDuration, SubmixToRecord);
 
-        ///<summary>Stop recording audio. By leaving the Submix To Record field blank, you can record the master output of the game.</summary>
+        ///<summary>Stop recording audio. Path can be absolute, or relative (to the /Saved/BouncedWavFiles folder). By leaving the Submix To Record field blank, you can record the master output of the game.</summary>
         public static SoundWave StopRecordingOutput(UObject WorldContextObject, EAudioRecordingExportType ExportType, string Name, string Path, SoundSubmix SubmixToRecord, SoundWave ExistingSoundWaveToOverwrite)  => 
             AudioMixerBlueprintLibrary_methods.StopRecordingOutput_method.Invoke(WorldContextObject, ExportType, Name, Path, SubmixToRecord, ExistingSoundWaveToOverwrite);
         static AudioMixerBlueprintLibrary() {

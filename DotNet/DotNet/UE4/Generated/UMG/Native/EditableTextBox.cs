@@ -13,29 +13,29 @@ using UE4.SlateCore;
 using UE4.Slate;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=3144 )]
+    [StructLayout( LayoutKind.Explicit, Size=3176 )]
     internal unsafe struct EditableTextBox_fields {
-        [FieldOffset(384)] byte Text; //TODO: text FText Text
-        [FieldOffset(408)] byte TextDelegate; //TODO: delegate FGetText TextDelegate
-        [FieldOffset(432)] public EditableTextBoxStyle WidgetStyle;
-        [FieldOffset(2808)] byte HintText; //TODO: text FText HintText
-        [FieldOffset(2832)] byte HintTextDelegate; //TODO: delegate FGetText HintTextDelegate
-        [FieldOffset(3008)] public bool IsReadOnly;
-        [FieldOffset(3009)] public bool IsPassword;
-        [FieldOffset(3012)] public float MinimumDesiredWidth;
-        [FieldOffset(3032)] public bool IsCaretMovedWhenGainFocus;
-        [FieldOffset(3033)] public bool SelectAllTextWhenFocused;
-        [FieldOffset(3034)] public bool RevertTextOnEscape;
-        [FieldOffset(3035)] public bool ClearKeyboardFocusOnCommit;
-        [FieldOffset(3036)] public bool SelectAllTextOnCommit;
-        [FieldOffset(3037)] public bool AllowContextMenu;
-        [FieldOffset(3038)] public byte KeyboardType;
-        [FieldOffset(3039)] public VirtualKeyboardOptions VirtualKeyboardOptions;
-        [FieldOffset(3040)] byte VirtualKeyboardDismissAction; //TODO: enum EVirtualKeyboardDismissAction VirtualKeyboardDismissAction
-        [FieldOffset(3041)] public byte Justification;
-        [FieldOffset(3042)] public ShapedTextOptions ShapedTextOptions;
-        [FieldOffset(3048)] byte OnTextChanged; //TODO: multicast delegate FOnEditableTextBoxChangedEvent OnTextChanged
-        [FieldOffset(3064)] byte OnTextCommitted; //TODO: multicast delegate FOnEditableTextBoxCommittedEvent OnTextCommitted
+        [FieldOffset(400)] byte Text; //TODO: text FText Text
+        [FieldOffset(424)] byte TextDelegate; //TODO: delegate FGetText TextDelegate
+        [FieldOffset(448)] public EditableTextBoxStyle WidgetStyle;
+        [FieldOffset(2832)] byte HintText; //TODO: text FText HintText
+        [FieldOffset(2856)] byte HintTextDelegate; //TODO: delegate FGetText HintTextDelegate
+        [FieldOffset(3040)] public bool IsReadOnly;
+        [FieldOffset(3041)] public bool IsPassword;
+        [FieldOffset(3044)] public float MinimumDesiredWidth;
+        [FieldOffset(3064)] public bool IsCaretMovedWhenGainFocus;
+        [FieldOffset(3065)] public bool SelectAllTextWhenFocused;
+        [FieldOffset(3066)] public bool RevertTextOnEscape;
+        [FieldOffset(3067)] public bool ClearKeyboardFocusOnCommit;
+        [FieldOffset(3068)] public bool SelectAllTextOnCommit;
+        [FieldOffset(3069)] public bool AllowContextMenu;
+        [FieldOffset(3070)] public byte KeyboardType;
+        [FieldOffset(3071)] public VirtualKeyboardOptions VirtualKeyboardOptions;
+        [FieldOffset(3072)] byte VirtualKeyboardDismissAction; //TODO: enum EVirtualKeyboardDismissAction VirtualKeyboardDismissAction
+        [FieldOffset(3073)] public byte Justification;
+        [FieldOffset(3074)] public ShapedTextOptions ShapedTextOptions;
+        [FieldOffset(3080)] byte OnTextChanged; //TODO: multicast delegate FOnEditableTextBoxChangedEvent OnTextChanged
+        [FieldOffset(3096)] byte OnTextCommitted; //TODO: multicast delegate FOnEditableTextBoxCommittedEvent OnTextCommitted
     }
     internal unsafe struct EditableTextBox_methods {
         internal struct ClearError_method {

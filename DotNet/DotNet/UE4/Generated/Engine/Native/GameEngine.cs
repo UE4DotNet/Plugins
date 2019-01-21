@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=4128 )]
+    [StructLayout( LayoutKind.Explicit, Size=4208 )]
     internal unsafe struct GameEngine_fields {
-        [FieldOffset(4048)] public float MaxDeltaTime;
-        [FieldOffset(4052)] public float ServerFlushLogInterval;
-        [FieldOffset(4056)]  public IntPtr  GameInstance;
+        [FieldOffset(4128)] public float MaxDeltaTime;
+        [FieldOffset(4132)] public float ServerFlushLogInterval;
+        [FieldOffset(4136)]  public IntPtr  GameInstance;
     }
     internal unsafe struct GameEngine_methods {
     }

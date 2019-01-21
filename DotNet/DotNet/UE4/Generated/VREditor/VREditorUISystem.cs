@@ -21,6 +21,7 @@ namespace UE4.VREditor {
             set {VREditorUISystem_ptr->VRMode = value;}
         }
          //TODO: map TMap FloatingUIs
+         //TODO: map TMap PreviewWindowInfo
         ///<summary>Our Quick Menu UI</summary>
         public unsafe VREditorFloatingUI InfoDisplayPanel {
             get {return VREditorUISystem_ptr->InfoDisplayPanel;}

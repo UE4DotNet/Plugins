@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=808 )]
+    [StructLayout( LayoutKind.Explicit, Size=800 )]
     internal unsafe struct SkeletalBodySetup_fields {
-        [FieldOffset(736)] public PhysicalAnimationProfile CurrentPhysicalAnimationProfile;
-        [FieldOffset(788)] public bool bSkipScaleFromAnimation;
-        [FieldOffset(792)] public NativeArray PhysicalAnimationData;
+        [FieldOffset(728)] public PhysicalAnimationProfile CurrentPhysicalAnimationProfile;
+        [FieldOffset(780)] public bool bSkipScaleFromAnimation;
+        [FieldOffset(784)] public NativeArray PhysicalAnimationData;
     }
     internal unsafe struct SkeletalBodySetup_methods {
     }

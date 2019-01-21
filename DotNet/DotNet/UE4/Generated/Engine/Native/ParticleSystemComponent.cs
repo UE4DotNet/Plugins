@@ -11,41 +11,41 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2128 )]
+    [StructLayout( LayoutKind.Explicit, Size=2112 )]
     internal unsafe struct ParticleSystemComponent_fields {
-        [FieldOffset(1520)]  public IntPtr  Template;
-        [FieldOffset(1528)] public NativeArray EmitterMaterials;
-        [FieldOffset(1544)] public NativeArray SkelMeshComponents;
-        [FieldOffset(1560)] public bool bResetOnDetach;
-        [FieldOffset(1561)] public bool bUpdateOnDedicatedServer;
-        [FieldOffset(1561)] public bool bAllowRecycling;
-        [FieldOffset(1561)] public bool bAutoManageAttachment;
-        [FieldOffset(1561)] public bool bWarmingUp;
-        [FieldOffset(1562)] public bool bOverrideLODMethod;
-        [FieldOffset(1562)] public bool bSkipUpdateDynamicDataDuringTick;
-        [FieldOffset(1565)] public byte LODMethod;
-        [FieldOffset(1566)] byte RequiredSignificance; //TODO: enum EParticleSignificanceLevel RequiredSignificance
-        [FieldOffset(1568)] public NativeArray InstanceParameters;
-        [FieldOffset(1584)] byte OnParticleSpawn; //TODO: multicast delegate FParticleSpawnSignature OnParticleSpawn
-        [FieldOffset(1600)] byte OnParticleBurst; //TODO: multicast delegate FParticleBurstSignature OnParticleBurst
-        [FieldOffset(1616)] byte OnParticleDeath; //TODO: multicast delegate FParticleDeathSignature OnParticleDeath
-        [FieldOffset(1632)] byte OnParticleCollide; //TODO: multicast delegate FParticleCollisionSignature OnParticleCollide
-        [FieldOffset(1648)] public Vector OldPosition;
-        [FieldOffset(1660)] public Vector PartSysVelocity;
-        [FieldOffset(1672)] public float WarmupTime;
-        [FieldOffset(1676)] public float WarmupTickRate;
-        [FieldOffset(1684)] public float SecondsBeforeInactive;
-        [FieldOffset(1692)] public float MaxTimeBeforeForceUpdateTransform;
-        [FieldOffset(1696)] public int EditorLODLevel;
-        [FieldOffset(1700)] public int EditorDetailMode;
-        [FieldOffset(1736)] public NativeArray ReplayClips;
-        [FieldOffset(1760)] public float CustomTimeDilation;
-        [FieldOffset(1848)] byte AutoAttachParent; //TODO: weak object TWeakObjectPtr<USceneComponent> AutoAttachParent
-        [FieldOffset(1856)] public Name AutoAttachSocketName;
-        [FieldOffset(1869)] byte AutoAttachLocationRule; //TODO: enum EAttachmentRule AutoAttachLocationRule
-        [FieldOffset(1870)] byte AutoAttachRotationRule; //TODO: enum EAttachmentRule AutoAttachRotationRule
-        [FieldOffset(1871)] byte AutoAttachScaleRule; //TODO: enum EAttachmentRule AutoAttachScaleRule
-        [FieldOffset(1920)] byte OnSystemFinished; //TODO: multicast delegate FOnSystemFinished OnSystemFinished
+        [FieldOffset(1504)]  public IntPtr  Template;
+        [FieldOffset(1512)] public NativeArray EmitterMaterials;
+        [FieldOffset(1528)] public NativeArray SkelMeshComponents;
+        [FieldOffset(1544)] public bool bResetOnDetach;
+        [FieldOffset(1545)] public bool bUpdateOnDedicatedServer;
+        [FieldOffset(1545)] public bool bAllowRecycling;
+        [FieldOffset(1545)] public bool bAutoManageAttachment;
+        [FieldOffset(1545)] public bool bWarmingUp;
+        [FieldOffset(1546)] public bool bOverrideLODMethod;
+        [FieldOffset(1546)] public bool bSkipUpdateDynamicDataDuringTick;
+        [FieldOffset(1549)] public byte LODMethod;
+        [FieldOffset(1550)] byte RequiredSignificance; //TODO: enum EParticleSignificanceLevel RequiredSignificance
+        [FieldOffset(1552)] public NativeArray InstanceParameters;
+        [FieldOffset(1568)] byte OnParticleSpawn; //TODO: multicast delegate FParticleSpawnSignature OnParticleSpawn
+        [FieldOffset(1584)] byte OnParticleBurst; //TODO: multicast delegate FParticleBurstSignature OnParticleBurst
+        [FieldOffset(1600)] byte OnParticleDeath; //TODO: multicast delegate FParticleDeathSignature OnParticleDeath
+        [FieldOffset(1616)] byte OnParticleCollide; //TODO: multicast delegate FParticleCollisionSignature OnParticleCollide
+        [FieldOffset(1632)] public Vector OldPosition;
+        [FieldOffset(1644)] public Vector PartSysVelocity;
+        [FieldOffset(1656)] public float WarmupTime;
+        [FieldOffset(1660)] public float WarmupTickRate;
+        [FieldOffset(1668)] public float SecondsBeforeInactive;
+        [FieldOffset(1676)] public float MaxTimeBeforeForceUpdateTransform;
+        [FieldOffset(1680)] public int EditorLODLevel;
+        [FieldOffset(1684)] public int EditorDetailMode;
+        [FieldOffset(1720)] public NativeArray ReplayClips;
+        [FieldOffset(1744)] public float CustomTimeDilation;
+        [FieldOffset(1832)] byte AutoAttachParent; //TODO: weak object TWeakObjectPtr<USceneComponent> AutoAttachParent
+        [FieldOffset(1840)] public Name AutoAttachSocketName;
+        [FieldOffset(1853)] byte AutoAttachLocationRule; //TODO: enum EAttachmentRule AutoAttachLocationRule
+        [FieldOffset(1854)] byte AutoAttachRotationRule; //TODO: enum EAttachmentRule AutoAttachRotationRule
+        [FieldOffset(1855)] byte AutoAttachScaleRule; //TODO: enum EAttachmentRule AutoAttachScaleRule
+        [FieldOffset(1904)] byte OnSystemFinished; //TODO: multicast delegate FOnSystemFinished OnSystemFinished
     }
     internal unsafe struct ParticleSystemComponent_methods {
         internal struct BeginTrails_method {

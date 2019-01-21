@@ -14,7 +14,7 @@ using UE4.Engine.Native;
 
 namespace UE4.Engine {
     ///<summary>A camera position the current level.</summary>
-    public unsafe partial class BookMark : UObject  {
+    public unsafe partial class BookMark : BookmarkBase  {
         ///<summary>Camera position</summary>
         public unsafe Vector Location {
             get {return BookMark_ptr->Location;}

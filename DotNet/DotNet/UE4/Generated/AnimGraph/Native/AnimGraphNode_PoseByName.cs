@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=512 )]
+    [StructLayout( LayoutKind.Explicit, Size=488 )]
     internal unsafe struct AnimGraphNode_PoseByName_fields {
         [FieldOffset(288)] public AnimNode_PoseByName Node;
     }

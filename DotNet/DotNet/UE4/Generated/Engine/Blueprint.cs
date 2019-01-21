@@ -27,7 +27,7 @@ namespace UE4.Engine {
         ///<remarks>
         ///This *can* be null under rare circumstances,
         ///one such case can be created by creating a blueprint (A) based on another blueprint (B), shutting down the editor, and
-        ///deleting the parent blueprint.
+        ///deleting the parent blueprint. Exported as Alphabetical in GetAssetRegistryTags
         ///</remarks>
         public unsafe SubclassOf<UObject> ParentClass {
             get {return Blueprint_ptr->ParentClass;}

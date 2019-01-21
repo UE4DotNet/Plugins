@@ -12,11 +12,16 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Group of Root Motion Sources that are applied</summary>
-        [StructLayout( LayoutKind.Explicit, Size=256 )]
+        [StructLayout( LayoutKind.Explicit, Size=248 )]
         public unsafe struct RootMotionSourceGroup {
             [FieldOffset(232)] public bool bHasAdditiveSources;
 
-            [FieldOffset(233)] public bool bHasOverrideSources;
+            [FieldOffset(232)] public bool bHasOverrideSources;
+
+            [FieldOffset(232)] public bool bIsAdditiveVelocityApplied;
+
+            ///<summary>Aggregate Settings of the last group of accumulated sources</summary>
+            [FieldOffset(233)] RootMotionSourceSettings LastAccumulatedSettings;
 
             ///<summary>
             ///Saved off pre-additive-applied Velocity, used for being able to reliably add/remove additive
@@ -29,11 +34,6 @@ namespace UE4.Engine{
             ///this method we override that resulting Velocity due to obstructions
             ///</remarks>
             [FieldOffset(236)] Vector_NetQuantize10 LastPreAdditiveVelocity;
-
-            [FieldOffset(248)] public bool bIsAdditiveVelocityApplied;
-
-            ///<summary>Aggregate Settings of the last group of accumulated sources</summary>
-            [FieldOffset(249)] RootMotionSourceSettings LastAccumulatedSettings;
 
         }
 }

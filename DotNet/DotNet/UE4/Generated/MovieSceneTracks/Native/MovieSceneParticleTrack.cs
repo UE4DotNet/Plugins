@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=168 )]
+    [StructLayout( LayoutKind.Explicit, Size=176 )]
     internal unsafe struct MovieSceneParticleTrack_fields {
-        [FieldOffset(152)] public NativeArray ParticleSections;
+        [FieldOffset(160)] public NativeArray ParticleSections;
     }
     internal unsafe struct MovieSceneParticleTrack_methods {
     }

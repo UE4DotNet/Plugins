@@ -13,9 +13,9 @@ using UE4.Native;
 namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=1024 )]
     internal unsafe struct SpotLightComponent_fields {
-        [FieldOffset(1008)] public float InnerConeAngle;
-        [FieldOffset(1012)] public float OuterConeAngle;
-        [FieldOffset(1016)] public float LightShaftConeAngle;
+        [FieldOffset(1000)] public float InnerConeAngle;
+        [FieldOffset(1004)] public float OuterConeAngle;
+        [FieldOffset(1008)] public float LightShaftConeAngle;
     }
     internal unsafe struct SpotLightComponent_methods {
         internal struct SetInnerConeAngle_method {

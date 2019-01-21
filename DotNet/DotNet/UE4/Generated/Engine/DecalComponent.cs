@@ -34,6 +34,14 @@ namespace UE4.Engine {
         public float GetFadeDuration()  => 
             DecalComponent_methods.GetFadeDuration_method.Invoke(ObjPointer);
 
+        ///<summary>Get Fade in Duration</summary>
+        public float GetFadeInDuration()  => 
+            DecalComponent_methods.GetFadeInDuration_method.Invoke(ObjPointer);
+
+        ///<summary>Get Fade in Start Delay</summary>
+        public float GetFadeInStartDelay()  => 
+            DecalComponent_methods.GetFadeInStartDelay_method.Invoke(ObjPointer);
+
         ///<summary>Get Fade Start Delay</summary>
         public float GetFadeStartDelay()  => 
             DecalComponent_methods.GetFadeStartDelay_method.Invoke(ObjPointer);
@@ -41,6 +49,10 @@ namespace UE4.Engine {
         ///<summary>setting decal material on decal component. This will force the decal to reattach</summary>
         public void SetDecalMaterial(MaterialInterface NewDecalMaterial)  => 
             DecalComponent_methods.SetDecalMaterial_method.Invoke(ObjPointer, NewDecalMaterial);
+
+        ///<summary>Set Fade In</summary>
+        public void SetFadeIn(float StartDelay, float Duaration)  => 
+            DecalComponent_methods.SetFadeIn_method.Invoke(ObjPointer, StartDelay, Duaration);
 
         ///<summary>Sets the decal's fade start time, duration and if the owning actor should be destroyed after the decal is fully faded out.</summary>
         ///<remarks>
@@ -84,6 +96,14 @@ namespace UE4.Engine {
         ///<summary>Time in seconds for the decal to fade out. Set fade duration and start delay to 0 to make persistent. Only fades in active simulation or game.</summary>
         public unsafe float FadeDuration {
             get {return DecalComponent_ptr->FadeDuration;}
+        }
+        ///<summary>Fade in Duration</summary>
+        public unsafe float FadeInDuration {
+            get {return DecalComponent_ptr->FadeInDuration;}
+        }
+        ///<summary>Fade in Start Delay</summary>
+        public unsafe float FadeInStartDelay {
+            get {return DecalComponent_ptr->FadeInStartDelay;}
         }
         public bool bDestroyOwnerAfterFade {
             get {return Main.GetGetBoolPropertyByName(this, "bDestroyOwnerAfterFade"); }

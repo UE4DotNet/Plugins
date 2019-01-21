@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=224 )]
+    [StructLayout( LayoutKind.Explicit, Size=240 )]
     internal unsafe struct EditorPerProjectUserSettings_fields {
         [FieldOffset(56)] public bool bDisplayUIExtensionPoints;
         [FieldOffset(56)] public bool bDisplayDocumentationLink;
@@ -28,6 +28,7 @@ namespace UE4.UnrealEd.Native {
         [FieldOffset(96)] byte SwarmIntermediateFolder; //TODO: string FString SwarmIntermediateFolder
         [FieldOffset(112)] public bool bAutomaticallyHotReloadNewClasses;
         [FieldOffset(112)] public bool bShowCompilerLogOnCompileError;
+        [FieldOffset(112)] public bool bKeepFbxNamespace;
         [FieldOffset(112)] public bool bShowImportDialogAtReimport;
         [FieldOffset(120)] public DirectoryPath DataSourceFolder;
         [FieldOffset(136)] public bool bKeepAttachHierarchy;
@@ -44,6 +45,8 @@ namespace UE4.UnrealEd.Native {
         [FieldOffset(168)] public int AssetViewerProfileIndex;
         [FieldOffset(176)] byte AssetViewerProfileName; //TODO: string FString AssetViewerProfileName
         [FieldOffset(192)] public int MaterialQualityLevel;
+        [FieldOffset(196)] public Name PreviewShaderPlatformName;
+        [FieldOffset(208)] public bool bIsMaterialQualityOverridePlatform;
     }
     internal unsafe struct EditorPerProjectUserSettings_methods {
     }

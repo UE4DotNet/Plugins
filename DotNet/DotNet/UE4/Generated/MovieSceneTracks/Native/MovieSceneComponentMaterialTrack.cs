@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=176 )]
+    [StructLayout( LayoutKind.Explicit, Size=184 )]
     internal unsafe struct MovieSceneComponentMaterialTrack_fields {
-        [FieldOffset(168)] public int MaterialIndex;
+        [FieldOffset(176)] public int MaterialIndex;
     }
     internal unsafe struct MovieSceneComponentMaterialTrack_methods {
     }

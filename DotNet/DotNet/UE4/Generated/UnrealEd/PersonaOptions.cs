@@ -73,6 +73,10 @@ namespace UE4.UnrealEd {
             get {return Main.GetGetBoolPropertyByName(this, "bAllowPreviewMeshCollectionsToSelectFromDifferentSkeletons"); }
             set {Main.SetGetBoolPropertyByName(this, "bAllowPreviewMeshCollectionsToSelectFromDifferentSkeletons", value); }
         }
+        public bool bAllowPreviewMeshCollectionsToUseCustomAnimBP {
+            get {return Main.GetGetBoolPropertyByName(this, "bAllowPreviewMeshCollectionsToUseCustomAnimBP"); }
+            set {Main.SetGetBoolPropertyByName(this, "bAllowPreviewMeshCollectionsToUseCustomAnimBP", value); }
+        }
         public bool bAllowMeshSectionSelection {
             get {return Main.GetGetBoolPropertyByName(this, "bAllowMeshSectionSelection"); }
             set {Main.SetGetBoolPropertyByName(this, "bAllowMeshSectionSelection", value); }

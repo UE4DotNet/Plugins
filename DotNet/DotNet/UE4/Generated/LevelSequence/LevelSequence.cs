@@ -21,6 +21,17 @@ namespace UE4.LevelSequence {
             get {return LevelSequence_ptr->UMovieScene;}
             set {LevelSequence_ptr->UMovieScene = value;}
         }
+        ///<summary>A pointer to the director blueprint that generates this sequence's DirectorClass.</summary>
+        public unsafe UObject DirectorBlueprint {
+            get {return LevelSequence_ptr->DirectorBlueprint;}
+            set {LevelSequence_ptr->DirectorBlueprint = value;}
+        }
+        ///<summary>The class that is used to spawn this level sequence's director instance.</summary>
+        ///<remarks>Director instances are allocated on-demand one per sequence during evaluation and are used by event tracks for triggering events.</remarks>
+        public unsafe SubclassOf<UObject> DirectorClass {
+            get {return LevelSequence_ptr->DirectorClass;}
+            set {LevelSequence_ptr->DirectorClass = value;}
+        }
         ///<summary>Legacy object references - should be read-only. Not deprecated because they need to still be saved</summary>
         public unsafe LevelSequenceObjectReferenceMap ObjectReferences {
             get {return LevelSequence_ptr->ObjectReferences;}

@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=416 )]
+    [StructLayout( LayoutKind.Explicit, Size=400 )]
     internal unsafe struct PawnMovementComponent_fields {
-        [FieldOffset(408)]  public IntPtr  PawnOwner;
+        [FieldOffset(392)]  public IntPtr  PawnOwner;
     }
     internal unsafe struct PawnMovementComponent_methods {
         internal struct AddInputVector_method {

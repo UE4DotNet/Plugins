@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.AudioMixer.Native {
-    [StructLayout( LayoutKind.Explicit, Size=832 )]
+    [StructLayout( LayoutKind.Explicit, Size=880 )]
     internal unsafe struct SynthSound_fields {
     }
     internal unsafe struct SynthSound_methods {

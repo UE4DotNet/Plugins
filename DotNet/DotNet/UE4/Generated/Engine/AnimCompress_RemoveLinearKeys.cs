@@ -68,6 +68,18 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bActuallyFilterLinearKeys"); }
             set {Main.SetGetBoolPropertyByName(this, "bActuallyFilterLinearKeys", value); }
         }
+        public bool bOptimizeForForwardPlayback {
+            get {return Main.GetGetBoolPropertyByName(this, "bOptimizeForForwardPlayback"); }
+            set {Main.SetGetBoolPropertyByName(this, "bOptimizeForForwardPlayback", value); }
+        }
+        public bool bUseDecompression {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseDecompression"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseDecompression", value); }
+        }
+        public bool bUseMultithreading {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseMultithreading"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseMultithreading", value); }
+        }
         static AnimCompress_RemoveLinearKeys() {
             StaticClass = Main.GetClass("AnimCompress_RemoveLinearKeys");
         }

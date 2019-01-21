@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Simulated Root Motion Replicated Move</summary>
-        [StructLayout( LayoutKind.Explicit, Size=360 )]
+        [StructLayout( LayoutKind.Explicit, Size=352 )]
         public unsafe struct SimulatedRootMotionReplicatedMove {
             [FieldOffset(0)] public float Time;
 

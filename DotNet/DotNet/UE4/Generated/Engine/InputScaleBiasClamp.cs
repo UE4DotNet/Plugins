@@ -12,9 +12,15 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Input Scale Bias Clamp</summary>
-        [StructLayout( LayoutKind.Explicit, Size=60 )]
+        [StructLayout( LayoutKind.Explicit, Size=48 )]
         public unsafe struct InputScaleBiasClamp {
             [FieldOffset(0)] public bool bMapRange;
+
+            [FieldOffset(1)] public bool bClampResult;
+
+            [FieldOffset(2)] public bool bInterpResult;
+
+            [FieldOffset(3)] public bool bInitialized;
 
             ///<summary>In Range</summary>
             [FieldOffset(4)] InputRange InRange;
@@ -26,21 +32,15 @@ namespace UE4.Engine{
 
             [FieldOffset(24)] public float Bias;
 
-            [FieldOffset(28)] public bool bClampResult;
+            [FieldOffset(28)] public float ClampMin;
 
-            [FieldOffset(32)] public float ClampMin;
+            [FieldOffset(32)] public float ClampMax;
 
-            [FieldOffset(36)] public float ClampMax;
+            [FieldOffset(36)] public float InterpSpeedIncreasing;
 
-            [FieldOffset(40)] public bool bInterpResult;
+            [FieldOffset(40)] public float InterpSpeedDecreasing;
 
-            [FieldOffset(44)] public float InterpSpeedIncreasing;
-
-            [FieldOffset(48)] public float InterpSpeedDecreasing;
-
-            [FieldOffset(52)] public float InterpolatedResult;
-
-            [FieldOffset(56)] public bool bInitialized;
+            [FieldOffset(44)] public float InterpolatedResult;
 
         }
 }

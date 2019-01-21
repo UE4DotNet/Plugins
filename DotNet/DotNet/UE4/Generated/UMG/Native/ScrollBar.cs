@@ -12,12 +12,12 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1872 )]
+    [StructLayout( LayoutKind.Explicit, Size=1888 )]
     internal unsafe struct ScrollBar_fields {
-        [FieldOffset(384)] public ScrollBarStyle WidgetStyle;
-        [FieldOffset(1840)] public bool bAlwaysShowScrollbar;
-        [FieldOffset(1841)] public byte Orientation;
-        [FieldOffset(1844)] public Vector2D Thickness;
+        [FieldOffset(400)] public ScrollBarStyle WidgetStyle;
+        [FieldOffset(1856)] public bool bAlwaysShowScrollbar;
+        [FieldOffset(1857)] public byte Orientation;
+        [FieldOffset(1860)] public Vector2D Thickness;
     }
     internal unsafe struct ScrollBar_methods {
         internal struct SetState_method {

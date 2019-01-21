@@ -11,14 +11,14 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1552 )]
+    [StructLayout( LayoutKind.Explicit, Size=1536 )]
     internal unsafe struct DrawFrustumComponent_fields {
-        [FieldOffset(1520)] public Color FrustumColor;
-        [FieldOffset(1524)] public float FrustumAngle;
-        [FieldOffset(1528)] public float FrustumAspectRatio;
-        [FieldOffset(1532)] public float FrustumStartDist;
-        [FieldOffset(1536)] public float FrustumEndDist;
-        [FieldOffset(1544)]  public IntPtr  Texture;
+        [FieldOffset(1504)] public Color FrustumColor;
+        [FieldOffset(1508)] public float FrustumAngle;
+        [FieldOffset(1512)] public float FrustumAspectRatio;
+        [FieldOffset(1516)] public float FrustumStartDist;
+        [FieldOffset(1520)] public float FrustumEndDist;
+        [FieldOffset(1528)]  public IntPtr  Texture;
     }
     internal unsafe struct DrawFrustumComponent_methods {
     }

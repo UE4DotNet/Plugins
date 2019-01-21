@@ -16,6 +16,10 @@ namespace UE4.Engine {
     ///<summary>Curve Linear Color</summary>
     public unsafe partial class CurveLinearColor : CurveBase  {
 
+        ///<summary>Get Clamped Linear Color Value</summary>
+        public LinearColor GetClampedLinearColorValue(float InTime)  => 
+            CurveLinearColor_methods.GetClampedLinearColorValue_method.Invoke(ObjPointer, InTime);
+
         ///<summary>Get Linear Color Value</summary>
         public LinearColor GetLinearColorValue(float InTime)  => 
             CurveLinearColor_methods.GetLinearColorValue_method.Invoke(ObjPointer, InTime);

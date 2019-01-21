@@ -23,6 +23,20 @@ namespace UE4.Engine.Native {
         [FieldOffset(560)] public float AdjustMaxAlpha;
     }
     internal unsafe struct CurveLinearColor_methods {
+        internal struct GetClampedLinearColorValue_method {
+            static internal IntPtr GetClampedLinearColorValue_ptr;
+            static GetClampedLinearColorValue_method() {
+                GetClampedLinearColorValue_ptr = Main.GetMethodUFunction(CurveLinearColor.StaticClass, "GetClampedLinearColorValue");
+            }
+
+            internal static unsafe LinearColor Invoke(IntPtr obj, float InTime) {
+                long* p = stackalloc long[] {0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((float*)(b+0)) = InTime;
+                Main.GetProcessEvent(obj, GetClampedLinearColorValue_ptr, new IntPtr(p)); ;
+                return *((LinearColor*)(b+4));
+            }
+        }
         internal struct GetLinearColorValue_method {
             static internal IntPtr GetLinearColorValue_ptr;
             static GetLinearColorValue_method() {

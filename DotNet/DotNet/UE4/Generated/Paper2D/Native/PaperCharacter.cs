@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Paper2D.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2080 )]
+    [StructLayout( LayoutKind.Explicit, Size=2064 )]
     internal unsafe struct PaperCharacter_fields {
-        [FieldOffset(2064)]  public IntPtr  Sprite;
+        [FieldOffset(2056)]  public IntPtr  Sprite;
     }
     internal unsafe struct PaperCharacter_methods {
     }

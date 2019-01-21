@@ -13,23 +13,23 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Debugging node that displays the current value of a bone in a specific space.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=424 )]
+        [StructLayout( LayoutKind.Explicit, Size=400 )]
         public unsafe struct AnimNode_ObserveBone {
             ///<summary>Name of bone to observe.</summary>
-            [FieldOffset(360)] BoneReference BoneToObserve;
+            [FieldOffset(336)] BoneReference BoneToObserve;
 
-            [FieldOffset(384)] public byte DisplaySpace;
+            [FieldOffset(360)] public byte DisplaySpace;
 
-            [FieldOffset(385)] public bool bRelativeToRefPose;
+            [FieldOffset(361)] public bool bRelativeToRefPose;
 
             ///<summary>Translation of the bone being observed.</summary>
-            [FieldOffset(388)] Vector Translation;
+            [FieldOffset(364)] Vector Translation;
 
             ///<summary>Rotation of the bone being observed.</summary>
-            [FieldOffset(400)] Rotator Rotation;
+            [FieldOffset(376)] Rotator Rotation;
 
             ///<summary>Scale of the bone being observed.</summary>
-            [FieldOffset(412)] Vector Scale;
+            [FieldOffset(388)] Vector Scale;
 
         }
 }

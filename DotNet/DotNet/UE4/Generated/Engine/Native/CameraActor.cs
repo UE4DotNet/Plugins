@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2368 )]
+    [StructLayout( LayoutKind.Explicit, Size=2336 )]
     internal unsafe struct CameraActor_fields {
         [FieldOffset(1008)] public byte AutoActivateForPlayer;
         [FieldOffset(1016)]  public IntPtr  CameraComponent;

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=96 )]
+    [StructLayout( LayoutKind.Explicit, Size=104 )]
     internal unsafe struct FbxSceneImportOptionsSkeletalMesh_fields {
         [FieldOffset(56)] public bool bUpdateSkeletonReferencePose;
         [FieldOffset(56)] public bool bCreatePhysicsAsset;
@@ -26,9 +26,10 @@ namespace UE4.UnrealEd.Native {
         [FieldOffset(76)] public byte AnimationLength;
         [FieldOffset(80)] public Int32Interval FrameImportRange;
         [FieldOffset(88)] public bool bUseDefaultSampleRate;
-        [FieldOffset(89)] public bool bImportCustomAttribute;
-        [FieldOffset(90)] public bool bPreserveLocalTransform;
-        [FieldOffset(91)] public bool bDeleteExistingMorphTargetCurves;
+        [FieldOffset(92)] public int CustomSampleRate;
+        [FieldOffset(96)] public bool bImportCustomAttribute;
+        [FieldOffset(97)] public bool bPreserveLocalTransform;
+        [FieldOffset(98)] public bool bDeleteExistingMorphTargetCurves;
     }
     internal unsafe struct FbxSceneImportOptionsSkeletalMesh_methods {
     }

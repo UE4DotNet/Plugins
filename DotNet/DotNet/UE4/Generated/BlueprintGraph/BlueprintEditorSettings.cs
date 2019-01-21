@@ -89,6 +89,7 @@ namespace UE4.BlueprintGraph {
             get {return Main.GetGetBoolPropertyByName(this, "bShowBookmarksForCurrentDocumentOnlyInTab"); }
             set {Main.SetGetBoolPropertyByName(this, "bShowBookmarksForCurrentDocumentOnlyInTab", value); }
         }
+         //TODO: map TMap GraphEditorQuickJumps
         ///<summary>Determines when to save Blueprints post-compile</summary>
         public unsafe byte SaveOnCompile {
             get {return BlueprintEditorSettings_ptr->SaveOnCompile;}

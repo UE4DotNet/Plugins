@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1152 )]
+    [StructLayout( LayoutKind.Explicit, Size=1160 )]
     internal unsafe struct GameNetworkManager_fields {
         [FieldOffset(1016)] public int AdjustedNetSpeed;
         [FieldOffset(1020)] public float LastNetSpeedUpdateTime;
@@ -32,22 +32,23 @@ namespace UE4.Engine.Native {
         [FieldOffset(1076)] public float MAXNEARZEROVELOCITYSQUARED;
         [FieldOffset(1080)] public float CLIENTADJUSTUPDATECOST;
         [FieldOffset(1084)] public float MAXCLIENTUPDATEINTERVAL;
-        [FieldOffset(1088)] public float MaxMoveDeltaTime;
-        [FieldOffset(1092)] public float ClientNetSendMoveDeltaTime;
-        [FieldOffset(1096)] public float ClientNetSendMoveDeltaTimeThrottled;
-        [FieldOffset(1100)] public float ClientNetSendMoveDeltaTimeStationary;
-        [FieldOffset(1104)] public int ClientNetSendMoveThrottleAtNetSpeed;
-        [FieldOffset(1108)] public int ClientNetSendMoveThrottleOverPlayerCount;
-        [FieldOffset(1112)] public bool ClientAuthorativePosition;
-        [FieldOffset(1116)] public float ClientErrorUpdateRateLimit;
-        [FieldOffset(1120)] public bool bMovementTimeDiscrepancyDetection;
-        [FieldOffset(1121)] public bool bMovementTimeDiscrepancyResolution;
-        [FieldOffset(1124)] public float MovementTimeDiscrepancyMaxTimeMargin;
-        [FieldOffset(1128)] public float MovementTimeDiscrepancyMinTimeMargin;
-        [FieldOffset(1132)] public float MovementTimeDiscrepancyResolutionRate;
-        [FieldOffset(1136)] public float MovementTimeDiscrepancyDriftAllowance;
-        [FieldOffset(1140)] public bool bMovementTimeDiscrepancyForceCorrectionsDuringResolution;
-        [FieldOffset(1141)] public bool bUseDistanceBasedRelevancy;
+        [FieldOffset(1088)] public float MaxClientForcedUpdateDuration;
+        [FieldOffset(1092)] public float MaxMoveDeltaTime;
+        [FieldOffset(1096)] public float ClientNetSendMoveDeltaTime;
+        [FieldOffset(1100)] public float ClientNetSendMoveDeltaTimeThrottled;
+        [FieldOffset(1104)] public float ClientNetSendMoveDeltaTimeStationary;
+        [FieldOffset(1108)] public int ClientNetSendMoveThrottleAtNetSpeed;
+        [FieldOffset(1112)] public int ClientNetSendMoveThrottleOverPlayerCount;
+        [FieldOffset(1116)] public bool ClientAuthorativePosition;
+        [FieldOffset(1120)] public float ClientErrorUpdateRateLimit;
+        [FieldOffset(1124)] public bool bMovementTimeDiscrepancyDetection;
+        [FieldOffset(1125)] public bool bMovementTimeDiscrepancyResolution;
+        [FieldOffset(1128)] public float MovementTimeDiscrepancyMaxTimeMargin;
+        [FieldOffset(1132)] public float MovementTimeDiscrepancyMinTimeMargin;
+        [FieldOffset(1136)] public float MovementTimeDiscrepancyResolutionRate;
+        [FieldOffset(1140)] public float MovementTimeDiscrepancyDriftAllowance;
+        [FieldOffset(1144)] public bool bMovementTimeDiscrepancyForceCorrectionsDuringResolution;
+        [FieldOffset(1145)] public bool bUseDistanceBasedRelevancy;
     }
     internal unsafe struct GameNetworkManager_methods {
     }

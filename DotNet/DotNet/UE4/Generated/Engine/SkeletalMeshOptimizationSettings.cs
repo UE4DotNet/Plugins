@@ -12,33 +12,33 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>FSkeletalMeshOptimizationSettings - The settings used to optimize a skeletal mesh LOD.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=72 )]
+        [StructLayout( LayoutKind.Explicit, Size=56 )]
         public unsafe struct SkeletalMeshOptimizationSettings {
-            [FieldOffset(0)] public byte ReductionMethod;
+            [FieldOffset(0)] public float NumOfTrianglesPercentage;
 
-            [FieldOffset(4)] public float NumOfTrianglesPercentage;
+            [FieldOffset(4)] public float MaxDeviationPercentage;
 
-            [FieldOffset(8)] public float MaxDeviationPercentage;
+            [FieldOffset(8)] public byte ReductionMethod;
 
-            [FieldOffset(12)] public bool bRemapMorphTargets;
+            [FieldOffset(9)] public byte SilhouetteImportance;
 
-            [FieldOffset(13)] public byte SilhouetteImportance;
+            [FieldOffset(10)] public byte TextureImportance;
 
-            [FieldOffset(14)] public byte TextureImportance;
+            [FieldOffset(11)] public byte ShadingImportance;
 
-            [FieldOffset(15)] public byte ShadingImportance;
+            [FieldOffset(12)] public byte SkinningImportance;
 
-            [FieldOffset(16)] public byte SkinningImportance;
+            [FieldOffset(13)] public bool bRemapMorphTargets;
 
-            [FieldOffset(20)] public float WeldingThreshold;
+            [FieldOffset(13)] public bool bRecalcNormals;
 
-            [FieldOffset(24)] public bool bRecalcNormals;
+            [FieldOffset(16)] public float WeldingThreshold;
 
-            [FieldOffset(28)] public float NormalsThreshold;
+            [FieldOffset(20)] public float NormalsThreshold;
 
-            [FieldOffset(32)] public int MaxBonesPerVertex;
+            [FieldOffset(24)] public int MaxBonesPerVertex;
 
-            [FieldOffset(56)] public int BaseLOD;
+            [FieldOffset(28)] public int BaseLOD;
 
         }
 }

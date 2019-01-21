@@ -24,7 +24,7 @@ namespace UE4.MobilePatchingUtils {
         public float GetDownloadSpeed()  => 
             MobilePendingContent_methods.GetDownloadSpeed_method.Invoke(ObjPointer);
 
-        ///<summary>Get the current installation status text. Valid during installation</summary>
+        ///<summary>Get Download Status Text</summary>
         public byte /*TODO: text FText*/ GetDownloadStatusText()  => 
             MobilePendingContent_methods.GetDownloadStatusText_method.Invoke(ObjPointer);
 

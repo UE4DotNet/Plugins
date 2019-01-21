@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.BlueprintGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=464 )]
+    [StructLayout( LayoutKind.Explicit, Size=472 )]
     internal unsafe struct K2Node_ComponentBoundEvent_fields {
-        [FieldOffset(368)] public Name DelegatePropertyName;
-        [FieldOffset(384)] public IntPtr DelegateOwnerClass;
-        [FieldOffset(392)] public Name ComponentPropertyName;
-        [FieldOffset(408)] byte DelegatePropertyDisplayName; //TODO: text FText DelegatePropertyDisplayName
+        [FieldOffset(376)] public Name DelegatePropertyName;
+        [FieldOffset(392)] public IntPtr DelegateOwnerClass;
+        [FieldOffset(400)] public Name ComponentPropertyName;
+        [FieldOffset(416)] byte DelegatePropertyDisplayName; //TODO: text FText DelegatePropertyDisplayName
     }
     internal unsafe struct K2Node_ComponentBoundEvent_methods {
     }

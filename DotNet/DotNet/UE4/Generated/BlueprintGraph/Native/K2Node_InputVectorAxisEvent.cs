@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.BlueprintGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=440 )]
+    [StructLayout( LayoutKind.Explicit, Size=448 )]
     internal unsafe struct K2Node_InputVectorAxisEvent_fields {
     }
     internal unsafe struct K2Node_InputVectorAxisEvent_methods {

@@ -752,6 +752,19 @@ namespace UE4.Engine.Native {
                 Main.GetProcessEvent(obj, SetHiddenInGame_ptr, new IntPtr(p)); ;
             }
         }
+        internal struct SetMobility_method {
+            static internal IntPtr SetMobility_ptr;
+            static SetMobility_method() {
+                SetMobility_ptr = Main.GetMethodUFunction(SceneComponent.StaticClass, "SetMobility");
+            }
+
+            internal static unsafe void Invoke(IntPtr obj, byte NewMobility) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *(b+0) = NewMobility;
+                Main.GetProcessEvent(obj, SetMobility_ptr, new IntPtr(p)); ;
+            }
+        }
         internal struct SetRelativeScale3D_method {
             static internal IntPtr SetRelativeScale3D_ptr;
             static SetRelativeScale3D_method() {

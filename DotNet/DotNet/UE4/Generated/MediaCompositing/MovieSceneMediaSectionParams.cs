@@ -39,13 +39,21 @@ namespace UE4.MediaCompositing{
                 set {MediaTexture_field = value;}
             }
 
-            [FieldOffset(24)] byte Proxy; //TODO: string FString Proxy
+            [FieldOffset(24)] 
+            private IntPtr  MediaPlayer_field;
+            ///<summary>Media Player</summary>
+            public MediaPlayer MediaPlayer {
+                get {return MediaPlayer_field;}
+                set {MediaPlayer_field = value;}
+            }
 
             ///<summary>Section Start Frame</summary>
-            [FieldOffset(40)] FrameNumber SectionStartFrame;
+            [FieldOffset(32)] FrameNumber SectionStartFrame;
 
             ///<summary>Section End Frame</summary>
-            [FieldOffset(44)] FrameNumber SectionEndFrame;
+            [FieldOffset(36)] FrameNumber SectionEndFrame;
+
+            [FieldOffset(40)] public bool bLooping;
 
         }
 }

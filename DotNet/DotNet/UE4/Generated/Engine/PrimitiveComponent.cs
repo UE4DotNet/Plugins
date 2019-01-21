@@ -375,6 +375,20 @@ namespace UE4.Engine {
         public bool IsOverlappingComponent(PrimitiveComponent OtherComp)  => 
             PrimitiveComponent_methods.IsOverlappingComponent_method.Invoke(ObjPointer, OtherComp);
 
+        ///<summary>
+        ///Perform a box overlap against a single component as an AABB (No rotation)
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param InBoxCentre The centre of the box to overlap with the component
+        ///@param InBox Description of the box to use in the overlap
+        ///@param bTraceComplex Whether or not to trace the complex physics representation or just the simple representation
+        ///@param bShowTrace Whether or not to draw the trace in the world (for debugging)
+        ///@param bPersistentShowTrace Whether or not to make the debugging draw stay in the world permanently
+        ///</remarks>
+        public (Vector, Vector, Name, HitResult, bool) K2_BoxOverlapComponent(Vector InBoxCentre, Box InBox, bool bTraceComplex, bool bShowTrace, bool bPersistentShowTrace)  => 
+            PrimitiveComponent_methods.K2_BoxOverlapComponent_method.Invoke(ObjPointer, InBoxCentre, InBox, bTraceComplex, bShowTrace, bPersistentShowTrace);
+
         ///<summary>Utility to see if there is any form of collision (query or physics) enabled on this component.</summary>
         public bool K2_IsCollisionEnabled()  => 
             PrimitiveComponent_methods.K2_IsCollisionEnabled_method.Invoke(ObjPointer);
@@ -387,9 +401,48 @@ namespace UE4.Engine {
         public bool K2_IsQueryCollisionEnabled()  => 
             PrimitiveComponent_methods.K2_IsQueryCollisionEnabled_method.Invoke(ObjPointer);
 
-        ///<summary>Perform a line trace against a single component</summary>
-        public (Vector, Vector, Name, HitResult, bool) K2_LineTraceComponent(Vector TraceStart, Vector TraceEnd, bool bTraceComplex, bool bShowTrace)  => 
-            PrimitiveComponent_methods.K2_LineTraceComponent_method.Invoke(ObjPointer, TraceStart, TraceEnd, bTraceComplex, bShowTrace);
+        ///<summary>
+        ///Perform a line trace against a single component
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param TraceStart The start of the trace in world-space
+        ///@param TraceEnd The end of the trace in world-space
+        ///@param bTraceComplex Whether or not to trace the complex physics representation or just the simple representation
+        ///@param bShowTrace Whether or not to draw the trace in the world (for debugging)
+        ///@param bPersistentShowTrace Whether or not to make the debugging draw stay in the world permanently
+        ///</remarks>
+        public (Vector, Vector, Name, HitResult, bool) K2_LineTraceComponent(Vector TraceStart, Vector TraceEnd, bool bTraceComplex, bool bShowTrace, bool bPersistentShowTrace)  => 
+            PrimitiveComponent_methods.K2_LineTraceComponent_method.Invoke(ObjPointer, TraceStart, TraceEnd, bTraceComplex, bShowTrace, bPersistentShowTrace);
+
+        ///<summary>
+        ///Perform a sphere overlap against a single component
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param InSphereCentre The centre of the sphere to overlap with the component
+        ///@param InSphereRadius The Radius of the sphere to overlap with the component
+        ///@param bTraceComplex Whether or not to trace the complex physics representation or just the simple representation
+        ///@param bShowTrace Whether or not to draw the trace in the world (for debugging)
+        ///@param bPersistentShowTrace Whether or not to make the debugging draw stay in the world permanently
+        ///</remarks>
+        public (Vector, Vector, Name, HitResult, bool) K2_SphereOverlapComponent(Vector InSphereCentre, float InSphereRadius, bool bTraceComplex, bool bShowTrace, bool bPersistentShowTrace)  => 
+            PrimitiveComponent_methods.K2_SphereOverlapComponent_method.Invoke(ObjPointer, InSphereCentre, InSphereRadius, bTraceComplex, bShowTrace, bPersistentShowTrace);
+
+        ///<summary>
+        ///Perform a sphere trace against a single component
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param TraceStart The start of the trace in world-space
+        ///@param TraceEnd The end of the trace in world-space
+        ///@param SphereRadius Radius of the sphere to trace against the component
+        ///@param bTraceComplex Whether or not to trace the complex physics representation or just the simple representation
+        ///@param bShowTrace Whether or not to draw the trace in the world (for debugging)
+        ///@param bPersistentShowTrace Whether or not to make the debugging draw stay in the world permanently
+        ///</remarks>
+        public (Vector, Vector, Name, HitResult, bool) K2_SphereTraceComponent(Vector TraceStart, Vector TraceEnd, float SphereRadius, bool bTraceComplex, bool bShowTrace, bool bPersistentShowTrace)  => 
+            PrimitiveComponent_methods.K2_SphereTraceComponent_method.Invoke(ObjPointer, TraceStart, TraceEnd, SphereRadius, bTraceComplex, bShowTrace, bPersistentShowTrace);
 
         ///<summary>Force a single body back to sleep.</summary>
         ///<remarks>
@@ -867,6 +920,10 @@ namespace UE4.Engine {
         public bool bApplyImpulseOnDamage {
             get {return Main.GetGetBoolPropertyByName(this, "bApplyImpulseOnDamage"); }
             set {Main.SetGetBoolPropertyByName(this, "bApplyImpulseOnDamage", value); }
+        }
+        public bool bReplicatePhysicsToAutonomousProxy {
+            get {return Main.GetGetBoolPropertyByName(this, "bReplicatePhysicsToAutonomousProxy"); }
+            set {Main.SetGetBoolPropertyByName(this, "bReplicatePhysicsToAutonomousProxy", value); }
         }
         public bool AlwaysLoadOnClient {
             get {return Main.GetGetBoolPropertyByName(this, "AlwaysLoadOnClient"); }

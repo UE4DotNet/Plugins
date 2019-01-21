@@ -11,13 +11,13 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=456 )]
+    [StructLayout( LayoutKind.Explicit, Size=472 )]
     internal unsafe struct ScaleBox_fields {
-        [FieldOffset(408)] public byte Stretch;
-        [FieldOffset(409)] public byte StretchDirection;
-        [FieldOffset(412)] public float UserSpecifiedScale;
-        [FieldOffset(416)] public bool IgnoreInheritedScale;
-        [FieldOffset(417)] public bool bSingleLayoutPass;
+        [FieldOffset(424)] public byte Stretch;
+        [FieldOffset(425)] public byte StretchDirection;
+        [FieldOffset(428)] public float UserSpecifiedScale;
+        [FieldOffset(432)] public bool IgnoreInheritedScale;
+        [FieldOffset(433)] public bool bSingleLayoutPass;
     }
     internal unsafe struct ScaleBox_methods {
         internal struct SetIgnoreInheritedScale_method {

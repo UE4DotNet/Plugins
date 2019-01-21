@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=208 )]
+    [StructLayout( LayoutKind.Explicit, Size=216 )]
     internal unsafe struct MovieSceneSlomoTrack_fields {
     }
     internal unsafe struct MovieSceneSlomoTrack_methods {

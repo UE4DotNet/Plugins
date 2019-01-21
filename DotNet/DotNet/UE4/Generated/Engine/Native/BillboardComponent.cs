@@ -11,17 +11,17 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1648 )]
+    [StructLayout( LayoutKind.Explicit, Size=1632 )]
     internal unsafe struct BillboardComponent_fields {
-        [FieldOffset(1520)]  public IntPtr  Sprite;
-        [FieldOffset(1528)] public bool bIsScreenSizeScaled;
-        [FieldOffset(1532)] public float ScreenSize;
-        [FieldOffset(1536)] public float U;
-        [FieldOffset(1540)] public float UL;
-        [FieldOffset(1544)] public float V;
-        [FieldOffset(1548)] public float VL;
-        [FieldOffset(1568)] public SpriteCategoryInfo SpriteInfo;
-        [FieldOffset(1632)] public bool bUseInEditorScaling;
+        [FieldOffset(1504)]  public IntPtr  Sprite;
+        [FieldOffset(1512)] public bool bIsScreenSizeScaled;
+        [FieldOffset(1516)] public float ScreenSize;
+        [FieldOffset(1520)] public float U;
+        [FieldOffset(1524)] public float UL;
+        [FieldOffset(1528)] public float V;
+        [FieldOffset(1532)] public float VL;
+        [FieldOffset(1552)] public SpriteCategoryInfo SpriteInfo;
+        [FieldOffset(1616)] public bool bUseInEditorScaling;
     }
     internal unsafe struct BillboardComponent_methods {
         internal struct SetSprite_method {

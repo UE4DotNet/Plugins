@@ -50,6 +50,7 @@ SourceArt/**/*.tga
 
 # Binary Files
 Binaries/*
+DotNet/Binaries/*
 Plugins/*/Binaries/*
 
 # Builds
@@ -71,7 +72,18 @@ Saved/*
 
 # Compiled source files for the engine to use
 Intermediate/*
+DotNet/Intermediate/*
 Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+###############
+#    folder   #
+###############
+/**/DROP/
+/**/TEMP/
+/**/packages/
+/**/bin/
+/**/obj/
+_site

@@ -11,9 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1568 )]
+    [StructLayout( LayoutKind.Explicit, Size=1552 )]
     internal unsafe struct BoxComponent_fields {
-        [FieldOffset(1552)] public Vector BoxExtent;
+        [FieldOffset(1528)] public Vector BoxExtent;
+        [FieldOffset(1540)] public float LineThickness;
     }
     internal unsafe struct BoxComponent_methods {
         internal struct GetScaledBoxExtent_method {

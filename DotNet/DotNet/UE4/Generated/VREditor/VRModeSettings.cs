@@ -11,13 +11,18 @@ using UE4.Native;
 
 #pragma warning disable CS0108
 using UE4.VREditor.Native;
+using UE4.ViewportInteraction;
 
 namespace UE4.VREditor {
     ///<summary>Implements the settings for VR Mode.</summary>
-    public unsafe partial class VRModeSettings : UObject  {
+    public unsafe partial class VRModeSettings : VISettings  {
         public bool bEnableAutoVREditMode {
             get {return Main.GetGetBoolPropertyByName(this, "bEnableAutoVREditMode"); }
             set {Main.SetGetBoolPropertyByName(this, "bEnableAutoVREditMode", value); }
+        }
+        public bool bAutokeySequences {
+            get {return Main.GetGetBoolPropertyByName(this, "bAutokeySequences"); }
+            set {Main.SetGetBoolPropertyByName(this, "bAutokeySequences", value); }
         }
          //TODO: enum EInteractorHand InteractorHand
         public bool bShowWorldMovementGrid {

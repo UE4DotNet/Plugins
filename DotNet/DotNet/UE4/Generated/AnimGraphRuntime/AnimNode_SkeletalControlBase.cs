@@ -13,7 +13,7 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Anim Node Skeletal Control Base</summary>
-        [StructLayout( LayoutKind.Explicit, Size=360 )]
+        [StructLayout( LayoutKind.Explicit, Size=336 )]
         public unsafe struct AnimNode_SkeletalControlBase {
             ///<summary>Input link</summary>
             [FieldOffset(56)] ComponentSpacePoseLink ComponentPose;
@@ -24,20 +24,20 @@ namespace UE4.AnimGraphRuntime{
 
             [FieldOffset(88)] byte AlphaInputType; //TODO: enum EAnimAlphaInputType AlphaInputType
 
+            [FieldOffset(89)] public bool bAlphaBoolEnabled;
+
             [FieldOffset(92)] public float Alpha;
 
             ///<summary>Alpha Scale Bias</summary>
             [FieldOffset(96)] InputScaleBias AlphaScaleBias;
 
-            [FieldOffset(104)] public bool bAlphaBoolEnabled;
-
             ///<summary>Alpha Bool Blend</summary>
-            [FieldOffset(112)] InputAlphaBoolBlend AlphaBoolBlend;
+            [FieldOffset(104)] InputAlphaBoolBlend AlphaBoolBlend;
 
-            [FieldOffset(200)] public Name AlphaCurveName;
+            [FieldOffset(184)] public Name AlphaCurveName;
 
             ///<summary>Alpha Scale Bias Clamp</summary>
-            [FieldOffset(212)] InputScaleBiasClamp AlphaScaleBiasClamp;
+            [FieldOffset(196)] InputScaleBiasClamp AlphaScaleBiasClamp;
 
         }
 }

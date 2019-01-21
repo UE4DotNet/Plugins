@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Foliage.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1040 )]
+    [StructLayout( LayoutKind.Explicit, Size=1024 )]
     internal unsafe struct FoliageType_InstancedStaticMesh_fields {
-        [FieldOffset(1008)]  public IntPtr  Mesh;
-        [FieldOffset(1016)] public NativeArray OverrideMaterials;
-        [FieldOffset(1032)] public IntPtr ComponentClass;
+        [FieldOffset(992)]  public IntPtr  Mesh;
+        [FieldOffset(1000)] public NativeArray OverrideMaterials;
+        [FieldOffset(1016)] public IntPtr ComponentClass;
     }
     internal unsafe struct FoliageType_InstancedStaticMesh_methods {
     }

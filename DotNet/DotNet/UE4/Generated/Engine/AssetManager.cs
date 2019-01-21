@@ -51,6 +51,10 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bIsBulkScanning"); }
             set {Main.SetGetBoolPropertyByName(this, "bIsBulkScanning", value); }
         }
+        public bool bIsPrimaryAssetDirectoryCurrent {
+            get {return Main.GetGetBoolPropertyByName(this, "bIsPrimaryAssetDirectoryCurrent"); }
+            set {Main.SetGetBoolPropertyByName(this, "bIsPrimaryAssetDirectoryCurrent", value); }
+        }
         public bool bIsManagementDatabaseCurrent {
             get {return Main.GetGetBoolPropertyByName(this, "bIsManagementDatabaseCurrent"); }
             set {Main.SetGetBoolPropertyByName(this, "bIsManagementDatabaseCurrent", value); }

@@ -12,10 +12,10 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=440 )]
+    [StructLayout( LayoutKind.Explicit, Size=456 )]
     internal unsafe struct WindowTitleBarArea_fields {
-        [FieldOffset(408)] public bool bWindowButtonsEnabled;
-        [FieldOffset(409)] public bool bDoubleClickTogglesFullscreen;
+        [FieldOffset(424)] public bool bWindowButtonsEnabled;
+        [FieldOffset(425)] public bool bDoubleClickTogglesFullscreen;
     }
     internal unsafe struct WindowTitleBarArea_methods {
         internal struct SetHorizontalAlignment_method {

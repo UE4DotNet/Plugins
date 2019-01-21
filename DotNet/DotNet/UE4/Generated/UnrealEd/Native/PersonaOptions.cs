@@ -28,7 +28,8 @@ namespace UE4.UnrealEd.Native {
         [FieldOffset(121)] public bool bFlattenSkeletonHierarchyWhenFiltering;
         [FieldOffset(122)] public bool bHideParentsWhenFiltering;
         [FieldOffset(123)] public bool bAllowPreviewMeshCollectionsToSelectFromDifferentSkeletons;
-        [FieldOffset(124)] public bool bAllowMeshSectionSelection;
+        [FieldOffset(124)] public bool bAllowPreviewMeshCollectionsToUseCustomAnimBP;
+        [FieldOffset(125)] public bool bAllowMeshSectionSelection;
         [FieldOffset(128)] byte NumFolderFiltersInAssetBrowser; //TODO: numeric uint32 NumFolderFiltersInAssetBrowser
         [FieldOffset(136)] public NativeArray AssetEditorOptions;
     }

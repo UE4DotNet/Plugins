@@ -78,6 +78,12 @@ namespace UE4.UMG {
         public bool Locked {
             get {return Main.GetGetBoolPropertyByName(this, "Locked"); }
         }
+        public bool MouseUsesStep {
+            get {return Main.GetGetBoolPropertyByName(this, "MouseUsesStep"); }
+        }
+        public bool RequiresControllerLock {
+            get {return Main.GetGetBoolPropertyByName(this, "RequiresControllerLock"); }
+        }
         ///<summary>The amount to adjust the value by, when using a controller or keyboard</summary>
         public unsafe float StepSize {
             get {return Slider_ptr->StepSize;}

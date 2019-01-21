@@ -15,7 +15,7 @@ namespace UE4.Engine{
         ///Cached camera POV info, stored as optimization so we only
         ///need to do a full camera update once per tick.
         ///</summary>
-        [StructLayout( LayoutKind.Explicit, Size=1408 )]
+        [StructLayout( LayoutKind.Explicit, Size=1376 )]
         public unsafe struct CameraCacheEntry {
             [FieldOffset(0)] public float TimeStamp;
 

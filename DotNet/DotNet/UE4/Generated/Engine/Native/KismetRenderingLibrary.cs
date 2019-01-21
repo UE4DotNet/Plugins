@@ -168,6 +168,22 @@ namespace UE4.Engine.Native {
                 FileName_handle.Free();
             }
         }
+        internal struct ImportBufferAsTexture2D_method {
+            static internal IntPtr ImportBufferAsTexture2D_ptr;
+            static ImportBufferAsTexture2D_method() {
+                ImportBufferAsTexture2D_ptr = Main.GetMethodUFunction(KismetRenderingLibrary.StaticClass, "ImportBufferAsTexture2D");
+            }
+
+            internal static unsafe Texture2D Invoke(UObject WorldContextObject, byte Buffer /*TODO: array TArray */) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = WorldContextObject;
+                throw new NotImplementedException(); //TODO: array TArray Buffer
+                Main.GetProcessEvent(KismetRenderingLibrary.DefaultObject, ImportBufferAsTexture2D_ptr, new IntPtr(p)); ;
+                 //TODO: array TArray Buffer
+                return *((IntPtr*)(b+24));
+            }
+        }
         internal struct ImportFileAsTexture2D_method {
             static internal IntPtr ImportFileAsTexture2D_ptr;
             static ImportFileAsTexture2D_method() {

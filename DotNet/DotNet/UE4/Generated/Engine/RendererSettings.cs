@@ -41,6 +41,14 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bMobileUseLegacyShadingModel"); }
             set {Main.SetGetBoolPropertyByName(this, "bMobileUseLegacyShadingModel", value); }
         }
+        public bool bMobileAllowDitheredLODTransition {
+            get {return Main.GetGetBoolPropertyByName(this, "bMobileAllowDitheredLODTransition"); }
+            set {Main.SetGetBoolPropertyByName(this, "bMobileAllowDitheredLODTransition", value); }
+        }
+        public bool bMobileAllowSoftwareOcclusionCulling {
+            get {return Main.GetGetBoolPropertyByName(this, "bMobileAllowSoftwareOcclusionCulling"); }
+            set {Main.SetGetBoolPropertyByName(this, "bMobileAllowSoftwareOcclusionCulling", value); }
+        }
         public bool bDiscardUnusedQualityLevels {
             get {return Main.GetGetBoolPropertyByName(this, "bDiscardUnusedQualityLevels"); }
             set {Main.SetGetBoolPropertyByName(this, "bDiscardUnusedQualityLevels", value); }
@@ -158,10 +166,6 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bUseNewAlgorithm"); }
             set {Main.SetGetBoolPropertyByName(this, "bUseNewAlgorithm", value); }
         }
-        public bool bUsePreExposure {
-            get {return Main.GetGetBoolPropertyByName(this, "bUsePreExposure"); }
-            set {Main.SetGetBoolPropertyByName(this, "bUsePreExposure", value); }
-        }
         public bool bDefaultFeatureBloom {
             get {return Main.GetGetBoolPropertyByName(this, "bDefaultFeatureBloom"); }
             set {Main.SetGetBoolPropertyByName(this, "bDefaultFeatureBloom", value); }
@@ -183,6 +187,14 @@ namespace UE4.Engine {
             get {return RendererSettings_ptr->DefaultFeatureAutoExposure;}
             set {RendererSettings_ptr->DefaultFeatureAutoExposure = value;}
         }
+        public bool bExtendDefaultLuminanceRangeInAutoExposureSettings {
+            get {return Main.GetGetBoolPropertyByName(this, "bExtendDefaultLuminanceRangeInAutoExposureSettings"); }
+            set {Main.SetGetBoolPropertyByName(this, "bExtendDefaultLuminanceRangeInAutoExposureSettings", value); }
+        }
+        public bool bUsePreExposure {
+            get {return Main.GetGetBoolPropertyByName(this, "bUsePreExposure"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUsePreExposure", value); }
+        }
         public bool bDefaultFeatureMotionBlur {
             get {return Main.GetGetBoolPropertyByName(this, "bDefaultFeatureMotionBlur"); }
             set {Main.SetGetBoolPropertyByName(this, "bDefaultFeatureMotionBlur", value); }
@@ -200,8 +212,7 @@ namespace UE4.Engine {
             get {return RendererSettings_ptr->DefaultFeatureAntiAliasing;}
             set {RendererSettings_ptr->DefaultFeatureAntiAliasing = value;}
         }
-         //TODO: enum ELightUnits DefaultPointLightUnits
-         //TODO: enum ELightUnits DefaultSpotLightUnits
+         //TODO: enum ELightUnits DefaultLightUnits
         ///<summary>Pixel format used for back buffer, when not specified</summary>
         public unsafe byte DefaultBackBufferPixelFormat {
             get {return RendererSettings_ptr->DefaultBackBufferPixelFormat;}
@@ -296,13 +307,13 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bMonoscopicFarField"); }
             set {Main.SetGetBoolPropertyByName(this, "bMonoscopicFarField", value); }
         }
+        public bool bRoundRobinOcclusion {
+            get {return Main.GetGetBoolPropertyByName(this, "bRoundRobinOcclusion"); }
+            set {Main.SetGetBoolPropertyByName(this, "bRoundRobinOcclusion", value); }
+        }
         public bool bODSCapture {
             get {return Main.GetGetBoolPropertyByName(this, "bODSCapture"); }
             set {Main.SetGetBoolPropertyByName(this, "bODSCapture", value); }
-        }
-        public bool bDebugCanvasInLayer {
-            get {return Main.GetGetBoolPropertyByName(this, "bDebugCanvasInLayer"); }
-            set {Main.SetGetBoolPropertyByName(this, "bDebugCanvasInLayer", value); }
         }
         ///<summary>Screen radius at which wireframe objects are culled. Larger values can improve performance when viewing a scene in wireframe.</summary>
         public unsafe float WireframeCullThreshold {

@@ -12,11 +12,11 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=512 )]
+    [StructLayout( LayoutKind.Explicit, Size=528 )]
     internal unsafe struct AnimGraphNode_SubInstance_fields {
         [FieldOffset(272)] public AnimNode_SubInstance Node;
-        [FieldOffset(480)] public NativeArray KnownExposableProperties;
-        [FieldOffset(496)] public NativeArray ExposedPropertyNames;
+        [FieldOffset(496)] public NativeArray KnownExposableProperties;
+        [FieldOffset(512)] public NativeArray ExposedPropertyNames;
     }
     internal unsafe struct AnimGraphNode_SubInstance_methods {
     }

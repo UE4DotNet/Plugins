@@ -18,17 +18,6 @@ namespace UE4.MagicLeapController {
     ///<summary>Magic Leap Controller Function Library</summary>
     public unsafe partial class MagicLeapControllerFunctionLibrary : BlueprintFunctionLibrary  {
 
-        ///<summary>
-        ///Match the position & orientation of the physical controller with an entity in the map and call this function
-        ///with the position & orientation of that entity relative to the Player Pawn.
-        ///</summary>
-        ///<remarks>
-        ///This would apply the correct offsets
-        ///to the MotionController component's transform.
-        ///</remarks>
-        public static void CalibrateControllerNow(EControllerHand Hand, Vector StartPosition, Rotator StartOrientation)  => 
-            MagicLeapControllerFunctionLibrary_methods.CalibrateControllerNow_method.Invoke(Hand, StartPosition, StartOrientation);
-
         ///<summary>Returns the hand to which given controller index has been mapped to in the device backend.</summary>
         ///<remarks>
         ///The native api does not have a concept of left vs right controller. They deal with indices. The first connected
@@ -40,6 +29,13 @@ namespace UE4.MagicLeapController {
         ///</remarks>
         public static (EControllerHand, bool) GetControllerMapping(int ControllerIndex)  => 
             MagicLeapControllerFunctionLibrary_methods.GetControllerMapping_method.Invoke(ControllerIndex);
+
+        ///<summary>Get controller tracking mode.</summary>
+        ///<remarks>
+        ///@return Controller tracking mode.
+        ///</remarks>
+        public static EMLControllerTrackingMode GetControllerTrackingMode()  => 
+            MagicLeapControllerFunctionLibrary_methods.GetControllerTrackingMode_method.Invoke();
 
         ///<summary>Type of ML device being tracking the given hand.</summary>
         ///<remarks>
@@ -97,6 +93,14 @@ namespace UE4.MagicLeapController {
         ///</remarks>
         public static bool PlayControllerLEDEffect(EControllerHand Hand, EMLControllerLEDEffect LEDEffect, EMLControllerLEDSpeed LEDSpeed, EMLControllerLEDPattern LEDPattern, EMLControllerLEDColor LEDColor, float DurationInSec)  => 
             MagicLeapControllerFunctionLibrary_methods.PlayControllerLEDEffect_method.Invoke(Hand, LEDEffect, LEDSpeed, LEDPattern, LEDColor, DurationInSec);
+
+        ///<summary>Set controller tracking mode.</summary>
+        ///<remarks>
+        ///@param TrackingMode Controller tracking mode.
+        ///@return True if the command to set the tracking mode was successfully sent to the controller, false otherwise.
+        ///</remarks>
+        public static bool SetControllerTrackingMode(EMLControllerTrackingMode TrackingMode)  => 
+            MagicLeapControllerFunctionLibrary_methods.SetControllerTrackingMode_method.Invoke(TrackingMode);
         static MagicLeapControllerFunctionLibrary() {
             StaticClass = Main.GetClass("MagicLeapControllerFunctionLibrary");
         }

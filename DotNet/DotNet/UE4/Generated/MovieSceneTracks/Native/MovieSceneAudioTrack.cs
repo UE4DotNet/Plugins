@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=176 )]
+    [StructLayout( LayoutKind.Explicit, Size=184 )]
     internal unsafe struct MovieSceneAudioTrack_fields {
-        [FieldOffset(152)] public NativeArray AudioSections;
-        [FieldOffset(168)] public int RowHeight;
+        [FieldOffset(160)] public NativeArray AudioSections;
+        [FieldOffset(176)] public int RowHeight;
     }
     internal unsafe struct MovieSceneAudioTrack_methods {
     }

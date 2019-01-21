@@ -20,6 +20,10 @@ namespace UE4.Engine {
             get {return NavigationSystemConfig_ptr->NavigationSystemClass;}
             set {NavigationSystemConfig_ptr->NavigationSystemClass = value;}
         }
+        public bool bIsOverriden {
+            get {return Main.GetGetBoolPropertyByName(this, "bIsOverriden"); }
+            set {Main.SetGetBoolPropertyByName(this, "bIsOverriden", value); }
+        }
         static NavigationSystemConfig() {
             StaticClass = Main.GetClass("NavigationSystemConfig");
         }

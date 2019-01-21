@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.OnlineSubsystemUtils.Native {
-    [StructLayout( LayoutKind.Explicit, Size=328 )]
+    [StructLayout( LayoutKind.Explicit, Size=320 )]
     internal unsafe struct OnlineEngineInterfaceImpl_fields {
         [FieldOffset(56)] public Name VoiceSubsystemNameOverride;
     }

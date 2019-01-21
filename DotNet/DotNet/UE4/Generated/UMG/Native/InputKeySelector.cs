@@ -13,19 +13,19 @@ using UE4.SlateCore;
 using UE4.Slate;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2000 )]
+    [StructLayout( LayoutKind.Explicit, Size=2032 )]
     internal unsafe struct InputKeySelector_fields {
-        [FieldOffset(384)] public ButtonStyle WidgetStyle;
-        [FieldOffset(1152)] public TextBlockStyle TextStyle;
-        [FieldOffset(1704)] public InputChord SelectedKey;
-        [FieldOffset(1848)] public Margin Margin;
-        [FieldOffset(1880)] byte KeySelectionText; //TODO: text FText KeySelectionText
-        [FieldOffset(1904)] byte NoKeySpecifiedText; //TODO: text FText NoKeySpecifiedText
-        [FieldOffset(1928)] public bool bAllowModifierKeys;
-        [FieldOffset(1929)] public bool bAllowGamepadKeys;
-        [FieldOffset(1936)] public NativeArray EscapeKeys;
-        [FieldOffset(1952)] byte OnKeySelected; //TODO: multicast delegate FOnKeySelected OnKeySelected
-        [FieldOffset(1968)] byte OnIsSelectingKeyChanged; //TODO: multicast delegate FOnIsSelectingKeyChanged OnIsSelectingKeyChanged
+        [FieldOffset(400)] public ButtonStyle WidgetStyle;
+        [FieldOffset(1168)] public TextBlockStyle TextStyle;
+        [FieldOffset(1728)] public InputChord SelectedKey;
+        [FieldOffset(1880)] public Margin Margin;
+        [FieldOffset(1912)] byte KeySelectionText; //TODO: text FText KeySelectionText
+        [FieldOffset(1936)] byte NoKeySpecifiedText; //TODO: text FText NoKeySpecifiedText
+        [FieldOffset(1960)] public bool bAllowModifierKeys;
+        [FieldOffset(1961)] public bool bAllowGamepadKeys;
+        [FieldOffset(1968)] public NativeArray EscapeKeys;
+        [FieldOffset(1984)] byte OnKeySelected; //TODO: multicast delegate FOnKeySelected OnKeySelected
+        [FieldOffset(2000)] byte OnIsSelectingKeyChanged; //TODO: multicast delegate FOnIsSelectingKeyChanged OnIsSelectingKeyChanged
     }
     internal unsafe struct InputKeySelector_methods {
         internal struct GetIsSelectingKey_method {

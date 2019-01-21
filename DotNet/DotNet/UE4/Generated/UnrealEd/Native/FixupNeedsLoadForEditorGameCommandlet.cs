@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=400 )]
+    [StructLayout( LayoutKind.Explicit, Size=480 )]
     internal unsafe struct FixupNeedsLoadForEditorGameCommandlet_fields {
     }
     internal unsafe struct FixupNeedsLoadForEditorGameCommandlet_methods {

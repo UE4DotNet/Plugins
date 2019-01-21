@@ -9,10 +9,12 @@ using UE4.CoreUObject.Native;
 using UE4.InputCore;
 using UE4.Native;
 
+using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
     [StructLayout( LayoutKind.Explicit, Size=352 )]
     internal unsafe struct AnimGraphNode_StateResult_fields {
+        [FieldOffset(272)] public AnimNode_StateResult Node;
     }
     internal unsafe struct AnimGraphNode_StateResult_methods {
     }

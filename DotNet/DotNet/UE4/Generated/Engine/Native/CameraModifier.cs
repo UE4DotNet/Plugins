@@ -92,7 +92,7 @@ namespace UE4.Engine.Native {
                 func.SetNativeFunc(Marshal.GetFunctionPointerForDelegate(BlueprintModifyCamera_link.Delegate));
             }
         }
-        [StructLayout( LayoutKind.Explicit, Size=1328 )]
+        [StructLayout( LayoutKind.Explicit, Size=1296 )]
         internal unsafe struct BlueprintModifyPostProcess_event {
             private static DelegateHolder<NativeFuncDelegate> BlueprintModifyPostProcess_link;
             private static unsafe void BlueprintModifyPostProcess_process_event(IntPtr context, Frame* theStack, IntPtr result) {

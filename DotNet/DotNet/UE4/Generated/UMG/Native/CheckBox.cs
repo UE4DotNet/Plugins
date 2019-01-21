@@ -12,14 +12,14 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2312 )]
+    [StructLayout( LayoutKind.Explicit, Size=2328 )]
     internal unsafe struct CheckBox_fields {
-        [FieldOffset(408)] byte CheckedState; //TODO: enum ECheckBoxState CheckedState
-        [FieldOffset(412)] byte CheckedStateDelegate; //TODO: delegate FGetCheckBoxState CheckedStateDelegate
-        [FieldOffset(432)] public CheckBoxStyle WidgetStyle;
-        [FieldOffset(2200)] public byte HorizontalAlignment;
-        [FieldOffset(2264)] public bool IsFocusable;
-        [FieldOffset(2272)] byte OnCheckStateChanged; //TODO: multicast delegate FOnCheckBoxComponentStateChanged OnCheckStateChanged
+        [FieldOffset(424)] byte CheckedState; //TODO: enum ECheckBoxState CheckedState
+        [FieldOffset(428)] byte CheckedStateDelegate; //TODO: delegate FGetCheckBoxState CheckedStateDelegate
+        [FieldOffset(448)] public CheckBoxStyle WidgetStyle;
+        [FieldOffset(2216)] public byte HorizontalAlignment;
+        [FieldOffset(2280)] public bool IsFocusable;
+        [FieldOffset(2288)] byte OnCheckStateChanged; //TODO: multicast delegate FOnCheckBoxComponentStateChanged OnCheckStateChanged
     }
     internal unsafe struct CheckBox_methods {
         internal struct GetCheckedState_method {

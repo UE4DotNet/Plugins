@@ -112,8 +112,8 @@ namespace UE4.Engine {
         ///@param bOutlined                                     If true, then the text should be rendered with an outline.
         ///@param OutlineColor                          Color to render the outline for the text.
         ///</remarks>
-        public void K2_DrawText(Font RenderFont, string RenderText, Vector2D ScreenPosition, LinearColor RenderColor, float Kerning, LinearColor ShadowColor, Vector2D ShadowOffset, bool bCentreX, bool bCentreY, bool bOutlined, LinearColor OutlineColor)  => 
-            Canvas_methods.K2_DrawText_method.Invoke(ObjPointer, RenderFont, RenderText, ScreenPosition, RenderColor, Kerning, ShadowColor, ShadowOffset, bCentreX, bCentreY, bOutlined, OutlineColor);
+        public void K2_DrawText(Font RenderFont, string RenderText, Vector2D ScreenPosition, Vector2D Scale, LinearColor RenderColor, float Kerning, LinearColor ShadowColor, Vector2D ShadowOffset, bool bCentreX, bool bCentreY, bool bOutlined, LinearColor OutlineColor)  => 
+            Canvas_methods.K2_DrawText_method.Invoke(ObjPointer, RenderFont, RenderText, ScreenPosition, Scale, RenderColor, Kerning, ShadowColor, ShadowOffset, bCentreX, bCentreY, bOutlined, OutlineColor);
 
         ///<summary>Draws a texture on the Canvas.</summary>
         ///<remarks>

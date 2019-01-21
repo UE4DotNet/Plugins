@@ -239,13 +239,8 @@ void FDotNetModule::LoadGameDll(UGameInstance* gameInstance) {
 	GameInstance = Cast<UDotNetGameInstance>( gameInstance );
 	Host->SetGameInstance(gameInstance);
 
-	auto config = GetDefault<UDotNetConfig>();
-	if (config->DLLGameFileName.IsEmpty()) {
-		GLog->Log(ELogVerbosity::Warning, "No file name for the DotNet DLL found.  Set in the Project settings under UE4 Dot Net");
-		return;
-	}
-	Host->LoadDLL(config->DLLGameFileName);
-	Host->CallStartFunction(config->GameInstanceClass, config->Argument, gameInstance);
+	Host->LoadDLL(FPaths::ProjectDir() / "DotNet/Game/Game.DLL");
+	Host->CallStartFunction("MyGameDotNetInstance", "", gameInstance);
 }
 
 void FDotNetModule::NewGame() {

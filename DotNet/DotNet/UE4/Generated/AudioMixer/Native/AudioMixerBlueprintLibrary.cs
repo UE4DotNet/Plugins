@@ -73,6 +73,20 @@ namespace UE4.AudioMixer.Native {
                 return *((int*)(b+16));
             }
         }
+        internal struct PauseRecordingOutput_method {
+            static internal IntPtr PauseRecordingOutput_ptr;
+            static PauseRecordingOutput_method() {
+                PauseRecordingOutput_ptr = Main.GetMethodUFunction(AudioMixerBlueprintLibrary.StaticClass, "PauseRecordingOutput");
+            }
+
+            internal static unsafe void Invoke(UObject WorldContextObject, SoundSubmix SubmixToPause) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = WorldContextObject;
+                *((IntPtr*)(b+8)) = SubmixToPause;
+                Main.GetProcessEvent(AudioMixerBlueprintLibrary.DefaultObject, PauseRecordingOutput_ptr, new IntPtr(p)); ;
+            }
+        }
         internal struct RemoveMasterSubmixEffect_method {
             static internal IntPtr RemoveMasterSubmixEffect_ptr;
             static RemoveMasterSubmixEffect_method() {
@@ -100,6 +114,20 @@ namespace UE4.AudioMixer.Native {
                 *((IntPtr*)(b+8)) = PresetChain;
                 *((int*)(b+16)) = EntryIndex;
                 Main.GetProcessEvent(AudioMixerBlueprintLibrary.DefaultObject, RemoveSourceEffectFromPresetChain_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct ResumeRecordingOutput_method {
+            static internal IntPtr ResumeRecordingOutput_ptr;
+            static ResumeRecordingOutput_method() {
+                ResumeRecordingOutput_ptr = Main.GetMethodUFunction(AudioMixerBlueprintLibrary.StaticClass, "ResumeRecordingOutput");
+            }
+
+            internal static unsafe void Invoke(UObject WorldContextObject, SoundSubmix SubmixToPause) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = WorldContextObject;
+                *((IntPtr*)(b+8)) = SubmixToPause;
+                Main.GetProcessEvent(AudioMixerBlueprintLibrary.DefaultObject, ResumeRecordingOutput_ptr, new IntPtr(p)); ;
             }
         }
         internal struct SetBypassSourceEffectChainEntry_method {

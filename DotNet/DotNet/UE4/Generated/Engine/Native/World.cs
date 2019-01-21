@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2384 )]
+    [StructLayout( LayoutKind.Explicit, Size=2336 )]
     internal unsafe struct World_fields {
         [FieldOffset(64)] public NativeArray Layers;
         [FieldOffset(80)] public NativeArray ActiveGroupActors;
@@ -46,10 +46,10 @@ namespace UE4.Engine.Native {
         [FieldOffset(488)]  public IntPtr  CanvasForRenderingToTarget;
         [FieldOffset(496)]  public IntPtr  CanvasForDrawMaterialToRenderTarget;
         [FieldOffset(520)] public NativeArray EditorViews;
-        [FieldOffset(1480)] public NativeArray SelectedLevels;
-        [FieldOffset(2160)]  public IntPtr  WorldComposition;
-        [FieldOffset(2246)] public bool bAreConstraintsDirty;
-        [FieldOffset(2296)] public WorldPSCPool PSCPool;
+        [FieldOffset(1424)] public NativeArray SelectedLevels;
+        [FieldOffset(2104)]  public IntPtr  WorldComposition;
+        [FieldOffset(2190)] public bool bAreConstraintsDirty;
+        [FieldOffset(2248)] public WorldPSCPool PSCPool;
     }
     internal unsafe struct World_methods {
     }

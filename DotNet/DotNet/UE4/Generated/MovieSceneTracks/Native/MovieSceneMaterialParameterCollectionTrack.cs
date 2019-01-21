@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=176 )]
+    [StructLayout( LayoutKind.Explicit, Size=184 )]
     internal unsafe struct MovieSceneMaterialParameterCollectionTrack_fields {
-        [FieldOffset(168)]  public IntPtr  MPC;
+        [FieldOffset(176)]  public IntPtr  MPC;
     }
     internal unsafe struct MovieSceneMaterialParameterCollectionTrack_methods {
     }

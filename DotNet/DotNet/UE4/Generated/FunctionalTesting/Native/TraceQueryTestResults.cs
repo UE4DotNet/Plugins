@@ -16,6 +16,7 @@ namespace UE4.FunctionalTesting.Native {
         [FieldOffset(56)] public TraceQueryTestResultsInner ChannelResults;
         [FieldOffset(952)] public TraceQueryTestResultsInner ObjectResults;
         [FieldOffset(1848)] public TraceQueryTestResultsInner ProfileResults;
+        [FieldOffset(2744)] public TraceChannelTestBatchOptions BatchOptions;
     }
     internal unsafe struct TraceQueryTestResults_methods {
         internal struct ToString_method {

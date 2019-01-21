@@ -13,8 +13,7 @@ namespace UE4.Engine {
     ///<summary>Enum indicating which physics scene to use.</summary>
     public enum EPhysicsSceneType {
         PST_Sync = 0x00000000, 
-        PST_Cloth = 0x00000001, 
-        PST_Async = 0x00000002, 
-        PST_MAX = 0x00000003
+        PST_Async = 0x00000001, 
+        PST_MAX = 0x00000002
     }
 }

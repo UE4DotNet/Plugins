@@ -103,16 +103,6 @@ namespace UE4.Engine {
         }
          //TODO: array not UObject TArray Materials
          //TODO: array not UObject TArray SkelMirrorTable
-        ///<summary>Skel Mirror Axis</summary>
-        public unsafe byte SkelMirrorAxis {
-            get {return SkeletalMesh_ptr->SkelMirrorAxis;}
-            set {SkeletalMesh_ptr->SkelMirrorAxis = value;}
-        }
-        ///<summary>Skel Mirror Flip Axis</summary>
-        public unsafe byte SkelMirrorFlipAxis {
-            get {return SkeletalMesh_ptr->SkelMirrorFlipAxis;}
-            set {SkeletalMesh_ptr->SkelMirrorFlipAxis = value;}
-        }
          //TODO: array not UObject TArray LODInfo
         ///<summary>Minimum LOD to render. Can be overridden per component as well as set here for all mesh instances here</summary>
         public unsafe PerPlatformInt MinLod {
@@ -123,6 +113,16 @@ namespace UE4.Engine {
         public unsafe SkeletalMeshLODSettings LODSettings {
             get {return SkeletalMesh_ptr->LODSettings;}
             set {SkeletalMesh_ptr->LODSettings = value;}
+        }
+        ///<summary>Skel Mirror Axis</summary>
+        public unsafe byte SkelMirrorAxis {
+            get {return SkeletalMesh_ptr->SkelMirrorAxis;}
+            set {SkeletalMesh_ptr->SkelMirrorAxis = value;}
+        }
+        ///<summary>Skel Mirror Flip Axis</summary>
+        public unsafe byte SkelMirrorFlipAxis {
+            get {return SkeletalMesh_ptr->SkelMirrorFlipAxis;}
+            set {SkeletalMesh_ptr->SkelMirrorFlipAxis = value;}
         }
         public bool bUseFullPrecisionUVs {
             get {return Main.GetGetBoolPropertyByName(this, "bUseFullPrecisionUVs"); }
@@ -140,14 +140,14 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bHasVertexColors"); }
             set {Main.SetGetBoolPropertyByName(this, "bHasVertexColors", value); }
         }
+        public bool bEnablePerPolyCollision {
+            get {return Main.GetGetBoolPropertyByName(this, "bEnablePerPolyCollision"); }
+            set {Main.SetGetBoolPropertyByName(this, "bEnablePerPolyCollision", value); }
+        }
         ///<summary>The guid to compute the ddc key, it must be dirty when we change the vertex color.</summary>
         public unsafe FGuid VertexColorGuid {
             get {return SkeletalMesh_ptr->VertexColorGuid;}
             set {SkeletalMesh_ptr->VertexColorGuid = value;}
-        }
-        public bool bEnablePerPolyCollision {
-            get {return Main.GetGetBoolPropertyByName(this, "bEnablePerPolyCollision"); }
-            set {Main.SetGetBoolPropertyByName(this, "bEnablePerPolyCollision", value); }
         }
         ///<summary>Physics data for the per poly collision case. In 99% of cases you will not need this and are better off using simple ragdoll collision (physics asset)</summary>
         public unsafe BodySetup BodySetup {

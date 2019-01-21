@@ -13,7 +13,7 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Information about each target in the PoseDriver</summary>
-        [StructLayout( LayoutKind.Explicit, Size=168 )]
+        [StructLayout( LayoutKind.Explicit, Size=176 )]
         public unsafe struct PoseDriverTarget {
             [FieldOffset(0)] byte BoneTransforms; //TODO: array TArray BoneTransforms
 

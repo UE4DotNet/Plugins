@@ -60,10 +60,35 @@ namespace UE4.Landscape {
         public void EditorSetLandscapeMaterial(MaterialInterface NewLandscapeMaterial)  => 
             LandscapeProxy_methods.EditorSetLandscapeMaterial_method.Invoke(ObjPointer, NewLandscapeMaterial);
 
-        ///<summary>Overwrites a landscape heightmap with render target data</summary>
+        ///<summary>
+        ///Output a landscape heightmap to a render target
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param InRenderTarget - Valid render target with a format of RTF_RGBA16f, RTF_RGBA32f or RTF_RGBA8
+        ///@param InExportHeightIntoRGChannel - Tell us if we should export the height that is internally stored as R & G (for 16 bits) to a single R channel of the render target (the format need to be RTF_RGBA16f or RTF_RGBA32f)
+        ///                                                                         Note that using RTF_RGBA16f with InExportHeightIntoRGChannel == false, could have precision loss.
+        ///</remarks>
+        public bool LandscapeExportHeightmapToRenderTarget(TextureRenderTarget2D InRenderTarget, bool InExportHeightIntoRGChannel)  => 
+            LandscapeProxy_methods.LandscapeExportHeightmapToRenderTarget_method.Invoke(ObjPointer, InRenderTarget, InExportHeightIntoRGChannel);
+
+        ///<summary>Output a landscape weightmap to a render target</summary>
         ///<remarks>Only works in the editor</remarks>
-        public bool LandscapeImportHeightmapFromRenderTarget(TextureRenderTarget2D InRenderTarget)  => 
-            LandscapeProxy_methods.LandscapeImportHeightmapFromRenderTarget_method.Invoke(ObjPointer, InRenderTarget);
+        public bool LandscapeExportWeightmapToRenderTarget(TextureRenderTarget2D InRenderTarget, Name InLayerName)  => 
+            LandscapeProxy_methods.LandscapeExportWeightmapToRenderTarget_method.Invoke(ObjPointer, InRenderTarget, InLayerName);
+
+        ///<summary>
+        ///Overwrites a landscape heightmap with render target data
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param InRenderTarget - Valid render target with a format of RTF_RGBA16f, RTF_RGBA32f or RTF_RGBA8
+        ///@param InImportHeightFromRGChannel - Only relevant when using format RTF_RGBA16f or RTF_RGBA32f, and will tell us if we should import the height data from the R channel only of the Render target or from R & G.
+        ///                                                                         Note that using RTF_RGBA16f with InImportHeightFromRGChannel == false, could have precision loss
+        ///Only works in the editor
+        ///</remarks>
+        public bool LandscapeImportHeightmapFromRenderTarget(TextureRenderTarget2D InRenderTarget, bool InImportHeightFromRGChannel)  => 
+            LandscapeProxy_methods.LandscapeImportHeightmapFromRenderTarget_method.Invoke(ObjPointer, InRenderTarget, InImportHeightFromRGChannel);
 
         ///<summary>Overwrites a landscape weightmap with render target data</summary>
         ///<remarks>Only works in the editor</remarks>
@@ -171,6 +196,7 @@ namespace UE4.Landscape {
             get {return LandscapeProxy_ptr->LandscapeHoleMaterial;}
             set {LandscapeProxy_ptr->LandscapeHoleMaterial = value;}
         }
+         //TODO: array not UObject TArray LandscapeMaterialsOverride
         ///<summary>Allows overriding the landscape bounds.</summary>
         ///<remarks>
         ///This is useful if you distort the landscape with world-position-offset, for example

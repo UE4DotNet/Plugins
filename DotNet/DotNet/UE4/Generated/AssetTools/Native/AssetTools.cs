@@ -236,6 +236,20 @@ namespace UE4.AssetTools.Native {
                  //TODO: array TArray ImportTasks
             }
         }
+        internal struct OpenEditorForAssets_method {
+            static internal IntPtr OpenEditorForAssets_ptr;
+            static OpenEditorForAssets_method() {
+                OpenEditorForAssets_ptr = Main.GetMethodUFunction(AssetTools.StaticClass, "OpenEditorForAssets");
+            }
+
+            internal static unsafe void Invoke(IntPtr obj, byte Assets /*TODO: array TArray */) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                throw new NotImplementedException(); //TODO: array TArray Assets
+                Main.GetProcessEvent(obj, OpenEditorForAssets_ptr, new IntPtr(p)); ;
+                 //TODO: array TArray Assets
+            }
+        }
         internal struct RenameAssets_method {
             static internal IntPtr RenameAssets_ptr;
             static RenameAssets_method() {

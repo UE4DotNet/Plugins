@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1568 )]
+    [StructLayout( LayoutKind.Explicit, Size=1552 )]
     internal unsafe struct VectorFieldComponent_fields {
-        [FieldOffset(1520)]  public IntPtr  VectorField;
-        [FieldOffset(1528)] public float Intensity;
-        [FieldOffset(1532)] public float Tightness;
-        [FieldOffset(1536)] public bool bPreviewVectorField;
+        [FieldOffset(1504)]  public IntPtr  VectorField;
+        [FieldOffset(1512)] public float Intensity;
+        [FieldOffset(1516)] public float Tightness;
+        [FieldOffset(1520)] public bool bPreviewVectorField;
     }
     internal unsafe struct VectorFieldComponent_methods {
         internal struct SetIntensity_method {

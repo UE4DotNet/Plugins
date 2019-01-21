@@ -12,23 +12,25 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1216 )]
+    [StructLayout( LayoutKind.Explicit, Size=1552 )]
     internal unsafe struct Slider_fields {
-        [FieldOffset(384)] public float Value;
-        [FieldOffset(388)] byte ValueDelegate; //TODO: delegate FGetFloat ValueDelegate
-        [FieldOffset(408)] public SliderStyle WidgetStyle;
-        [FieldOffset(1064)] public byte Orientation;
-        [FieldOffset(1068)] public LinearColor SliderBarColor;
-        [FieldOffset(1084)] public LinearColor SliderHandleColor;
-        [FieldOffset(1100)] public bool IndentHandle;
-        [FieldOffset(1101)] public bool Locked;
-        [FieldOffset(1104)] public float StepSize;
-        [FieldOffset(1108)] public bool IsFocusable;
-        [FieldOffset(1112)] byte OnMouseCaptureBegin; //TODO: multicast delegate FOnMouseCaptureBeginEvent OnMouseCaptureBegin
-        [FieldOffset(1128)] byte OnMouseCaptureEnd; //TODO: multicast delegate FOnMouseCaptureEndEvent OnMouseCaptureEnd
-        [FieldOffset(1144)] byte OnControllerCaptureBegin; //TODO: multicast delegate FOnControllerCaptureBeginEvent OnControllerCaptureBegin
-        [FieldOffset(1160)] byte OnControllerCaptureEnd; //TODO: multicast delegate FOnControllerCaptureEndEvent OnControllerCaptureEnd
-        [FieldOffset(1176)] byte OnValueChanged; //TODO: multicast delegate FOnFloatValueChangedEvent OnValueChanged
+        [FieldOffset(400)] public float Value;
+        [FieldOffset(404)] byte ValueDelegate; //TODO: delegate FGetFloat ValueDelegate
+        [FieldOffset(424)] public SliderStyle WidgetStyle;
+        [FieldOffset(1400)] public byte Orientation;
+        [FieldOffset(1404)] public LinearColor SliderBarColor;
+        [FieldOffset(1420)] public LinearColor SliderHandleColor;
+        [FieldOffset(1436)] public bool IndentHandle;
+        [FieldOffset(1437)] public bool Locked;
+        [FieldOffset(1438)] public bool MouseUsesStep;
+        [FieldOffset(1439)] public bool RequiresControllerLock;
+        [FieldOffset(1440)] public float StepSize;
+        [FieldOffset(1444)] public bool IsFocusable;
+        [FieldOffset(1448)] byte OnMouseCaptureBegin; //TODO: multicast delegate FOnMouseCaptureBeginEvent OnMouseCaptureBegin
+        [FieldOffset(1464)] byte OnMouseCaptureEnd; //TODO: multicast delegate FOnMouseCaptureEndEvent OnMouseCaptureEnd
+        [FieldOffset(1480)] byte OnControllerCaptureBegin; //TODO: multicast delegate FOnControllerCaptureBeginEvent OnControllerCaptureBegin
+        [FieldOffset(1496)] byte OnControllerCaptureEnd; //TODO: multicast delegate FOnControllerCaptureEndEvent OnControllerCaptureEnd
+        [FieldOffset(1512)] byte OnValueChanged; //TODO: multicast delegate FOnFloatValueChangedEvent OnValueChanged
     }
     internal unsafe struct Slider_methods {
         internal struct GetValue_method {

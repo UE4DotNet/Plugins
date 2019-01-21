@@ -11,15 +11,15 @@ using UE4.Native;
 
 
 namespace UE4.ProceduralMeshComponent.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1664 )]
+    [StructLayout( LayoutKind.Explicit, Size=1648 )]
     internal unsafe struct ProceduralMeshComponent_fields {
-        [FieldOffset(1568)] public bool bUseComplexAsSimpleCollision;
-        [FieldOffset(1569)] public bool bUseAsyncCooking;
-        [FieldOffset(1576)]  public IntPtr  ProcMeshBodySetup;
-        [FieldOffset(1584)] public NativeArray ProcMeshSections;
-        [FieldOffset(1600)] public NativeArray CollisionConvexElems;
-        [FieldOffset(1616)] public BoxSphereBounds LocalBounds;
-        [FieldOffset(1648)] public NativeArray AsyncBodySetupQueue;
+        [FieldOffset(1552)] public bool bUseComplexAsSimpleCollision;
+        [FieldOffset(1553)] public bool bUseAsyncCooking;
+        [FieldOffset(1560)]  public IntPtr  ProcMeshBodySetup;
+        [FieldOffset(1568)] public NativeArray ProcMeshSections;
+        [FieldOffset(1584)] public NativeArray CollisionConvexElems;
+        [FieldOffset(1600)] public BoxSphereBounds LocalBounds;
+        [FieldOffset(1632)] public NativeArray AsyncBodySetupQueue;
     }
     internal unsafe struct ProceduralMeshComponent_methods {
         internal struct AddCollisionConvexMesh_method {

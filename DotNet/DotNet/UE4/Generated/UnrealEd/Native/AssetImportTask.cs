@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=136 )]
+    [StructLayout( LayoutKind.Explicit, Size=144 )]
     internal unsafe struct AssetImportTask_fields {
         [FieldOffset(56)] byte Filename; //TODO: string FString Filename
         [FieldOffset(72)] byte DestinationPath; //TODO: string FString DestinationPath
@@ -21,6 +21,7 @@ namespace UE4.UnrealEd.Native {
         [FieldOffset(106)] public bool bSave;
         [FieldOffset(112)]  public IntPtr  Options;
         [FieldOffset(120)] public NativeArray ImportedObjectPaths;
+        [FieldOffset(136)]  public IntPtr  Result;
     }
     internal unsafe struct AssetImportTask_methods {
     }

@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.PhysXVehicles;
 
 namespace UE4.PhysXVehiclesEditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=656 )]
+    [StructLayout( LayoutKind.Explicit, Size=632 )]
     internal unsafe struct AnimGraphNode_WheelHandler_fields {
         [FieldOffset(272)] public AnimNode_WheelHandler Node;
     }

@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Static Mesh Component LODInfo</summary>
-        [StructLayout( LayoutKind.Explicit, Size=184 )]
+        [StructLayout( LayoutKind.Explicit, Size=176 )]
         public unsafe struct StaticMeshComponentLODInfo {
             [FieldOffset(40)] byte PaintedVertices; //TODO: array TArray PaintedVertices
 

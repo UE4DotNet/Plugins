@@ -120,6 +120,14 @@ namespace UE4.Engine {
         public static (int, int, int, int, int, int, int) BreakDateTime(FDateTime InDateTime)  => 
             KismetMathLibrary_methods.BreakDateTime_method.Invoke(InDateTime);
 
+        ///<summary>Breaks a FFrameRate into a numerator and denominator.</summary>
+        public static (int, int) BreakFrameRate(FrameRate InFrameRate)  => 
+            KismetMathLibrary_methods.BreakFrameRate_method.Invoke(InFrameRate);
+
+        ///<summary>Breaks a FQualifiedFrameTime into its component parts again.</summary>
+        public static (FrameNumber, FrameRate, float) BreakQualifiedFrameTime(QualifiedFrameTime InFrameTime)  => 
+            KismetMathLibrary_methods.BreakQualifiedFrameTime_method.Invoke(InFrameTime);
+
         ///<summary>Breaks apart a random number generator</summary>
         public static int BreakRandomStream(RandomStream InRandomStream)  => 
             KismetMathLibrary_methods.BreakRandomStream_method.Invoke(InRandomStream);
@@ -274,6 +282,18 @@ namespace UE4.Engine {
         ///<summary>Converts a LinearColor to a vector</summary>
         public static Vector Conv_LinearColorToVector(LinearColor InLinearColor)  => 
             KismetMathLibrary_methods.Conv_LinearColorToVector_method.Invoke(InLinearColor);
+
+        ///<summary>Convert a Matrix to a Rotator</summary>
+        public static Rotator Conv_MatrixToRotator(Matrix InMatrix)  => 
+            KismetMathLibrary_methods.Conv_MatrixToRotator_method.Invoke(InMatrix);
+
+        ///<summary>Convert a Matrix to a Transform</summary>
+        public static Transform Conv_MatrixToTransform(Matrix InMatrix)  => 
+            KismetMathLibrary_methods.Conv_MatrixToTransform_method.Invoke(InMatrix);
+
+        ///<summary>Convert Rotator to Transform</summary>
+        public static Transform Conv_RotatorToTransform(Rotator InRotator)  => 
+            KismetMathLibrary_methods.Conv_RotatorToTransform_method.Invoke(InRotator);
 
         ///<summary>Get the X direction vector after this rotation</summary>
         public static Vector Conv_RotatorToVector(Rotator InRot)  => 
@@ -870,11 +890,11 @@ namespace UE4.Engine {
         public static float GridSnap_Float(float Location, float GridSize)  => 
             KismetMathLibrary_methods.GridSnap_Float_method.Invoke(Location, GridSize);
 
-        ///<summary>Make a color from individual color components (HSV space)</summary>
+        ///<summary>Make a color from individual color components (HSV space; Hue is [0..360) while Saturation and Value are 0..1)</summary>
         public static LinearColor HSVToRGB(float H, float S, float V, float A)  => 
             KismetMathLibrary_methods.HSVToRGB_method.Invoke(H, S, V, A);
 
-        ///<summary>Converts a HSV linear color (where H is in R, S is in G, and V is in B) to RGB</summary>
+        ///<summary>Converts a HSV linear color (where H is in R (0..360), S is in G (0..1), and V is in B (0..1)) to RGB</summary>
         public static LinearColor HSVToRGB_Vector(LinearColor HSV)  => 
             KismetMathLibrary_methods.HSVToRGB_Vector_method.Invoke(HSV);
 
@@ -1066,6 +1086,10 @@ namespace UE4.Engine {
         public static FDateTime MakeDateTime(int Year, int Month, int Day, int Hour, int Minute, int Second, int Millisecond)  => 
             KismetMathLibrary_methods.MakeDateTime_method.Invoke(Year, Month, Day, Hour, Minute, Second, Millisecond);
 
+        ///<summary>Creates a FFrameRate from a Numerator and a Denominator. Enforces that the Denominator is at least one.</summary>
+        public static FrameRate MakeFrameRate(int Numerator, int Denominator)  => 
+            KismetMathLibrary_methods.MakeFrameRate_method.Invoke(Numerator, Denominator);
+
         ///<summary>
         ///Creates a plane with a facing direction of Normal at the given Point
         ///@
@@ -1091,6 +1115,10 @@ namespace UE4.Engine {
         ///</remarks>
         public static float MakePulsatingValue(float InCurrentTime, float InPulsesPerSecond, float InPhase)  => 
             KismetMathLibrary_methods.MakePulsatingValue_method.Invoke(InCurrentTime, InPulsesPerSecond, InPhase);
+
+        ///<summary>Creates a FQualifiedFrameTime out of a frame number, frame rate, and optional 0-1 clamped subframe.</summary>
+        public static QualifiedFrameTime MakeQualifiedFrameTime(FrameNumber Frame, FrameRate FrameRate, float SubFrame)  => 
+            KismetMathLibrary_methods.MakeQualifiedFrameTime_method.Invoke(Frame, FrameRate, SubFrame);
 
         ///<summary>Makes a SRand-based random number generator</summary>
         public static RandomStream MakeRandomStream(int InitialSeed)  => 
@@ -1167,6 +1195,14 @@ namespace UE4.Engine {
         ///<summary>Returns Value mapped from one range into another.  (e.g. 20 normalized from the range 10->50 to 20->40 would result in 25)</summary>
         public static float MapRangeUnclamped(float Value, float InRangeA, float InRangeB, float OutRangeA, float OutRangeB)  => 
             KismetMathLibrary_methods.MapRangeUnclamped_method.Invoke(Value, InRangeA, InRangeB, OutRangeA, OutRangeB);
+
+        ///<summary>
+        ///Get the origin of the co-ordinate system
+        ///@
+        ///</summary>
+        ///<remarks>return co-ordinate system origin</remarks>
+        public static Vector Matrix_GetOrigin(Matrix InMatrix)  => 
+            KismetMathLibrary_methods.Matrix_GetOrigin_method.Invoke(InMatrix);
 
         ///<summary>Returns the maximum value of A and B</summary>
         public static int Max(int A, int B)  => 
@@ -1407,6 +1443,17 @@ namespace UE4.Engine {
         public static int Percent_IntInt(int A, int B)  => 
             KismetMathLibrary_methods.Percent_IntInt_method.Invoke(A, B);
 
+        ///<summary>Generates a 1D Perlin noise from the given value.</summary>
+        ///<remarks>
+        ///Returns a continuous random value between -1.0 and 1.0.
+        ///
+        ///@param       Value   The input value that Perlin noise will be generated from.  This is usually a steadily incrementing time value.
+        ///
+        ///@return      Perlin noise in the range of -1.0 to 1.0
+        ///</remarks>
+        public static float PerlinNoise1D(float Value)  => 
+            KismetMathLibrary_methods.PerlinNoise1D_method.Invoke(Value);
+
         ///<summary>Determines whether a given set of points are coplanar, with a tolerance.</summary>
         ///<remarks>
         ///Any three points or less are always coplanar.
@@ -1621,11 +1668,11 @@ namespace UE4.Engine {
         public static void ResetVectorSpringState(VectorSpringState SpringState)  => 
             KismetMathLibrary_methods.ResetVectorSpringState_method.Invoke(SpringState);
 
-        ///<summary>Breaks apart a color into individual HSV components (as well as alpha)</summary>
+        ///<summary>Breaks apart a color into individual HSV components (as well as alpha) (Hue is [0..360) while Saturation and Value are 0..1)</summary>
         public static (float, float, float, float) RGBToHSV(LinearColor InColor)  => 
             KismetMathLibrary_methods.RGBToHSV_method.Invoke(InColor);
 
-        ///<summary>Converts a RGB linear color to HSV (where H is in R, S is in G, and V is in B)</summary>
+        ///<summary>Converts a RGB linear color to HSV (where H is in R (0..360), S is in G (0..1), and V is in B (0..1))</summary>
         public static LinearColor RGBToHSV_Vector(LinearColor RGB)  => 
             KismetMathLibrary_methods.RGBToHSV_Vector_method.Invoke(RGB);
 

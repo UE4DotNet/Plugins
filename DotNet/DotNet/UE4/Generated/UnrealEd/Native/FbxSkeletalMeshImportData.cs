@@ -11,16 +11,17 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=208 )]
+    [StructLayout( LayoutKind.Explicit, Size=216 )]
     internal unsafe struct FbxSkeletalMeshImportData_fields {
-        [FieldOffset(192)] public bool bUpdateSkeletonReferencePose;
-        [FieldOffset(192)] public bool bUseT0AsRefPose;
-        [FieldOffset(192)] public bool bPreserveSmoothingGroups;
-        [FieldOffset(192)] public bool bImportMeshesInBoneHierarchy;
-        [FieldOffset(192)] public bool bImportMorphTargets;
-        [FieldOffset(196)] public float ThresholdPosition;
-        [FieldOffset(200)] public float ThresholdTangentNormal;
-        [FieldOffset(204)] public float ThresholdUV;
+        [FieldOffset(192)] public byte ImportContentType;
+        [FieldOffset(196)] public bool bUpdateSkeletonReferencePose;
+        [FieldOffset(196)] public bool bUseT0AsRefPose;
+        [FieldOffset(196)] public bool bPreserveSmoothingGroups;
+        [FieldOffset(196)] public bool bImportMeshesInBoneHierarchy;
+        [FieldOffset(196)] public bool bImportMorphTargets;
+        [FieldOffset(200)] public float ThresholdPosition;
+        [FieldOffset(204)] public float ThresholdTangentNormal;
+        [FieldOffset(208)] public float ThresholdUV;
     }
     internal unsafe struct FbxSkeletalMeshImportData_methods {
     }

@@ -155,6 +155,14 @@ namespace UE4.UnrealEd {
             get {return Main.GetGetBoolPropertyByName(this, "bAutomatedImportShouldDetectType"); }
             set {Main.SetGetBoolPropertyByName(this, "bAutomatedImportShouldDetectType", value); }
         }
+         //TODO: string FString FileVersion
+         //TODO: string FString FileCreator
+         //TODO: string FString FileCreatorApplication
+         //TODO: string FString FileUnits
+         //TODO: string FString FileAxisDirection
+         //TODO: string FString FileSampleRate
+         //TODO: string FString AnimStartFrame
+         //TODO: string FString AnimEndFrame
         static FbxImportUI() {
             StaticClass = Main.GetClass("FbxImportUI");
         }

@@ -10,7 +10,7 @@ using UE4.InputCore;
 using UE4.Native;
 
 namespace UE4.MagicLeap {
-    ///<summary>Type of mesh to query from the underlying system.</summary>
+    ///<summary>Vertex color mode.</summary>
     public enum EMLMeshVertexColorMode {
         None = 0x00000000, 
         Confidence = 0x00000001, 

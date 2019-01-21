@@ -398,6 +398,34 @@ namespace UE4.Engine.Native {
                 return (*((int*)(b+8)),*((int*)(b+12)),*((int*)(b+16)),*((int*)(b+20)),*((int*)(b+24)),*((int*)(b+28)),*((int*)(b+32)));
             }
         }
+        internal struct BreakFrameRate_method {
+            static internal IntPtr BreakFrameRate_ptr;
+            static BreakFrameRate_method() {
+                BreakFrameRate_ptr = Main.GetMethodUFunction(KismetMathLibrary.StaticClass, "BreakFrameRate");
+            }
+
+            internal static unsafe (int, int) Invoke(FrameRate InFrameRate) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                *((FrameRate*)(b+0)) = InFrameRate;
+                Main.GetProcessEvent(KismetMathLibrary.DefaultObject, BreakFrameRate_ptr, new IntPtr(p)); ;
+                return (*((int*)(b+8)),*((int*)(b+12)));
+            }
+        }
+        internal struct BreakQualifiedFrameTime_method {
+            static internal IntPtr BreakQualifiedFrameTime_ptr;
+            static BreakQualifiedFrameTime_method() {
+                BreakQualifiedFrameTime_ptr = Main.GetMethodUFunction(KismetMathLibrary.StaticClass, "BreakQualifiedFrameTime");
+            }
+
+            internal static unsafe (FrameNumber, FrameRate, float) Invoke(QualifiedFrameTime InFrameTime) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((QualifiedFrameTime*)(b+0)) = InFrameTime;
+                Main.GetProcessEvent(KismetMathLibrary.DefaultObject, BreakQualifiedFrameTime_ptr, new IntPtr(p)); ;
+                return (*((FrameNumber*)(b+16)),*((FrameRate*)(b+20)),*((float*)(b+28)));
+            }
+        }
         internal struct BreakRandomStream_method {
             static internal IntPtr BreakRandomStream_ptr;
             static BreakRandomStream_method() {
@@ -842,6 +870,48 @@ namespace UE4.Engine.Native {
                 *((LinearColor*)(b+0)) = InLinearColor;
                 Main.GetProcessEvent(KismetMathLibrary.DefaultObject, Conv_LinearColorToVector_ptr, new IntPtr(p)); ;
                 return *((Vector*)(b+16));
+            }
+        }
+        internal struct Conv_MatrixToRotator_method {
+            static internal IntPtr Conv_MatrixToRotator_ptr;
+            static Conv_MatrixToRotator_method() {
+                Conv_MatrixToRotator_ptr = Main.GetMethodUFunction(KismetMathLibrary.StaticClass, "Conv_MatrixToRotator");
+            }
+
+            internal static unsafe Rotator Invoke(Matrix InMatrix) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Matrix*)(b+0)) = InMatrix;
+                Main.GetProcessEvent(KismetMathLibrary.DefaultObject, Conv_MatrixToRotator_ptr, new IntPtr(p)); ;
+                return *((Rotator*)(b+64));
+            }
+        }
+        internal struct Conv_MatrixToTransform_method {
+            static internal IntPtr Conv_MatrixToTransform_ptr;
+            static Conv_MatrixToTransform_method() {
+                Conv_MatrixToTransform_ptr = Main.GetMethodUFunction(KismetMathLibrary.StaticClass, "Conv_MatrixToTransform");
+            }
+
+            internal static unsafe Transform Invoke(Matrix InMatrix) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Matrix*)(b+0)) = InMatrix;
+                Main.GetProcessEvent(KismetMathLibrary.DefaultObject, Conv_MatrixToTransform_ptr, new IntPtr(p)); ;
+                return *((Transform*)(b+64));
+            }
+        }
+        internal struct Conv_RotatorToTransform_method {
+            static internal IntPtr Conv_RotatorToTransform_ptr;
+            static Conv_RotatorToTransform_method() {
+                Conv_RotatorToTransform_ptr = Main.GetMethodUFunction(KismetMathLibrary.StaticClass, "Conv_RotatorToTransform");
+            }
+
+            internal static unsafe Transform Invoke(Rotator InRotator) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Rotator*)(b+0)) = InRotator;
+                Main.GetProcessEvent(KismetMathLibrary.DefaultObject, Conv_RotatorToTransform_ptr, new IntPtr(p)); ;
+                return *((Transform*)(b+16));
             }
         }
         internal struct Conv_RotatorToVector_method {
@@ -3233,6 +3303,21 @@ namespace UE4.Engine.Native {
                 return *((FDateTime*)(b+32));
             }
         }
+        internal struct MakeFrameRate_method {
+            static internal IntPtr MakeFrameRate_ptr;
+            static MakeFrameRate_method() {
+                MakeFrameRate_ptr = Main.GetMethodUFunction(KismetMathLibrary.StaticClass, "MakeFrameRate");
+            }
+
+            internal static unsafe FrameRate Invoke(int Numerator, int Denominator) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                *((int*)(b+0)) = Numerator;
+                *((int*)(b+4)) = Denominator;
+                Main.GetProcessEvent(KismetMathLibrary.DefaultObject, MakeFrameRate_ptr, new IntPtr(p)); ;
+                return *((FrameRate*)(b+8));
+            }
+        }
         internal struct MakePlaneFromPointAndNormal_method {
             static internal IntPtr MakePlaneFromPointAndNormal_ptr;
             static MakePlaneFromPointAndNormal_method() {
@@ -3262,6 +3347,22 @@ namespace UE4.Engine.Native {
                 *((float*)(b+8)) = InPhase;
                 Main.GetProcessEvent(KismetMathLibrary.DefaultObject, MakePulsatingValue_ptr, new IntPtr(p)); ;
                 return *((float*)(b+12));
+            }
+        }
+        internal struct MakeQualifiedFrameTime_method {
+            static internal IntPtr MakeQualifiedFrameTime_ptr;
+            static MakeQualifiedFrameTime_method() {
+                MakeQualifiedFrameTime_ptr = Main.GetMethodUFunction(KismetMathLibrary.StaticClass, "MakeQualifiedFrameTime");
+            }
+
+            internal static unsafe QualifiedFrameTime Invoke(FrameNumber Frame, FrameRate FrameRate, float SubFrame) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((FrameNumber*)(b+0)) = Frame;
+                *((FrameRate*)(b+4)) = FrameRate;
+                *((float*)(b+12)) = SubFrame;
+                Main.GetProcessEvent(KismetMathLibrary.DefaultObject, MakeQualifiedFrameTime_ptr, new IntPtr(p)); ;
+                return *((QualifiedFrameTime*)(b+16));
             }
         }
         internal struct MakeRandomStream_method {
@@ -3559,6 +3660,20 @@ namespace UE4.Engine.Native {
                 *((float*)(b+16)) = OutRangeB;
                 Main.GetProcessEvent(KismetMathLibrary.DefaultObject, MapRangeUnclamped_ptr, new IntPtr(p)); ;
                 return *((float*)(b+20));
+            }
+        }
+        internal struct Matrix_GetOrigin_method {
+            static internal IntPtr Matrix_GetOrigin_ptr;
+            static Matrix_GetOrigin_method() {
+                Matrix_GetOrigin_ptr = Main.GetMethodUFunction(KismetMathLibrary.StaticClass, "Matrix_GetOrigin");
+            }
+
+            internal static unsafe Vector Invoke(Matrix InMatrix) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Matrix*)(b+0)) = InMatrix;
+                Main.GetProcessEvent(KismetMathLibrary.DefaultObject, Matrix_GetOrigin_ptr, new IntPtr(p)); ;
+                return *((Vector*)(b+64));
             }
         }
         internal struct Max_method {
@@ -4370,6 +4485,20 @@ namespace UE4.Engine.Native {
                 *((int*)(b+4)) = B;
                 Main.GetProcessEvent(KismetMathLibrary.DefaultObject, Percent_IntInt_ptr, new IntPtr(p)); ;
                 return *((int*)(b+8));
+            }
+        }
+        internal struct PerlinNoise1D_method {
+            static internal IntPtr PerlinNoise1D_ptr;
+            static PerlinNoise1D_method() {
+                PerlinNoise1D_ptr = Main.GetMethodUFunction(KismetMathLibrary.StaticClass, "PerlinNoise1D");
+            }
+
+            internal static unsafe float Invoke(float Value) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((float*)(b+0)) = Value;
+                Main.GetProcessEvent(KismetMathLibrary.DefaultObject, PerlinNoise1D_ptr, new IntPtr(p)); ;
+                return *((float*)(b+4));
             }
         }
         internal struct PointsAreCoplanar_method {

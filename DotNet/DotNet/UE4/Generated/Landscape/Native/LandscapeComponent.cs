@@ -12,46 +12,50 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.Landscape.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2064 )]
+    [StructLayout( LayoutKind.Explicit, Size=2208 )]
     internal unsafe struct LandscapeComponent_fields {
-        [FieldOffset(1520)] public int SectionBaseX;
-        [FieldOffset(1524)] public int SectionBaseY;
-        [FieldOffset(1528)] public int ComponentSizeQuads;
-        [FieldOffset(1532)] public int SubsectionSizeQuads;
-        [FieldOffset(1536)] public int NumSubsections;
-        [FieldOffset(1544)]  public IntPtr  OverrideMaterial;
-        [FieldOffset(1552)]  public IntPtr  OverrideHoleMaterial;
+        [FieldOffset(1504)] public int SectionBaseX;
+        [FieldOffset(1508)] public int SectionBaseY;
+        [FieldOffset(1512)] public int ComponentSizeQuads;
+        [FieldOffset(1516)] public int SubsectionSizeQuads;
+        [FieldOffset(1520)] public int NumSubsections;
+        [FieldOffset(1528)]  public IntPtr  OverrideMaterial;
+        [FieldOffset(1536)]  public IntPtr  OverrideHoleMaterial;
+        [FieldOffset(1544)] public NativeArray OverrideMaterials;
         [FieldOffset(1568)] public NativeArray MaterialInstances;
         [FieldOffset(1584)] public NativeArray MaterialInstancesDynamic;
-        [FieldOffset(1600)] public NativeArray WeightmapLayerAllocations;
-        [FieldOffset(1616)] public NativeArray WeightmapTextures;
-        [FieldOffset(1632)]  public IntPtr  XYOffsetmapTexture;
-        [FieldOffset(1648)] public Vector4 WeightmapScaleBias;
-        [FieldOffset(1664)] public float WeightmapSubsectionOffset;
-        [FieldOffset(1680)] public Vector4 HeightmapScaleBias;
-        [FieldOffset(1696)]  public IntPtr  HeightmapTexture;
-        [FieldOffset(1704)] public Box CachedLocalBox;
-        [FieldOffset(1732)] byte CollisionComponent; //TODO: lazy_object TLazyObjectPtr<ULandscapeHeightfieldCollisionComponent> CollisionComponent
-        [FieldOffset(1760)] public FGuid LightingGuid;
-        [FieldOffset(1776)] public FGuid MapBuildDataId;
-        [FieldOffset(1808)] public int CollisionMipLevel;
-        [FieldOffset(1812)] public int SimpleCollisionMipLevel;
-        [FieldOffset(1816)] public float NegativeZBoundsExtension;
-        [FieldOffset(1820)] public float PositiveZBoundsExtension;
-        [FieldOffset(1824)] public float StaticLightingResolution;
-        [FieldOffset(1828)] public int ForcedLOD;
-        [FieldOffset(1832)] public int LODBias;
-        [FieldOffset(1836)] public FGuid StateId;
-        [FieldOffset(1852)] public FGuid BakedTextureMaterialGuid;
-        [FieldOffset(1872)]  public IntPtr  GIBakedBaseColorTexture;
-        [FieldOffset(1880)] public int LightingLODBias;
-        [FieldOffset(1888)] public NativeArray LayerWhitelist;
-        [FieldOffset(1904)] public LandscapeEditToolRenderData EditToolRenderData;
-        [FieldOffset(1944)] public FGuid MobileDataSourceHash;
-        [FieldOffset(1960)] public byte MobileBlendableLayerMask;
-        [FieldOffset(1968)]  public IntPtr  MobileMaterialInterface;
-        [FieldOffset(1976)] public NativeArray MobileWeightmapTextures;
-        [FieldOffset(2008)]  public IntPtr  MobileCombinationMaterialInstance;
+        [FieldOffset(1600)] public NativeArray LODIndexToMaterialIndex;
+        [FieldOffset(1616)] public NativeArray MaterialIndexToDisabledTessellationMaterial;
+        [FieldOffset(1632)] public NativeArray WeightmapLayerAllocations;
+        [FieldOffset(1648)] public NativeArray WeightmapTextures;
+        [FieldOffset(1664)]  public IntPtr  XYOffsetmapTexture;
+        [FieldOffset(1680)] public Vector4 WeightmapScaleBias;
+        [FieldOffset(1696)] public float WeightmapSubsectionOffset;
+        [FieldOffset(1712)] public Vector4 HeightmapScaleBias;
+        [FieldOffset(1728)]  public IntPtr  HeightmapTexture;
+        [FieldOffset(1736)] public Box CachedLocalBox;
+        [FieldOffset(1764)] byte CollisionComponent; //TODO: lazy_object TLazyObjectPtr<ULandscapeHeightfieldCollisionComponent> CollisionComponent
+        [FieldOffset(1792)] public FGuid LightingGuid;
+        [FieldOffset(1808)] public FGuid MapBuildDataId;
+        [FieldOffset(1840)] public int CollisionMipLevel;
+        [FieldOffset(1844)] public int SimpleCollisionMipLevel;
+        [FieldOffset(1848)] public float NegativeZBoundsExtension;
+        [FieldOffset(1852)] public float PositiveZBoundsExtension;
+        [FieldOffset(1856)] public float StaticLightingResolution;
+        [FieldOffset(1860)] public int ForcedLOD;
+        [FieldOffset(1864)] public int LODBias;
+        [FieldOffset(1868)] public FGuid StateId;
+        [FieldOffset(1884)] public FGuid BakedTextureMaterialGuid;
+        [FieldOffset(1904)]  public IntPtr  GIBakedBaseColorTexture;
+        [FieldOffset(1912)] public int LightingLODBias;
+        [FieldOffset(1920)] public NativeArray LayerWhitelist;
+        [FieldOffset(1936)] public LandscapeEditToolRenderData EditToolRenderData;
+        [FieldOffset(1976)] public FGuid MobileDataSourceHash;
+        [FieldOffset(1992)] byte MaterialPerLOD; //TODO: map TMap MaterialPerLOD
+        [FieldOffset(2072)] public byte MobileBlendableLayerMask;
+        [FieldOffset(2088)] public NativeArray MobileMaterialInterfaces;
+        [FieldOffset(2104)] public NativeArray MobileWeightmapTextures;
+        [FieldOffset(2136)] public NativeArray MobileCombinationMaterialInstances;
     }
     internal unsafe struct LandscapeComponent_methods {
         internal struct GetMaterialInstanceDynamic_method {

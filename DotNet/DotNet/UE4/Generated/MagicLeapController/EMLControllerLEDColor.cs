@@ -12,8 +12,8 @@ using UE4.Native;
 namespace UE4.MagicLeapController {
     ///<summary>LED colors supported on the controller.</summary>
     public enum EMLControllerLEDColor {
-        BrightRed = 0x00000000, 
-        PastelRed = 0x00000001, 
+        BrightMissionRed = 0x00000000, 
+        PastelMissionRed = 0x00000001, 
         BrightFloridaOrange = 0x00000002, 
         PastelFloridaOrange = 0x00000003, 
         BrightLunaYellow = 0x00000004, 

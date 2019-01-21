@@ -14,6 +14,7 @@ namespace UE4.EngineSettings {
     public enum EThreePlayerSplitScreenType {
         FavorTop = 0x00000000, 
         FavorBottom = 0x00000001, 
-        EThreePlayerSplitScreenType_MAX = 0x00000002
+        Vertical = 0x00000002, 
+        EThreePlayerSplitScreenType_MAX = 0x00000003
     }
 }

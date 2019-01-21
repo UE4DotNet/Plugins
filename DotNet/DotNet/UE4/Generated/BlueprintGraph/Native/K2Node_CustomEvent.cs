@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.BlueprintGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=408 )]
+    [StructLayout( LayoutKind.Explicit, Size=416 )]
     internal unsafe struct K2Node_CustomEvent_fields {
-        [FieldOffset(368)] public bool bCallInEditor;
+        [FieldOffset(376)] public bool bCallInEditor;
     }
     internal unsafe struct K2Node_CustomEvent_methods {
     }

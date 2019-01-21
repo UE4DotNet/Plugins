@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1568 )]
+    [StructLayout( LayoutKind.Explicit, Size=1536 )]
     internal unsafe struct SphereComponent_fields {
-        [FieldOffset(1552)] public float SphereRadius;
+        [FieldOffset(1528)] public float SphereRadius;
     }
     internal unsafe struct SphereComponent_methods {
         internal struct GetScaledSphereRadius_method {

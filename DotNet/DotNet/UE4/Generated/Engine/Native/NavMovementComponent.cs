@@ -11,15 +11,15 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=408 )]
+    [StructLayout( LayoutKind.Explicit, Size=392 )]
     internal unsafe struct NavMovementComponent_fields {
-        [FieldOffset(328)] public NavAgentProperties NavAgentProps;
-        [FieldOffset(384)] public float FixedPathBrakingDistance;
-        [FieldOffset(388)] public bool bUpdateNavAgentWithOwnersCollision;
-        [FieldOffset(388)] public bool bUseAccelerationForPaths;
-        [FieldOffset(388)] public bool bUseFixedBrakingDistanceForPaths;
-        [FieldOffset(392)]  public IntPtr  PathFollowingComp;
-        [FieldOffset(400)] public MovementProperties MovementState;
+        [FieldOffset(320)] public NavAgentProperties NavAgentProps;
+        [FieldOffset(376)] public float FixedPathBrakingDistance;
+        [FieldOffset(380)] public bool bUpdateNavAgentWithOwnersCollision;
+        [FieldOffset(380)] public bool bUseAccelerationForPaths;
+        [FieldOffset(380)] public bool bUseFixedBrakingDistanceForPaths;
+        [FieldOffset(381)] public MovementProperties MovementState;
+        [FieldOffset(384)]  public IntPtr  PathFollowingComp;
     }
     internal unsafe struct NavMovementComponent_methods {
         internal struct IsCrouching_method {

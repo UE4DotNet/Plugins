@@ -23,26 +23,27 @@ namespace UE4.Engine.Native {
         [FieldOffset(1236)] public Vector BaseTranslationOffset;
         [FieldOffset(1248)] public Quat BaseRotationOffset;
         [FieldOffset(1264)] public float ReplicatedServerLastTransformUpdateTimeStamp;
-        [FieldOffset(1268)] public byte ReplicatedMovementMode;
-        [FieldOffset(1269)] public bool bInBaseReplication;
-        [FieldOffset(1272)] public float CrouchedEyeHeight;
-        [FieldOffset(1276)] public bool bIsCrouched;
-        [FieldOffset(1276)] public bool bProxyIsJumpForceApplied;
-        [FieldOffset(1276)] public bool bPressedJump;
-        [FieldOffset(1276)] public bool bClientUpdating;
-        [FieldOffset(1276)] public bool bClientWasFalling;
-        [FieldOffset(1276)] public bool bClientResimulateRootMotion;
-        [FieldOffset(1276)] public bool bClientResimulateRootMotionSources;
-        [FieldOffset(1276)] public bool bSimGravityDisabled;
-        [FieldOffset(1277)] public bool bClientCheckEncroachmentOnNetUpdate;
-        [FieldOffset(1277)] public bool bServerMoveIgnoreRootMotion;
-        [FieldOffset(1277)] public bool bWasJumping;
-        [FieldOffset(1280)] public float JumpKeyHoldTime;
-        [FieldOffset(1284)] public float JumpForceTimeRemaining;
-        [FieldOffset(1288)] public float ProxyJumpForceStartedTime;
-        [FieldOffset(1292)] public float JumpMaxHoldTime;
-        [FieldOffset(1296)] public int JumpMaxCount;
-        [FieldOffset(1300)] public int JumpCurrentCount;
+        [FieldOffset(1268)] public float ReplayLastTransformUpdateTimeStamp;
+        [FieldOffset(1272)] public byte ReplicatedMovementMode;
+        [FieldOffset(1273)] public bool bInBaseReplication;
+        [FieldOffset(1276)] public float CrouchedEyeHeight;
+        [FieldOffset(1280)] public bool bIsCrouched;
+        [FieldOffset(1280)] public bool bProxyIsJumpForceApplied;
+        [FieldOffset(1280)] public bool bPressedJump;
+        [FieldOffset(1280)] public bool bClientUpdating;
+        [FieldOffset(1280)] public bool bClientWasFalling;
+        [FieldOffset(1280)] public bool bClientResimulateRootMotion;
+        [FieldOffset(1280)] public bool bClientResimulateRootMotionSources;
+        [FieldOffset(1280)] public bool bSimGravityDisabled;
+        [FieldOffset(1281)] public bool bClientCheckEncroachmentOnNetUpdate;
+        [FieldOffset(1281)] public bool bServerMoveIgnoreRootMotion;
+        [FieldOffset(1281)] public bool bWasJumping;
+        [FieldOffset(1284)] public float JumpKeyHoldTime;
+        [FieldOffset(1288)] public float JumpForceTimeRemaining;
+        [FieldOffset(1292)] public float ProxyJumpForceStartedTime;
+        [FieldOffset(1296)] public float JumpMaxHoldTime;
+        [FieldOffset(1300)] public int JumpMaxCount;
+        [FieldOffset(1304)] public int JumpCurrentCount;
         [FieldOffset(1312)] byte OnReachedJumpApex; //TODO: multicast delegate FCharacterReachedApexSignature OnReachedJumpApex
         [FieldOffset(1344)] byte MovementModeChangedDelegate; //TODO: multicast delegate FMovementModeChangedSignature MovementModeChangedDelegate
         [FieldOffset(1360)] byte OnCharacterMovementUpdated; //TODO: multicast delegate FCharacterMovementUpdatedSignature OnCharacterMovementUpdated

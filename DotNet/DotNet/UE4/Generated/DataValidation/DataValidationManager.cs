@@ -17,6 +17,10 @@ namespace UE4.DataValidation {
     ///<remarks>and some misc tasks like local log hooking</remarks>
     public unsafe partial class DataValidationManager : UObject  {
          //TODO: array not UObject TArray ExcludedDirectories
+        public bool bValidateOnSave {
+            get {return Main.GetGetBoolPropertyByName(this, "bValidateOnSave"); }
+            set {Main.SetGetBoolPropertyByName(this, "bValidateOnSave", value); }
+        }
         ///<summary>The class to instantiate as the manager object. Defaults to this class but can be overridden</summary>
         public unsafe SoftClassPath DataValidationManagerClassName {
             get {return DataValidationManager_ptr->DataValidationManagerClassName;}

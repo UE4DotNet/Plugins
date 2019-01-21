@@ -36,10 +36,10 @@ namespace UE4.UnrealEd.Native {
         [FieldOffset(81)] public bool bUseOpenCLForConvexHullDecomp;
         [FieldOffset(82)] public bool bAllowPotentiallyUnsafePropertyEditing;
         [FieldOffset(83)] public bool bFacialAnimationImporter;
-        [FieldOffset(84)] public bool bEnableLiveRecompilationOfAnimationBlueprints;
-        [FieldOffset(85)] public bool bMobilePIEPreviewDeviceLaunch;
-        [FieldOffset(86)] public bool bTextAssetFormatSupport;
-        [FieldOffset(87)] public bool bExampleLayersAndBlends;
+        [FieldOffset(84)] public bool bMobilePIEPreviewDeviceLaunch;
+        [FieldOffset(85)] public bool bTextAssetFormatSupport;
+        [FieldOffset(86)] public bool bExampleLayersAndBlends;
+        [FieldOffset(87)] public bool bEnableLongPathsSupport;
     }
     internal unsafe struct EditorExperimentalSettings_methods {
     }

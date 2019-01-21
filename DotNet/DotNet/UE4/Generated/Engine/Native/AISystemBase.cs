@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=104 )]
+    [StructLayout( LayoutKind.Explicit, Size=120 )]
     internal unsafe struct AISystemBase_fields {
         [FieldOffset(56)] public SoftClassPath AISystemClassName;
         [FieldOffset(88)] public Name AISystemModuleName;
-        [FieldOffset(100)] public bool bInstantiateAISystemOnClient;
+        [FieldOffset(112)] public bool bInstantiateAISystemOnClient;
     }
     internal unsafe struct AISystemBase_methods {
     }

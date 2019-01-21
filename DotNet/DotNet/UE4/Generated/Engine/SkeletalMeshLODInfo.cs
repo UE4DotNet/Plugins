@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Struct containing information for a particular LOD level, such as materials and info for when to use it.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=272 )]
+        [StructLayout( LayoutKind.Explicit, Size=248 )]
         public unsafe struct SkeletalMeshLODInfo {
             ///<summary>ScreenSize to display this LOD.</summary>
             ///<remarks>
@@ -25,14 +25,12 @@ namespace UE4.Engine{
 
             [FieldOffset(96)] byte LODMaterialMap; //TODO: array TArray LODMaterialMap
 
-            [FieldOffset(128)] public bool bHasBeenSimplified;
-
             ///<summary>Reduction settings to apply when building render data.</summary>
-            [FieldOffset(136)] SkeletalMeshOptimizationSettings ReductionSettings;
+            [FieldOffset(144)] SkeletalMeshOptimizationSettings ReductionSettings;
 
-            [FieldOffset(224)] byte BonesToRemove; //TODO: array TArray BonesToRemove
+            [FieldOffset(200)] byte BonesToRemove; //TODO: array TArray BonesToRemove
 
-            [FieldOffset(240)] 
+            [FieldOffset(216)] 
             private IntPtr  BakePose_field;
             ///<summary>Pose which should be used to reskin vertex influences for which the bones will be removed in this LOD level, uses ref-pose by default</summary>
             public AnimSequence BakePose {
@@ -40,15 +38,17 @@ namespace UE4.Engine{
                 set {BakePose_field = value;}
             }
 
-            [FieldOffset(248)] byte SourceImportFilename; //TODO: string FString SourceImportFilename
+            [FieldOffset(224)] byte SourceImportFilename; //TODO: string FString SourceImportFilename
 
-            [FieldOffset(264)] public bool bHasPerLODVertexColors;
+            [FieldOffset(240)] public bool bHasBeenSimplified;
 
-            [FieldOffset(264)] public bool bAllowCPUAccess;
+            [FieldOffset(240)] public bool bHasPerLODVertexColors;
 
-            [FieldOffset(264)] public bool bSupportUniformlyDistributedSampling;
+            [FieldOffset(240)] public bool bAllowCPUAccess;
 
-            [FieldOffset(268)] public bool bImportWithBaseMesh;
+            [FieldOffset(240)] public bool bSupportUniformlyDistributedSampling;
+
+            [FieldOffset(240)] public bool bImportWithBaseMesh;
 
         }
 }

@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=440 )]
+    [StructLayout( LayoutKind.Explicit, Size=456 )]
     internal unsafe struct WrapBox_fields {
-        [FieldOffset(408)] public Vector2D InnerSlotPadding;
-        [FieldOffset(416)] public float WrapWidth;
-        [FieldOffset(420)] public bool bExplicitWrapWidth;
+        [FieldOffset(424)] public Vector2D InnerSlotPadding;
+        [FieldOffset(432)] public float WrapWidth;
+        [FieldOffset(436)] public bool bExplicitWrapWidth;
     }
     internal unsafe struct WrapBox_methods {
         internal struct AddChildWrapBox_method {

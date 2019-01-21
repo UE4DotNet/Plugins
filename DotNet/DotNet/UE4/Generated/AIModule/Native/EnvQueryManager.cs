@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.AIModule.Native {
-    [StructLayout( LayoutKind.Explicit, Size=496 )]
+    [StructLayout( LayoutKind.Explicit, Size=504 )]
     internal unsafe struct EnvQueryManager_fields {
         [FieldOffset(336)] public NativeArray InstanceCache;
         [FieldOffset(352)] public NativeArray LocalContexts;

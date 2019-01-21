@@ -17,11 +17,19 @@ namespace UE4.MagicLeapEyeTracker {
     ///<summary>Magic Leap Eye Tracker Function Library</summary>
     public unsafe partial class MagicLeapEyeTrackerFunctionLibrary : BlueprintFunctionLibrary  {
 
+        ///<summary>Get Calibration Status</summary>
+        public static EMagicLeapEyeTrackingCalibrationStatus GetCalibrationStatus()  => 
+            MagicLeapEyeTrackerFunctionLibrary_methods.GetCalibrationStatus_method.Invoke();
+
         ///<summary>Get Eye Blink State</summary>
         public static (MagicLeapEyeBlinkState, bool) GetEyeBlinkState()  => 
             MagicLeapEyeTrackerFunctionLibrary_methods.GetEyeBlinkState_method.Invoke();
 
-        ///<summary>True if the calibration step was completed for this user.</summary>
+        ///<summary>Get Fixation Comfort</summary>
+        public static (MagicLeapFixationComfort, bool) GetFixationComfort()  => 
+            MagicLeapEyeTrackerFunctionLibrary_methods.GetFixationComfort_method.Invoke();
+
+        ///<summary>False if the calibration status is none, otherwise returns true, even with a bad calibration.</summary>
         ///<remarks>If not, user should be advised to run the Eye Calibrator app on the device.</remarks>
         public static bool IsEyeTrackerCalibrated()  => 
             MagicLeapEyeTrackerFunctionLibrary_methods.IsEyeTrackerCalibrated_method.Invoke();

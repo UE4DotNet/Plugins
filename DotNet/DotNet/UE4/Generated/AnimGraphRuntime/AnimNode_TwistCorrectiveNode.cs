@@ -19,25 +19,25 @@ namespace UE4.AnimGraphRuntime{
         ///This node can detect the angle and apply morphtarget curve
         ///</summary>
         ///<remarks>This isn't the twist control node for bone twist</remarks>
-        [StructLayout( LayoutKind.Explicit, Size=496 )]
+        [StructLayout( LayoutKind.Explicit, Size=472 )]
         public unsafe struct AnimNode_TwistCorrectiveNode {
             ///<summary>Base Frame of the reference for the twist node</summary>
-            [FieldOffset(360)] ReferenceBoneFrame BaseFrame;
+            [FieldOffset(336)] ReferenceBoneFrame BaseFrame;
 
             ///<summary>Transform component to use as input</summary>
-            [FieldOffset(400)] ReferenceBoneFrame TwistFrame;
+            [FieldOffset(376)] ReferenceBoneFrame TwistFrame;
 
             ///<summary>Normal of the Plane that we'd like to calculate angle calculation from in BaseFrame. Please note we're looking for Normal Axis</summary>
-            [FieldOffset(440)] Axis TwistPlaneNormalAxis;
+            [FieldOffset(416)] Axis TwistPlaneNormalAxis;
 
-            [FieldOffset(456)] public float RangeMax;
+            [FieldOffset(432)] public float RangeMax;
 
-            [FieldOffset(460)] public float RemappedMin;
+            [FieldOffset(436)] public float RemappedMin;
 
-            [FieldOffset(464)] public float RemappedMax;
+            [FieldOffset(440)] public float RemappedMax;
 
             ///<summary>Curve</summary>
-            [FieldOffset(468)] AnimCurveParam Curve;
+            [FieldOffset(444)] AnimCurveParam Curve;
 
         }
 }

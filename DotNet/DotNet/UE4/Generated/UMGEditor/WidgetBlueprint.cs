@@ -11,17 +11,12 @@ using UE4.Native;
 
 #pragma warning disable CS0108
 using UE4.UMGEditor.Native;
-using UE4.Engine;
+using UE4.UnrealEd;
 using UE4.UMG;
 
 namespace UE4.UMGEditor {
     ///<summary>The widget blueprint enables extending UUserWidget the user extensible UWidget.</summary>
-    public unsafe partial class WidgetBlueprint : Blueprint  {
-        ///<summary>A tree of the widget templates to be created</summary>
-        public unsafe WidgetTree WidgetTree {
-            get {return WidgetBlueprint_ptr->WidgetTree;}
-            set {WidgetBlueprint_ptr->WidgetTree = value;}
-        }
+    public unsafe partial class WidgetBlueprint : BaseWidgetBlueprint  {
          //TODO: array not UObject TArray Bindings
         ///<summary>Animations</summary>
         public ObjectArrayField<WidgetAnimation> Animations{ get {
@@ -35,6 +30,7 @@ namespace UE4.UMGEditor {
             get {return Main.GetGetBoolPropertyByName(this, "bForceSlowConstructionPath"); }
             set {Main.SetGetBoolPropertyByName(this, "bForceSlowConstructionPath", value); }
         }
+         //TODO: enum EWidgetSupportsDynamicCreation SupportDynamicCreation
         ///<summary>The total number of widgets this widget contains.  This is a good way to find the "largest" widgets.</summary>
         public unsafe int InclusiveWidgets {
             get {return WidgetBlueprint_ptr->InclusiveWidgets;}
@@ -43,7 +39,6 @@ namespace UE4.UMGEditor {
          //TODO: enum EWidgetTickFrequency TickFrequency
          //TODO: enum EWidgetCompileTimeTickPrediction TickPrediction
          //TODO: string FString TickPredictionReason
-         //TODO: enum EWidgetSupportsDynamicCreation SupportDynamicCreation
         ///<summary>The total number of property bindings.  Consider this as a performance warning.</summary>
         public unsafe int PropertyBindings {
             get {return WidgetBlueprint_ptr->PropertyBindings;}

@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.Paper2D.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1600 )]
+    [StructLayout( LayoutKind.Explicit, Size=1584 )]
     internal unsafe struct PaperSpriteComponent_fields {
-        [FieldOffset(1560)]  public IntPtr  SourceSprite;
-        [FieldOffset(1576)] public LinearColor SpriteColor;
+        [FieldOffset(1544)]  public IntPtr  SourceSprite;
+        [FieldOffset(1560)] public LinearColor SpriteColor;
     }
     internal unsafe struct PaperSpriteComponent_methods {
         internal struct GetSprite_method {

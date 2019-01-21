@@ -18,6 +18,20 @@ namespace UE4.Engine {
 
         ///<summary>Export the given object to file.</summary>
         ///<remarks>
+        ///Overridden by script based exporters.
+        ///
+        ///@param        Task            The task to export.
+        ///
+        ///@return       true if overridden by script exporter.
+        ///</remarks>
+        public event ScriptRunAssetExportTask_delegate ScriptRunAssetExportTask;
+        public delegate bool ScriptRunAssetExportTask_delegate(AssetExportTask Task, bool ReturnValue);
+        internal bool on_ScriptRunAssetExportTask(AssetExportTask Task, bool ReturnValue) =>
+            ScriptRunAssetExportTask != null ? ScriptRunAssetExportTask(Task, ReturnValue) : ReturnValue;
+
+
+        ///<summary>Export the given object to file.</summary>
+        ///<remarks>
         ///Child classes do not override this, but they do provide an Export() function
         ///to do the resource-specific export work.
         ///
@@ -81,6 +95,7 @@ namespace UE4.Engine {
         }
         static Exporter() {
             StaticClass = Main.GetClass("Exporter");
+            Exporter_events.ScriptRunAssetExportTask_event.Setup();
         }
         internal unsafe Exporter_fields* Exporter_ptr => (Exporter_fields*) ObjPointer.ToPointer();
 

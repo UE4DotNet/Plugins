@@ -48,14 +48,18 @@ namespace UE4.Engine {
         public unsafe float Score {
             get {return PlayerState_ptr->Score;}
         }
-        ///<summary>Replicated compressed ping for this player (holds ping in msec divided by 4)</summary>
-        public unsafe byte Ping {
-            get {return PlayerState_ptr->Ping;}
-        }
          //TODO: string FString PlayerName
         ///<summary>Unique net id number. Actual value varies based on current online subsystem, use it only as a guaranteed unique number per player.</summary>
         public unsafe int PlayerId {
             get {return PlayerState_ptr->PlayerId;}
+        }
+        ///<summary>Replicated compressed ping for this player (holds ping in msec divided by 4)</summary>
+        public unsafe byte Ping {
+            get {return PlayerState_ptr->Ping;}
+        }
+        public bool bShouldUpdateReplicatedPing {
+            get {return Main.GetGetBoolPropertyByName(this, "bShouldUpdateReplicatedPing"); }
+            set {Main.SetGetBoolPropertyByName(this, "bShouldUpdateReplicatedPing", value); }
         }
         public bool bIsSpectator {
             get {return Main.GetGetBoolPropertyByName(this, "bIsSpectator"); }
@@ -96,11 +100,11 @@ namespace UE4.Engine {
             get {return PlayerState_ptr->UniqueId;}
             set {PlayerState_ptr->UniqueId = value;}
         }
-         //TODO: string FString PlayerNamePrivate
-        public bool bShouldUpdateReplicatedPing {
-            get {return Main.GetGetBoolPropertyByName(this, "bShouldUpdateReplicatedPing"); }
-            set {Main.SetGetBoolPropertyByName(this, "bShouldUpdateReplicatedPing", value); }
+        ///<summary>The pawn that is controlled by by this player state.</summary>
+        public unsafe Pawn PawnPrivate {
+            get {return PlayerState_ptr->PawnPrivate;}
         }
+         //TODO: string FString PlayerNamePrivate
         static PlayerState() {
             StaticClass = Main.GetClass("PlayerState");
             PlayerState_events.ReceiveCopyProperties_event.Setup();

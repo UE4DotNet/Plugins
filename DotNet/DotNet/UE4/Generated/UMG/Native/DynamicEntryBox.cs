@@ -13,7 +13,7 @@ using UE4.Native;
 namespace UE4.UMG.Native {
     [StructLayout( LayoutKind.Explicit, Size=704 )]
     internal unsafe struct DynamicEntryBox_fields {
-        [FieldOffset(384)] public int NumDesignerPreviewEntries;
+        [FieldOffset(400)] public int NumDesignerPreviewEntries;
         [FieldOffset(496)] byte EntryBoxType; //TODO: enum EDynamicBoxType EntryBoxType
         [FieldOffset(500)] public Vector2D EntrySpacing;
         [FieldOffset(512)] public NativeArray SpacingPattern;
@@ -35,6 +35,20 @@ namespace UE4.UMG.Native {
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(obj, BP_CreateEntry_ptr, new IntPtr(p)); ;
                 return *((IntPtr*)(b+0));
+            }
+        }
+        internal struct BP_CreateEntryOfClass_method {
+            static internal IntPtr BP_CreateEntryOfClass_ptr;
+            static BP_CreateEntryOfClass_method() {
+                BP_CreateEntryOfClass_ptr = Main.GetMethodUFunction(DynamicEntryBox.StaticClass, "BP_CreateEntryOfClass");
+            }
+
+            internal static unsafe UserWidget Invoke(IntPtr obj, SubclassOf<UserWidget> EntryClass) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = EntryClass;
+                Main.GetProcessEvent(obj, BP_CreateEntryOfClass_ptr, new IntPtr(p)); ;
+                return *((IntPtr*)(b+8));
             }
         }
         internal struct GetAllEntries_method {

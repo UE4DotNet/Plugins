@@ -13,20 +13,20 @@ using UE4.SlateCore;
 using UE4.Slate;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2592 )]
+    [StructLayout( LayoutKind.Explicit, Size=2608 )]
     internal unsafe struct ScrollBox_fields {
-        [FieldOffset(408)] public ScrollBoxStyle WidgetStyle;
-        [FieldOffset(1056)] public ScrollBarStyle WidgetBarStyle;
-        [FieldOffset(2520)] public byte Orientation;
-        [FieldOffset(2521)] byte ScrollBarVisibility; //TODO: enum ESlateVisibility ScrollBarVisibility
-        [FieldOffset(2522)] byte ConsumeMouseWheel; //TODO: enum EConsumeMouseWheel ConsumeMouseWheel
-        [FieldOffset(2524)] public Vector2D ScrollbarThickness;
-        [FieldOffset(2532)] public bool AlwaysShowScrollbar;
-        [FieldOffset(2533)] public bool AllowOverscroll;
-        [FieldOffset(2534)] byte NavigationDestination; //TODO: enum EDescendantScrollDestination NavigationDestination
-        [FieldOffset(2536)] public float NavigationScrollPadding;
-        [FieldOffset(2540)] public bool bAllowRightClickDragScrolling;
-        [FieldOffset(2544)] byte OnUserScrolled; //TODO: multicast delegate FOnUserScrolledEvent OnUserScrolled
+        [FieldOffset(424)] public ScrollBoxStyle WidgetStyle;
+        [FieldOffset(1072)] public ScrollBarStyle WidgetBarStyle;
+        [FieldOffset(2536)] public byte Orientation;
+        [FieldOffset(2537)] byte ScrollBarVisibility; //TODO: enum ESlateVisibility ScrollBarVisibility
+        [FieldOffset(2538)] byte ConsumeMouseWheel; //TODO: enum EConsumeMouseWheel ConsumeMouseWheel
+        [FieldOffset(2540)] public Vector2D ScrollbarThickness;
+        [FieldOffset(2548)] public bool AlwaysShowScrollbar;
+        [FieldOffset(2549)] public bool AllowOverscroll;
+        [FieldOffset(2550)] byte NavigationDestination; //TODO: enum EDescendantScrollDestination NavigationDestination
+        [FieldOffset(2552)] public float NavigationScrollPadding;
+        [FieldOffset(2556)] public bool bAllowRightClickDragScrolling;
+        [FieldOffset(2560)] byte OnUserScrolled; //TODO: multicast delegate FOnUserScrolledEvent OnUserScrolled
     }
     internal unsafe struct ScrollBox_methods {
         internal struct GetScrollOffset_method {

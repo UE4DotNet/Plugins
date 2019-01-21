@@ -30,6 +30,27 @@ namespace UE4.Engine.Native {
                 return *((DebugFloatHistory*)(b+40));
             }
         }
+        internal struct BeginTransaction_method {
+            static internal IntPtr BeginTransaction_ptr;
+            static BeginTransaction_method() {
+                BeginTransaction_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "BeginTransaction");
+            }
+
+            internal static unsafe int Invoke(string Context, byte Description /*TODO: text FText */, UObject PrimaryObject) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                var Context_handle = GCHandle.Alloc(Context, GCHandleType.Pinned);
+                *(IntPtr*)(b+0) = Context_handle.AddrOfPinnedObject();
+                *(int*)(b+IntPtr.Size+0) = Context.Length;
+                *(int*)(b+IntPtr.Size+4+0) = Context.Length;
+                throw new NotImplementedException(); //TODO: text FText Description
+                *((IntPtr*)(b+40)) = PrimaryObject;
+                Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, BeginTransaction_ptr, new IntPtr(p)); ;
+                Context_handle.Free();
+                 //TODO: text FText Description
+                return *((int*)(b+48));
+            }
+        }
         internal struct BoxOverlapActors_method {
             static internal IntPtr BoxOverlapActors_ptr;
             static BoxOverlapActors_method() {
@@ -267,6 +288,19 @@ namespace UE4.Engine.Native {
                 *((SoftObjectPath*)(b+0)) = InSoftObjectPath;
                 Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, BreakSoftObjectPath_ptr, new IntPtr(p)); ;
                 return FString.Get(b+32);
+            }
+        }
+        internal struct CancelTransaction_method {
+            static internal IntPtr CancelTransaction_ptr;
+            static CancelTransaction_method() {
+                CancelTransaction_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "CancelTransaction");
+            }
+
+            internal static unsafe void Invoke(int Index) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((int*)(b+0)) = Index;
+                Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, CancelTransaction_ptr, new IntPtr(p)); ;
             }
         }
         internal struct CanLaunchURL_method {
@@ -700,6 +734,42 @@ namespace UE4.Engine.Native {
                 return FString.Get(b+48);
             }
         }
+        internal struct ConvertToAbsolutePath_method {
+            static internal IntPtr ConvertToAbsolutePath_ptr;
+            static ConvertToAbsolutePath_method() {
+                ConvertToAbsolutePath_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "ConvertToAbsolutePath");
+            }
+
+            internal static unsafe string Invoke(string Filename) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                var Filename_handle = GCHandle.Alloc(Filename, GCHandleType.Pinned);
+                *(IntPtr*)(b+0) = Filename_handle.AddrOfPinnedObject();
+                *(int*)(b+IntPtr.Size+0) = Filename.Length;
+                *(int*)(b+IntPtr.Size+4+0) = Filename.Length;
+                Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, ConvertToAbsolutePath_ptr, new IntPtr(p)); ;
+                Filename_handle.Free();
+                return FString.Get(b+16);
+            }
+        }
+        internal struct ConvertToRelativePath_method {
+            static internal IntPtr ConvertToRelativePath_ptr;
+            static ConvertToRelativePath_method() {
+                ConvertToRelativePath_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "ConvertToRelativePath");
+            }
+
+            internal static unsafe string Invoke(string Filename) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                var Filename_handle = GCHandle.Alloc(Filename, GCHandleType.Pinned);
+                *(IntPtr*)(b+0) = Filename_handle.AddrOfPinnedObject();
+                *(int*)(b+IntPtr.Size+0) = Filename.Length;
+                *(int*)(b+IntPtr.Size+4+0) = Filename.Length;
+                Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, ConvertToRelativePath_ptr, new IntPtr(p)); ;
+                Filename_handle.Free();
+                return FString.Get(b+16);
+            }
+        }
         internal struct CreateCopyForUndoBuffer_method {
             static internal IntPtr CreateCopyForUndoBuffer_ptr;
             static CreateCopyForUndoBuffer_method() {
@@ -1065,6 +1135,19 @@ namespace UE4.Engine.Native {
                 *((float*)(b+64)) = Duration;
                 Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, DrawDebugString_ptr, new IntPtr(p)); ;
                 Text_handle.Free();
+            }
+        }
+        internal struct EndTransaction_method {
+            static internal IntPtr EndTransaction_ptr;
+            static EndTransaction_method() {
+                EndTransaction_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "EndTransaction");
+            }
+
+            internal static unsafe int Invoke() {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, EndTransaction_ptr, new IntPtr(p)); ;
+                return *((int*)(b+0));
             }
         }
         internal struct EqualEqual_PrimaryAssetId_method {
@@ -1904,6 +1987,19 @@ namespace UE4.Engine.Native {
                 return *((bool*)(b+0));
             }
         }
+        internal struct IsScreensaverEnabled_method {
+            static internal IntPtr IsScreensaverEnabled_ptr;
+            static IsScreensaverEnabled_method() {
+                IsScreensaverEnabled_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "IsScreensaverEnabled");
+            }
+
+            internal static unsafe bool Invoke() {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, IsScreensaverEnabled_ptr, new IntPtr(p)); ;
+                return *((bool*)(b+0));
+            }
+        }
         internal struct IsServer_method {
             static internal IntPtr IsServer_ptr;
             static IsServer_method() {
@@ -1930,6 +2026,19 @@ namespace UE4.Engine.Native {
                 *((IntPtr*)(b+0)) = WorldContextObject;
                 Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, IsStandalone_ptr, new IntPtr(p)); ;
                 return *((bool*)(b+8));
+            }
+        }
+        internal struct IsUnattended_method {
+            static internal IntPtr IsUnattended_ptr;
+            static IsUnattended_method() {
+                IsUnattended_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "IsUnattended");
+            }
+
+            internal static unsafe bool Invoke() {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, IsUnattended_ptr, new IntPtr(p)); ;
+                return *((bool*)(b+0));
             }
         }
         internal struct IsValid_method {
@@ -2863,6 +2972,24 @@ namespace UE4.Engine.Native {
                 Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, MoveComponentTo_ptr, new IntPtr(p)); ;
             }
         }
+        internal struct NormalizeFilename_method {
+            static internal IntPtr NormalizeFilename_ptr;
+            static NormalizeFilename_method() {
+                NormalizeFilename_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "NormalizeFilename");
+            }
+
+            internal static unsafe string Invoke(string InFilename) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                var InFilename_handle = GCHandle.Alloc(InFilename, GCHandleType.Pinned);
+                *(IntPtr*)(b+0) = InFilename_handle.AddrOfPinnedObject();
+                *(int*)(b+IntPtr.Size+0) = InFilename.Length;
+                *(int*)(b+IntPtr.Size+4+0) = InFilename.Length;
+                Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, NormalizeFilename_ptr, new IntPtr(p)); ;
+                InFilename_handle.Free();
+                return FString.Get(b+16);
+            }
+        }
         internal struct NotEqual_PrimaryAssetId_method {
             static internal IntPtr NotEqual_PrimaryAssetId_ptr;
             static NotEqual_PrimaryAssetId_method() {
@@ -2991,12 +3118,13 @@ namespace UE4.Engine.Native {
                 QuitGame_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "QuitGame");
             }
 
-            internal static unsafe void Invoke(UObject WorldContextObject, PlayerController SpecificPlayer, byte QuitPreference) {
+            internal static unsafe void Invoke(UObject WorldContextObject, PlayerController SpecificPlayer, byte QuitPreference, bool bIgnorePlatformRestrictions) {
                 long* p = stackalloc long[] {0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = WorldContextObject;
                 *((IntPtr*)(b+8)) = SpecificPlayer;
                 *(b+16) = QuitPreference;
+                *((bool*)(b+17)) = bIgnorePlatformRestrictions;
                 Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, QuitGame_ptr, new IntPtr(p)); ;
             }
         }
@@ -3655,6 +3783,19 @@ namespace UE4.Engine.Native {
                 long* p = stackalloc long[] {0L};
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, StackTrace_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct TransactObject_method {
+            static internal IntPtr TransactObject_ptr;
+            static TransactObject_method() {
+                TransactObject_ptr = Main.GetMethodUFunction(KismetSystemLibrary.StaticClass, "TransactObject");
+            }
+
+            internal static unsafe void Invoke(UObject UObject) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = UObject;
+                Main.GetProcessEvent(KismetSystemLibrary.DefaultObject, TransactObject_ptr, new IntPtr(p)); ;
             }
         }
         internal struct UnloadPrimaryAsset_method {

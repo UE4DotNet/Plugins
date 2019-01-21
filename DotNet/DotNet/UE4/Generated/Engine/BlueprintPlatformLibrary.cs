@@ -28,6 +28,10 @@ namespace UE4.Engine {
         public static void ClearAllLocalNotifications()  => 
             BlueprintPlatformLibrary_methods.ClearAllLocalNotifications_method.Invoke();
 
+        ///<summary>@return the current device orientation</summary>
+        public static byte GetDeviceOrientation()  => 
+            BlueprintPlatformLibrary_methods.GetDeviceOrientation_method.Invoke();
+
         ///<summary>
         ///Get the local notification that was used to launch the app
         ///@

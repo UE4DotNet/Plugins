@@ -26,6 +26,11 @@ namespace UE4.PhysXVehicles {
             get {return WheeledVehicleMovementComponent4W_ptr->DifferentialSetup;}
             set {WheeledVehicleMovementComponent4W_ptr->DifferentialSetup = value;}
         }
+        ///<summary>Accuracy of Ackermann steer calculation (range: 0..1)</summary>
+        public unsafe float AckermannAccuracy {
+            get {return WheeledVehicleMovementComponent4W_ptr->AckermannAccuracy;}
+            set {WheeledVehicleMovementComponent4W_ptr->AckermannAccuracy = value;}
+        }
         ///<summary>Transmission data</summary>
         public unsafe VehicleTransmissionData TransmissionSetup {
             get {return WheeledVehicleMovementComponent4W_ptr->TransmissionSetup;}
@@ -35,11 +40,6 @@ namespace UE4.PhysXVehicles {
         public unsafe RuntimeFloatCurve SteeringCurve {
             get {return WheeledVehicleMovementComponent4W_ptr->SteeringCurve;}
             set {WheeledVehicleMovementComponent4W_ptr->SteeringCurve = value;}
-        }
-        ///<summary>Accuracy of Ackermann steer calculation (range: 0..1)</summary>
-        public unsafe float AckermannAccuracy {
-            get {return WheeledVehicleMovementComponent4W_ptr->AckermannAccuracy;}
-            set {WheeledVehicleMovementComponent4W_ptr->AckermannAccuracy = value;}
         }
         static WheeledVehicleMovementComponent4W() {
             StaticClass = Main.GetClass("WheeledVehicleMovementComponent4W");

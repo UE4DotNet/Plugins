@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=816 )]
+    [StructLayout( LayoutKind.Explicit, Size=792 )]
     internal unsafe struct AnimGraphNode_RotationMultiplier_fields {
         [FieldOffset(272)] public AnimNode_RotationMultiplier Node;
     }

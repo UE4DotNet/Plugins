@@ -12,11 +12,11 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=448 )]
+    [StructLayout( LayoutKind.Explicit, Size=464 )]
     internal unsafe struct UniformGridPanel_fields {
-        [FieldOffset(408)] public Margin SlotPadding;
-        [FieldOffset(424)] public float MinDesiredSlotWidth;
-        [FieldOffset(428)] public float MinDesiredSlotHeight;
+        [FieldOffset(424)] public Margin SlotPadding;
+        [FieldOffset(440)] public float MinDesiredSlotWidth;
+        [FieldOffset(444)] public float MinDesiredSlotHeight;
     }
     internal unsafe struct UniformGridPanel_methods {
         internal struct AddChildToUniformGrid_method {

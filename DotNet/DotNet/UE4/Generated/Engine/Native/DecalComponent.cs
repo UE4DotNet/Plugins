@@ -18,8 +18,10 @@ namespace UE4.Engine.Native {
         [FieldOffset(636)] public float FadeScreenSize;
         [FieldOffset(640)] public float FadeStartDelay;
         [FieldOffset(644)] public float FadeDuration;
-        [FieldOffset(648)] public bool bDestroyOwnerAfterFade;
-        [FieldOffset(652)] public Vector DecalSize;
+        [FieldOffset(648)] public float FadeInDuration;
+        [FieldOffset(652)] public float FadeInStartDelay;
+        [FieldOffset(656)] public bool bDestroyOwnerAfterFade;
+        [FieldOffset(660)] public Vector DecalSize;
     }
     internal unsafe struct DecalComponent_methods {
         internal struct CreateDynamicMaterialInstance_method {
@@ -61,6 +63,32 @@ namespace UE4.Engine.Native {
                 return *((float*)(b+0));
             }
         }
+        internal struct GetFadeInDuration_method {
+            static internal IntPtr GetFadeInDuration_ptr;
+            static GetFadeInDuration_method() {
+                GetFadeInDuration_ptr = Main.GetMethodUFunction(DecalComponent.StaticClass, "GetFadeInDuration");
+            }
+
+            internal static unsafe float Invoke(IntPtr obj) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(obj, GetFadeInDuration_ptr, new IntPtr(p)); ;
+                return *((float*)(b+0));
+            }
+        }
+        internal struct GetFadeInStartDelay_method {
+            static internal IntPtr GetFadeInStartDelay_ptr;
+            static GetFadeInStartDelay_method() {
+                GetFadeInStartDelay_ptr = Main.GetMethodUFunction(DecalComponent.StaticClass, "GetFadeInStartDelay");
+            }
+
+            internal static unsafe float Invoke(IntPtr obj) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(obj, GetFadeInStartDelay_ptr, new IntPtr(p)); ;
+                return *((float*)(b+0));
+            }
+        }
         internal struct GetFadeStartDelay_method {
             static internal IntPtr GetFadeStartDelay_ptr;
             static GetFadeStartDelay_method() {
@@ -85,6 +113,20 @@ namespace UE4.Engine.Native {
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = NewDecalMaterial;
                 Main.GetProcessEvent(obj, SetDecalMaterial_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct SetFadeIn_method {
+            static internal IntPtr SetFadeIn_ptr;
+            static SetFadeIn_method() {
+                SetFadeIn_ptr = Main.GetMethodUFunction(DecalComponent.StaticClass, "SetFadeIn");
+            }
+
+            internal static unsafe void Invoke(IntPtr obj, float StartDelay, float Duaration) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((float*)(b+0)) = StartDelay;
+                *((float*)(b+4)) = Duaration;
+                Main.GetProcessEvent(obj, SetFadeIn_ptr, new IntPtr(p)); ;
             }
         }
         internal struct SetFadeOut_method {

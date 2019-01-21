@@ -12,14 +12,14 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=464 )]
+    [StructLayout( LayoutKind.Explicit, Size=480 )]
     internal unsafe struct RetainerBox_fields {
-        [FieldOffset(408)] public bool RenderOnInvalidation;
-        [FieldOffset(409)] public bool RenderOnPhase;
-        [FieldOffset(412)] public int Phase;
-        [FieldOffset(416)] public int PhaseCount;
-        [FieldOffset(424)]  public IntPtr  EffectMaterial;
-        [FieldOffset(432)] public Name TextureParameter;
+        [FieldOffset(424)] public bool RenderOnInvalidation;
+        [FieldOffset(425)] public bool RenderOnPhase;
+        [FieldOffset(428)] public int Phase;
+        [FieldOffset(432)] public int PhaseCount;
+        [FieldOffset(440)]  public IntPtr  EffectMaterial;
+        [FieldOffset(448)] public Name TextureParameter;
     }
     internal unsafe struct RetainerBox_methods {
         internal struct GetEffectMaterial_method {

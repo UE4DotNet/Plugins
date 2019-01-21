@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneCapture.Native {
-    [StructLayout( LayoutKind.Explicit, Size=528 )]
+    [StructLayout( LayoutKind.Explicit, Size=560 )]
     internal unsafe struct LevelCapture_fields {
-        [FieldOffset(496)] public bool bAutoStartCapture;
-        [FieldOffset(508)] public FGuid PrerequisiteActorId;
+        [FieldOffset(528)] public bool bAutoStartCapture;
+        [FieldOffset(540)] public FGuid PrerequisiteActorId;
     }
     internal unsafe struct LevelCapture_methods {
     }

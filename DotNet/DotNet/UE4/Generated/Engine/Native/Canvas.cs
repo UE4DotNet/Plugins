@@ -160,8 +160,8 @@ namespace UE4.Engine.Native {
                 K2_DrawText_ptr = Main.GetMethodUFunction(Canvas.StaticClass, "K2_DrawText");
             }
 
-            internal static unsafe void Invoke(IntPtr obj, Font RenderFont, string RenderText, Vector2D ScreenPosition, LinearColor RenderColor, float Kerning, LinearColor ShadowColor, Vector2D ShadowOffset, bool bCentreX, bool bCentreY, bool bOutlined, LinearColor OutlineColor) {
-                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+            internal static unsafe void Invoke(IntPtr obj, Font RenderFont, string RenderText, Vector2D ScreenPosition, Vector2D Scale, LinearColor RenderColor, float Kerning, LinearColor ShadowColor, Vector2D ShadowOffset, bool bCentreX, bool bCentreY, bool bOutlined, LinearColor OutlineColor) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = RenderFont;
                 var RenderText_handle = GCHandle.Alloc(RenderText, GCHandleType.Pinned);
@@ -169,14 +169,15 @@ namespace UE4.Engine.Native {
                 *(int*)(b+IntPtr.Size+8) = RenderText.Length;
                 *(int*)(b+IntPtr.Size+4+8) = RenderText.Length;
                 *((Vector2D*)(b+24)) = ScreenPosition;
-                *((LinearColor*)(b+32)) = RenderColor;
-                *((float*)(b+48)) = Kerning;
-                *((LinearColor*)(b+52)) = ShadowColor;
-                *((Vector2D*)(b+68)) = ShadowOffset;
-                *((bool*)(b+76)) = bCentreX;
-                *((bool*)(b+77)) = bCentreY;
-                *((bool*)(b+78)) = bOutlined;
-                *((LinearColor*)(b+80)) = OutlineColor;
+                *((Vector2D*)(b+32)) = Scale;
+                *((LinearColor*)(b+40)) = RenderColor;
+                *((float*)(b+56)) = Kerning;
+                *((LinearColor*)(b+60)) = ShadowColor;
+                *((Vector2D*)(b+76)) = ShadowOffset;
+                *((bool*)(b+84)) = bCentreX;
+                *((bool*)(b+85)) = bCentreY;
+                *((bool*)(b+86)) = bOutlined;
+                *((LinearColor*)(b+88)) = OutlineColor;
                 Main.GetProcessEvent(obj, K2_DrawText_ptr, new IntPtr(p)); ;
                 RenderText_handle.Free();
             }

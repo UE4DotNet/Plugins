@@ -77,6 +77,10 @@ namespace UE4.Landscape {
             get {return LandscapeSplineControlPoint_ptr->MeshScale;}
             set {LandscapeSplineControlPoint_ptr->MeshScale = value;}
         }
+        public bool bHiddenInGame {
+            get {return Main.GetGetBoolPropertyByName(this, "bHiddenInGame"); }
+            set {Main.SetGetBoolPropertyByName(this, "bHiddenInGame", value); }
+        }
         ///<summary>Name of the collision profile to use for this spline</summary>
         public unsafe Name CollisionProfileName {
             get {return LandscapeSplineControlPoint_ptr->CollisionProfileName;}

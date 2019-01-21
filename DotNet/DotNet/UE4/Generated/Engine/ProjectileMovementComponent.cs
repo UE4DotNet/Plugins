@@ -25,9 +25,39 @@ namespace UE4.Engine {
     ///</remarks>
     public unsafe partial class ProjectileMovementComponent : MovementComponent  {
 
+        ///<summary>Returns whether interpolation is complete because the target has been reached. True when interpolation is disabled.</summary>
+        public bool IsInterpolationComplete()  => 
+            ProjectileMovementComponent_methods.IsInterpolationComplete_method.Invoke(ObjPointer);
+
+        ///<summary>Returns true if velocity magnitude is less than BounceVelocityStopSimulatingThreshold.</summary>
+        public bool IsVelocityUnderSimulationThreshold()  => 
+            ProjectileMovementComponent_methods.IsVelocityUnderSimulationThreshold_method.Invoke(ObjPointer);
+
         ///<summary>Don't allow velocity magnitude to exceed MaxSpeed, if MaxSpeed is non-zero.</summary>
         public Vector LimitVelocity(Vector NewVelocity)  => 
             ProjectileMovementComponent_methods.LimitVelocity_method.Invoke(ObjPointer, NewVelocity);
+
+        ///<summary>Moves the UpdatedComponent, which is also the interpolation target for the interpolated component.</summary>
+        ///<remarks>
+        ///If there is not interpolated component, this simply moves UpdatedComponent.
+        ///Use this typically from PostNetReceiveLocationAndRotation() or similar from an Actor.
+        ///</remarks>
+        public void MoveInterpolationTarget(Vector NewLocation, Rotator NewRotation)  => 
+            ProjectileMovementComponent_methods.MoveInterpolationTarget_method.Invoke(ObjPointer, NewLocation, NewRotation);
+
+        ///<summary>Resets interpolation so that interpolated component snaps back to the initial location/rotation without any additional offsets.</summary>
+        public void ResetInterpolation()  => 
+            ProjectileMovementComponent_methods.ResetInterpolation_method.Invoke(ObjPointer);
+
+        ///<summary>Assigns the component that will be used for network interpolation/smoothing.</summary>
+        ///<remarks>
+        ///It is expected that this is a component attached somewhere below the UpdatedComponent.
+        ///When network updates use MoveInterpolationTarget() to move the UpdatedComponent, the interpolated component's relative offset will be maintained and smoothed over
+        ///the course of future component ticks. The current relative location and rotation of the component is saved as the target offset for future interpolation.
+        ///@see MoveInterpolationTarget(), bInterpMovement, bInterpRotation
+        ///</remarks>
+        public void SetInterpolatedComponent(SceneComponent Component)  => 
+            ProjectileMovementComponent_methods.SetInterpolatedComponent_method.Invoke(ObjPointer, Component);
 
         ///<summary>Sets the velocity to the new value, rotated into Actor space.</summary>
         public void SetVelocityInLocalSpace(Vector NewVelocity)  => 
@@ -62,6 +92,14 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bForceSubStepping"); }
             set {Main.SetGetBoolPropertyByName(this, "bForceSubStepping", value); }
         }
+        public bool bSimulationEnabled {
+            get {return Main.GetGetBoolPropertyByName(this, "bSimulationEnabled"); }
+            set {Main.SetGetBoolPropertyByName(this, "bSimulationEnabled", value); }
+        }
+        public bool bSweepCollision {
+            get {return Main.GetGetBoolPropertyByName(this, "bSweepCollision"); }
+            set {Main.SetGetBoolPropertyByName(this, "bSweepCollision", value); }
+        }
         public bool bIsHomingProjectile {
             get {return Main.GetGetBoolPropertyByName(this, "bIsHomingProjectile"); }
             set {Main.SetGetBoolPropertyByName(this, "bIsHomingProjectile", value); }
@@ -72,6 +110,14 @@ namespace UE4.Engine {
         }
         public bool bIsSliding {
             get {return Main.GetGetBoolPropertyByName(this, "bIsSliding"); }
+        }
+        public bool bInterpMovement {
+            get {return Main.GetGetBoolPropertyByName(this, "bInterpMovement"); }
+            set {Main.SetGetBoolPropertyByName(this, "bInterpMovement", value); }
+        }
+        public bool bInterpRotation {
+            get {return Main.GetGetBoolPropertyByName(this, "bInterpRotation"); }
+            set {Main.SetGetBoolPropertyByName(this, "bInterpRotation", value); }
         }
         ///<summary>Saved HitResult Time (0 to 1) from previous simulation step. Equal to 1.0 when there was no impact.</summary>
         public unsafe float PreviousHitTime {
@@ -117,6 +163,12 @@ namespace UE4.Engine {
             get {return ProjectileMovementComponent_ptr->BounceVelocityStopSimulatingThreshold;}
             set {ProjectileMovementComponent_ptr->BounceVelocityStopSimulatingThreshold = value;}
         }
+        ///<summary>When bounce angle affects friction, apply at least this fraction of normal friction.</summary>
+        ///<remarks>Helps consistently slow objects sliding or rolling along surfaces or in valleys when the usual friction amount would take a very long time to settle.</remarks>
+        public unsafe float MinFrictionFraction {
+            get {return ProjectileMovementComponent_ptr->MinFrictionFraction;}
+            set {ProjectileMovementComponent_ptr->MinFrictionFraction = value;}
+        }
          //TODO: multicast delegate FOnProjectileBounceDelegate OnProjectileBounce
          //TODO: multicast delegate FOnProjectileStopDelegate OnProjectileStop
         ///<summary>The magnitude of our acceleration towards the homing target. Overall velocity magnitude will still be limited by MaxSpeed.</summary>
@@ -151,6 +203,35 @@ namespace UE4.Engine {
         public unsafe int BounceAdditionalIterations {
             get {return ProjectileMovementComponent_ptr->BounceAdditionalIterations;}
             set {ProjectileMovementComponent_ptr->BounceAdditionalIterations = value;}
+        }
+        ///<summary>"Time" over which most of the location interpolation occurs, when the UpdatedComponent (target) moves ahead of the interpolated component.</summary>
+        ///<remarks>
+        ///Since the implementation uses exponential lagged smoothing, this is a rough time value and experimentation should inform a final result.
+        ///A value of zero is effectively instantaneous interpolation.
+        ///</remarks>
+        public unsafe float InterpLocationTime {
+            get {return ProjectileMovementComponent_ptr->InterpLocationTime;}
+            set {ProjectileMovementComponent_ptr->InterpLocationTime = value;}
+        }
+        ///<summary>"Time" over which most of the rotation interpolation occurs, when the UpdatedComponent (target) moves ahead of the interpolated component.</summary>
+        ///<remarks>
+        ///Since the implementation uses exponential lagged smoothing, this is a rough time value and experimentation should inform a final result.
+        ///A value of zero is effectively instantaneous interpolation.
+        ///</remarks>
+        public unsafe float InterpRotationTime {
+            get {return ProjectileMovementComponent_ptr->InterpRotationTime;}
+            set {ProjectileMovementComponent_ptr->InterpRotationTime = value;}
+        }
+        ///<summary>Max distance behind UpdatedComponent which the interpolated component is allowed to lag.</summary>
+        public unsafe float InterpLocationMaxLagDistance {
+            get {return ProjectileMovementComponent_ptr->InterpLocationMaxLagDistance;}
+            set {ProjectileMovementComponent_ptr->InterpLocationMaxLagDistance = value;}
+        }
+        ///<summary>Max distance behind UpdatedComponent beyond which the interpolated component is snapped to the target location instead.</summary>
+        ///<remarks>For instance if the target teleports this far beyond the interpolated component, the interpolation is snapped to match the target.</remarks>
+        public unsafe float InterpLocationSnapToTargetDistance {
+            get {return ProjectileMovementComponent_ptr->InterpLocationSnapToTargetDistance;}
+            set {ProjectileMovementComponent_ptr->InterpLocationSnapToTargetDistance = value;}
         }
         static ProjectileMovementComponent() {
             StaticClass = Main.GetClass("ProjectileMovementComponent");

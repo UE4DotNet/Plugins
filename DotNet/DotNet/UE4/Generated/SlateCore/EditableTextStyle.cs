@@ -12,22 +12,22 @@ using UE4.Native;
 
 namespace UE4.SlateCore{
         ///<summary>Represents the appearance of an SEditableText</summary>
-        [StructLayout( LayoutKind.Explicit, Size=632 )]
+        [StructLayout( LayoutKind.Explicit, Size=640 )]
         public unsafe struct EditableTextStyle {
             ///<summary>Font family and size to be used when displaying this text.</summary>
             [FieldOffset(8)] SlateFontInfo Font;
 
             ///<summary>The color and opacity of this text</summary>
-            [FieldOffset(112)] SlateColor ColorAndOpacity;
+            [FieldOffset(120)] SlateColor ColorAndOpacity;
 
             ///<summary>Background image for the selected text</summary>
-            [FieldOffset(152)] SlateBrush BackgroundImageSelected;
+            [FieldOffset(160)] SlateBrush BackgroundImageSelected;
 
             ///<summary>Background image for the selected text</summary>
-            [FieldOffset(312)] SlateBrush BackgroundImageComposing;
+            [FieldOffset(320)] SlateBrush BackgroundImageComposing;
 
             ///<summary>Image brush used for the caret</summary>
-            [FieldOffset(472)] SlateBrush CaretImage;
+            [FieldOffset(480)] SlateBrush CaretImage;
 
         }
 }

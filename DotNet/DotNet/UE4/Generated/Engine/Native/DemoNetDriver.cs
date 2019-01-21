@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2984 )]
+    [StructLayout( LayoutKind.Explicit, Size=3440 )]
     internal unsafe struct DemoNetDriver_fields {
-        [FieldOffset(1576)] byte RollbackNetStartupActors; //TODO: map TMap RollbackNetStartupActors
-        [FieldOffset(2572)] public float CheckpointSaveMaxMSPerFrame;
-        [FieldOffset(2624)] public bool bIsLocalReplay;
+        [FieldOffset(2016)] byte RollbackNetStartupActors; //TODO: map TMap RollbackNetStartupActors
+        [FieldOffset(3028)] public float CheckpointSaveMaxMSPerFrame;
+        [FieldOffset(3080)] public bool bIsLocalReplay;
     }
     internal unsafe struct DemoNetDriver_methods {
     }

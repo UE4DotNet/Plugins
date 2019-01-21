@@ -13,7 +13,7 @@ using UE4.Native;
 namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=544 )]
     internal unsafe struct Texture2DDynamic_fields {
-        [FieldOffset(528)] public byte Format;
+        [FieldOffset(520)] public byte Format;
     }
     internal unsafe struct Texture2DDynamic_methods {
     }

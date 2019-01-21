@@ -20,6 +20,22 @@ namespace UE4.Engine {
         public static DebugFloatHistory AddFloatHistorySample(float Value, DebugFloatHistory FloatHistory)  => 
             KismetSystemLibrary_methods.AddFloatHistorySample_method.Invoke(Value, FloatHistory);
 
+        ///<summary>Begin a new undo transaction.</summary>
+        ///<remarks>
+        ///An undo transaction is defined as all actions which take place when the user selects "undo" a single time.
+        ///@note If there is already an active transaction in progress, then this increments that transaction's action counter instead of beginning a new transaction.
+        ///@note You must call TransactObject before modifying each object that should be included in this undo transaction.
+        ///@note Only available in the editor.
+        ///
+        ///@param       Context                 The context for the undo session. Typically the tool/editor that caused the undo operation.
+        ///@param       Description             The description for the undo session. This is the text that will appear in the "Edit" menu next to the Undo item.
+        ///@param       PrimaryObject   The primary object that the undo session operators on (can be null, and mostly is).
+        ///
+        ///@return      The number of active actions when BeginTransaction was called (values greater than 0 indicate that there was already an existing undo transaction in progress), or -1 on failure.
+        ///</remarks>
+        public static int BeginTransaction(string Context, byte Description /*TODO: text FText */, UObject PrimaryObject)  => 
+            KismetSystemLibrary_methods.BeginTransaction_method.Invoke(Context, Description, PrimaryObject);
+
         ///<summary>Returns an array of actors that overlap the given axis-aligned box.</summary>
         ///<remarks>
         ///@param WorldContext  World context
@@ -155,6 +171,15 @@ namespace UE4.Engine {
         ///<summary>Gets the path string out of a Soft Object Path</summary>
         public static string BreakSoftObjectPath(SoftObjectPath InSoftObjectPath)  => 
             KismetSystemLibrary_methods.BreakSoftObjectPath_method.Invoke(InSoftObjectPath);
+
+        ///<summary>Cancel the current transaction, and no longer capture actions to be placed in the undo buffer.</summary>
+        ///<remarks>
+        ///@note Only available in the editor.
+        ///
+        ///@param       Index           The action counter to cancel transactions from (as returned by a call to BeginTransaction).
+        ///</remarks>
+        public static void CancelTransaction(int Index)  => 
+            KismetSystemLibrary_methods.CancelTransaction_method.Invoke(Index);
 
         ///<summary>Can Launch URL</summary>
         public static bool CanLaunchURL(string URL)  => 
@@ -371,6 +396,14 @@ namespace UE4.Engine {
         public static string Conv_SoftObjectReferenceToString(byte SoftObjectReference /*TODO: soft object TSoftObjectPtr<UObject> */)  => 
             KismetSystemLibrary_methods.Conv_SoftObjectReferenceToString_method.Invoke(SoftObjectReference);
 
+        ///<summary>Converts passed in filename to use a absolute path</summary>
+        public static string ConvertToAbsolutePath(string Filename)  => 
+            KismetSystemLibrary_methods.ConvertToAbsolutePath_method.Invoke(Filename);
+
+        ///<summary>Converts passed in filename to use a relative path</summary>
+        public static string ConvertToRelativePath(string Filename)  => 
+            KismetSystemLibrary_methods.ConvertToRelativePath_method.Invoke(Filename);
+
         ///<summary>Mark as modified.</summary>
         public static void CreateCopyForUndoBuffer(UObject ObjectToModify)  => 
             KismetSystemLibrary_methods.CreateCopyForUndoBuffer_method.Invoke(ObjectToModify);
@@ -458,6 +491,16 @@ namespace UE4.Engine {
         ///<summary>Draw a debug string at a 3d world location.</summary>
         public static void DrawDebugString(UObject WorldContextObject, Vector TextLocation, string Text, Actor TestBaseActor, LinearColor TextColor, float Duration)  => 
             KismetSystemLibrary_methods.DrawDebugString_method.Invoke(WorldContextObject, TextLocation, Text, TestBaseActor, TextColor, Duration);
+
+        ///<summary>Attempt to end the current undo transaction.</summary>
+        ///<remarks>
+        ///Only successful if the transaction's action counter is 1.
+        ///@note Only available in the editor.
+        ///
+        ///@return      The number of active actions when EndTransaction was called (a value of 1 indicates that the transaction was successfully closed), or -1 on failure.
+        ///</remarks>
+        public static int EndTransaction()  => 
+            KismetSystemLibrary_methods.EndTransaction_method.Invoke();
 
         ///<summary>Returns true if the values are equal (A == B)</summary>
         public static bool EqualEqual_PrimaryAssetId(PrimaryAssetId A, PrimaryAssetId B)  => 
@@ -816,6 +859,10 @@ namespace UE4.Engine {
         public static bool IsPackagedForDistribution()  => 
             KismetSystemLibrary_methods.IsPackagedForDistribution_method.Invoke();
 
+        ///<summary>Returns true if screen saver is enabled.</summary>
+        public static bool IsScreensaverEnabled()  => 
+            KismetSystemLibrary_methods.IsScreensaverEnabled_method.Invoke();
+
         ///<summary>Returns whether the world this object is in is the host or not</summary>
         public static bool IsServer(UObject WorldContextObject)  => 
             KismetSystemLibrary_methods.IsServer_method.Invoke(WorldContextObject);
@@ -823,6 +870,14 @@ namespace UE4.Engine {
         ///<summary>Returns whether this game instance is stand alone (no networking).</summary>
         public static bool IsStandalone(UObject WorldContextObject)  => 
             KismetSystemLibrary_methods.IsStandalone_method.Invoke(WorldContextObject);
+
+        ///<summary>
+        ///Returns true if running unattended (-unattended is on the command line)
+        ///@
+        ///</summary>
+        ///<remarks>return      Unattended state</remarks>
+        public static bool IsUnattended()  => 
+            KismetSystemLibrary_methods.IsUnattended_method.Invoke();
 
         ///<summary>Return true if the object is usable : non-null and not pending kill</summary>
         public static bool IsValid(UObject UObject)  => 
@@ -1302,6 +1357,10 @@ namespace UE4.Engine {
         public static void MoveComponentTo(SceneComponent Component, Vector TargetRelativeLocation, Rotator TargetRelativeRotation, bool bEaseOut, bool bEaseIn, float OverTime, bool bForceShortestRotationPath, byte MoveAction, LatentActionInfo LatentInfo)  => 
             KismetSystemLibrary_methods.MoveComponentTo_method.Invoke(Component, TargetRelativeLocation, TargetRelativeRotation, bEaseOut, bEaseIn, OverTime, bForceShortestRotationPath, MoveAction, LatentInfo);
 
+        ///<summary>Convert all / and \ to TEXT("/")</summary>
+        public static string NormalizeFilename(string InFilename)  => 
+            KismetSystemLibrary_methods.NormalizeFilename_method.Invoke(InFilename);
+
         ///<summary>Returns true if the values are not equal (A != B)</summary>
         public static bool NotEqual_PrimaryAssetId(PrimaryAssetId A, PrimaryAssetId B)  => 
             KismetSystemLibrary_methods.NotEqual_PrimaryAssetId_method.Invoke(A, B);
@@ -1367,9 +1426,13 @@ namespace UE4.Engine {
         ///Exit the current game
         ///@
         ///</summary>
-        ///<remarks>param       SpecificPlayer  The specific player to quit the game. If not specified, player 0 will quit.</remarks>
-        public static void QuitGame(UObject WorldContextObject, PlayerController SpecificPlayer, byte QuitPreference)  => 
-            KismetSystemLibrary_methods.QuitGame_method.Invoke(WorldContextObject, SpecificPlayer, QuitPreference);
+        ///<remarks>
+        ///param       SpecificPlayer  The specific player to quit the game. If not specified, player 0 will quit.
+        ///@param       QuitPreference  Form of quitting.
+        ///@param       bIgnorePlatformRestrictions     Ignores and best-practices based on platform (e.g PS4 games should never quit). Non-shipping only
+        ///</remarks>
+        public static void QuitGame(UObject WorldContextObject, PlayerController SpecificPlayer, byte QuitPreference, bool bIgnorePlatformRestrictions)  => 
+            KismetSystemLibrary_methods.QuitGame_method.Invoke(WorldContextObject, SpecificPlayer, QuitPreference, bIgnorePlatformRestrictions);
 
         ///<summary>Requests permission to send remote notifications to the user's device.</summary>
         ///<remarks>(Android and iOS only)</remarks>
@@ -1650,6 +1713,16 @@ namespace UE4.Engine {
         ///<summary>Prints a stack trace to the log, so you can see how a blueprint got to this node</summary>
         public static void StackTrace()  => 
             KismetSystemLibrary_methods.StackTrace_method.Invoke();
+
+        ///<summary>Notify the current transaction (if any) that this object is about to be modified and should be placed into the undo buffer.</summary>
+        ///<remarks>
+        ///@note Internally this calls Modify on the given object, so will also mark the owner package dirty.
+        ///@note Only available in the editor.
+        ///
+        ///@param       Object          The object that is about to be modified.
+        ///</remarks>
+        public static void TransactObject(UObject UObject)  => 
+            KismetSystemLibrary_methods.TransactObject_method.Invoke(UObject);
 
         ///<summary>Unloads a primary asset, which allows it to be garbage collected if nothing else is referencing it</summary>
         public static void UnloadPrimaryAsset(PrimaryAssetId PrimaryAssetId)  => 

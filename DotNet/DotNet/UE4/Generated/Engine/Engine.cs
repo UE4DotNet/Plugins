@@ -129,6 +129,11 @@ namespace UE4.Engine {
             get {return Engine_ptr->NavigationSystemConfigClassName;}
             set {Engine_ptr->NavigationSystemConfigClassName = value;}
         }
+        ///<summary>The class for NavigationSystem *</summary>
+        public unsafe SubclassOf<NavigationSystemConfig> NavigationSystemConfigClass {
+            get {return Engine_ptr->NavigationSystemConfigClass;}
+            set {Engine_ptr->NavigationSystemConfigClass = value;}
+        }
         ///<summary>Name of behavior tree manager class</summary>
         public unsafe SoftClassPath AvoidanceManagerClassName {
             get {return Engine_ptr->AvoidanceManagerClassName;}
@@ -692,9 +697,14 @@ namespace UE4.Engine {
             set {Engine_ptr->SmoothedFrameRateRange = value;}
         }
         ///<summary>Control how the Engine process the Framerate/Timestep</summary>
-        public unsafe EngineCustomTimeStep CustomTimeStep {
-            get {return Engine_ptr->CustomTimeStep;}
-            set {Engine_ptr->CustomTimeStep = value;}
+        public unsafe EngineCustomTimeStep DefaultCustomTimeStep {
+            get {return Engine_ptr->DefaultCustomTimeStep;}
+            set {Engine_ptr->DefaultCustomTimeStep = value;}
+        }
+        ///<summary>Control how the Engine process the Framerate/Timestep</summary>
+        public unsafe EngineCustomTimeStep CurrentCustomTimeStep {
+            get {return Engine_ptr->CurrentCustomTimeStep;}
+            set {Engine_ptr->CurrentCustomTimeStep = value;}
         }
         ///<summary>Override how the Engine process the Framerate/Timestep.</summary>
         ///<remarks>
@@ -705,15 +715,34 @@ namespace UE4.Engine {
             get {return Engine_ptr->CustomTimeStepClassName;}
             set {Engine_ptr->CustomTimeStepClassName = value;}
         }
-        ///<summary>Provide a timecode to the Engine</summary>
-        public unsafe TimecodeProvider TimecodeProvider {
-            get {return Engine_ptr->TimecodeProvider;}
-            set {Engine_ptr->TimecodeProvider = value;}
+        ///<summary>Default timecode provider that will be used when no custom provider is set.</summary>
+        ///<remarks>This is expected to be valid throughout the entire life of the application.</remarks>
+        public unsafe TimecodeProvider DefaultTimecodeProvider {
+            get {return Engine_ptr->DefaultTimecodeProvider;}
+            set {Engine_ptr->DefaultTimecodeProvider = value;}
         }
-        ///<summary>Provide a timecode to the Engine</summary>
-        public unsafe SoftClassPath TimecodeFrameRateClassName {
-            get {return Engine_ptr->TimecodeFrameRateClassName;}
-            set {Engine_ptr->TimecodeFrameRateClassName = value;}
+        ///<summary>Custom Timecode Provider</summary>
+        public unsafe TimecodeProvider CustomTimecodeProvider {
+            get {return Engine_ptr->CustomTimecodeProvider;}
+            set {Engine_ptr->CustomTimecodeProvider = value;}
+        }
+        ///<summary>Allows UEngine subclasses a chance to override the DefaultTimecodeProvider class.</summary>
+        ///<remarks>
+        ///This must be set before InitializeObjectReferences is called.
+        ///This is intentionally protected and not exposed to config.
+        ///</remarks>
+        public unsafe SoftClassPath DefaultTimecodeProviderClassName {
+            get {return Engine_ptr->DefaultTimecodeProviderClassName;}
+            set {Engine_ptr->DefaultTimecodeProviderClassName = value;}
+        }
+        ///<summary>Override the CustomTimecodeProvider when the engine is started.</summary>
+        ///<remarks>
+        ///When set, this does not change the DefaultTImecodeProvider class.
+        ///Instead, it will create an instance and set it as the CustomTimecodeProvider.
+        ///</remarks>
+        public unsafe SoftClassPath TimecodeProviderClassName {
+            get {return Engine_ptr->TimecodeProviderClassName;}
+            set {Engine_ptr->TimecodeProviderClassName = value;}
         }
         ///<summary>Frame rate used to generated the engine Timecode's frame number when no TimecodeProvider are specified.</summary>
         ///<remarks>It doesn't control the Engine frame rate. The Engine can run faster or slower that the specified TimecodeFrameRate.</remarks>

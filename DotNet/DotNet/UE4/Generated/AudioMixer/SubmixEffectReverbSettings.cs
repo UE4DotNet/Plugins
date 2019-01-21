@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.AudioMixer{
         ///<summary>Submix Effect Reverb Settings</summary>
-        [StructLayout( LayoutKind.Explicit, Size=48 )]
+        [StructLayout( LayoutKind.Explicit, Size=52 )]
         public unsafe struct SubmixEffectReverbSettings {
             [FieldOffset(0)] public float Density;
 
@@ -37,6 +37,8 @@ namespace UE4.AudioMixer{
             [FieldOffset(40)] public float AirAbsorptionGainHF;
 
             [FieldOffset(44)] public float WetLevel;
+
+            [FieldOffset(48)] public float DryLevel;
 
         }
 }

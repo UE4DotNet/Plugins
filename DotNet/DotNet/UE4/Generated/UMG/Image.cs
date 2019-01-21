@@ -39,6 +39,10 @@ namespace UE4.UMG {
         public void SetBrushFromMaterial(MaterialInterface Material)  => 
             Image_methods.SetBrushFromMaterial_method.Invoke(ObjPointer, Material);
 
+        ///<summary>Set Brush from Soft Texture</summary>
+        public void SetBrushFromSoftTexture(byte SoftTexture /*TODO: soft object TSoftObjectPtr<UTexture2D> */, bool bMatchSize)  => 
+            Image_methods.SetBrushFromSoftTexture_method.Invoke(ObjPointer, SoftTexture, bMatchSize);
+
         ///<summary>Set Brush from Texture</summary>
         public void SetBrushFromTexture(Texture2D Texture, bool bMatchSize)  => 
             Image_methods.SetBrushFromTexture_method.Invoke(ObjPointer, Texture, bMatchSize);

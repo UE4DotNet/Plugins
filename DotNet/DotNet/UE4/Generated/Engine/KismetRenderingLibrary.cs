@@ -61,6 +61,10 @@ namespace UE4.Engine {
         public static void ExportTexture2D(UObject WorldContextObject, Texture2D Texture, string FilePath, string FileName)  => 
             KismetRenderingLibrary_methods.ExportTexture2D_method.Invoke(WorldContextObject, Texture, FilePath, FileName);
 
+        ///<summary>Imports a texture from a buffer and creates Texture2D from it.</summary>
+        public static Texture2D ImportBufferAsTexture2D(UObject WorldContextObject, byte Buffer /*TODO: array TArray */)  => 
+            KismetRenderingLibrary_methods.ImportBufferAsTexture2D_method.Invoke(WorldContextObject, Buffer);
+
         ///<summary>Imports a texture file from disk and creates Texture2D from it.</summary>
         public static Texture2D ImportFileAsTexture2D(UObject WorldContextObject, string Filename)  => 
             KismetRenderingLibrary_methods.ImportFileAsTexture2D_method.Invoke(WorldContextObject, Filename);

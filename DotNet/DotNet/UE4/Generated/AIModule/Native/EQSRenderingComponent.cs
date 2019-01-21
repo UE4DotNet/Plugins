@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.AIModule.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1680 )]
+    [StructLayout( LayoutKind.Explicit, Size=1664 )]
     internal unsafe struct EQSRenderingComponent_fields {
     }
     internal unsafe struct EQSRenderingComponent_methods {

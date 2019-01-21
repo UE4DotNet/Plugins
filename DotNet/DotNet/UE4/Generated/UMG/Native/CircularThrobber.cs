@@ -12,13 +12,13 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=592 )]
+    [StructLayout( LayoutKind.Explicit, Size=608 )]
     internal unsafe struct CircularThrobber_fields {
-        [FieldOffset(384)] public int NumberOfPieces;
-        [FieldOffset(388)] public float Period;
-        [FieldOffset(392)] public float Radius;
-        [FieldOffset(408)] public SlateBrush Image;
-        [FieldOffset(568)] public bool bEnableRadius;
+        [FieldOffset(400)] public int NumberOfPieces;
+        [FieldOffset(404)] public float Period;
+        [FieldOffset(408)] public float Radius;
+        [FieldOffset(424)] public SlateBrush Image;
+        [FieldOffset(584)] public bool bEnableRadius;
     }
     internal unsafe struct CircularThrobber_methods {
         internal struct SetNumberOfPieces_method {

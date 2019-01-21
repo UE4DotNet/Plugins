@@ -80,6 +80,18 @@ namespace UE4.Engine {
         public Name GetBoneName(int BoneIndex)  => 
             SkinnedMeshComponent_methods.GetBoneName_method.Invoke(ObjPointer, BoneIndex);
 
+        ///<summary>Get delta transform from reference pose based on BaseNode.</summary>
+        ///<remarks>
+        ///This uses last frame up-to-date transform, so it will have a frame delay if you use this info in the AnimGraph
+        ///
+        ///@param BoneName Name of the bone
+        ///@param BaseName Name of the base bone - if none, it will use parent as a base
+        ///
+        ///@return the delta transform from refpose in that given space (BaseName)
+        ///</remarks>
+        public Transform GetDeltaTransformFromRefPose(Name BoneName, Name BaseName)  => 
+            SkinnedMeshComponent_methods.GetDeltaTransformFromRefPose_method.Invoke(ObjPointer, BoneName, BaseName);
+
         ///<summary>Returns the number of bones in the skeleton.</summary>
         public int GetNumBones()  => 
             SkinnedMeshComponent_methods.GetNumBones_method.Invoke(ObjPointer);
@@ -274,9 +286,6 @@ namespace UE4.Engine {
         public unsafe int ForcedLodModel {
             get {return SkinnedMeshComponent_ptr->ForcedLodModel;}
         }
-        public bool bOverrideMinLod {
-            get {return Main.GetGetBoolPropertyByName(this, "bOverrideMinLod"); }
-        }
         ///<summary>This is the min LOD that this component will use.</summary>
         ///<remarks>
         ///(e.g. if set to 2 then only 2+ LOD Models will be used.) This is useful to set on
@@ -296,15 +305,9 @@ namespace UE4.Engine {
             set {SkinnedMeshComponent_ptr->StreamingDistanceMultiplier = value;}
         }
          //TODO: array not UObject TArray LODInfo
-        ///<summary>
-        ///This is update frequency flag even when our Owner has not been rendered recently
-        ///SMU_AlwaysTickPoseAndRefreshBones,                   // Always Tick and Refresh BoneTransforms whether rendered or not
-        ///SMU_AlwaysTickPose,                                                  // Always Tick, but Refresh BoneTransforms only when rendered
-        ///</summary>
-        ///<remarks>SMU_OnlyTickPoseWhenRendered,                                // Tick only when rendered, and it will only RefreshBoneTransforms when rendered</remarks>
-        public unsafe byte MeshComponentUpdateFlag {
-            get {return SkinnedMeshComponent_ptr->MeshComponentUpdateFlag;}
-            set {SkinnedMeshComponent_ptr->MeshComponentUpdateFlag = value;}
+         //TODO: enum EVisibilityBasedAnimTickOption VisibilityBasedAnimTickOption
+        public bool bOverrideMinLod {
+            get {return Main.GetGetBoolPropertyByName(this, "bOverrideMinLod"); }
         }
         public bool bUseBoundsFromMasterPoseComponent {
             get {return Main.GetGetBoolPropertyByName(this, "bUseBoundsFromMasterPoseComponent"); }

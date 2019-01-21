@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=408 )]
+    [StructLayout( LayoutKind.Explicit, Size=424 )]
     internal unsafe struct Spacer_fields {
-        [FieldOffset(384)] public Vector2D Size;
+        [FieldOffset(400)] public Vector2D Size;
     }
     internal unsafe struct Spacer_methods {
         internal struct SetSize_method {

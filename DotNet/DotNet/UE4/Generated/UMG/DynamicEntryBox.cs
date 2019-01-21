@@ -26,6 +26,10 @@ namespace UE4.UMG {
         public UserWidget BP_CreateEntry()  => 
             DynamicEntryBox_methods.BP_CreateEntry_method.Invoke(ObjPointer);
 
+        ///<summary>Creates and establishes a new dynamic entry in the box using the specified class instead of the default.</summary>
+        public UserWidget BP_CreateEntryOfClass(SubclassOf<UserWidget> EntryClass)  => 
+            DynamicEntryBox_methods.BP_CreateEntryOfClass_method.Invoke(ObjPointer, EntryClass);
+
         ///<summary>Get All Entries</summary>
         public void GetAllEntries(byte ReturnValue /*TODO: array TArray */)  => 
             DynamicEntryBox_methods.GetAllEntries_method.Invoke(ObjPointer, ReturnValue);

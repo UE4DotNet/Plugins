@@ -22,6 +22,18 @@ namespace UE4.MagicLeap {
     ///@note Currently only R8G8B8A8 and B8G8R8A8 textures are supported.
     ///</remarks>
     public unsafe partial class ImageTrackerComponent : SceneComponent  {
+
+        ///<summary>Attempts to change the currently tracked target.</summary>
+        ///<remarks>
+        ///Initiates an asynchronous call on a worker thread.
+        ///When the task completes, the instigating blueprint will be notified by either a FSetImageTargetSucceeded
+        ///or FSetImageTargetFailed event.
+        ///@param ImageTarget The new texture to be tracked.
+        ///</remarks>
+        public void SetTargetAsync(Texture2D ImageTarget)  => 
+            ImageTrackerComponent_methods.SetTargetAsync_method.Invoke(ObjPointer, ImageTarget);
+         //TODO: multicast delegate FSetImageTargetSucceeded OnSetImageTargetSucceeded
+         //TODO: multicast delegate FSetImageTargetFailed OnSetImageTargetFailed
          //TODO: multicast delegate FImageTargetFound OnImageTargetFound
          //TODO: multicast delegate FImageTargetLost OnImageTargetLost
          //TODO: multicast delegate FImageTargetUnreliableTracking OnImageTargetUnreliableTracking

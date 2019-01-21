@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=944 )]
+    [StructLayout( LayoutKind.Explicit, Size=928 )]
     internal unsafe struct AnimGraphNode_Constraint_fields {
         [FieldOffset(272)] public AnimNode_Constraint Node;
     }

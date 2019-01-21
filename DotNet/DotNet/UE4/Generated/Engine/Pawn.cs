@@ -213,19 +213,19 @@ namespace UE4.Engine {
             set {Pawn_ptr->AutoPossessPlayer = value;}
         }
          //TODO: enum EAutoPossessAI AutoPossessAI
+        ///<summary>Replicated so we can see where remote clients are looking.</summary>
+        public unsafe byte RemoteViewPitch {
+            get {return Pawn_ptr->RemoteViewPitch;}
+            set {Pawn_ptr->RemoteViewPitch = value;}
+        }
         ///<summary>Default class to use when pawn is controlled by AI.</summary>
         public unsafe SubclassOf<Controller> AIControllerClass {
             get {return Pawn_ptr->AIControllerClass;}
             set {Pawn_ptr->AIControllerClass = value;}
         }
-        ///<summary>If Pawn is possessed by a player, points to his playerstate.  Needed for network play as controllers are not replicated to clients.</summary>
+        ///<summary>If Pawn is possessed by a player, points to its Player State.  Needed for network play as controllers are not replicated to clients.</summary>
         public unsafe PlayerState PlayerState {
             get {return Pawn_ptr->PlayerState;}
-        }
-        ///<summary>Replicated so we can see where remote clients are looking.</summary>
-        public unsafe byte RemoteViewPitch {
-            get {return Pawn_ptr->RemoteViewPitch;}
-            set {Pawn_ptr->RemoteViewPitch = value;}
         }
         ///<summary>Controller of the last Actor that caused us damage.</summary>
         public unsafe Controller LastHitBy {

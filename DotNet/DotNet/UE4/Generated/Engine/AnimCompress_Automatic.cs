@@ -28,22 +28,6 @@ namespace UE4.Engine {
             get {return AnimCompress_Automatic_ptr->MaxEndEffectorError;}
             set {AnimCompress_Automatic_ptr->MaxEndEffectorError = value;}
         }
-        public bool bTryFixedBitwiseCompression {
-            get {return Main.GetGetBoolPropertyByName(this, "bTryFixedBitwiseCompression"); }
-            set {Main.SetGetBoolPropertyByName(this, "bTryFixedBitwiseCompression", value); }
-        }
-        public bool bTryPerTrackBitwiseCompression {
-            get {return Main.GetGetBoolPropertyByName(this, "bTryPerTrackBitwiseCompression"); }
-            set {Main.SetGetBoolPropertyByName(this, "bTryPerTrackBitwiseCompression", value); }
-        }
-        public bool bTryLinearKeyRemovalCompression {
-            get {return Main.GetGetBoolPropertyByName(this, "bTryLinearKeyRemovalCompression"); }
-            set {Main.SetGetBoolPropertyByName(this, "bTryLinearKeyRemovalCompression", value); }
-        }
-        public bool bTryIntervalKeyRemoval {
-            get {return Main.GetGetBoolPropertyByName(this, "bTryIntervalKeyRemoval"); }
-            set {Main.SetGetBoolPropertyByName(this, "bTryIntervalKeyRemoval", value); }
-        }
         public bool bRunCurrentDefaultCompressor {
             get {return Main.GetGetBoolPropertyByName(this, "bRunCurrentDefaultCompressor"); }
             set {Main.SetGetBoolPropertyByName(this, "bRunCurrentDefaultCompressor", value); }
@@ -55,6 +39,10 @@ namespace UE4.Engine {
         public bool bRaiseMaxErrorToExisting {
             get {return Main.GetGetBoolPropertyByName(this, "bRaiseMaxErrorToExisting"); }
             set {Main.SetGetBoolPropertyByName(this, "bRaiseMaxErrorToExisting", value); }
+        }
+        public bool bTryExhaustiveSearch {
+            get {return Main.GetGetBoolPropertyByName(this, "bTryExhaustiveSearch"); }
+            set {Main.SetGetBoolPropertyByName(this, "bTryExhaustiveSearch", value); }
         }
         static AnimCompress_Automatic() {
             StaticClass = Main.GetClass("AnimCompress_Automatic");

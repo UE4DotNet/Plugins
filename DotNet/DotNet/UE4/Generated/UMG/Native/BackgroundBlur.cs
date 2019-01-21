@@ -12,16 +12,16 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=616 )]
+    [StructLayout( LayoutKind.Explicit, Size=632 )]
     internal unsafe struct BackgroundBlur_fields {
-        [FieldOffset(408)] public Margin Padding;
-        [FieldOffset(424)] public byte HorizontalAlignment;
-        [FieldOffset(425)] public byte VerticalAlignment;
-        [FieldOffset(426)] public bool bApplyAlphaToBlur;
-        [FieldOffset(428)] public float BlurStrength;
-        [FieldOffset(432)] public bool bOverrideAutoRadiusCalculation;
-        [FieldOffset(436)] public int BlurRadius;
-        [FieldOffset(440)] public SlateBrush LowQualityFallbackBrush;
+        [FieldOffset(424)] public Margin Padding;
+        [FieldOffset(440)] public byte HorizontalAlignment;
+        [FieldOffset(441)] public byte VerticalAlignment;
+        [FieldOffset(442)] public bool bApplyAlphaToBlur;
+        [FieldOffset(444)] public float BlurStrength;
+        [FieldOffset(448)] public bool bOverrideAutoRadiusCalculation;
+        [FieldOffset(452)] public int BlurRadius;
+        [FieldOffset(456)] public SlateBrush LowQualityFallbackBrush;
     }
     internal unsafe struct BackgroundBlur_methods {
         internal struct SetApplyAlphaToBlur_method {

@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.VREditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1856 )]
+    [StructLayout( LayoutKind.Explicit, Size=1840 )]
     internal unsafe struct VREditorWidgetComponent_fields {
-        [FieldOffset(1848)] byte DrawingPolicy; //TODO: enum EVREditorWidgetDrawingPolicy DrawingPolicy
-        [FieldOffset(1849)] public bool bIsHovering;
-        [FieldOffset(1850)] public bool bHasEverDrawn;
+        [FieldOffset(1832)] byte DrawingPolicy; //TODO: enum EVREditorWidgetDrawingPolicy DrawingPolicy
+        [FieldOffset(1833)] public bool bIsHovering;
+        [FieldOffset(1834)] public bool bHasEverDrawn;
     }
     internal unsafe struct VREditorWidgetComponent_methods {
     }

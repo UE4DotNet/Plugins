@@ -13,14 +13,14 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Constraint node to parent or world transform for rotation/translation</summary>
-        [StructLayout( LayoutKind.Explicit, Size=544 )]
+        [StructLayout( LayoutKind.Explicit, Size=528 )]
         public unsafe struct AnimNode_Constraint {
             ///<summary>Name of bone to control. This is the main bone chain to modify from. *</summary>
-            [FieldOffset(360)] BoneReference BoneToModify;
+            [FieldOffset(336)] BoneReference BoneToModify;
 
-            [FieldOffset(384)] byte ConstraintSetup; //TODO: array TArray ConstraintSetup
+            [FieldOffset(360)] byte ConstraintSetup; //TODO: array TArray ConstraintSetup
 
-            [FieldOffset(400)] byte ConstraintWeights; //TODO: array TArray ConstraintWeights
+            [FieldOffset(376)] byte ConstraintWeights; //TODO: array TArray ConstraintWeights
 
         }
 }

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=936 )]
+    [StructLayout( LayoutKind.Explicit, Size=912 )]
     internal unsafe struct Model_fields {
     }
     internal unsafe struct Model_methods {

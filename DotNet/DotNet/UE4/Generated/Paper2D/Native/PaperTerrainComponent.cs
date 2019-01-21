@@ -11,19 +11,19 @@ using UE4.Native;
 
 
 namespace UE4.Paper2D.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1616 )]
+    [StructLayout( LayoutKind.Explicit, Size=1600 )]
     internal unsafe struct PaperTerrainComponent_fields {
-        [FieldOffset(1520)]  public IntPtr  TerrainMaterial;
-        [FieldOffset(1528)] public bool bClosedSpline;
-        [FieldOffset(1529)] public bool bFilledSpline;
-        [FieldOffset(1536)]  public IntPtr  AssociatedSpline;
-        [FieldOffset(1544)] public int RandomSeed;
-        [FieldOffset(1548)] public float SegmentOverlapAmount;
-        [FieldOffset(1552)] public LinearColor TerrainColor;
-        [FieldOffset(1568)] public int ReparamStepsPerSegment;
-        [FieldOffset(1572)] public byte SpriteCollisionDomain;
-        [FieldOffset(1576)] public float CollisionThickness;
-        [FieldOffset(1584)]  public IntPtr  CachedBodySetup;
+        [FieldOffset(1504)]  public IntPtr  TerrainMaterial;
+        [FieldOffset(1512)] public bool bClosedSpline;
+        [FieldOffset(1513)] public bool bFilledSpline;
+        [FieldOffset(1520)]  public IntPtr  AssociatedSpline;
+        [FieldOffset(1528)] public int RandomSeed;
+        [FieldOffset(1532)] public float SegmentOverlapAmount;
+        [FieldOffset(1536)] public LinearColor TerrainColor;
+        [FieldOffset(1552)] public int ReparamStepsPerSegment;
+        [FieldOffset(1556)] public byte SpriteCollisionDomain;
+        [FieldOffset(1560)] public float CollisionThickness;
+        [FieldOffset(1568)]  public IntPtr  CachedBodySetup;
     }
     internal unsafe struct PaperTerrainComponent_methods {
         internal struct SetTerrainColor_method {

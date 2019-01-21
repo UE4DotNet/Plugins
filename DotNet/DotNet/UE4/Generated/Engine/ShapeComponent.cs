@@ -15,14 +15,14 @@ using UE4.Engine.Native;
 namespace UE4.Engine {
     ///<summary>ShapeComponent is a PrimitiveComponent that is represented by a simple geometrical shape (sphere, capsule, box, etc).</summary>
     public unsafe partial class ShapeComponent : PrimitiveComponent  {
-        ///<summary>Color used to draw the shape.</summary>
-        public unsafe Color ShapeColor {
-            get {return ShapeComponent_ptr->ShapeColor;}
-        }
         ///<summary>Description of collision</summary>
         public unsafe BodySetup ShapeBodySetup {
             get {return ShapeComponent_ptr->ShapeBodySetup;}
             set {ShapeComponent_ptr->ShapeBodySetup = value;}
+        }
+        ///<summary>Color used to draw the shape.</summary>
+        public unsafe Color ShapeColor {
+            get {return ShapeComponent_ptr->ShapeColor;}
         }
         public bool bDrawOnlyIfSelected {
             get {return Main.GetGetBoolPropertyByName(this, "bDrawOnlyIfSelected"); }

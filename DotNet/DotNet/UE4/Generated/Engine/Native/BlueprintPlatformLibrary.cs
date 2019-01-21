@@ -44,6 +44,19 @@ namespace UE4.Engine.Native {
                 Main.GetProcessEvent(BlueprintPlatformLibrary.DefaultObject, ClearAllLocalNotifications_ptr, new IntPtr(p)); ;
             }
         }
+        internal struct GetDeviceOrientation_method {
+            static internal IntPtr GetDeviceOrientation_ptr;
+            static GetDeviceOrientation_method() {
+                GetDeviceOrientation_ptr = Main.GetMethodUFunction(BlueprintPlatformLibrary.StaticClass, "GetDeviceOrientation");
+            }
+
+            internal static unsafe byte Invoke() {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(BlueprintPlatformLibrary.DefaultObject, GetDeviceOrientation_ptr, new IntPtr(p)); ;
+                return *(b+0);
+            }
+        }
         internal struct GetLaunchNotification_method {
             static internal IntPtr GetLaunchNotification_ptr;
             static GetLaunchNotification_method() {

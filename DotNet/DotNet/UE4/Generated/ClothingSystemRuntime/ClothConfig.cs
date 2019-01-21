@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.ClothingSystemRuntime{
         ///<summary>Holds initial, asset level config for clothing actors.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=196 )]
+        [StructLayout( LayoutKind.Explicit, Size=212 )]
         public unsafe struct ClothConfig {
             [FieldOffset(0)] byte WindMethod; //TODO: enum EClothingWindMethod WindMethod
 
@@ -64,15 +64,20 @@ namespace UE4.ClothingSystemRuntime{
 
             [FieldOffset(172)] public float GravityScale;
 
-            [FieldOffset(176)] public float TetherStiffness;
+            ///<summary>Direct gravity override value</summary>
+            [FieldOffset(176)] Vector GravityOverride;
 
-            [FieldOffset(180)] public float TetherLimit;
+            [FieldOffset(188)] public bool bUseGravityOverride;
 
-            [FieldOffset(184)] public float CollisionThickness;
+            [FieldOffset(192)] public float TetherStiffness;
 
-            [FieldOffset(188)] public float AnimDriveSpringStiffness;
+            [FieldOffset(196)] public float TetherLimit;
 
-            [FieldOffset(192)] public float AnimDriveDamperStiffness;
+            [FieldOffset(200)] public float CollisionThickness;
+
+            [FieldOffset(204)] public float AnimDriveSpringStiffness;
+
+            [FieldOffset(208)] public float AnimDriveDamperStiffness;
 
         }
 }

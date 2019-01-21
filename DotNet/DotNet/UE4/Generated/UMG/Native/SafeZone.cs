@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=456 )]
+    [StructLayout( LayoutKind.Explicit, Size=472 )]
     internal unsafe struct SafeZone_fields {
-        [FieldOffset(408)] public bool PadLeft;
-        [FieldOffset(409)] public bool PadRight;
-        [FieldOffset(410)] public bool PadTop;
-        [FieldOffset(411)] public bool PadBottom;
+        [FieldOffset(424)] public bool PadLeft;
+        [FieldOffset(425)] public bool PadRight;
+        [FieldOffset(426)] public bool PadTop;
+        [FieldOffset(427)] public bool PadBottom;
     }
     internal unsafe struct SafeZone_methods {
         internal struct SetSidesToPad_method {

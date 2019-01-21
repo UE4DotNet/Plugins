@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.AIModule.Native {
-    [StructLayout( LayoutKind.Explicit, Size=776 )]
+    [StructLayout( LayoutKind.Explicit, Size=752 )]
     internal unsafe struct GridPathFollowingComponent_fields {
-        [FieldOffset(728)]  public IntPtr  GridManager;
+        [FieldOffset(704)]  public IntPtr  GridManager;
     }
     internal unsafe struct GridPathFollowingComponent_methods {
     }

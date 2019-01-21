@@ -15,6 +15,19 @@ namespace UE4.MagicLeapEyeTracker.Native {
     internal unsafe struct MagicLeapEyeTrackerFunctionLibrary_fields {
     }
     internal unsafe struct MagicLeapEyeTrackerFunctionLibrary_methods {
+        internal struct GetCalibrationStatus_method {
+            static internal IntPtr GetCalibrationStatus_ptr;
+            static GetCalibrationStatus_method() {
+                GetCalibrationStatus_ptr = Main.GetMethodUFunction(MagicLeapEyeTrackerFunctionLibrary.StaticClass, "GetCalibrationStatus");
+            }
+
+            internal static unsafe EMagicLeapEyeTrackingCalibrationStatus Invoke() {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(MagicLeapEyeTrackerFunctionLibrary.DefaultObject, GetCalibrationStatus_ptr, new IntPtr(p)); ;
+                return *((EMagicLeapEyeTrackingCalibrationStatus*)(b+0));
+            }
+        }
         internal struct GetEyeBlinkState_method {
             static internal IntPtr GetEyeBlinkState_ptr;
             static GetEyeBlinkState_method() {
@@ -26,6 +39,19 @@ namespace UE4.MagicLeapEyeTracker.Native {
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(MagicLeapEyeTrackerFunctionLibrary.DefaultObject, GetEyeBlinkState_ptr, new IntPtr(p)); ;
                 return (*((MagicLeapEyeBlinkState*)(b+0)),*((bool*)(b+2)));
+            }
+        }
+        internal struct GetFixationComfort_method {
+            static internal IntPtr GetFixationComfort_ptr;
+            static GetFixationComfort_method() {
+                GetFixationComfort_ptr = Main.GetMethodUFunction(MagicLeapEyeTrackerFunctionLibrary.StaticClass, "GetFixationComfort");
+            }
+
+            internal static unsafe (MagicLeapFixationComfort, bool) Invoke() {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(MagicLeapEyeTrackerFunctionLibrary.DefaultObject, GetFixationComfort_ptr, new IntPtr(p)); ;
+                return (*((MagicLeapFixationComfort*)(b+0)),*((bool*)(b+8)));
             }
         }
         internal struct IsEyeTrackerCalibrated_method {

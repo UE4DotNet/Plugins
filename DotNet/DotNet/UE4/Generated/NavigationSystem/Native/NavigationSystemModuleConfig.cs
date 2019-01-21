@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.NavigationSystem.Native {
-    [StructLayout( LayoutKind.Explicit, Size=96 )]
+    [StructLayout( LayoutKind.Explicit, Size=104 )]
     internal unsafe struct NavigationSystemModuleConfig_fields {
-        [FieldOffset(88)] public bool bStrictlyStatic;
-        [FieldOffset(88)] public bool bCreateOnClient;
-        [FieldOffset(88)] public bool bAutoSpawnMissingNavData;
-        [FieldOffset(88)] public bool bSpawnNavDataInNavBoundsLevel;
+        [FieldOffset(96)] public bool bStrictlyStatic;
+        [FieldOffset(96)] public bool bCreateOnClient;
+        [FieldOffset(96)] public bool bAutoSpawnMissingNavData;
+        [FieldOffset(96)] public bool bSpawnNavDataInNavBoundsLevel;
     }
     internal unsafe struct NavigationSystemModuleConfig_methods {
     }

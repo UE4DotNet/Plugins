@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine{
-        ///<summary>Handle to a particular row in a table</summary>
+        ///<summary>Handle to a particular set of rows in a table</summary>
         [StructLayout( LayoutKind.Explicit, Size=32 )]
         public unsafe struct DataTableCategoryHandle {
             [FieldOffset(0)] 

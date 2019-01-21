@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=408 )]
+    [StructLayout( LayoutKind.Explicit, Size=424 )]
     internal unsafe struct PanelWidget_fields {
-        [FieldOffset(384)] public NativeArray Slots;
+        [FieldOffset(400)] public NativeArray Slots;
     }
     internal unsafe struct PanelWidget_methods {
         internal struct AddChild_method {

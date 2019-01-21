@@ -11,15 +11,15 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1936 )]
+    [StructLayout( LayoutKind.Explicit, Size=1920 )]
     internal unsafe struct InstancedStaticMeshComponent_fields {
-        [FieldOffset(1760)] public NativeArray PerInstanceSMData;
-        [FieldOffset(1776)] public int InstancingRandomSeed;
-        [FieldOffset(1780)] public int InstanceStartCullDistance;
-        [FieldOffset(1784)] public int InstanceEndCullDistance;
-        [FieldOffset(1792)] public NativeArray InstanceReorderTable;
-        [FieldOffset(1912)] public int NumPendingLightmaps;
-        [FieldOffset(1920)] public NativeArray CachedMappings;
+        [FieldOffset(1744)] public NativeArray PerInstanceSMData;
+        [FieldOffset(1760)] public int InstancingRandomSeed;
+        [FieldOffset(1764)] public int InstanceStartCullDistance;
+        [FieldOffset(1768)] public int InstanceEndCullDistance;
+        [FieldOffset(1776)] public NativeArray InstanceReorderTable;
+        [FieldOffset(1896)] public int NumPendingLightmaps;
+        [FieldOffset(1904)] public NativeArray CachedMappings;
     }
     internal unsafe struct InstancedStaticMeshComponent_methods {
         internal struct AddInstance_method {

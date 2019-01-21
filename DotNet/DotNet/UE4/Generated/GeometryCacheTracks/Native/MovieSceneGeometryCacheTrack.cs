@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.GeometryCacheTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=168 )]
+    [StructLayout( LayoutKind.Explicit, Size=176 )]
     internal unsafe struct MovieSceneGeometryCacheTrack_fields {
-        [FieldOffset(152)] public NativeArray AnimationSections;
+        [FieldOffset(160)] public NativeArray AnimationSections;
     }
     internal unsafe struct MovieSceneGeometryCacheTrack_methods {
     }

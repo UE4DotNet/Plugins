@@ -12,72 +12,72 @@ using UE4.Native;
 using UE4.ClothingSystemRuntimeInterface;
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=3264 )]
+    [StructLayout( LayoutKind.Explicit, Size=3168 )]
     internal unsafe struct SkeletalMeshComponent_fields {
-        [FieldOffset(2008)] public IntPtr AnimBlueprintGeneratedClass;
-        [FieldOffset(2016)] public IntPtr AnimClass;
-        [FieldOffset(2024)]  public IntPtr  AnimScriptInstance;
-        [FieldOffset(2032)] public NativeArray SubInstances;
-        [FieldOffset(2048)]  public IntPtr  PostProcessAnimInstance;
-        [FieldOffset(2056)] public bool bDisablePostProcessBlueprint;
-        [FieldOffset(2064)] public SingleAnimationPlayData AnimationData;
-        [FieldOffset(2104)] public Vector RootBoneTranslation;
-        [FieldOffset(2116)] public Vector LineCheckBoundsScale;
-        [FieldOffset(2160)] public NativeArray CachedBoneSpaceTransforms;
-        [FieldOffset(2176)] public NativeArray CachedComponentSpaceTransforms;
-        [FieldOffset(2224)] public float GlobalAnimRateScale;
-        [FieldOffset(2228)] byte UseAsyncScene; //TODO: enum EDynamicActorScene UseAsyncScene
-        [FieldOffset(2229)] public byte KinematicBonesUpdateType;
-        [FieldOffset(2230)] public byte PhysicsTransformUpdateMode;
-        [FieldOffset(2232)] public byte AnimationMode;
-        [FieldOffset(2234)] public bool bHasValidBodies;
-        [FieldOffset(2234)] public bool bBlendPhysics;
-        [FieldOffset(2234)] public bool bEnablePhysicsOnDedicatedServer;
-        [FieldOffset(2234)] public bool bUpdateJointsFromAnimation;
-        [FieldOffset(2234)] public bool bDisableClothSimulation;
-        [FieldOffset(2234)] public bool bAllowAnimCurveEvaluation;
-        [FieldOffset(2235)] public bool bCollideWithEnvironment;
-        [FieldOffset(2235)] public bool bCollideWithAttachedChildren;
-        [FieldOffset(2235)] public bool bLocalSpaceSimulation;
-        [FieldOffset(2235)] public bool bResetAfterTeleport;
-        [FieldOffset(2236)] public bool bDeferMovementFromSceneQueries;
-        [FieldOffset(2236)] public bool bNoSkeletonUpdate;
-        [FieldOffset(2236)] public bool bPauseAnims;
-        [FieldOffset(2236)] public bool bUseRefPoseOnInitAnim;
-        [FieldOffset(2236)] public bool bEnablePerPolyCollision;
-        [FieldOffset(2236)] public bool bForceRefpose;
-        [FieldOffset(2236)] public bool bOnlyAllowAutonomousTickPose;
-        [FieldOffset(2237)] public bool bIsAutonomousTickPose;
-        [FieldOffset(2237)] public bool bOldForceRefPose;
-        [FieldOffset(2237)] public bool bShowPrePhysBones;
-        [FieldOffset(2237)] public bool bRequiredBonesUpToDate;
-        [FieldOffset(2237)] public bool bAnimTreeInitialised;
-        [FieldOffset(2237)] public bool bIncludeComponentLocationIntoBounds;
-        [FieldOffset(2237)] public bool bEnableLineCheckWithBounds;
-        [FieldOffset(2238)] public bool bUpdateAnimationInEditor;
-        [FieldOffset(2238)] public bool bNeedsQueuedAnimEventsDispatched;
-        [FieldOffset(2240)] public NativeArray DisallowedAnimCurves;
-        [FieldOffset(2256)] byte CachedAnimCurveUidVersion; //TODO: numeric uint16 CachedAnimCurveUidVersion
-        [FieldOffset(2260)] public float ClothBlendWeight;
-        [FieldOffset(2264)] public float EdgeStiffness;
-        [FieldOffset(2268)] public float BendingStiffness;
-        [FieldOffset(2272)] public float AreaStiffness;
-        [FieldOffset(2276)] public float VolumeStiffness;
-        [FieldOffset(2280)] public float StrainLimitingStiffness;
-        [FieldOffset(2284)] public float ShapeTargetStiffness;
-        [FieldOffset(2288)] public bool bUseBendingElements;
-        [FieldOffset(2289)] public bool bUseTetrahedralConstraints;
-        [FieldOffset(2290)] public bool bUseThinShellVolumeConstraints;
-        [FieldOffset(2291)] public bool bUseSelfCollisions;
-        [FieldOffset(2292)] public bool bUseContinuousCollisionDetection;
-        [FieldOffset(2296)]  public IntPtr  BodySetup;
-        [FieldOffset(2312)] byte OnConstraintBroken; //TODO: multicast delegate FConstraintBrokenSignature OnConstraintBroken
-        [FieldOffset(2328)] public IntPtr ClothingSimulationFactory;
-        [FieldOffset(2576)] public float TeleportDistanceThreshold;
-        [FieldOffset(2580)] public float TeleportRotationThreshold;
-        [FieldOffset(2592)] byte LastPoseTickFrame; //TODO: numeric uint32 LastPoseTickFrame
-        [FieldOffset(2688)]  public IntPtr  ClothingInteractor;
-        [FieldOffset(2880)] byte OnAnimInitialized; //TODO: multicast delegate FOnAnimInitialized OnAnimInitialized
+        [FieldOffset(1920)] public IntPtr AnimBlueprintGeneratedClass;
+        [FieldOffset(1928)] public IntPtr AnimClass;
+        [FieldOffset(1936)]  public IntPtr  AnimScriptInstance;
+        [FieldOffset(1944)] public NativeArray SubInstances;
+        [FieldOffset(1960)]  public IntPtr  PostProcessAnimInstance;
+        [FieldOffset(1968)] public SingleAnimationPlayData AnimationData;
+        [FieldOffset(2008)] public Vector RootBoneTranslation;
+        [FieldOffset(2020)] public Vector LineCheckBoundsScale;
+        [FieldOffset(2064)] public NativeArray CachedBoneSpaceTransforms;
+        [FieldOffset(2080)] public NativeArray CachedComponentSpaceTransforms;
+        [FieldOffset(2128)] public float GlobalAnimRateScale;
+        [FieldOffset(2132)] byte UseAsyncScene; //TODO: enum EDynamicActorScene UseAsyncScene
+        [FieldOffset(2133)] public byte KinematicBonesUpdateType;
+        [FieldOffset(2134)] public byte PhysicsTransformUpdateMode;
+        [FieldOffset(2136)] public byte AnimationMode;
+        [FieldOffset(2138)] public bool bDisablePostProcessBlueprint;
+        [FieldOffset(2138)] public bool bUpdateOverlapsOnAnimationFinalize;
+        [FieldOffset(2138)] public bool bHasValidBodies;
+        [FieldOffset(2138)] public bool bBlendPhysics;
+        [FieldOffset(2138)] public bool bEnablePhysicsOnDedicatedServer;
+        [FieldOffset(2139)] public bool bUpdateJointsFromAnimation;
+        [FieldOffset(2139)] public bool bDisableClothSimulation;
+        [FieldOffset(2139)] public bool bAllowAnimCurveEvaluation;
+        [FieldOffset(2139)] public bool bCollideWithEnvironment;
+        [FieldOffset(2140)] public bool bCollideWithAttachedChildren;
+        [FieldOffset(2140)] public bool bLocalSpaceSimulation;
+        [FieldOffset(2140)] public bool bResetAfterTeleport;
+        [FieldOffset(2140)] public bool bNoSkeletonUpdate;
+        [FieldOffset(2140)] public bool bPauseAnims;
+        [FieldOffset(2140)] public bool bUseRefPoseOnInitAnim;
+        [FieldOffset(2140)] public bool bEnablePerPolyCollision;
+        [FieldOffset(2141)] public bool bForceRefpose;
+        [FieldOffset(2141)] public bool bOnlyAllowAutonomousTickPose;
+        [FieldOffset(2141)] public bool bIsAutonomousTickPose;
+        [FieldOffset(2141)] public bool bOldForceRefPose;
+        [FieldOffset(2141)] public bool bShowPrePhysBones;
+        [FieldOffset(2141)] public bool bRequiredBonesUpToDate;
+        [FieldOffset(2141)] public bool bAnimTreeInitialised;
+        [FieldOffset(2141)] public bool bIncludeComponentLocationIntoBounds;
+        [FieldOffset(2142)] public bool bEnableLineCheckWithBounds;
+        [FieldOffset(2142)] public bool bUseBendingElements;
+        [FieldOffset(2142)] public bool bUseTetrahedralConstraints;
+        [FieldOffset(2142)] public bool bUseThinShellVolumeConstraints;
+        [FieldOffset(2142)] public bool bUseSelfCollisions;
+        [FieldOffset(2142)] public bool bUseContinuousCollisionDetection;
+        [FieldOffset(2142)] public bool bUpdateAnimationInEditor;
+        [FieldOffset(2143)] public bool bNeedsQueuedAnimEventsDispatched;
+        [FieldOffset(2144)] byte CachedAnimCurveUidVersion; //TODO: numeric uint16 CachedAnimCurveUidVersion
+        [FieldOffset(2148)] public float ClothBlendWeight;
+        [FieldOffset(2152)] public float EdgeStiffness;
+        [FieldOffset(2156)] public float BendingStiffness;
+        [FieldOffset(2160)] public float AreaStiffness;
+        [FieldOffset(2164)] public float VolumeStiffness;
+        [FieldOffset(2168)] public float StrainLimitingStiffness;
+        [FieldOffset(2172)] public float ShapeTargetStiffness;
+        [FieldOffset(2176)] public NativeArray DisallowedAnimCurves;
+        [FieldOffset(2192)]  public IntPtr  BodySetup;
+        [FieldOffset(2208)] byte OnConstraintBroken; //TODO: multicast delegate FConstraintBrokenSignature OnConstraintBroken
+        [FieldOffset(2224)] public IntPtr ClothingSimulationFactory;
+        [FieldOffset(2480)] public float TeleportDistanceThreshold;
+        [FieldOffset(2484)] public float TeleportRotationThreshold;
+        [FieldOffset(2496)] byte LastPoseTickFrame; //TODO: numeric uint32 LastPoseTickFrame
+        [FieldOffset(2592)]  public IntPtr  ClothingInteractor;
+        [FieldOffset(2784)] byte OnAnimInitialized; //TODO: multicast delegate FOnAnimInitialized OnAnimInitialized
     }
     internal unsafe struct SkeletalMeshComponent_methods {
         internal struct AccumulateAllBodiesBelowPhysicsBlendWeight_method {
@@ -402,6 +402,20 @@ namespace UE4.Engine.Native {
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(obj, GetSkeletalCenterOfMass_ptr, new IntPtr(p)); ;
                 return *((Vector*)(b+0));
+            }
+        }
+        internal struct GetSubInstanceByName_method {
+            static internal IntPtr GetSubInstanceByName_ptr;
+            static GetSubInstanceByName_method() {
+                GetSubInstanceByName_ptr = Main.GetMethodUFunction(SkeletalMeshComponent.StaticClass, "GetSubInstanceByName");
+            }
+
+            internal static unsafe AnimInstance Invoke(IntPtr obj, Name InName) {
+                long* p = stackalloc long[] {0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Name*)(b+0)) = InName;
+                Main.GetProcessEvent(obj, GetSubInstanceByName_ptr, new IntPtr(p)); ;
+                return *((IntPtr*)(b+16));
             }
         }
         internal struct GetTeleportDistanceThreshold_method {

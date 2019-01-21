@@ -57,6 +57,10 @@ namespace UE4.MovieScene {
         }
          //TODO: enum EMovieSceneEvaluationType EvaluationType
          //TODO: enum EUpdateClockSource ClockSource
+        public bool bReadOnly {
+            get {return Main.GetGetBoolPropertyByName(this, "bReadOnly"); }
+            set {Main.SetGetBoolPropertyByName(this, "bReadOnly", value); }
+        }
         public bool bPlaybackRangeLocked {
             get {return Main.GetGetBoolPropertyByName(this, "bPlaybackRangeLocked"); }
             set {Main.SetGetBoolPropertyByName(this, "bPlaybackRangeLocked", value); }

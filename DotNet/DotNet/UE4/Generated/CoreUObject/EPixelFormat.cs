@@ -75,6 +75,6 @@ namespace UE4.CoreUObject {
         PF_R8G8B8A8_SNORM = 0x0000003d, 
         PF_R16G16B16A16_UNORM = 0x0000003e, 
         PF_R16G16B16A16_SNORM = 0x0000003f, 
-        PF_MAX = 0x00000040
+        PF_MAX = 0x00000043
     }
 }

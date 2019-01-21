@@ -11,11 +11,13 @@ using UE4.Native;
 
 
 namespace UE4.LevelSequence.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1216 )]
+    [StructLayout( LayoutKind.Explicit, Size=1232 )]
     internal unsafe struct LevelSequence_fields {
         [FieldOffset(888)]  public IntPtr  UMovieScene;
-        [FieldOffset(896)] public LevelSequenceObjectReferenceMap ObjectReferences;
-        [FieldOffset(976)] public LevelSequenceBindingReferences BindingReferences;
+        [FieldOffset(896)]  public IntPtr  DirectorBlueprint;
+        [FieldOffset(904)] public IntPtr DirectorClass;
+        [FieldOffset(912)] public LevelSequenceObjectReferenceMap ObjectReferences;
+        [FieldOffset(992)] public LevelSequenceBindingReferences BindingReferences;
     }
     internal unsafe struct LevelSequence_methods {
     }

@@ -14,13 +14,13 @@ namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=432 )]
     internal unsafe struct PhysicsHandleComponent_fields {
         [FieldOffset(256)]  public IntPtr  GrabbedComponent;
-        [FieldOffset(280)] public bool bSoftAngularConstraint;
-        [FieldOffset(280)] public bool bSoftLinearConstraint;
-        [FieldOffset(280)] public bool bInterpolateTarget;
-        [FieldOffset(284)] public float LinearDamping;
-        [FieldOffset(288)] public float LinearStiffness;
-        [FieldOffset(292)] public float AngularDamping;
-        [FieldOffset(296)] public float AngularStiffness;
+        [FieldOffset(276)] public bool bSoftAngularConstraint;
+        [FieldOffset(276)] public bool bSoftLinearConstraint;
+        [FieldOffset(276)] public bool bInterpolateTarget;
+        [FieldOffset(280)] public float LinearDamping;
+        [FieldOffset(284)] public float LinearStiffness;
+        [FieldOffset(288)] public float AngularDamping;
+        [FieldOffset(292)] public float AngularStiffness;
         [FieldOffset(400)] public float InterpolationSpeed;
     }
     internal unsafe struct PhysicsHandleComponent_methods {

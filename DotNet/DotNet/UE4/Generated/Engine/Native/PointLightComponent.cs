@@ -13,11 +13,11 @@ using UE4.Native;
 namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=1008 )]
     internal unsafe struct PointLightComponent_fields {
-        [FieldOffset(984)] public bool bUseInverseSquaredFalloff;
-        [FieldOffset(988)] public float LightFalloffExponent;
-        [FieldOffset(992)] public float SourceRadius;
-        [FieldOffset(996)] public float SoftSourceRadius;
-        [FieldOffset(1000)] public float SourceLength;
+        [FieldOffset(976)] public bool bUseInverseSquaredFalloff;
+        [FieldOffset(980)] public float LightFalloffExponent;
+        [FieldOffset(984)] public float SourceRadius;
+        [FieldOffset(988)] public float SoftSourceRadius;
+        [FieldOffset(992)] public float SourceLength;
     }
     internal unsafe struct PointLightComponent_methods {
         internal struct SetLightFalloffExponent_method {

@@ -14,7 +14,6 @@ namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=256 )]
     internal unsafe struct MaterialParameterCollectionInstance_fields {
         [FieldOffset(64)]  public IntPtr  Collection;
-        [FieldOffset(72)]  public IntPtr  World;
     }
     internal unsafe struct MaterialParameterCollectionInstance_methods {
     }

@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1568 )]
+    [StructLayout( LayoutKind.Explicit, Size=1552 )]
     internal unsafe struct MeshComponent_fields {
-        [FieldOffset(1520)] public NativeArray OverrideMaterials;
+        [FieldOffset(1504)] public NativeArray OverrideMaterials;
     }
     internal unsafe struct MeshComponent_methods {
         internal struct GetMaterialIndex_method {

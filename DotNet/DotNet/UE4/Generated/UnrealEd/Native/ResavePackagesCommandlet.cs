@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=320 )]
+    [StructLayout( LayoutKind.Explicit, Size=400 )]
     internal unsafe struct ResavePackagesCommandlet_fields {
     }
     internal unsafe struct ResavePackagesCommandlet_methods {

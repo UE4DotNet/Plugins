@@ -33,28 +33,29 @@ namespace UE4.Landscape.Native {
         [FieldOffset(1120)] public float StreamingDistanceMultiplier;
         [FieldOffset(1128)]  public IntPtr  LandscapeMaterial;
         [FieldOffset(1136)]  public IntPtr  LandscapeHoleMaterial;
-        [FieldOffset(1144)] public float NegativeZBoundsExtension;
-        [FieldOffset(1148)] public float PositiveZBoundsExtension;
-        [FieldOffset(1152)] public NativeArray LandscapeComponents;
-        [FieldOffset(1168)] public NativeArray CollisionComponents;
-        [FieldOffset(1184)] public NativeArray FoliageComponents;
-        [FieldOffset(1300)] public bool bHasLandscapeGrass;
-        [FieldOffset(1304)] public float StaticLightingResolution;
-        [FieldOffset(1308)] public bool bCastStaticShadow;
-        [FieldOffset(1308)] public bool bCastShadowAsTwoSided;
-        [FieldOffset(1308)] public bool bCastFarShadow;
-        [FieldOffset(1312)] public bool bAffectDistanceFieldLighting;
-        [FieldOffset(1313)] public LightingChannels LightingChannels;
-        [FieldOffset(1316)] public bool bUseMaterialPositionOffsetInStaticLighting;
-        [FieldOffset(1316)] public bool bRenderCustomDepth;
-        [FieldOffset(1320)] public int CustomDepthStencilValue;
-        [FieldOffset(1324)] public float LDMaxDrawDistance;
-        [FieldOffset(1328)] public bool bIsMovingToLevel;
-        [FieldOffset(1332)] public LightmassPrimitiveSettings LightmassSettings;
-        [FieldOffset(1356)] public int CollisionMipLevel;
-        [FieldOffset(1360)] public int SimpleCollisionMipLevel;
-        [FieldOffset(1364)] public float CollisionThickness;
-        [FieldOffset(1368)] public BodyInstance BodyInstance;
+        [FieldOffset(1144)] public NativeArray LandscapeMaterialsOverride;
+        [FieldOffset(1160)] public float NegativeZBoundsExtension;
+        [FieldOffset(1164)] public float PositiveZBoundsExtension;
+        [FieldOffset(1168)] public NativeArray LandscapeComponents;
+        [FieldOffset(1184)] public NativeArray CollisionComponents;
+        [FieldOffset(1200)] public NativeArray FoliageComponents;
+        [FieldOffset(1316)] public bool bHasLandscapeGrass;
+        [FieldOffset(1320)] public float StaticLightingResolution;
+        [FieldOffset(1324)] public bool bCastStaticShadow;
+        [FieldOffset(1324)] public bool bCastShadowAsTwoSided;
+        [FieldOffset(1324)] public bool bCastFarShadow;
+        [FieldOffset(1328)] public bool bAffectDistanceFieldLighting;
+        [FieldOffset(1329)] public LightingChannels LightingChannels;
+        [FieldOffset(1332)] public bool bUseMaterialPositionOffsetInStaticLighting;
+        [FieldOffset(1332)] public bool bRenderCustomDepth;
+        [FieldOffset(1336)] public int CustomDepthStencilValue;
+        [FieldOffset(1340)] public float LDMaxDrawDistance;
+        [FieldOffset(1344)] public bool bIsMovingToLevel;
+        [FieldOffset(1348)] public LightmassPrimitiveSettings LightmassSettings;
+        [FieldOffset(1372)] public int CollisionMipLevel;
+        [FieldOffset(1376)] public int SimpleCollisionMipLevel;
+        [FieldOffset(1380)] public float CollisionThickness;
+        [FieldOffset(1384)] public BodyInstance BodyInstance;
         [FieldOffset(1752)] public bool bGenerateOverlapEvents;
         [FieldOffset(1752)] public bool bBakeMaterialPositionOffsetIntoCollision;
         [FieldOffset(1776)] byte ReimportHeightmapFilePath; //TODO: string FString ReimportHeightmapFilePath
@@ -170,18 +171,49 @@ namespace UE4.Landscape.Native {
                 Main.GetProcessEvent(obj, EditorSetLandscapeMaterial_ptr, new IntPtr(p)); ;
             }
         }
+        internal struct LandscapeExportHeightmapToRenderTarget_method {
+            static internal IntPtr LandscapeExportHeightmapToRenderTarget_ptr;
+            static LandscapeExportHeightmapToRenderTarget_method() {
+                LandscapeExportHeightmapToRenderTarget_ptr = Main.GetMethodUFunction(LandscapeProxy.StaticClass, "LandscapeExportHeightmapToRenderTarget");
+            }
+
+            internal static unsafe bool Invoke(IntPtr obj, TextureRenderTarget2D InRenderTarget, bool InExportHeightIntoRGChannel) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = InRenderTarget;
+                *((bool*)(b+8)) = InExportHeightIntoRGChannel;
+                Main.GetProcessEvent(obj, LandscapeExportHeightmapToRenderTarget_ptr, new IntPtr(p)); ;
+                return *((bool*)(b+9));
+            }
+        }
+        internal struct LandscapeExportWeightmapToRenderTarget_method {
+            static internal IntPtr LandscapeExportWeightmapToRenderTarget_ptr;
+            static LandscapeExportWeightmapToRenderTarget_method() {
+                LandscapeExportWeightmapToRenderTarget_ptr = Main.GetMethodUFunction(LandscapeProxy.StaticClass, "LandscapeExportWeightmapToRenderTarget");
+            }
+
+            internal static unsafe bool Invoke(IntPtr obj, TextureRenderTarget2D InRenderTarget, Name InLayerName) {
+                long* p = stackalloc long[] {0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = InRenderTarget;
+                *((Name*)(b+8)) = InLayerName;
+                Main.GetProcessEvent(obj, LandscapeExportWeightmapToRenderTarget_ptr, new IntPtr(p)); ;
+                return *((bool*)(b+20));
+            }
+        }
         internal struct LandscapeImportHeightmapFromRenderTarget_method {
             static internal IntPtr LandscapeImportHeightmapFromRenderTarget_ptr;
             static LandscapeImportHeightmapFromRenderTarget_method() {
                 LandscapeImportHeightmapFromRenderTarget_ptr = Main.GetMethodUFunction(LandscapeProxy.StaticClass, "LandscapeImportHeightmapFromRenderTarget");
             }
 
-            internal static unsafe bool Invoke(IntPtr obj, TextureRenderTarget2D InRenderTarget) {
+            internal static unsafe bool Invoke(IntPtr obj, TextureRenderTarget2D InRenderTarget, bool InImportHeightFromRGChannel) {
                 long* p = stackalloc long[] {0L,0L,0L};
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = InRenderTarget;
+                *((bool*)(b+8)) = InImportHeightFromRGChannel;
                 Main.GetProcessEvent(obj, LandscapeImportHeightmapFromRenderTarget_ptr, new IntPtr(p)); ;
-                return *((bool*)(b+8));
+                return *((bool*)(b+9));
             }
         }
         internal struct LandscapeImportWeightmapFromRenderTarget_method {

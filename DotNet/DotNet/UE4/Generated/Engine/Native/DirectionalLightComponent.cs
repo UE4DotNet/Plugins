@@ -13,27 +13,27 @@ using UE4.Native;
 namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=1072 )]
     internal unsafe struct DirectionalLightComponent_fields {
-        [FieldOffset(960)] public bool bEnableLightShaftOcclusion;
-        [FieldOffset(964)] public float OcclusionMaskDarkness;
-        [FieldOffset(968)] public float OcclusionDepthRange;
-        [FieldOffset(972)] public Vector LightShaftOverrideDirection;
-        [FieldOffset(988)] public float DynamicShadowDistanceMovableLight;
-        [FieldOffset(992)] public float DynamicShadowDistanceStationaryLight;
-        [FieldOffset(996)] public int DynamicShadowCascades;
-        [FieldOffset(1000)] public float CascadeDistributionExponent;
-        [FieldOffset(1004)] public float CascadeTransitionFraction;
-        [FieldOffset(1008)] public float ShadowDistanceFadeoutFraction;
-        [FieldOffset(1012)] public bool bUseInsetShadowsForMovableObjects;
-        [FieldOffset(1016)] public int FarShadowCascadeCount;
-        [FieldOffset(1020)] public float FarShadowDistance;
-        [FieldOffset(1024)] public float DistanceFieldShadowDistance;
-        [FieldOffset(1028)] public float LightSourceAngle;
-        [FieldOffset(1032)] public float LightSourceSoftAngle;
-        [FieldOffset(1036)] public float TraceDistance;
-        [FieldOffset(1040)] public LightmassDirectionalLightSettings LightmassSettings;
-        [FieldOffset(1056)] public bool bCastModulatedShadows;
-        [FieldOffset(1060)] public Color ModulatedShadowColor;
-        [FieldOffset(1064)] public bool bUsedAsAtmosphereSunLight;
+        [FieldOffset(952)] public bool bEnableLightShaftOcclusion;
+        [FieldOffset(956)] public float OcclusionMaskDarkness;
+        [FieldOffset(960)] public float OcclusionDepthRange;
+        [FieldOffset(964)] public Vector LightShaftOverrideDirection;
+        [FieldOffset(980)] public float DynamicShadowDistanceMovableLight;
+        [FieldOffset(984)] public float DynamicShadowDistanceStationaryLight;
+        [FieldOffset(988)] public int DynamicShadowCascades;
+        [FieldOffset(992)] public float CascadeDistributionExponent;
+        [FieldOffset(996)] public float CascadeTransitionFraction;
+        [FieldOffset(1000)] public float ShadowDistanceFadeoutFraction;
+        [FieldOffset(1004)] public bool bUseInsetShadowsForMovableObjects;
+        [FieldOffset(1008)] public int FarShadowCascadeCount;
+        [FieldOffset(1012)] public float FarShadowDistance;
+        [FieldOffset(1016)] public float DistanceFieldShadowDistance;
+        [FieldOffset(1020)] public float LightSourceAngle;
+        [FieldOffset(1024)] public float LightSourceSoftAngle;
+        [FieldOffset(1028)] public float TraceDistance;
+        [FieldOffset(1032)] public LightmassDirectionalLightSettings LightmassSettings;
+        [FieldOffset(1048)] public bool bCastModulatedShadows;
+        [FieldOffset(1052)] public Color ModulatedShadowColor;
+        [FieldOffset(1056)] public bool bUsedAsAtmosphereSunLight;
     }
     internal unsafe struct DirectionalLightComponent_methods {
         internal struct SetCascadeDistributionExponent_method {

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1360 )]
+    [StructLayout( LayoutKind.Explicit, Size=1376 )]
     internal unsafe struct PhysicsConstraintComponent_fields {
         [FieldOffset(624)]  public IntPtr  ConstraintActor1;
         [FieldOffset(632)] public ConstrainComponentPropName ComponentName1;

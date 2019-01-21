@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.MovieScene.Native {
-    [StructLayout( LayoutKind.Explicit, Size=152 )]
+    [StructLayout( LayoutKind.Explicit, Size=160 )]
     internal unsafe struct MovieSceneNameableTrack_fields {
-        [FieldOffset(128)] byte DisplayName; //TODO: text FText DisplayName
+        [FieldOffset(136)] byte DisplayName; //TODO: text FText DisplayName
     }
     internal unsafe struct MovieSceneNameableTrack_methods {
     }

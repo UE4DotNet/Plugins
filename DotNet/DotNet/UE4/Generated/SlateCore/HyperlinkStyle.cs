@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.SlateCore{
         ///<summary>Represents the appearance of an SHyperlink</summary>
-        [StructLayout( LayoutKind.Explicit, Size=1344 )]
+        [StructLayout( LayoutKind.Explicit, Size=1352 )]
         public unsafe struct HyperlinkStyle {
             ///<summary>Underline style</summary>
             [FieldOffset(8)] ButtonStyle UnderlineStyle;
@@ -21,7 +21,7 @@ namespace UE4.SlateCore{
             [FieldOffset(776)] TextBlockStyle TextStyle;
 
             ///<summary>Padding</summary>
-            [FieldOffset(1328)] Margin Padding;
+            [FieldOffset(1336)] Margin Padding;
 
         }
 }

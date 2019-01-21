@@ -11,15 +11,17 @@ using UE4.Native;
 
 
 namespace UE4.VREditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1440 )]
+    [StructLayout( LayoutKind.Explicit, Size=1472 )]
     internal unsafe struct VREditorDockableWindow_fields {
-        [FieldOffset(1352)]  public IntPtr  SelectionBarMeshComponent;
-        [FieldOffset(1360)]  public IntPtr  CloseButtonMeshComponent;
-        [FieldOffset(1368)]  public IntPtr  SelectionBarMID;
-        [FieldOffset(1376)]  public IntPtr  SelectionBarTranslucentMID;
-        [FieldOffset(1384)]  public IntPtr  CloseButtonMID;
-        [FieldOffset(1392)]  public IntPtr  CloseButtonTranslucentMID;
-        [FieldOffset(1400)]  public IntPtr  DragOperationComponent;
+        [FieldOffset(1360)]  public IntPtr  DockButtonMeshComponent;
+        [FieldOffset(1368)]  public IntPtr  SelectionBarMeshComponent;
+        [FieldOffset(1376)]  public IntPtr  CloseButtonMeshComponent;
+        [FieldOffset(1384)]  public IntPtr  DockButtonMID;
+        [FieldOffset(1392)]  public IntPtr  SelectionBarMID;
+        [FieldOffset(1400)]  public IntPtr  SelectionBarTranslucentMID;
+        [FieldOffset(1408)]  public IntPtr  CloseButtonMID;
+        [FieldOffset(1416)]  public IntPtr  CloseButtonTranslucentMID;
+        [FieldOffset(1424)]  public IntPtr  DragOperationComponent;
     }
     internal unsafe struct VREditorDockableWindow_methods {
     }

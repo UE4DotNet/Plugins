@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=288 )]
+    [StructLayout( LayoutKind.Explicit, Size=312 )]
     internal unsafe struct TransBuffer_fields {
     }
     internal unsafe struct TransBuffer_methods {

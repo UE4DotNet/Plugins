@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=288 )]
+    [StructLayout( LayoutKind.Explicit, Size=312 )]
     internal unsafe struct DataTable_fields {
         [FieldOffset(56)]  public IntPtr  RowStruct;
         [FieldOffset(144)] public bool bStripFromClientBuilds;

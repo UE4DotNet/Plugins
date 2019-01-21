@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1584 )]
+    [StructLayout( LayoutKind.Explicit, Size=1568 )]
     internal unsafe struct ModelComponent_fields {
-        [FieldOffset(1544)]  public IntPtr  ModelBodySetup;
+        [FieldOffset(1528)]  public IntPtr  ModelBodySetup;
     }
     internal unsafe struct ModelComponent_methods {
     }

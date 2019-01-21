@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=200 )]
+    [StructLayout( LayoutKind.Explicit, Size=208 )]
     internal unsafe struct MovieSceneWidgetMaterialTrack_fields {
-        [FieldOffset(168)] public NativeArray BrushPropertyNamePath;
-        [FieldOffset(184)] public Name TrackName;
+        [FieldOffset(176)] public NativeArray BrushPropertyNamePath;
+        [FieldOffset(192)] public Name TrackName;
     }
     internal unsafe struct MovieSceneWidgetMaterialTrack_methods {
     }

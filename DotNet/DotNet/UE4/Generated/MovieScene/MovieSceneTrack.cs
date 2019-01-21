@@ -30,6 +30,10 @@ namespace UE4.MovieScene {
             get {return MovieSceneTrack_ptr->SortingOrder;}
             set {MovieSceneTrack_ptr->SortingOrder = value;}
         }
+        public bool bSupportsDefaultSections {
+            get {return Main.GetGetBoolPropertyByName(this, "bSupportsDefaultSections"); }
+            set {Main.SetGetBoolPropertyByName(this, "bSupportsDefaultSections", value); }
+        }
         static MovieSceneTrack() {
             StaticClass = Main.GetClass("MovieSceneTrack");
         }

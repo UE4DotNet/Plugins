@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Landscape.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2176 )]
+    [StructLayout( LayoutKind.Explicit, Size=2160 )]
     internal unsafe struct LandscapeMeshCollisionComponent_fields {
-        [FieldOffset(2032)] public FGuid MeshGuid;
+        [FieldOffset(2016)] public FGuid MeshGuid;
     }
     internal unsafe struct LandscapeMeshCollisionComponent_methods {
     }

@@ -14,7 +14,7 @@ using UE4.UnrealEd.Native;
 using UE4.Engine;
 
 namespace UE4.UnrealEd {
-    ///<summary>Gather Text Commandlet Base</summary>
+    ///<summary>UGatherTextCommandletBase: Base class for localization commandlets. Just to force certain behaviors and provide helper functionality.</summary>
     public unsafe partial class GatherTextCommandletBase : Commandlet  {
         static GatherTextCommandletBase() {
             StaticClass = Main.GetClass("GatherTextCommandletBase");

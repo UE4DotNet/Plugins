@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=528 )]
+    [StructLayout( LayoutKind.Explicit, Size=512 )]
     internal unsafe struct Texture_fields {
         [FieldOffset(64)] public TextureSource Source;
         [FieldOffset(240)] public FGuid LightingGuid;

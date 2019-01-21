@@ -56,6 +56,10 @@ namespace UE4.MovieScene {
         public float GetLength()  => 
             MovieSceneSequencePlayer_methods.GetLength_method.Invoke(ObjPointer);
 
+        ///<summary>Get the object bindings for the requested object</summary>
+        public IReadOnlyCollection<MovieSceneObjectBindingID> GetObjectBindings(UObject InObject)  => 
+            MovieSceneSequencePlayer_methods.GetObjectBindings_method.Invoke(ObjPointer, InObject);
+
         ///<summary>Get Playback End</summary>
         public float GetPlaybackEnd()  => 
             MovieSceneSequencePlayer_methods.GetPlaybackEnd_method.Invoke(ObjPointer);
@@ -254,6 +258,11 @@ namespace UE4.MovieScene {
         public unsafe MovieSceneSequencePlaybackSettings PlaybackSettings {
             get {return MovieSceneSequencePlayer_ptr->PlaybackSettings;}
             set {MovieSceneSequencePlayer_ptr->PlaybackSettings = value;}
+        }
+        ///<summary>The root template instance we're evaluating</summary>
+        public unsafe MovieSceneRootEvaluationTemplateInstance RootTemplateInstance {
+            get {return MovieSceneSequencePlayer_ptr->RootTemplateInstance;}
+            set {MovieSceneSequencePlayer_ptr->RootTemplateInstance = value;}
         }
         static MovieSceneSequencePlayer() {
             StaticClass = Main.GetClass("MovieSceneSequencePlayer");

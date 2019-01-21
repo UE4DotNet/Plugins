@@ -16,9 +16,21 @@ namespace UE4.Engine {
     ///<summary>Sound Submix</summary>
     public unsafe partial class SoundSubmix : UObject  {
 
+        ///<summary>Add Envelope Follower Delegate</summary>
+        public void AddEnvelopeFollowerDelegate(UObject WorldContextObject, byte OnSubmixEnvelopeBP /*TODO: delegate FOnSubmixEnvelopeBP */)  => 
+            SoundSubmix_methods.AddEnvelopeFollowerDelegate_method.Invoke(ObjPointer, WorldContextObject, OnSubmixEnvelopeBP);
+
+        ///<summary>Start envelope following the submix output. Register with OnSubmixEnvelope to receive envelope follower data in BP.</summary>
+        public void StartEnvelopeFollowing(UObject WorldContextObject)  => 
+            SoundSubmix_methods.StartEnvelopeFollowing_method.Invoke(ObjPointer, WorldContextObject);
+
         ///<summary>Start recording the audio from this submix.</summary>
         public void StartRecordingOutput(UObject WorldContextObject, float ExpectedDuration)  => 
             SoundSubmix_methods.StartRecordingOutput_method.Invoke(ObjPointer, WorldContextObject, ExpectedDuration);
+
+        ///<summary>Start envelope following the submix output. Register with OnSubmixEnvelope to receive envelope follower data in BP.</summary>
+        public void StopEnvelopeFollowing(UObject WorldContextObject)  => 
+            SoundSubmix_methods.StopEnvelopeFollowing_method.Invoke(ObjPointer, WorldContextObject);
 
         ///<summary>Finish recording the audio from this submix and export it as a wav file or a USoundWave.</summary>
         public void StopRecordingOutput(UObject WorldContextObject, EAudioRecordingExportType ExportType, string Name, string Path, SoundWave ExistingSoundWaveToOverwrite)  => 
@@ -47,6 +59,16 @@ namespace UE4.Engine {
         public unsafe AmbisonicsSubmixSettingsBase AmbisonicsPluginSettings {
             get {return SoundSubmix_ptr->AmbisonicsPluginSettings;}
             set {SoundSubmix_ptr->AmbisonicsPluginSettings = value;}
+        }
+        ///<summary>The attack time in milliseconds for the envelope follower. Delegate callbacks can be registered to get the envelope value of sounds played with this submix.</summary>
+        public unsafe int EnvelopeFollowerAttackTime {
+            get {return SoundSubmix_ptr->EnvelopeFollowerAttackTime;}
+            set {SoundSubmix_ptr->EnvelopeFollowerAttackTime = value;}
+        }
+        ///<summary>The release time in milliseconds for the envelope follower. Delegate callbacks can be registered to get the envelope value of sounds played with this submix.</summary>
+        public unsafe int EnvelopeFollowerReleaseTime {
+            get {return SoundSubmix_ptr->EnvelopeFollowerReleaseTime;}
+            set {SoundSubmix_ptr->EnvelopeFollowerReleaseTime = value;}
         }
          //TODO: multicast delegate FOnSubmixRecordedFileDone OnSubmixRecordedFileDone
         static SoundSubmix() {

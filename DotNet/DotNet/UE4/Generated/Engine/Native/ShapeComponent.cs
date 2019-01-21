@@ -11,14 +11,14 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1552 )]
+    [StructLayout( LayoutKind.Explicit, Size=1536 )]
     internal unsafe struct ShapeComponent_fields {
-        [FieldOffset(1520)] public Color ShapeColor;
-        [FieldOffset(1528)]  public IntPtr  ShapeBodySetup;
-        [FieldOffset(1536)] public bool bDrawOnlyIfSelected;
-        [FieldOffset(1536)] public bool bShouldCollideWhenPlacing;
-        [FieldOffset(1536)] public bool bDynamicObstacle;
-        [FieldOffset(1544)] public IntPtr AreaClass;
+        [FieldOffset(1504)]  public IntPtr  ShapeBodySetup;
+        [FieldOffset(1512)] public Color ShapeColor;
+        [FieldOffset(1516)] public bool bDrawOnlyIfSelected;
+        [FieldOffset(1516)] public bool bShouldCollideWhenPlacing;
+        [FieldOffset(1516)] public bool bDynamicObstacle;
+        [FieldOffset(1520)] public IntPtr AreaClass;
     }
     internal unsafe struct ShapeComponent_methods {
     }

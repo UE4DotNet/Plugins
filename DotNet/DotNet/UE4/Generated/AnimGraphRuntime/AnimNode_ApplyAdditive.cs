@@ -13,7 +13,7 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Anim Node Apply Additive</summary>
-        [StructLayout( LayoutKind.Explicit, Size=288 )]
+        [StructLayout( LayoutKind.Explicit, Size=272 )]
         public unsafe struct AnimNode_ApplyAdditive {
             ///<summary>Base</summary>
             [FieldOffset(56)] PoseLink Base;
@@ -37,10 +37,10 @@ namespace UE4.AnimGraphRuntime{
             ///<summary>Alpha Bool Blend</summary>
             [FieldOffset(128)] InputAlphaBoolBlend AlphaBoolBlend;
 
-            [FieldOffset(216)] public Name AlphaCurveName;
+            [FieldOffset(208)] public Name AlphaCurveName;
 
             ///<summary>Alpha Scale Bias Clamp</summary>
-            [FieldOffset(228)] InputScaleBiasClamp AlphaScaleBiasClamp;
+            [FieldOffset(220)] InputScaleBiasClamp AlphaScaleBiasClamp;
 
         }
 }

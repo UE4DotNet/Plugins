@@ -26,6 +26,11 @@ namespace UE4.PixelInspectorModule {
             set {PixelInspectorView_ptr->SceneColor = value;}
         }
         ///<summary>HDR Luminance.</summary>
+        public unsafe float PreExposure {
+            get {return PixelInspectorView_ptr->PreExposure;}
+            set {PixelInspectorView_ptr->PreExposure = value;}
+        }
+        ///<summary>HDR Luminance.</summary>
         public unsafe float Luminance {
             get {return PixelInspectorView_ptr->Luminance;}
             set {PixelInspectorView_ptr->Luminance = value;}

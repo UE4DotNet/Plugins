@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.MediaCompositing.Native {
-    [StructLayout( LayoutKind.Explicit, Size=168 )]
+    [StructLayout( LayoutKind.Explicit, Size=176 )]
     internal unsafe struct MovieSceneMediaTrack_fields {
-        [FieldOffset(152)] public NativeArray MediaSections;
+        [FieldOffset(160)] public NativeArray MediaSections;
     }
     internal unsafe struct MovieSceneMediaTrack_methods {
     }

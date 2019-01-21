@@ -34,11 +34,12 @@ namespace UE4.Engine {
         PPI_PostProcessInput5 = 0x00000013, 
         PPI_PostProcessInput6 = 0x00000014, 
         PPI_DecalMask = 0x00000015, 
-        PPI_ShadingModel = 0x00000016, 
-        PPI_AmbientOcclusion = 0x00000017, 
-        PPI_CustomStencil = 0x00000018, 
-        PPI_StoredBaseColor = 0x00000019, 
-        PPI_StoredSpecular = 0x0000001a, 
-        PPI_MAX = 0x0000001b
+        PPI_ShadingModelColor = 0x00000016, 
+        PPI_ShadingModelID = 0x00000017, 
+        PPI_AmbientOcclusion = 0x00000018, 
+        PPI_CustomStencil = 0x00000019, 
+        PPI_StoredBaseColor = 0x0000001a, 
+        PPI_StoredSpecular = 0x0000001b, 
+        PPI_MAX = 0x0000001c
     }
 }

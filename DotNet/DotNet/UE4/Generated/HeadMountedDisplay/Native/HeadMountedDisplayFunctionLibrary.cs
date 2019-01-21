@@ -16,6 +16,19 @@ namespace UE4.HeadMountedDisplay.Native {
     internal unsafe struct HeadMountedDisplayFunctionLibrary_fields {
     }
     internal unsafe struct HeadMountedDisplayFunctionLibrary_methods {
+        internal struct CalibrateExternalTrackingToHMD_method {
+            static internal IntPtr CalibrateExternalTrackingToHMD_ptr;
+            static CalibrateExternalTrackingToHMD_method() {
+                CalibrateExternalTrackingToHMD_ptr = Main.GetMethodUFunction(HeadMountedDisplayFunctionLibrary.StaticClass, "CalibrateExternalTrackingToHMD");
+            }
+
+            internal static unsafe void Invoke(Transform ExternalTrackingTransform) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Transform*)(b+0)) = ExternalTrackingTransform;
+                Main.GetProcessEvent(HeadMountedDisplayFunctionLibrary.DefaultObject, CalibrateExternalTrackingToHMD_ptr, new IntPtr(p)); ;
+            }
+        }
         internal struct EnableHMD_method {
             static internal IntPtr EnableHMD_ptr;
             static EnableHMD_method() {
@@ -373,7 +386,7 @@ namespace UE4.HeadMountedDisplay.Native {
                 SetSpectatorScreenModeTexturePlusEyeLayout_ptr = Main.GetMethodUFunction(HeadMountedDisplayFunctionLibrary.StaticClass, "SetSpectatorScreenModeTexturePlusEyeLayout");
             }
 
-            internal static unsafe void Invoke(Vector2D EyeRectMin, Vector2D EyeRectMax, Vector2D TextureRectMin, Vector2D TextureRectMax, bool bDrawEyeFirst, bool bClearBlack) {
+            internal static unsafe void Invoke(Vector2D EyeRectMin, Vector2D EyeRectMax, Vector2D TextureRectMin, Vector2D TextureRectMax, bool bDrawEyeFirst, bool bClearBlack, bool bUseAlpha) {
                 long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((Vector2D*)(b+0)) = EyeRectMin;
@@ -382,6 +395,7 @@ namespace UE4.HeadMountedDisplay.Native {
                 *((Vector2D*)(b+24)) = TextureRectMax;
                 *((bool*)(b+32)) = bDrawEyeFirst;
                 *((bool*)(b+33)) = bClearBlack;
+                *((bool*)(b+34)) = bUseAlpha;
                 Main.GetProcessEvent(HeadMountedDisplayFunctionLibrary.DefaultObject, SetSpectatorScreenModeTexturePlusEyeLayout_ptr, new IntPtr(p)); ;
             }
         }
@@ -423,6 +437,19 @@ namespace UE4.HeadMountedDisplay.Native {
                 *((IntPtr*)(b+0)) = WorldContext;
                 *((float*)(b+8)) = NewScale;
                 Main.GetProcessEvent(HeadMountedDisplayFunctionLibrary.DefaultObject, SetWorldToMetersScale_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct UpdateExternalTrackingHMDPosition_method {
+            static internal IntPtr UpdateExternalTrackingHMDPosition_ptr;
+            static UpdateExternalTrackingHMDPosition_method() {
+                UpdateExternalTrackingHMDPosition_ptr = Main.GetMethodUFunction(HeadMountedDisplayFunctionLibrary.StaticClass, "UpdateExternalTrackingHMDPosition");
+            }
+
+            internal static unsafe void Invoke(Transform ExternalTrackingTransform) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Transform*)(b+0)) = ExternalTrackingTransform;
+                Main.GetProcessEvent(HeadMountedDisplayFunctionLibrary.DefaultObject, UpdateExternalTrackingHMDPosition_ptr, new IntPtr(p)); ;
             }
         }
     }

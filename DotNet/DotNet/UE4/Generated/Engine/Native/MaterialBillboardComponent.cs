@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1536 )]
+    [StructLayout( LayoutKind.Explicit, Size=1520 )]
     internal unsafe struct MaterialBillboardComponent_fields {
-        [FieldOffset(1520)] public NativeArray Elements;
+        [FieldOffset(1504)] public NativeArray Elements;
     }
     internal unsafe struct MaterialBillboardComponent_methods {
         internal struct AddElement_method {

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=88 )]
+    [StructLayout( LayoutKind.Explicit, Size=96 )]
     internal unsafe struct AnimCompress_LeastDestructive_fields {
     }
     internal unsafe struct AnimCompress_LeastDestructive_methods {

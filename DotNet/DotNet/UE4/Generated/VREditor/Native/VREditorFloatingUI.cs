@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.VREditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1344 )]
+    [StructLayout( LayoutKind.Explicit, Size=1360 )]
     internal unsafe struct VREditorFloatingUI_fields {
         [FieldOffset(1264)]  public IntPtr  UserWidget;
         [FieldOffset(1272)]  public IntPtr  WidgetComponent;
         [FieldOffset(1280)]  public IntPtr  WindowMeshComponent;
-        [FieldOffset(1304)] public IntPtr UserWidgetClass;
+        [FieldOffset(1312)] public IntPtr UserWidgetClass;
     }
     internal unsafe struct VREditorFloatingUI_methods {
     }

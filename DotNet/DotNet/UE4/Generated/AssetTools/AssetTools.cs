@@ -96,6 +96,10 @@ namespace UE4.AssetTools {
         public void ImportAssetTasks(byte ImportTasks /*TODO: array TArray */)  => 
             AssetTools_methods.ImportAssetTasks_method.Invoke(ObjPointer, ImportTasks);
 
+        ///<summary>Opens editor for assets</summary>
+        public void OpenEditorForAssets(byte Assets /*TODO: array TArray */)  => 
+            AssetTools_methods.OpenEditorForAssets_method.Invoke(ObjPointer, Assets);
+
         ///<summary>Renames assets using the specified names.</summary>
         public bool RenameAssets(byte AssetsAndNames /*TODO: array TArray */)  => 
             AssetTools_methods.RenameAssets_method.Invoke(ObjPointer, AssetsAndNames);

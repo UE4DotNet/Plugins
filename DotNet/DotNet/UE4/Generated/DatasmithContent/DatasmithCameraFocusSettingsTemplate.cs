@@ -12,9 +12,11 @@ using UE4.Native;
 
 namespace UE4.DatasmithContent{
         ///<summary>Datasmith Camera Focus Settings Template</summary>
-        [StructLayout( LayoutKind.Explicit, Size=4 )]
+        [StructLayout( LayoutKind.Explicit, Size=8 )]
         public unsafe struct DatasmithCameraFocusSettingsTemplate {
-            [FieldOffset(0)] public float ManualFocusDistance;
+            [FieldOffset(0)] byte FocusMethod; //TODO: enum ECameraFocusMethod FocusMethod
+
+            [FieldOffset(4)] public float ManualFocusDistance;
 
         }
 }

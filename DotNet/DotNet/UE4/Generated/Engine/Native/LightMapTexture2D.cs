@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=672 )]
+    [StructLayout( LayoutKind.Explicit, Size=656 )]
     internal unsafe struct LightMapTexture2D_fields {
     }
     internal unsafe struct LightMapTexture2D_methods {

@@ -12,13 +12,13 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=576 )]
+    [StructLayout( LayoutKind.Explicit, Size=592 )]
     internal unsafe struct Throbber_fields {
-        [FieldOffset(384)] public int NumberOfPieces;
-        [FieldOffset(388)] public bool bAnimateHorizontally;
-        [FieldOffset(389)] public bool bAnimateVertically;
-        [FieldOffset(390)] public bool bAnimateOpacity;
-        [FieldOffset(400)] public SlateBrush Image;
+        [FieldOffset(400)] public int NumberOfPieces;
+        [FieldOffset(404)] public bool bAnimateHorizontally;
+        [FieldOffset(405)] public bool bAnimateVertically;
+        [FieldOffset(406)] public bool bAnimateOpacity;
+        [FieldOffset(416)] public SlateBrush Image;
     }
     internal unsafe struct Throbber_methods {
         internal struct SetAnimateHorizontally_method {

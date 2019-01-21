@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.MovieScene{
         ///<summary>Editor only data that needs to be saved between sessions for editing but has no runtime purpose</summary>
-        [StructLayout( LayoutKind.Explicit, Size=144 )]
+        [StructLayout( LayoutKind.Explicit, Size=224 )]
         public unsafe struct MovieSceneEditorData {
             [FieldOffset(0)] byte ExpansionStates; //TODO: map TMap ExpansionStates
 
@@ -23,6 +23,8 @@ namespace UE4.MovieScene{
             [FieldOffset(96)] public double WorkStart;
 
             [FieldOffset(104)] public double WorkEnd;
+
+            [FieldOffset(112)] byte MarkedFrames; //TODO: set TSet MarkedFrames
 
         }
 }

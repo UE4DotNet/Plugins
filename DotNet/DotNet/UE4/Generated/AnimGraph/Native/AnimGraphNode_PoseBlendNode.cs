@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=512 )]
+    [StructLayout( LayoutKind.Explicit, Size=496 )]
     internal unsafe struct AnimGraphNode_PoseBlendNode_fields {
         [FieldOffset(288)] public AnimNode_PoseBlendNode Node;
     }

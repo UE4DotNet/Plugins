@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1392 )]
+    [StructLayout( LayoutKind.Explicit, Size=1752 )]
     internal unsafe struct NetDriver_fields {
         [FieldOffset(64)] byte NetConnectionClassName; //TODO: string FString NetConnectionClassName
         [FieldOffset(80)] byte ReplicationDriverClassName; //TODO: string FString ReplicationDriverClassName
@@ -30,15 +30,16 @@ namespace UE4.Engine.Native {
         [FieldOffset(144)] public bool bNoTimeouts;
         [FieldOffset(152)]  public IntPtr  ServerConnection;
         [FieldOffset(160)] public NativeArray ClientConnections;
-        [FieldOffset(216)]  public IntPtr  World;
-        [FieldOffset(224)]  public IntPtr  WorldPackage;
-        [FieldOffset(264)] public IntPtr NetConnectionClass;
-        [FieldOffset(272)] public IntPtr ReplicationDriverClass;
-        [FieldOffset(280)]  public IntPtr  RoleProperty;
-        [FieldOffset(288)]  public IntPtr  RemoteRoleProperty;
-        [FieldOffset(296)] public Name NetDriverName;
-        [FieldOffset(384)] public float Time;
-        [FieldOffset(1360)]  public IntPtr  ReplicationDriver;
+        [FieldOffset(312)]  public IntPtr  World;
+        [FieldOffset(320)]  public IntPtr  WorldPackage;
+        [FieldOffset(360)] public IntPtr NetConnectionClass;
+        [FieldOffset(368)] public IntPtr ReplicationDriverClass;
+        [FieldOffset(376)]  public IntPtr  RoleProperty;
+        [FieldOffset(384)]  public IntPtr  RemoteRoleProperty;
+        [FieldOffset(392)] public Name NetDriverName;
+        [FieldOffset(472)] public NativeArray ActorChannelPool;
+        [FieldOffset(496)] public float Time;
+        [FieldOffset(1712)]  public IntPtr  ReplicationDriver;
     }
     internal unsafe struct NetDriver_methods {
     }

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.PhysXVehicles.Native {
-    [StructLayout( LayoutKind.Explicit, Size=776 )]
+    [StructLayout( LayoutKind.Explicit, Size=744 )]
     internal unsafe struct SimpleWheeledVehicleMovementComponent_fields {
     }
     internal unsafe struct SimpleWheeledVehicleMovementComponent_methods {

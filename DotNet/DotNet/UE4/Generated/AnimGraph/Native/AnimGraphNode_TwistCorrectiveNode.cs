@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=768 )]
+    [StructLayout( LayoutKind.Explicit, Size=744 )]
     internal unsafe struct AnimGraphNode_TwistCorrectiveNode_fields {
         [FieldOffset(272)] public AnimNode_TwistCorrectiveNode Node;
     }

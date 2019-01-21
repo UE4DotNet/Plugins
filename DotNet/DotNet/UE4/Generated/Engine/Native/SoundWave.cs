@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=712 )]
+    [StructLayout( LayoutKind.Explicit, Size=760 )]
     internal unsafe struct SoundWave_fields {
         [FieldOffset(192)] public int CompressionQuality;
         [FieldOffset(196)] public int StreamingPriority;
@@ -31,8 +31,7 @@ namespace UE4.Engine.Native {
         [FieldOffset(244)] public int NumChannels;
         [FieldOffset(248)] public NativeArray ChannelOffsets;
         [FieldOffset(264)] public NativeArray ChannelSizes;
-        [FieldOffset(280)] public int RawPCMDataSize;
-        [FieldOffset(284)] public int SampleRate;
+        [FieldOffset(280)] public int SampleRate;
         [FieldOffset(288)] public NativeArray Subtitles;
         [FieldOffset(304)] byte Comment; //TODO: string FString Comment
         [FieldOffset(320)] public NativeArray LocalizedSubtitles;

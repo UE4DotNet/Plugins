@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.BlueprintGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=288 )]
+    [StructLayout( LayoutKind.Explicit, Size=296 )]
     internal unsafe struct K2Node_InputAction_fields {
-        [FieldOffset(208)] public Name InputActionName;
-        [FieldOffset(220)] public bool bConsumeInput;
-        [FieldOffset(220)] public bool bExecuteWhenPaused;
-        [FieldOffset(220)] public bool bOverrideParentBinding;
+        [FieldOffset(216)] public Name InputActionName;
+        [FieldOffset(228)] public bool bConsumeInput;
+        [FieldOffset(228)] public bool bExecuteWhenPaused;
+        [FieldOffset(228)] public bool bOverrideParentBinding;
     }
     internal unsafe struct K2Node_InputAction_methods {
     }

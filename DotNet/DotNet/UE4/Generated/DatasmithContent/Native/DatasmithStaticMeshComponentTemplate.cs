@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.DatasmithContent.Native {
-    [StructLayout( LayoutKind.Explicit, Size=160 )]
+    [StructLayout( LayoutKind.Explicit, Size=272 )]
     internal unsafe struct DatasmithStaticMeshComponentTemplate_fields {
-        [FieldOffset(128)]  public IntPtr  StaticMesh;
-        [FieldOffset(136)] public NativeArray OverrideMaterials;
+        [FieldOffset(248)]  public IntPtr  StaticMesh;
+        [FieldOffset(256)] public NativeArray OverrideMaterials;
     }
     internal unsafe struct DatasmithStaticMeshComponentTemplate_methods {
     }

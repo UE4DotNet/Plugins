@@ -14,7 +14,7 @@ using UE4.AnimGraph.Native;
 
 namespace UE4.AnimGraph {
     ///<summary>Anim Graph Node Custom Transition Result</summary>
-    public unsafe partial class AnimGraphNode_CustomTransitionResult : AnimGraphNode_Root  {
+    public unsafe partial class AnimGraphNode_CustomTransitionResult : AnimGraphNode_StateResult  {
         static AnimGraphNode_CustomTransitionResult() {
             StaticClass = Main.GetClass("AnimGraphNode_CustomTransitionResult");
         }

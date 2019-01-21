@@ -18,7 +18,7 @@ namespace UE4.Engine{
         ///All poses within this asset should contain same number of tracks,
         ///</summary>
         ///<remarks>so that we can blend quickly</remarks>
-        [StructLayout( LayoutKind.Explicit, Size=80 )]
+        [StructLayout( LayoutKind.Explicit, Size=144 )]
         public unsafe struct PoseData {
             [FieldOffset(0)] byte SourceLocalSpacePose; //TODO: array TArray SourceLocalSpacePose
 
@@ -26,9 +26,9 @@ namespace UE4.Engine{
 
             [FieldOffset(32)] byte LocalSpacePose; //TODO: array TArray LocalSpacePose
 
-            [FieldOffset(48)] byte LocalSpacePoseMask; //TODO: array TArray LocalSpacePoseMask
+            [FieldOffset(48)] byte TrackToBufferIndex; //TODO: map TMap TrackToBufferIndex
 
-            [FieldOffset(64)] byte CurveData; //TODO: array TArray CurveData
+            [FieldOffset(128)] byte CurveData; //TODO: array TArray CurveData
 
         }
 }

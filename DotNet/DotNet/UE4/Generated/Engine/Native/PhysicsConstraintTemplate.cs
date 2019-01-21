@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1184 )]
+    [StructLayout( LayoutKind.Explicit, Size=1200 )]
     internal unsafe struct PhysicsConstraintTemplate_fields {
         [FieldOffset(64)] public ConstraintInstance DefaultInstance;
-        [FieldOffset(704)] public NativeArray ProfileHandles;
-        [FieldOffset(720)] public ConstraintProfileProperties DefaultProfile;
+        [FieldOffset(720)] public NativeArray ProfileHandles;
+        [FieldOffset(736)] public ConstraintProfileProperties DefaultProfile;
     }
     internal unsafe struct PhysicsConstraintTemplate_methods {
     }

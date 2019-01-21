@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=992 )]
+    [StructLayout( LayoutKind.Explicit, Size=976 )]
     internal unsafe struct LocalLightComponent_fields {
-        [FieldOffset(960)] byte IntensityUnits; //TODO: enum ELightUnits IntensityUnits
-        [FieldOffset(968)] public float AttenuationRadius;
-        [FieldOffset(972)] public LightmassPointLightSettings LightmassSettings;
+        [FieldOffset(952)] byte IntensityUnits; //TODO: enum ELightUnits IntensityUnits
+        [FieldOffset(960)] public float AttenuationRadius;
+        [FieldOffset(964)] public LightmassPointLightSettings LightmassSettings;
     }
     internal unsafe struct LocalLightComponent_methods {
         internal struct GetUnitsConversionFactor_method {

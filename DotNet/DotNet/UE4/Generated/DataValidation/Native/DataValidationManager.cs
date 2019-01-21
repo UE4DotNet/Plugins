@@ -11,10 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.DataValidation.Native {
-    [StructLayout( LayoutKind.Explicit, Size=104 )]
+    [StructLayout( LayoutKind.Explicit, Size=128 )]
     internal unsafe struct DataValidationManager_fields {
         [FieldOffset(56)] public NativeArray ExcludedDirectories;
-        [FieldOffset(72)] public SoftClassPath DataValidationManagerClassName;
+        [FieldOffset(72)] public bool bValidateOnSave;
+        [FieldOffset(96)] public SoftClassPath DataValidationManagerClassName;
     }
     internal unsafe struct DataValidationManager_methods {
     }

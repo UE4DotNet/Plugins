@@ -11,25 +11,25 @@ using UE4.Native;
 
 
 namespace UE4.CinematicCamera.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2320 )]
+    [StructLayout( LayoutKind.Explicit, Size=2288 )]
     internal unsafe struct CineCameraComponent_fields {
-        [FieldOffset(2096)] public CameraFilmbackSettings FilmbackSettings;
-        [FieldOffset(2108)] public CameraLensSettings LensSettings;
-        [FieldOffset(2136)] public CameraFocusSettings FocusSettings;
-        [FieldOffset(2192)] public float CurrentFocalLength;
-        [FieldOffset(2196)] public float CurrentAperture;
-        [FieldOffset(2200)] public float CurrentFocusDistance;
-        [FieldOffset(2204)] public float CurrentHorizontalFOV;
-        [FieldOffset(2216)]  public IntPtr  FocusPlaneVisualizationMesh;
-        [FieldOffset(2224)]  public IntPtr  FocusPlaneVisualizationMaterial;
-        [FieldOffset(2232)]  public IntPtr  DebugFocusPlaneComponent;
-        [FieldOffset(2240)]  public IntPtr  DebugFocusPlaneMID;
-        [FieldOffset(2248)] public NativeArray FilmbackPresets;
-        [FieldOffset(2264)] public NativeArray LensPresets;
-        [FieldOffset(2280)] byte DefaultFilmbackPresetName; //TODO: string FString DefaultFilmbackPresetName
-        [FieldOffset(2296)] byte DefaultLensPresetName; //TODO: string FString DefaultLensPresetName
-        [FieldOffset(2312)] public float DefaultLensFocalLength;
-        [FieldOffset(2316)] public float DefaultLensFStop;
+        [FieldOffset(2056)] public CameraFilmbackSettings FilmbackSettings;
+        [FieldOffset(2068)] public CameraLensSettings LensSettings;
+        [FieldOffset(2096)] public CameraFocusSettings FocusSettings;
+        [FieldOffset(2152)] public float CurrentFocalLength;
+        [FieldOffset(2156)] public float CurrentAperture;
+        [FieldOffset(2160)] public float CurrentFocusDistance;
+        [FieldOffset(2164)] public float CurrentHorizontalFOV;
+        [FieldOffset(2176)]  public IntPtr  FocusPlaneVisualizationMesh;
+        [FieldOffset(2184)]  public IntPtr  FocusPlaneVisualizationMaterial;
+        [FieldOffset(2192)]  public IntPtr  DebugFocusPlaneComponent;
+        [FieldOffset(2200)]  public IntPtr  DebugFocusPlaneMID;
+        [FieldOffset(2208)] public NativeArray FilmbackPresets;
+        [FieldOffset(2224)] public NativeArray LensPresets;
+        [FieldOffset(2240)] byte DefaultFilmbackPresetName; //TODO: string FString DefaultFilmbackPresetName
+        [FieldOffset(2256)] byte DefaultLensPresetName; //TODO: string FString DefaultLensPresetName
+        [FieldOffset(2272)] public float DefaultLensFocalLength;
+        [FieldOffset(2276)] public float DefaultLensFStop;
     }
     internal unsafe struct CineCameraComponent_methods {
         internal struct GetFilmbackPresetName_method {

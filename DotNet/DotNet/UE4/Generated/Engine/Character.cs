@@ -286,6 +286,11 @@ namespace UE4.Engine {
             get {return Character_ptr->ReplicatedServerLastTransformUpdateTimeStamp;}
             set {Character_ptr->ReplicatedServerLastTransformUpdateTimeStamp = value;}
         }
+        ///<summary>Replay Last Transform Update Time Stamp</summary>
+        public unsafe float ReplayLastTransformUpdateTimeStamp {
+            get {return Character_ptr->ReplayLastTransformUpdateTimeStamp;}
+            set {Character_ptr->ReplayLastTransformUpdateTimeStamp = value;}
+        }
         ///<summary>CharacterMovement MovementMode (and custom mode) replicated for simulated proxies. Use CharacterMovementComponent::UnpackNetworkMovementMode() to translate it.</summary>
         public unsafe byte ReplicatedMovementMode {
             get {return Character_ptr->ReplicatedMovementMode;}

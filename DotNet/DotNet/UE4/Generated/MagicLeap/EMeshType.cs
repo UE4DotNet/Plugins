@@ -12,9 +12,8 @@ using UE4.Native;
 namespace UE4.MagicLeap {
     ///<summary>Type of mesh to query from the underlying system.</summary>
     public enum EMeshType {
-        Full = 0x00000000, 
-        Blocks = 0x00000001, 
-        PointCloud = 0x00000002, 
-        EMeshType_MAX = 0x00000003
+        Triangles = 0x00000000, 
+        PointCloud = 0x00000001, 
+        EMeshType_MAX = 0x00000002
     }
 }

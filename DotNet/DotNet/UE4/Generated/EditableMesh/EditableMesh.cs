@@ -498,6 +498,10 @@ namespace UE4.EditableMesh {
         public UE4.EditableMesh.EditableMesh RevertInstance()  => 
             EditableMesh_methods.RevertInstance_method.Invoke(ObjPointer);
 
+        ///<summary>Search Spatial Database for Polygons in Volume</summary>
+        public IReadOnlyCollection<PolygonID> SearchSpatialDatabaseForPolygonsInVolume(byte Planes /*TODO: array TArray */)  => 
+            EditableMesh_methods.SearchSpatialDatabaseForPolygonsInVolume_method.Invoke(ObjPointer, Planes);
+
         ///<summary>Search Spatial Database for Polygons Potentially Intersecting Line Segment</summary>
         public IReadOnlyCollection<PolygonID> SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment(Vector LineSegmentStart, Vector LineSegmentEnd)  => 
             EditableMesh_methods.SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment_method.Invoke(ObjPointer, LineSegmentStart, LineSegmentEnd);

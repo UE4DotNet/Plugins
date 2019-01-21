@@ -34,19 +34,6 @@ namespace UE4.OculusHMD.Native {
                 Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, AddLoadingSplashScreen_ptr, new IntPtr(p)); ;
             }
         }
-        internal struct AreHeadPhonesPluggedIn_method {
-            static internal IntPtr AreHeadPhonesPluggedIn_ptr;
-            static AreHeadPhonesPluggedIn_method() {
-                AreHeadPhonesPluggedIn_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "AreHeadPhonesPluggedIn");
-            }
-
-            internal static unsafe bool Invoke() {
-                long* p = stackalloc long[] {0L,0L};
-                byte* b = (byte*) p;
-                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, AreHeadPhonesPluggedIn_ptr, new IntPtr(p)); ;
-                return *((bool*)(b+0));
-            }
-        }
         internal struct ClearLoadingSplashScreens_method {
             static internal IntPtr ClearLoadingSplashScreens_ptr;
             static ClearLoadingSplashScreens_method() {
@@ -57,19 +44,6 @@ namespace UE4.OculusHMD.Native {
                 long* p = stackalloc long[] {0L};
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, ClearLoadingSplashScreens_ptr, new IntPtr(p)); ;
-            }
-        }
-        internal struct EnableArmModel_method {
-            static internal IntPtr EnableArmModel_ptr;
-            static EnableArmModel_method() {
-                EnableArmModel_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "EnableArmModel");
-            }
-
-            internal static unsafe void Invoke(bool bArmModelEnable) {
-                long* p = stackalloc long[] {0L,0L};
-                byte* b = (byte*) p;
-                *((bool*)(b+0)) = bArmModelEnable;
-                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, EnableArmModel_ptr, new IntPtr(p)); ;
             }
         }
         internal struct EnableAutoLoadingSplashScreen_method {
@@ -83,6 +57,32 @@ namespace UE4.OculusHMD.Native {
                 byte* b = (byte*) p;
                 *((bool*)(b+0)) = bAutoShowEnabled;
                 Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, EnableAutoLoadingSplashScreen_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct EnableOrientationTracking_method {
+            static internal IntPtr EnableOrientationTracking_ptr;
+            static EnableOrientationTracking_method() {
+                EnableOrientationTracking_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "EnableOrientationTracking");
+            }
+
+            internal static unsafe void Invoke(bool bOrientationTracking) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((bool*)(b+0)) = bOrientationTracking;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, EnableOrientationTracking_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct EnablePositionTracking_method {
+            static internal IntPtr EnablePositionTracking_ptr;
+            static EnablePositionTracking_method() {
+                EnablePositionTracking_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "EnablePositionTracking");
+            }
+
+            internal static unsafe void Invoke(bool bPositionTracking) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((bool*)(b+0)) = bPositionTracking;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, EnablePositionTracking_ptr, new IntPtr(p)); ;
             }
         }
         internal struct GetAvailableDisplayFrequencies_method {
@@ -125,19 +125,6 @@ namespace UE4.OculusHMD.Native {
                 return (*((Rotator*)(b+0)),*((Vector*)(b+12)));
             }
         }
-        internal struct GetBatteryLevel_method {
-            static internal IntPtr GetBatteryLevel_ptr;
-            static GetBatteryLevel_method() {
-                GetBatteryLevel_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "GetBatteryLevel");
-            }
-
-            internal static unsafe float Invoke() {
-                long* p = stackalloc long[] {0L,0L};
-                byte* b = (byte*) p;
-                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetBatteryLevel_ptr, new IntPtr(p)); ;
-                return *((float*)(b+0));
-            }
-        }
         internal struct GetCurrentDisplayFrequency_method {
             static internal IntPtr GetCurrentDisplayFrequency_ptr;
             static GetCurrentDisplayFrequency_method() {
@@ -164,17 +151,17 @@ namespace UE4.OculusHMD.Native {
                 return FString.Get(b+0);
             }
         }
-        internal struct GetGearVRControllerHandedness_method {
-            static internal IntPtr GetGearVRControllerHandedness_ptr;
-            static GetGearVRControllerHandedness_method() {
-                GetGearVRControllerHandedness_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "GetGearVRControllerHandedness");
+        internal struct GetGPUFrameTime_method {
+            static internal IntPtr GetGPUFrameTime_ptr;
+            static GetGPUFrameTime_method() {
+                GetGPUFrameTime_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "GetGPUFrameTime");
             }
 
-            internal static unsafe EGearVRControllerHandedness_DEPRECATED Invoke() {
+            internal static unsafe float Invoke() {
                 long* p = stackalloc long[] {0L,0L};
                 byte* b = (byte*) p;
-                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetGearVRControllerHandedness_ptr, new IntPtr(p)); ;
-                return *((EGearVRControllerHandedness_DEPRECATED*)(b+0));
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetGPUFrameTime_ptr, new IntPtr(p)); ;
+                return *((float*)(b+0));
             }
         }
         internal struct GetGPUUtilization_method {
@@ -190,6 +177,35 @@ namespace UE4.OculusHMD.Native {
                 return (*((bool*)(b+0)),*((float*)(b+4)));
             }
         }
+        internal struct GetGuardianDimensions_method {
+            static internal IntPtr GetGuardianDimensions_ptr;
+            static GetGuardianDimensions_method() {
+                GetGuardianDimensions_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "GetGuardianDimensions");
+            }
+
+            internal static unsafe Vector Invoke(EBoundaryType BoundaryType) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                *(b+0) = (byte)BoundaryType;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetGuardianDimensions_ptr, new IntPtr(p)); ;
+                return *((Vector*)(b+4));
+            }
+        }
+        internal struct GetGuardianPoints_method {
+            static internal IntPtr GetGuardianPoints_ptr;
+            static GetGuardianPoints_method() {
+                GetGuardianPoints_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "GetGuardianPoints");
+            }
+
+            internal static unsafe IReadOnlyCollection<Vector> Invoke(EBoundaryType BoundaryType) {
+                long* p = stackalloc long[] {0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *(b+0) = (byte)BoundaryType;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetGuardianPoints_ptr, new IntPtr(p)); ;
+                 //TODO: array TArray ReturnValue
+                return UObject.ToUnmangedCollection<Vector>(b+8);
+            }
+        }
         internal struct GetLoadingSplashParams_method {
             static internal IntPtr GetLoadingSplashParams_ptr;
             static GetLoadingSplashParams_method() {
@@ -201,6 +217,49 @@ namespace UE4.OculusHMD.Native {
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetLoadingSplashParams_ptr, new IntPtr(p)); ;
                 return (FString.Get(b+0),*((Vector*)(b+16)),*((Vector2D*)(b+28)),*((Vector*)(b+36)),*((float*)(b+48)));
+            }
+        }
+        internal struct GetNodeGuardianIntersection_method {
+            static internal IntPtr GetNodeGuardianIntersection_ptr;
+            static GetNodeGuardianIntersection_method() {
+                GetNodeGuardianIntersection_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "GetNodeGuardianIntersection");
+            }
+
+            internal static unsafe GuardianTestResult Invoke(ETrackedDeviceType DeviceType, EBoundaryType BoundaryType) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *(b+0) = (byte)DeviceType;
+                *(b+1) = (byte)BoundaryType;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetNodeGuardianIntersection_ptr, new IntPtr(p)); ;
+                return *((GuardianTestResult*)(b+4));
+            }
+        }
+        internal struct GetPlayAreaTransform_method {
+            static internal IntPtr GetPlayAreaTransform_ptr;
+            static GetPlayAreaTransform_method() {
+                GetPlayAreaTransform_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "GetPlayAreaTransform");
+            }
+
+            internal static unsafe Transform Invoke() {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetPlayAreaTransform_ptr, new IntPtr(p)); ;
+                return *((Transform*)(b+0));
+            }
+        }
+        internal struct GetPointGuardianIntersection_method {
+            static internal IntPtr GetPointGuardianIntersection_ptr;
+            static GetPointGuardianIntersection_method() {
+                GetPointGuardianIntersection_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "GetPointGuardianIntersection");
+            }
+
+            internal static unsafe GuardianTestResult Invoke(Vector Point, EBoundaryType BoundaryType) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((Vector*)(b+0)) = Point;
+                *(b+12) = (byte)BoundaryType;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetPointGuardianIntersection_ptr, new IntPtr(p)); ;
+                return *((GuardianTestResult*)(b+16));
             }
         }
         internal struct GetPose_method {
@@ -231,19 +290,6 @@ namespace UE4.OculusHMD.Native {
                 *(b+52) = (byte)DeviceType;
                 Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetRawSensorData_ptr, new IntPtr(p)); ;
                 return (*((Vector*)(b+0)),*((Vector*)(b+12)),*((Vector*)(b+24)),*((Vector*)(b+36)),*((float*)(b+48)));
-            }
-        }
-        internal struct GetTemperatureInCelsius_method {
-            static internal IntPtr GetTemperatureInCelsius_ptr;
-            static GetTemperatureInCelsius_method() {
-                GetTemperatureInCelsius_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "GetTemperatureInCelsius");
-            }
-
-            internal static unsafe float Invoke() {
-                long* p = stackalloc long[] {0L,0L};
-                byte* b = (byte*) p;
-                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, GetTemperatureInCelsius_ptr, new IntPtr(p)); ;
-                return *((float*)(b+0));
             }
         }
         internal struct GetTiledMultiresLevel_method {
@@ -336,19 +382,6 @@ namespace UE4.OculusHMD.Native {
                 return *((bool*)(b+0));
             }
         }
-        internal struct IsControllerActive_method {
-            static internal IntPtr IsControllerActive_ptr;
-            static IsControllerActive_method() {
-                IsControllerActive_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "IsControllerActive");
-            }
-
-            internal static unsafe bool Invoke() {
-                long* p = stackalloc long[] {0L,0L};
-                byte* b = (byte*) p;
-                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, IsControllerActive_ptr, new IntPtr(p)); ;
-                return *((bool*)(b+0));
-            }
-        }
         internal struct IsDeviceTracked_method {
             static internal IntPtr IsDeviceTracked_ptr;
             static IsDeviceTracked_method() {
@@ -363,6 +396,19 @@ namespace UE4.OculusHMD.Native {
                 return *((bool*)(b+1));
             }
         }
+        internal struct IsGuardianDisplayed_method {
+            static internal IntPtr IsGuardianDisplayed_ptr;
+            static IsGuardianDisplayed_method() {
+                IsGuardianDisplayed_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "IsGuardianDisplayed");
+            }
+
+            internal static unsafe bool Invoke() {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, IsGuardianDisplayed_ptr, new IntPtr(p)); ;
+                return *((bool*)(b+0));
+            }
+        }
         internal struct IsLoadingIconEnabled_method {
             static internal IntPtr IsLoadingIconEnabled_ptr;
             static IsLoadingIconEnabled_method() {
@@ -373,32 +419,6 @@ namespace UE4.OculusHMD.Native {
                 long* p = stackalloc long[] {0L,0L};
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, IsLoadingIconEnabled_ptr, new IntPtr(p)); ;
-                return *((bool*)(b+0));
-            }
-        }
-        internal struct IsPowerLevelStateMinimum_method {
-            static internal IntPtr IsPowerLevelStateMinimum_ptr;
-            static IsPowerLevelStateMinimum_method() {
-                IsPowerLevelStateMinimum_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "IsPowerLevelStateMinimum");
-            }
-
-            internal static unsafe bool Invoke() {
-                long* p = stackalloc long[] {0L,0L};
-                byte* b = (byte*) p;
-                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, IsPowerLevelStateMinimum_ptr, new IntPtr(p)); ;
-                return *((bool*)(b+0));
-            }
-        }
-        internal struct IsPowerLevelStateThrottled_method {
-            static internal IntPtr IsPowerLevelStateThrottled_ptr;
-            static IsPowerLevelStateThrottled_method() {
-                IsPowerLevelStateThrottled_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "IsPowerLevelStateThrottled");
-            }
-
-            internal static unsafe bool Invoke() {
-                long* p = stackalloc long[] {0L,0L};
-                byte* b = (byte*) p;
-                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, IsPowerLevelStateThrottled_ptr, new IntPtr(p)); ;
                 return *((bool*)(b+0));
             }
         }
@@ -459,6 +479,19 @@ namespace UE4.OculusHMD.Native {
                 Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, SetDisplayFrequency_ptr, new IntPtr(p)); ;
             }
         }
+        internal struct SetGuardianVisibility_method {
+            static internal IntPtr SetGuardianVisibility_ptr;
+            static SetGuardianVisibility_method() {
+                SetGuardianVisibility_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "SetGuardianVisibility");
+            }
+
+            internal static unsafe void Invoke(bool GuardianVisible) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((bool*)(b+0)) = GuardianVisible;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, SetGuardianVisibility_ptr, new IntPtr(p)); ;
+            }
+        }
         internal struct SetLoadingSplashParams_method {
             static internal IntPtr SetLoadingSplashParams_ptr;
             static SetLoadingSplashParams_method() {
@@ -491,6 +524,19 @@ namespace UE4.OculusHMD.Native {
                 byte* b = (byte*) p;
                 *((Vector*)(b+0)) = PosScale3D;
                 Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, SetPositionScale3D_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct SetReorientHMDOnControllerRecenter_method {
+            static internal IntPtr SetReorientHMDOnControllerRecenter_ptr;
+            static SetReorientHMDOnControllerRecenter_method() {
+                SetReorientHMDOnControllerRecenter_ptr = Main.GetMethodUFunction(OculusFunctionLibrary.StaticClass, "SetReorientHMDOnControllerRecenter");
+            }
+
+            internal static unsafe void Invoke(bool recenterMode) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *((bool*)(b+0)) = recenterMode;
+                Main.GetProcessEvent(OculusFunctionLibrary.DefaultObject, SetReorientHMDOnControllerRecenter_ptr, new IntPtr(p)); ;
             }
         }
         internal struct SetTiledMultiresLevel_method {

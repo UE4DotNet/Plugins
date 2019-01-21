@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Foliage.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1464 )]
+    [StructLayout( LayoutKind.Explicit, Size=1544 )]
     internal unsafe struct InstancedFoliageActor_fields {
     }
     internal unsafe struct InstancedFoliageActor_methods {

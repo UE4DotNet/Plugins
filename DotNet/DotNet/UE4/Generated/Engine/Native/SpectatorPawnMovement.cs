@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=448 )]
+    [StructLayout( LayoutKind.Explicit, Size=432 )]
     internal unsafe struct SpectatorPawnMovement_fields {
-        [FieldOffset(440)] public bool bIgnoreTimeDilation;
+        [FieldOffset(424)] public bool bIgnoreTimeDilation;
     }
     internal unsafe struct SpectatorPawnMovement_methods {
     }

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Sequencer.Native {
-    [StructLayout( LayoutKind.Explicit, Size=208 )]
+    [StructLayout( LayoutKind.Explicit, Size=232 )]
     internal unsafe struct SequencerSettings_fields {
         [FieldOffset(56)] byte AutoChangeMode; //TODO: enum EAutoChangeMode AutoChangeMode
         [FieldOffset(57)] byte AllowEditsMode; //TODO: enum EAllowEditsMode AllowEditsMode
@@ -46,13 +46,13 @@ namespace UE4.Sequencer.Native {
         [FieldOffset(92)] public bool bShowCombinedKeyframes;
         [FieldOffset(93)] public bool bInfiniteKeyAreas;
         [FieldOffset(94)] public bool bShowChannelColors;
-        [FieldOffset(95)] public bool bShowViewportTransportControls;
-        [FieldOffset(96)] public bool bAllowPossessionOfPIEViewports;
-        [FieldOffset(97)] public bool bActivateRealtimeViewports;
-        [FieldOffset(98)] public bool bEvaluateSubSequencesInIsolation;
-        [FieldOffset(99)] public bool bRerunConstructionScripts;
-        [FieldOffset(100)] public bool bShowDebugVisualization;
-        [FieldOffset(101)] public bool bVisualizePreAndPostRoll;
+        [FieldOffset(95)] public bool bAllowPossessionOfPIEViewports;
+        [FieldOffset(96)] public bool bActivateRealtimeViewports;
+        [FieldOffset(97)] public bool bEvaluateSubSequencesInIsolation;
+        [FieldOffset(98)] public bool bRerunConstructionScripts;
+        [FieldOffset(99)] public bool bShowDebugVisualization;
+        [FieldOffset(100)] public bool bVisualizePreAndPostRoll;
+        [FieldOffset(101)] public bool bCompileDirectorOnEvaluate;
         [FieldOffset(104)] byte TrajectoryPathCap; //TODO: numeric uint32 TrajectoryPathCap
         [FieldOffset(108)] byte FrameNumberDisplayFormat; //TODO: enum EFrameNumberDisplayFormats FrameNumberDisplayFormat
         [FieldOffset(109)] byte CurveVisibility; //TODO: enum ECurveEditorCurveVisibility CurveVisibility

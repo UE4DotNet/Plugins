@@ -112,6 +112,11 @@ namespace UE4.Engine {
             get {return GameNetworkManager_ptr->MAXCLIENTUPDATEINTERVAL;}
             set {GameNetworkManager_ptr->MAXCLIENTUPDATEINTERVAL = value;}
         }
+        ///<summary>MaxClientForcedUpdateDuration is the maximum time duration over which the server will force updates, after MAXCLIENTUPDATEINTERVAL is initially exceeded.</summary>
+        public unsafe float MaxClientForcedUpdateDuration {
+            get {return GameNetworkManager_ptr->MaxClientForcedUpdateDuration;}
+            set {GameNetworkManager_ptr->MaxClientForcedUpdateDuration = value;}
+        }
         ///<summary>MaxMoveDeltaTime is the default maximum time delta of CharacterMovement ServerMoves. Should be less than or equal to MAXCLIENTUPDATEINTERVAL, otherwise server will interfere by forcing position updates.</summary>
         public unsafe float MaxMoveDeltaTime {
             get {return GameNetworkManager_ptr->MaxMoveDeltaTime;}

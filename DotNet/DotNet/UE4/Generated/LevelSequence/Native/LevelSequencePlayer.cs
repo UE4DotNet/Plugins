@@ -12,10 +12,10 @@ using UE4.Native;
 using UE4.MovieScene;
 
 namespace UE4.LevelSequence.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2192 )]
+    [StructLayout( LayoutKind.Explicit, Size=2168 )]
     internal unsafe struct LevelSequencePlayer_fields {
-        [FieldOffset(2032)] byte OnCameraCut; //TODO: multicast delegate FOnLevelSequencePlayerCameraCutEvent OnCameraCut
-        [FieldOffset(2096)] public NativeArray AdditionalEventReceivers;
+        [FieldOffset(2008)] byte OnCameraCut; //TODO: multicast delegate FOnLevelSequencePlayerCameraCutEvent OnCameraCut
+        [FieldOffset(2072)] public NativeArray AdditionalEventReceivers;
     }
     internal unsafe struct LevelSequencePlayer_methods {
         internal struct CreateLevelSequencePlayer_method {

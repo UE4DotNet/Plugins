@@ -43,10 +43,16 @@ namespace UE4.Engine {
         ///<summary>Holds parameters for NavigationSystem's creation.</summary>
         ///<remarks>
         ///Set to Null will result
-        ///    in NavigationSystem instance not being created for this world
+        ///    in NavigationSystem instance not being created for this world. Note that
+        ///    if set NavigationSystemConfigOverride will be used instead.
         ///</remarks>
         public unsafe NavigationSystemConfig NavigationSystemConfig {
             get {return WorldSettings_ptr->NavigationSystemConfig;}
+        }
+        ///<summary>Overrides NavigationSystemConfig.</summary>
+        public unsafe NavigationSystemConfig NavigationSystemConfigOverride {
+            get {return WorldSettings_ptr->NavigationSystemConfigOverride;}
+            set {WorldSettings_ptr->NavigationSystemConfigOverride = value;}
         }
         ///<summary>any actor falling below this level gets destroyed</summary>
         public unsafe float KillZ {
@@ -179,7 +185,7 @@ namespace UE4.Engine {
         public unsafe float MonoCullingDistance {
             get {return WorldSettings_ptr->MonoCullingDistance;}
         }
-        ///<summary>Level Bookmarks: 10 should be MAX_BOOKMARK_NUMBER @fixmeconst</summary>
+        ///<summary>Book Marks</summary>
         public unsafe BookMark BookMarks {
             get {return WorldSettings_ptr->BookMarks;}
             set {WorldSettings_ptr->BookMarks = value;}
@@ -254,6 +260,33 @@ namespace UE4.Engine {
         } }
         private ObjectArrayField<AssetUserData> AssetUserData_store;
 
+        ///<summary>Maximum number of bookmarks allowed.</summary>
+        ///<remarks>
+        ///Changing this will change the allocation of the bookmarks array, and when shrinking
+        ///may cause some bookmarks to become eligible for GC.
+        ///</remarks>
+        public unsafe int MaxNumberOfBookmarks {
+            get {return WorldSettings_ptr->MaxNumberOfBookmarks;}
+            set {WorldSettings_ptr->MaxNumberOfBookmarks = value;}
+        }
+        ///<summary>Class that will be used when creating new bookmarks.</summary>
+        ///<remarks>Old bookmarks may be recreated with the new class where possible.</remarks>
+        public unsafe SubclassOf<BookmarkBase> DefaultBookmarkClass {
+            get {return WorldSettings_ptr->DefaultBookmarkClass;}
+            set {WorldSettings_ptr->DefaultBookmarkClass = value;}
+        }
+        ///<summary>Bookmark Array</summary>
+        public ObjectArrayField<BookmarkBase> BookmarkArray{ get {
+            if(BookmarkArray_store == null) BookmarkArray_store = new ObjectArrayField<BookmarkBase> (&WorldSettings_ptr->BookmarkArray);
+            return BookmarkArray_store;
+        } }
+        private ObjectArrayField<BookmarkBase> BookmarkArray_store;
+
+        ///<summary>Tracked so we can detect changes from Config</summary>
+        public unsafe SubclassOf<BookmarkBase> LastBookmarkClass {
+            get {return WorldSettings_ptr->LastBookmarkClass;}
+            set {WorldSettings_ptr->LastBookmarkClass = value;}
+        }
         static WorldSettings() {
             StaticClass = Main.GetClass("WorldSettings");
         }

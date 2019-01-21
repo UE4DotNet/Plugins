@@ -96,7 +96,7 @@ namespace UE4.Engine {
             get {return NetDriver_ptr->ServerConnection;}
             set {NetDriver_ptr->ServerConnection = value;}
         }
-        ///<summary>Array of connections to clients (this net driver is a host)</summary>
+        ///<summary>Array of connections to clients (this net driver is a host) - unsorted, and ordering changes depending on actor replication</summary>
         public ObjectArrayField<NetConnection> ClientConnections{ get {
             if(ClientConnections_store == null) ClientConnections_store = new ObjectArrayField<NetConnection> (&NetDriver_ptr->ClientConnections);
             return ClientConnections_store;
@@ -138,6 +138,13 @@ namespace UE4.Engine {
             get {return NetDriver_ptr->NetDriverName;}
             set {NetDriver_ptr->NetDriverName = value;}
         }
+        ///<summary>List of channels that were previously used and can be used again</summary>
+        public ObjectArrayField<Channel> ActorChannelPool{ get {
+            if(ActorChannelPool_store == null) ActorChannelPool_store = new ObjectArrayField<Channel> (&NetDriver_ptr->ActorChannelPool);
+            return ActorChannelPool_store;
+        } }
+        private ObjectArrayField<Channel> ActorChannelPool_store;
+
         ///<summary>Accumulated time for the net driver, updated by Tick</summary>
         public unsafe float Time {
             get {return NetDriver_ptr->Time;}

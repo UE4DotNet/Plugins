@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Landscape.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1808 )]
+    [StructLayout( LayoutKind.Explicit, Size=1792 )]
     internal unsafe struct LandscapeMeshProxyComponent_fields {
-        [FieldOffset(1760)] public FGuid LandscapeGuid;
-        [FieldOffset(1776)] public NativeArray ProxyComponentBases;
-        [FieldOffset(1792)] public sbyte ProxyLOD;
+        [FieldOffset(1744)] public FGuid LandscapeGuid;
+        [FieldOffset(1760)] public NativeArray ProxyComponentBases;
+        [FieldOffset(1776)] public sbyte ProxyLOD;
     }
     internal unsafe struct LandscapeMeshProxyComponent_methods {
     }

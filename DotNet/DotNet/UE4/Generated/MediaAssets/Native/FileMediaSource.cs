@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.MediaAssets.Native {
-    [StructLayout( LayoutKind.Explicit, Size=184 )]
+    [StructLayout( LayoutKind.Explicit, Size=200 )]
     internal unsafe struct FileMediaSource_fields {
         [FieldOffset(160)] byte FilePath; //TODO: string FString FilePath
         [FieldOffset(176)] public bool PrecacheFile;

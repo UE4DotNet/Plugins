@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=784 )]
+    [StructLayout( LayoutKind.Explicit, Size=800 )]
     internal unsafe struct SceneCaptureComponent_fields {
         [FieldOffset(624)] byte PrimitiveRenderMode; //TODO: enum ESceneCapturePrimitiveRenderMode PrimitiveRenderMode
         [FieldOffset(632)] public NativeArray HiddenComponents;
@@ -25,7 +25,7 @@ namespace UE4.Engine.Native {
         [FieldOffset(704)] public float MaxViewDistanceOverride;
         [FieldOffset(708)] public int CaptureSortPriority;
         [FieldOffset(712)] public NativeArray ShowFlagSettings;
-        [FieldOffset(752)] byte ProfilingEventName; //TODO: string FString ProfilingEventName
+        [FieldOffset(760)] byte ProfilingEventName; //TODO: string FString ProfilingEventName
     }
     internal unsafe struct SceneCaptureComponent_methods {
         internal struct ClearHiddenComponents_method {

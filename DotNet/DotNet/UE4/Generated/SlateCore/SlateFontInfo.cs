@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.SlateCore{
         ///<summary>A representation of a font in Slate.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=104 )]
+        [StructLayout( LayoutKind.Explicit, Size=112 )]
         public unsafe struct SlateFontInfo {
             [FieldOffset(0)] 
             private IntPtr  FontObject_field;
@@ -33,9 +33,9 @@ namespace UE4.SlateCore{
             ///<summary>Settings for applying an outline to a font</summary>
             [FieldOffset(16)] FontOutlineSettings OutlineSettings;
 
-            [FieldOffset(64)] public Name TypefaceFontName;
+            [FieldOffset(72)] public Name TypefaceFontName;
 
-            [FieldOffset(76)] public int Size;
+            [FieldOffset(84)] public int Size;
 
         }
 }

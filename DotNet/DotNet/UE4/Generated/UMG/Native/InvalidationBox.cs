@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=432 )]
+    [StructLayout( LayoutKind.Explicit, Size=448 )]
     internal unsafe struct InvalidationBox_fields {
-        [FieldOffset(408)] public bool bCanCache;
-        [FieldOffset(409)] public bool CacheRelativeTransforms;
+        [FieldOffset(424)] public bool bCanCache;
+        [FieldOffset(425)] public bool CacheRelativeTransforms;
     }
     internal unsafe struct InvalidationBox_methods {
         internal struct GetCanCache_method {

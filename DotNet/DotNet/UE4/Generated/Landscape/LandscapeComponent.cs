@@ -53,6 +53,7 @@ namespace UE4.Landscape {
             get {return LandscapeComponent_ptr->OverrideHoleMaterial;}
             set {LandscapeComponent_ptr->OverrideHoleMaterial = value;}
         }
+         //TODO: array not UObject TArray OverrideMaterials
         ///<summary>Material Instances</summary>
         public ObjectArrayField<MaterialInstanceConstant> MaterialInstances{ get {
             if(MaterialInstances_store == null) MaterialInstances_store = new ObjectArrayField<MaterialInstanceConstant> (&LandscapeComponent_ptr->MaterialInstances);
@@ -67,6 +68,8 @@ namespace UE4.Landscape {
         } }
         private ObjectArrayField<MaterialInstanceDynamic> MaterialInstancesDynamic_store;
 
+         //TODO: array not UObject TArray LODIndexToMaterialIndex
+         //TODO: array not UObject TArray MaterialIndexToDisabledTessellationMaterial
          //TODO: array not UObject TArray WeightmapLayerAllocations
         ///<summary>Weightmap texture reference</summary>
         public ObjectArrayField<Texture2D> WeightmapTextures{ get {
@@ -193,16 +196,19 @@ namespace UE4.Landscape {
             get {return LandscapeComponent_ptr->MobileDataSourceHash;}
             set {LandscapeComponent_ptr->MobileDataSourceHash = value;}
         }
+         //TODO: map TMap MaterialPerLOD
         ///<summary>For ES2</summary>
         public unsafe byte MobileBlendableLayerMask {
             get {return LandscapeComponent_ptr->MobileBlendableLayerMask;}
             set {LandscapeComponent_ptr->MobileBlendableLayerMask = value;}
         }
-        ///<summary>Material interface used for ES2. Serialized only when cooking or loading cooked builds.</summary>
-        public unsafe MaterialInterface MobileMaterialInterface {
-            get {return LandscapeComponent_ptr->MobileMaterialInterface;}
-            set {LandscapeComponent_ptr->MobileMaterialInterface = value;}
-        }
+        ///<summary>Material interfaces used for mobile</summary>
+        public ObjectArrayField<MaterialInterface> MobileMaterialInterfaces{ get {
+            if(MobileMaterialInterfaces_store == null) MobileMaterialInterfaces_store = new ObjectArrayField<MaterialInterface> (&LandscapeComponent_ptr->MobileMaterialInterfaces);
+            return MobileMaterialInterfaces_store;
+        } }
+        private ObjectArrayField<MaterialInterface> MobileMaterialInterfaces_store;
+
         ///<summary>Generated weightmap textures used for ES2.</summary>
         ///<remarks>
         ///The first entry is also used for the normal map.
@@ -216,10 +222,12 @@ namespace UE4.Landscape {
 
         ///<summary>The editor needs to save out the combination MIC we'll use for mobile,</summary>
         ///<remarks>because we cannot generate it at runtime for standalone PIE games</remarks>
-        public unsafe MaterialInstanceConstant MobileCombinationMaterialInstance {
-            get {return LandscapeComponent_ptr->MobileCombinationMaterialInstance;}
-            set {LandscapeComponent_ptr->MobileCombinationMaterialInstance = value;}
-        }
+        public ObjectArrayField<MaterialInstanceConstant> MobileCombinationMaterialInstances{ get {
+            if(MobileCombinationMaterialInstances_store == null) MobileCombinationMaterialInstances_store = new ObjectArrayField<MaterialInstanceConstant> (&LandscapeComponent_ptr->MobileCombinationMaterialInstances);
+            return MobileCombinationMaterialInstances_store;
+        } }
+        private ObjectArrayField<MaterialInstanceConstant> MobileCombinationMaterialInstances_store;
+
         static LandscapeComponent() {
             StaticClass = Main.GetClass("LandscapeComponent");
         }

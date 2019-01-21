@@ -13,19 +13,18 @@ using UE4.SlateCore;
 using UE4.Engine;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=784 )]
+    [StructLayout( LayoutKind.Explicit, Size=808 )]
     internal unsafe struct TextBlock_fields {
-        [FieldOffset(416)] byte Text; //TODO: text FText Text
-        [FieldOffset(440)] byte TextDelegate; //TODO: delegate FGetText TextDelegate
-        [FieldOffset(464)] public SlateColor ColorAndOpacity;
-        [FieldOffset(504)] byte ColorAndOpacityDelegate; //TODO: delegate FGetSlateColor ColorAndOpacityDelegate
-        [FieldOffset(528)] public SlateFontInfo Font;
-        [FieldOffset(632)] public Vector2D ShadowOffset;
-        [FieldOffset(640)] public LinearColor ShadowColorAndOpacity;
-        [FieldOffset(656)] byte ShadowColorAndOpacityDelegate; //TODO: delegate FGetLinearColor ShadowColorAndOpacityDelegate
-        [FieldOffset(676)] public float MinDesiredWidth;
-        [FieldOffset(680)] public bool bWrapWithInvalidationPanel;
-        [FieldOffset(681)] public bool bAutoWrapText;
+        [FieldOffset(432)] byte Text; //TODO: text FText Text
+        [FieldOffset(456)] byte TextDelegate; //TODO: delegate FGetText TextDelegate
+        [FieldOffset(480)] public SlateColor ColorAndOpacity;
+        [FieldOffset(520)] byte ColorAndOpacityDelegate; //TODO: delegate FGetSlateColor ColorAndOpacityDelegate
+        [FieldOffset(544)] public SlateFontInfo Font;
+        [FieldOffset(656)] public Vector2D ShadowOffset;
+        [FieldOffset(664)] public LinearColor ShadowColorAndOpacity;
+        [FieldOffset(680)] byte ShadowColorAndOpacityDelegate; //TODO: delegate FGetLinearColor ShadowColorAndOpacityDelegate
+        [FieldOffset(700)] public float MinDesiredWidth;
+        [FieldOffset(704)] public bool bWrapWithInvalidationPanel;
     }
     internal unsafe struct TextBlock_methods {
         internal struct GetDynamicFontMaterial_method {
@@ -101,7 +100,7 @@ namespace UE4.UMG.Native {
             }
 
             internal static unsafe void Invoke(IntPtr obj, SlateFontInfo InFontInfo) {
-                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((SlateFontInfo*)(b+0)) = InFontInfo;
                 Main.GetProcessEvent(obj, SetFont_ptr, new IntPtr(p)); ;

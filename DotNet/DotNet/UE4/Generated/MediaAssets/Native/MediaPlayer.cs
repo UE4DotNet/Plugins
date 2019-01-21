@@ -9,6 +9,7 @@ using UE4.CoreUObject.Native;
 using UE4.InputCore;
 using UE4.Native;
 
+using UE4.MediaUtils;
 
 namespace UE4.MediaAssets.Native {
     [StructLayout( LayoutKind.Explicit, Size=328 )]
@@ -665,6 +666,21 @@ namespace UE4.MediaAssets.Native {
                 *((IntPtr*)(b+0)) = MediaSource;
                 Main.GetProcessEvent(obj, OpenSource_ptr, new IntPtr(p)); ;
                 return *((bool*)(b+8));
+            }
+        }
+        internal struct OpenSourceWithOptions_method {
+            static internal IntPtr OpenSourceWithOptions_ptr;
+            static OpenSourceWithOptions_method() {
+                OpenSourceWithOptions_ptr = Main.GetMethodUFunction(MediaPlayer.StaticClass, "OpenSourceWithOptions");
+            }
+
+            internal static unsafe bool Invoke(IntPtr obj, MediaSource MediaSource, MediaPlayerOptions Options) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = MediaSource;
+                *((MediaPlayerOptions*)(b+8)) = Options;
+                Main.GetProcessEvent(obj, OpenSourceWithOptions_ptr, new IntPtr(p)); ;
+                return *((bool*)(b+36));
             }
         }
         internal struct OpenUrl_method {

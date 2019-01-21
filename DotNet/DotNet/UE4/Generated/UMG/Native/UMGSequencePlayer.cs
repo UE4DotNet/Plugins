@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1808 )]
+    [StructLayout( LayoutKind.Explicit, Size=1784 )]
     internal unsafe struct UMGSequencePlayer_fields {
         [FieldOffset(896)]  public IntPtr  Animation;
     }

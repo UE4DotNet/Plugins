@@ -11,15 +11,15 @@ using UE4.Native;
 
 
 namespace UE4.MagicLeap.Native {
-    [StructLayout( LayoutKind.Explicit, Size=384 )]
+    [StructLayout( LayoutKind.Explicit, Size=376 )]
     internal unsafe struct CameraCaptureComponent_fields {
-        [FieldOffset(272)] byte CaptureLogMessage; //TODO: multicast delegate FCameraCaptureLogMessage CaptureLogMessage
-        [FieldOffset(288)] byte CaptureImgToFileSuccess; //TODO: multicast delegate FCameraCaptureImgToFileSuccess CaptureImgToFileSuccess
-        [FieldOffset(304)] byte CaptureImgToFileFailure; //TODO: multicast delegate FCameraCaptureImgToFileFailure CaptureImgToFileFailure
-        [FieldOffset(320)] byte CaptureImgToTextureSuccess; //TODO: multicast delegate FCameraCaptureImgToTextureSuccess CaptureImgToTextureSuccess
-        [FieldOffset(336)] byte CaptureImgToTextureFailure; //TODO: multicast delegate FCameraCaptureImgToTextureFailure CaptureImgToTextureFailure
-        [FieldOffset(352)] byte CaptureVidToFileSuccess; //TODO: multicast delegate FCameraCaptureVidToFileSuccess CaptureVidToFileSuccess
-        [FieldOffset(368)] byte CaptureVidToFileFailure; //TODO: multicast delegate FCameraCaptureVidToFileFailure CaptureVidToFileFailure
+        [FieldOffset(264)] byte CaptureLogMessage; //TODO: multicast delegate FCameraCaptureLogMessage CaptureLogMessage
+        [FieldOffset(280)] byte CaptureImgToFileSuccess; //TODO: multicast delegate FCameraCaptureImgToFileSuccess CaptureImgToFileSuccess
+        [FieldOffset(296)] byte CaptureImgToFileFailure; //TODO: multicast delegate FCameraCaptureImgToFileFailure CaptureImgToFileFailure
+        [FieldOffset(312)] byte CaptureImgToTextureSuccess; //TODO: multicast delegate FCameraCaptureImgToTextureSuccess CaptureImgToTextureSuccess
+        [FieldOffset(328)] byte CaptureImgToTextureFailure; //TODO: multicast delegate FCameraCaptureImgToTextureFailure CaptureImgToTextureFailure
+        [FieldOffset(344)] byte CaptureVidToFileSuccess; //TODO: multicast delegate FCameraCaptureVidToFileSuccess CaptureVidToFileSuccess
+        [FieldOffset(360)] byte CaptureVidToFileFailure; //TODO: multicast delegate FCameraCaptureVidToFileFailure CaptureVidToFileFailure
     }
     internal unsafe struct CameraCaptureComponent_methods {
         internal struct CaptureImageToFileAsync_method {

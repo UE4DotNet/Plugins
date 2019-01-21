@@ -21,12 +21,12 @@ namespace UE4.MagicLeapIdentity.Native {
                 GetAllAvailableAttributes_ptr = Main.GetMethodUFunction(MagicLeapIdentity.StaticClass, "GetAllAvailableAttributes");
             }
 
-            internal static unsafe (IReadOnlyCollection<EMagicLeapIdentityAttribute>, EMagicLeapIdentityError) Invoke(IntPtr obj) {
+            internal static unsafe (IReadOnlyCollection<EMagicLeapIdentityKey>, EMagicLeapIdentityError) Invoke(IntPtr obj) {
                 long* p = stackalloc long[] {0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(obj, GetAllAvailableAttributes_ptr, new IntPtr(p)); ;
                  //TODO: array TArray AvailableAttributes
-                return (UObject.ToUnmangedCollection<EMagicLeapIdentityAttribute>(b+0),*((EMagicLeapIdentityError*)(b+16)));
+                return (UObject.ToUnmangedCollection<EMagicLeapIdentityKey>(b+0),*((EMagicLeapIdentityError*)(b+16)));
             }
         }
         internal struct GetAllAvailableAttributesAsync_method {
@@ -41,39 +41,6 @@ namespace UE4.MagicLeapIdentity.Native {
                 throw new NotImplementedException(); //TODO: delegate FAvailableIdentityAttributesDelegate ResultDelegate
                 Main.GetProcessEvent(obj, GetAllAvailableAttributesAsync_ptr, new IntPtr(p)); ;
                  //TODO: delegate FAvailableIdentityAttributesDelegate ResultDelegate
-            }
-        }
-        internal struct ModifyAttributeValue_method {
-            static internal IntPtr ModifyAttributeValue_ptr;
-            static ModifyAttributeValue_method() {
-                ModifyAttributeValue_ptr = Main.GetMethodUFunction(MagicLeapIdentity.StaticClass, "ModifyAttributeValue");
-            }
-
-            internal static unsafe (IReadOnlyCollection<EMagicLeapIdentityAttribute>, EMagicLeapIdentityError) Invoke(IntPtr obj, byte UpdatedAttributeValueList /*TODO: array TArray */) {
-                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L};
-                byte* b = (byte*) p;
-                throw new NotImplementedException(); //TODO: array TArray UpdatedAttributeValueList
-                Main.GetProcessEvent(obj, ModifyAttributeValue_ptr, new IntPtr(p)); ;
-                 //TODO: array TArray UpdatedAttributeValueList
-                 //TODO: array TArray AttributesUpdatedSuccessfully
-                return (UObject.ToUnmangedCollection<EMagicLeapIdentityAttribute>(b+16),*((EMagicLeapIdentityError*)(b+32)));
-            }
-        }
-        internal struct ModifyAttributeValueAsync_method {
-            static internal IntPtr ModifyAttributeValueAsync_ptr;
-            static ModifyAttributeValueAsync_method() {
-                ModifyAttributeValueAsync_ptr = Main.GetMethodUFunction(MagicLeapIdentity.StaticClass, "ModifyAttributeValueAsync");
-            }
-
-            internal static unsafe EMagicLeapIdentityError Invoke(IntPtr obj, byte UpdatedAttributeValueList /*TODO: array TArray */, byte ResultDelegate /*TODO: delegate FModifyIdentityAttributeValueDelegate */) {
-                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L};
-                byte* b = (byte*) p;
-                throw new NotImplementedException(); //TODO: array TArray UpdatedAttributeValueList
-                throw new NotImplementedException(); //TODO: delegate FModifyIdentityAttributeValueDelegate ResultDelegate
-                Main.GetProcessEvent(obj, ModifyAttributeValueAsync_ptr, new IntPtr(p)); ;
-                 //TODO: array TArray UpdatedAttributeValueList
-                 //TODO: delegate FModifyIdentityAttributeValueDelegate ResultDelegate
-                return *((EMagicLeapIdentityError*)(b+36));
             }
         }
         internal struct RequestAttributeValue_method {

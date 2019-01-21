@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.SlateCore{
         ///<summary>Represents the appearance of an SEditableTextBox</summary>
-        [StructLayout( LayoutKind.Explicit, Size=2368 )]
+        [StructLayout( LayoutKind.Explicit, Size=2376 )]
         public unsafe struct EditableTextBoxStyle {
             ///<summary>Border background image when the box is not hovered or focused</summary>
             [FieldOffset(8)] SlateBrush BackgroundImageNormal;
@@ -33,22 +33,22 @@ namespace UE4.SlateCore{
             [FieldOffset(664)] SlateFontInfo Font;
 
             ///<summary>The foreground color of text.</summary>
-            [FieldOffset(768)] SlateColor ForegroundColor;
+            [FieldOffset(776)] SlateColor ForegroundColor;
 
             ///<summary>The background color applied to the active background image</summary>
-            [FieldOffset(808)] SlateColor BackgroundColor;
+            [FieldOffset(816)] SlateColor BackgroundColor;
 
             ///<summary>The read-only foreground color of text in read-only mode.</summary>
-            [FieldOffset(848)] SlateColor ReadOnlyForegroundColor;
+            [FieldOffset(856)] SlateColor ReadOnlyForegroundColor;
 
             ///<summary>Padding around the horizontal scrollbar</summary>
-            [FieldOffset(888)] Margin HScrollBarPadding;
+            [FieldOffset(896)] Margin HScrollBarPadding;
 
             ///<summary>Padding around the vertical scrollbar</summary>
-            [FieldOffset(904)] Margin VScrollBarPadding;
+            [FieldOffset(912)] Margin VScrollBarPadding;
 
             ///<summary>Style used for the scrollbars</summary>
-            [FieldOffset(920)] ScrollBarStyle ScrollBarStyle;
+            [FieldOffset(928)] ScrollBarStyle ScrollBarStyle;
 
         }
 }

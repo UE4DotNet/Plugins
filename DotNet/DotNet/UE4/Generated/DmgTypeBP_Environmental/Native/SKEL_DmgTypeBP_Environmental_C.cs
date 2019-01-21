@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.DmgTypeBP_Environmental.Native {
-    [StructLayout( LayoutKind.Explicit, Size=88 )]
+    [StructLayout( LayoutKind.Explicit, Size=96 )]
     internal unsafe struct SKEL_DmgTypeBP_Environmental_C_fields {
         [FieldOffset(80)] public PointerToUberGraphFrame UberGraphFrame;
     }

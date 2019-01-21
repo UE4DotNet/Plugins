@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=680 )]
+    [StructLayout( LayoutKind.Explicit, Size=656 )]
     internal unsafe struct AnimGraphNode_LegIK_fields {
         [FieldOffset(272)] public AnimNode_LegIK Node;
     }

@@ -40,7 +40,7 @@ namespace UE4.Engine {
         public void EnableHDRDisplayOutput(bool bEnable, int DisplayNits)  => 
             GameUserSettings_methods.EnableHDRDisplayOutput_method.Invoke(ObjPointer, bEnable, DisplayNits);
 
-        ///<summary>Returns the anti-aliasing quality (0..3, higher is better)</summary>
+        ///<summary>Returns the anti-aliasing quality (0..4, higher is better)</summary>
         public int GetAntiAliasingQuality()  => 
             GameUserSettings_methods.GetAntiAliasingQuality_method.Invoke(ObjPointer);
 
@@ -72,7 +72,7 @@ namespace UE4.Engine {
         public IntPoint GetDesktopResolution()  => 
             GameUserSettings_methods.GetDesktopResolution_method.Invoke(ObjPointer);
 
-        ///<summary>Returns the post-processing quality (0..3, higher is better)</summary>
+        ///<summary>Returns the foliage quality (0..4, higher is better)</summary>
         public int GetFoliageQuality()  => 
             GameUserSettings_methods.GetFoliageQuality_method.Invoke(ObjPointer);
 
@@ -100,7 +100,7 @@ namespace UE4.Engine {
         public int GetOverallScalabilityLevel()  => 
             GameUserSettings_methods.GetOverallScalabilityLevel_method.Invoke(ObjPointer);
 
-        ///<summary>Returns the post-processing quality (0..3, higher is better)</summary>
+        ///<summary>Returns the post-processing quality (0..4, higher is better)</summary>
         public int GetPostProcessingQuality()  => 
             GameUserSettings_methods.GetPostProcessingQuality_method.Invoke(ObjPointer);
 
@@ -124,19 +124,19 @@ namespace UE4.Engine {
         public IntPoint GetScreenResolution()  => 
             GameUserSettings_methods.GetScreenResolution_method.Invoke(ObjPointer);
 
-        ///<summary>Returns the shadow quality (0..3, higher is better)</summary>
+        ///<summary>Returns the shadow quality (0..4, higher is better)</summary>
         public int GetShadowQuality()  => 
             GameUserSettings_methods.GetShadowQuality_method.Invoke(ObjPointer);
 
-        ///<summary>Returns the texture quality (0..3, higher is better)</summary>
+        ///<summary>Returns the texture quality (0..4, higher is better)</summary>
         public int GetTextureQuality()  => 
             GameUserSettings_methods.GetTextureQuality_method.Invoke(ObjPointer);
 
-        ///<summary>Returns the view distance quality (0..3, higher is better)</summary>
+        ///<summary>Returns the view distance quality (0..4, higher is better)</summary>
         public int GetViewDistanceQuality()  => 
             GameUserSettings_methods.GetViewDistanceQuality_method.Invoke(ObjPointer);
 
-        ///<summary>Returns the visual effects quality (0..3, higher is better)</summary>
+        ///<summary>Returns the visual effects quality (0..4, higher is better)</summary>
         public int GetVisualEffectQuality()  => 
             GameUserSettings_methods.GetVisualEffectQuality_method.Invoke(ObjPointer);
 
@@ -192,7 +192,11 @@ namespace UE4.Engine {
         public void SaveSettings()  => 
             GameUserSettings_methods.SaveSettings_method.Invoke(ObjPointer);
 
-        ///<summary>Sets the anti-aliasing quality (0..3, higher is better)</summary>
+        ///<summary>Sets the anti-aliasing quality (0.</summary>
+        ///<remarks>
+        ///.4, higher is better)
+        ///@param Value 0:low, 1:medium, 2:high, 3:epic, 4:cinematic (gets clamped if needed)
+        ///</remarks>
         public void SetAntiAliasingQuality(int Value)  => 
             GameUserSettings_methods.SetAntiAliasingQuality_method.Invoke(ObjPointer, Value);
 
@@ -208,7 +212,11 @@ namespace UE4.Engine {
         public void SetDynamicResolutionEnabled(bool bEnable)  => 
             GameUserSettings_methods.SetDynamicResolutionEnabled_method.Invoke(ObjPointer, bEnable);
 
-        ///<summary>Sets the post-processing quality (0..3, higher is better)</summary>
+        ///<summary>Sets the foliage quality (0.</summary>
+        ///<remarks>
+        ///.4, higher is better)
+        ///@param Value 0:low, 1:medium, 2:high, 3:epic, 4:cinematic (gets clamped if needed)
+        ///</remarks>
         public void SetFoliageQuality(int Value)  => 
             GameUserSettings_methods.SetFoliageQuality_method.Invoke(ObjPointer, Value);
 
@@ -224,11 +232,15 @@ namespace UE4.Engine {
         ///Changes all scalability settings at once based on a single overall quality level
         ///@
         ///</summary>
-        ///<remarks>param Value 0:low, 1:medium, 2:high, 3:epic</remarks>
+        ///<remarks>param Value 0:low, 1:medium, 2:high, 3:epic, 4:cinematic</remarks>
         public void SetOverallScalabilityLevel(int Value)  => 
             GameUserSettings_methods.SetOverallScalabilityLevel_method.Invoke(ObjPointer, Value);
 
-        ///<summary>Sets the post-processing quality (0..3, higher is better)</summary>
+        ///<summary>Sets the post-processing quality (0.</summary>
+        ///<remarks>
+        ///.4, higher is better)
+        ///@param Value 0:low, 1:medium, 2:high, 3:epic, 4:cinematic (gets clamped if needed)
+        ///</remarks>
         public void SetPostProcessingQuality(int Value)  => 
             GameUserSettings_methods.SetPostProcessingQuality_method.Invoke(ObjPointer, Value);
 
@@ -248,11 +260,19 @@ namespace UE4.Engine {
         public void SetScreenResolution(IntPoint Resolution)  => 
             GameUserSettings_methods.SetScreenResolution_method.Invoke(ObjPointer, Resolution);
 
-        ///<summary>Sets the shadow quality (0..3, higher is better)</summary>
+        ///<summary>Sets the shadow quality (0.</summary>
+        ///<remarks>
+        ///.4, higher is better)
+        ///@param Value 0:low, 1:medium, 2:high, 3:epic, 4:cinematic (gets clamped if needed)
+        ///</remarks>
         public void SetShadowQuality(int Value)  => 
             GameUserSettings_methods.SetShadowQuality_method.Invoke(ObjPointer, Value);
 
-        ///<summary>Sets the texture quality (0..3, higher is better)</summary>
+        ///<summary>Sets the texture quality (0.</summary>
+        ///<remarks>
+        ///.4, higher is better)
+        ///@param Value 0:low, 1:medium, 2:high, 3:epic, 4:cinematic  (gets clamped if needed)
+        ///</remarks>
         public void SetTextureQuality(int Value)  => 
             GameUserSettings_methods.SetTextureQuality_method.Invoke(ObjPointer, Value);
 
@@ -260,11 +280,19 @@ namespace UE4.Engine {
         public void SetToDefaults()  => 
             GameUserSettings_methods.SetToDefaults_method.Invoke(ObjPointer);
 
-        ///<summary>Sets the view distance quality (0..3, higher is better)</summary>
+        ///<summary>Sets the view distance quality (0.</summary>
+        ///<remarks>
+        ///.4, higher is better)
+        ///@param Value 0:low, 1:medium, 2:high, 3:epic, 4:cinematic (gets clamped if needed)
+        ///</remarks>
         public void SetViewDistanceQuality(int Value)  => 
             GameUserSettings_methods.SetViewDistanceQuality_method.Invoke(ObjPointer, Value);
 
-        ///<summary>Sets the visual effects quality (0..3, higher is better)</summary>
+        ///<summary>Sets the visual effects quality (0.</summary>
+        ///<remarks>
+        ///.4, higher is better)
+        ///@param Value 0:low, 1:medium, 2:high, 3:epic, 4:cinematic (gets clamped if needed)
+        ///</remarks>
         public void SetVisualEffectQuality(int Value)  => 
             GameUserSettings_methods.SetVisualEffectQuality_method.Invoke(ObjPointer, Value);
 
@@ -326,6 +354,11 @@ namespace UE4.Engine {
         public unsafe int AudioQualityLevel {
             get {return GameUserSettings_ptr->AudioQualityLevel;}
             set {GameUserSettings_ptr->AudioQualityLevel = value;}
+        }
+        ///<summary>Last Confirmed Audio Quality Level</summary>
+        public unsafe int LastConfirmedAudioQualityLevel {
+            get {return GameUserSettings_ptr->LastConfirmedAudioQualityLevel;}
+            set {GameUserSettings_ptr->LastConfirmedAudioQualityLevel = value;}
         }
         ///<summary>Frame rate cap</summary>
         public unsafe float FrameRateLimit {

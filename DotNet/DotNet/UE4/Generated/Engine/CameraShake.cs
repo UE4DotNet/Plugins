@@ -137,6 +137,7 @@ namespace UE4.Engine {
         ///<summary>Overall intensity scale for this shake instance.</summary>
         public unsafe float ShakeScale {
             get {return CameraShake_ptr->ShakeScale;}
+            set {CameraShake_ptr->ShakeScale = value;}
         }
         ///<summary>Time remaining for oscillation shakes. Less than 0.f means shake infinitely.</summary>
         public unsafe float OscillatorTimeRemaining {

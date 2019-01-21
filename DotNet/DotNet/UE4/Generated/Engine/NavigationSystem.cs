@@ -15,6 +15,14 @@ using UE4.Engine.Native;
 namespace UE4.Engine {
     ///<summary>Navigation System</summary>
     public unsafe partial class NavigationSystem : UObject  {
+
+        ///<summary>Simple Move to Actor</summary>
+        public static void SimpleMoveToActor(Controller Controller, Actor Goal)  => 
+            NavigationSystem_methods.SimpleMoveToActor_method.Invoke(Controller, Goal);
+
+        ///<summary>Simple Move to Location</summary>
+        public static void SimpleMoveToLocation(Controller Controller, Vector Goal)  => 
+            NavigationSystem_methods.SimpleMoveToLocation_method.Invoke(Controller, Goal);
         static NavigationSystem() {
             StaticClass = Main.GetClass("NavigationSystem");
         }

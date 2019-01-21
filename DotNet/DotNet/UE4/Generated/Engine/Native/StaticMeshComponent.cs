@@ -11,42 +11,42 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1760 )]
+    [StructLayout( LayoutKind.Explicit, Size=1744 )]
     internal unsafe struct StaticMeshComponent_fields {
-        [FieldOffset(1560)] public int ForcedLodModel;
-        [FieldOffset(1564)] public int PreviousLODLevel;
-        [FieldOffset(1568)] public int MinLOD;
-        [FieldOffset(1572)] public int SubDivisionStepSize;
-        [FieldOffset(1576)]  public IntPtr  StaticMesh;
-        [FieldOffset(1584)] public Color WireframeColorOverride;
-        [FieldOffset(1588)] public int SelectedEditorSection;
-        [FieldOffset(1592)] public int SelectedEditorMaterial;
-        [FieldOffset(1596)] public int SectionIndexPreview;
-        [FieldOffset(1600)] public int MaterialIndexPreview;
-        [FieldOffset(1604)] public int StaticMeshImportVersion;
-        [FieldOffset(1608)] public bool bOverrideWireframeColor;
-        [FieldOffset(1608)] public bool bOverrideMinLOD;
-        [FieldOffset(1608)] public bool bOverrideNavigationExport;
-        [FieldOffset(1608)] public bool bForceNavigationObstacle;
-        [FieldOffset(1608)] public bool bDisallowMeshPaintPerInstance;
-        [FieldOffset(1608)] public bool bIgnoreInstanceForTextureStreaming;
-        [FieldOffset(1609)] public bool bOverrideLightMapRes;
-        [FieldOffset(1609)] public bool bCastDistanceFieldIndirectShadow;
-        [FieldOffset(1609)] public bool bOverrideDistanceFieldSelfShadowBias;
-        [FieldOffset(1609)] public bool bUseSubDivisions;
-        [FieldOffset(1609)] public bool bUseDefaultCollision;
-        [FieldOffset(1609)] public bool bCustomOverrideVertexColorPerLOD;
-        [FieldOffset(1609)] public bool bDisplayVertexColors;
-        [FieldOffset(1609)] public bool bReverseCulling;
-        [FieldOffset(1612)] public int OverriddenLightMapRes;
-        [FieldOffset(1616)] public float DistanceFieldIndirectShadowMinVisibility;
-        [FieldOffset(1620)] public float DistanceFieldSelfShadowBias;
-        [FieldOffset(1624)] public float StreamingDistanceMultiplier;
-        [FieldOffset(1648)] public NativeArray LODData;
-        [FieldOffset(1664)] public NativeArray StreamingTextureData;
-        [FieldOffset(1680)] byte StaticMeshDerivedDataKey; //TODO: string FString StaticMeshDerivedDataKey
-        [FieldOffset(1696)] public NativeArray MaterialStreamingRelativeBoxes;
-        [FieldOffset(1712)] public LightmassPrimitiveSettings LightmassSettings;
+        [FieldOffset(1544)] public int ForcedLodModel;
+        [FieldOffset(1548)] public int PreviousLODLevel;
+        [FieldOffset(1552)] public int MinLOD;
+        [FieldOffset(1556)] public int SubDivisionStepSize;
+        [FieldOffset(1560)]  public IntPtr  StaticMesh;
+        [FieldOffset(1568)] public Color WireframeColorOverride;
+        [FieldOffset(1572)] public int SelectedEditorSection;
+        [FieldOffset(1576)] public int SelectedEditorMaterial;
+        [FieldOffset(1580)] public int SectionIndexPreview;
+        [FieldOffset(1584)] public int MaterialIndexPreview;
+        [FieldOffset(1588)] public int StaticMeshImportVersion;
+        [FieldOffset(1592)] public bool bOverrideWireframeColor;
+        [FieldOffset(1592)] public bool bOverrideMinLOD;
+        [FieldOffset(1592)] public bool bOverrideNavigationExport;
+        [FieldOffset(1592)] public bool bForceNavigationObstacle;
+        [FieldOffset(1592)] public bool bDisallowMeshPaintPerInstance;
+        [FieldOffset(1592)] public bool bIgnoreInstanceForTextureStreaming;
+        [FieldOffset(1593)] public bool bOverrideLightMapRes;
+        [FieldOffset(1593)] public bool bCastDistanceFieldIndirectShadow;
+        [FieldOffset(1593)] public bool bOverrideDistanceFieldSelfShadowBias;
+        [FieldOffset(1593)] public bool bUseSubDivisions;
+        [FieldOffset(1593)] public bool bUseDefaultCollision;
+        [FieldOffset(1593)] public bool bCustomOverrideVertexColorPerLOD;
+        [FieldOffset(1593)] public bool bDisplayVertexColors;
+        [FieldOffset(1593)] public bool bReverseCulling;
+        [FieldOffset(1596)] public int OverriddenLightMapRes;
+        [FieldOffset(1600)] public float DistanceFieldIndirectShadowMinVisibility;
+        [FieldOffset(1604)] public float DistanceFieldSelfShadowBias;
+        [FieldOffset(1608)] public float StreamingDistanceMultiplier;
+        [FieldOffset(1632)] public NativeArray LODData;
+        [FieldOffset(1648)] public NativeArray StreamingTextureData;
+        [FieldOffset(1664)] byte StaticMeshDerivedDataKey; //TODO: string FString StaticMeshDerivedDataKey
+        [FieldOffset(1680)] public NativeArray MaterialStreamingRelativeBoxes;
+        [FieldOffset(1696)] public LightmassPrimitiveSettings LightmassSettings;
     }
     internal unsafe struct StaticMeshComponent_methods {
         internal struct GetLocalBounds_method {

@@ -11,13 +11,14 @@ using UE4.Native;
 
 #pragma warning disable CS0108
 using UE4.VREditor.Native;
+using UE4.UMG;
 using UE4.Engine;
 
 namespace UE4.VREditor {
     ///<summary>Represents an interactive floating UI panel in the VR Editor</summary>
     public unsafe partial class VREditorFloatingUI : VREditorBaseActor  {
         ///<summary>UMG user widget we're drawing, or nullptr if we're drawing a Slate widget</summary>
-        public unsafe VREditorBaseUserWidget UserWidget {
+        public unsafe UserWidget UserWidget {
             get {return VREditorFloatingUI_ptr->UserWidget;}
             set {VREditorFloatingUI_ptr->UserWidget = value;}
         }

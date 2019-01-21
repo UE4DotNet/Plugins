@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>A ViewTarget is the primary actor the camera is associated with.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=1424 )]
+        [StructLayout( LayoutKind.Explicit, Size=1392 )]
         public unsafe struct TViewTarget {
             [FieldOffset(0)] 
             private IntPtr  Target_field;
@@ -25,7 +25,7 @@ namespace UE4.Engine{
             ///<summary>Computed point of view</summary>
             [FieldOffset(16)] MinimalViewInfo POV;
 
-            [FieldOffset(1408)] 
+            [FieldOffset(1376)] 
             private IntPtr  PlayerState_field;
             ///<summary>PlayerState (used to follow same player through pawn transitions, etc., when spectating)</summary>
             public PlayerState PlayerState {

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.MovieScene.Native {
-    [StructLayout( LayoutKind.Explicit, Size=640 )]
+    [StructLayout( LayoutKind.Explicit, Size=720 )]
     internal unsafe struct UMovieScene_fields {
         [FieldOffset(112)] public MovieSceneTimecodeSource TimecodeSource;
         [FieldOffset(136)] public NativeArray Spawnables;
@@ -25,11 +25,12 @@ namespace UE4.MovieScene.Native {
         [FieldOffset(280)] public FrameRate DisplayRate;
         [FieldOffset(288)] byte EvaluationType; //TODO: enum EMovieSceneEvaluationType EvaluationType
         [FieldOffset(289)] byte ClockSource; //TODO: enum EUpdateClockSource ClockSource
-        [FieldOffset(290)] public bool bPlaybackRangeLocked;
+        [FieldOffset(290)] public bool bReadOnly;
+        [FieldOffset(291)] public bool bPlaybackRangeLocked;
         [FieldOffset(296)] byte ObjectsToDisplayNames; //TODO: map TMap ObjectsToDisplayNames
         [FieldOffset(376)] byte ObjectsToLabels; //TODO: map TMap ObjectsToLabels
         [FieldOffset(456)] public MovieSceneEditorData EditorData;
-        [FieldOffset(600)] public NativeArray RootFolders;
+        [FieldOffset(680)] public NativeArray RootFolders;
     }
     internal unsafe struct UMovieScene_methods {
     }

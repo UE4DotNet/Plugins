@@ -161,6 +161,11 @@ namespace UE4.VREditor {
             get {return VREditorAssetContainer_ptr->JointSphereMesh;}
             set {VREditorAssetContainer_ptr->JointSphereMesh = value;}
         }
+        ///<summary>Docking Button Mesh</summary>
+        public unsafe StaticMesh DockingButtonMesh {
+            get {return VREditorAssetContainer_ptr->DockingButtonMesh;}
+            set {VREditorAssetContainer_ptr->DockingButtonMesh = value;}
+        }
         ///<summary>Materials</summary>
         public unsafe MaterialInterface GridMaterial {
             get {return VREditorAssetContainer_ptr->GridMaterial;}

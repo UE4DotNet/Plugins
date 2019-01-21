@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>The latent action manager handles all pending latent actions for a single world</summary>
-        [StructLayout( LayoutKind.Explicit, Size=240 )]
+        [StructLayout( LayoutKind.Explicit, Size=160 )]
         public unsafe struct LatentActionManager {
         }
 }

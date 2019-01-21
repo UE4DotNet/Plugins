@@ -22,11 +22,6 @@ namespace UE4.Engine {
             set {AnimBlueprintGeneratedClass_ptr->TargetSkeleton = value;}
         }
          //TODO: array not UObject TArray AnimNotifies
-        ///<summary>The index of the root node in the animation tree</summary>
-        public unsafe int RootAnimNodeIndex {
-            get {return AnimBlueprintGeneratedClass_ptr->RootAnimNodeIndex;}
-            set {AnimBlueprintGeneratedClass_ptr->RootAnimNodeIndex = value;}
-        }
          //TODO: array not UObject TArray OrderedSavedPoseIndices
          //TODO: array not UObject TArray SyncGroupNames
         static AnimBlueprintGeneratedClass() {

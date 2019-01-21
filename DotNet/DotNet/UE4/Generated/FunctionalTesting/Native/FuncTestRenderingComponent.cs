@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.FunctionalTesting.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1520 )]
+    [StructLayout( LayoutKind.Explicit, Size=1504 )]
     internal unsafe struct FuncTestRenderingComponent_fields {
     }
     internal unsafe struct FuncTestRenderingComponent_methods {

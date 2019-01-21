@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=432 )]
+    [StructLayout( LayoutKind.Explicit, Size=400 )]
     internal unsafe struct ParticleSpriteEmitter_fields {
     }
     internal unsafe struct ParticleSpriteEmitter_methods {

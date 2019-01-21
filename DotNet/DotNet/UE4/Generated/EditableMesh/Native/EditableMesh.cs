@@ -13,12 +13,12 @@ using UE4.MeshDescription;
 using UE4.Engine;
 
 namespace UE4.EditableMesh.Native {
-    [StructLayout( LayoutKind.Explicit, Size=4224 )]
+    [StructLayout( LayoutKind.Explicit, Size=1584 )]
     internal unsafe struct EditableMesh_fields {
-        [FieldOffset(3464)] public NativeArray Adapters;
-        [FieldOffset(3480)] public int TextureCoordinateCount;
-        [FieldOffset(3732)] public int PendingCompactCounter;
-        [FieldOffset(3736)] public int SubdivisionCount;
+        [FieldOffset(824)] public NativeArray Adapters;
+        [FieldOffset(840)] public int TextureCoordinateCount;
+        [FieldOffset(1092)] public int PendingCompactCounter;
+        [FieldOffset(1096)] public int SubdivisionCount;
     }
     internal unsafe struct EditableMesh_methods {
         internal struct AnyChangesToUndo_method {
@@ -1772,6 +1772,22 @@ namespace UE4.EditableMesh.Native {
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(obj, RevertInstance_ptr, new IntPtr(p)); ;
                 return *((IntPtr*)(b+0));
+            }
+        }
+        internal struct SearchSpatialDatabaseForPolygonsInVolume_method {
+            static internal IntPtr SearchSpatialDatabaseForPolygonsInVolume_ptr;
+            static SearchSpatialDatabaseForPolygonsInVolume_method() {
+                SearchSpatialDatabaseForPolygonsInVolume_ptr = Main.GetMethodUFunction(EditableMesh.StaticClass, "SearchSpatialDatabaseForPolygonsInVolume");
+            }
+
+            internal static unsafe IReadOnlyCollection<PolygonID> Invoke(IntPtr obj, byte Planes /*TODO: array TArray */) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                throw new NotImplementedException(); //TODO: array TArray Planes
+                Main.GetProcessEvent(obj, SearchSpatialDatabaseForPolygonsInVolume_ptr, new IntPtr(p)); ;
+                 //TODO: array TArray Planes
+                 //TODO: array TArray OutPolygons
+                return UObject.ToUnmangedCollection<PolygonID>(b+16);
             }
         }
         internal struct SearchSpatialDatabaseForPolygonsPotentiallyIntersectingLineSegment_method {

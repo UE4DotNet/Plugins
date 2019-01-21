@@ -104,7 +104,30 @@ namespace UE4.PhysXVehicles {
             get {return Main.GetGetBoolPropertyByName(this, "bDeprecatedSpringOffsetMode"); }
             set {Main.SetGetBoolPropertyByName(this, "bDeprecatedSpringOffsetMode", value); }
         }
-         //TODO: array not UObject TArray WheelSetups
+        public bool bReverseAsBrake {
+            get {return Main.GetGetBoolPropertyByName(this, "bReverseAsBrake"); }
+            set {Main.SetGetBoolPropertyByName(this, "bReverseAsBrake", value); }
+        }
+        public bool bUseRVOAvoidance {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseRVOAvoidance"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseRVOAvoidance", value); }
+        }
+        public bool bRawHandbrakeInput {
+            get {return Main.GetGetBoolPropertyByName(this, "bRawHandbrakeInput"); }
+            set {Main.SetGetBoolPropertyByName(this, "bRawHandbrakeInput", value); }
+        }
+        public bool bRawGearUpInput {
+            get {return Main.GetGetBoolPropertyByName(this, "bRawGearUpInput"); }
+            set {Main.SetGetBoolPropertyByName(this, "bRawGearUpInput", value); }
+        }
+        public bool bRawGearDownInput {
+            get {return Main.GetGetBoolPropertyByName(this, "bRawGearDownInput"); }
+            set {Main.SetGetBoolPropertyByName(this, "bRawGearDownInput", value); }
+        }
+        public bool bWasAvoidanceUpdated {
+            get {return Main.GetGetBoolPropertyByName(this, "bWasAvoidanceUpdated"); }
+            set {Main.SetGetBoolPropertyByName(this, "bWasAvoidanceUpdated", value); }
+        }
         ///<summary>Mass to set the vehicle chassis to.</summary>
         ///<remarks>
         ///It's much easier to tweak vehicle settings when
@@ -114,6 +137,7 @@ namespace UE4.PhysXVehicles {
             get {return WheeledVehicleMovementComponent_ptr->Mass;}
             set {WheeledVehicleMovementComponent_ptr->Mass = value;}
         }
+         //TODO: array not UObject TArray WheelSetups
         ///<summary>DragCoefficient of the vehicle chassis.</summary>
         public unsafe float DragCoefficient {
             get {return WheeledVehicleMovementComponent_ptr->DragCoefficient;}
@@ -128,10 +152,6 @@ namespace UE4.PhysXVehicles {
         public unsafe float ChassisHeight {
             get {return WheeledVehicleMovementComponent_ptr->ChassisHeight;}
             set {WheeledVehicleMovementComponent_ptr->ChassisHeight = value;}
-        }
-        public bool bReverseAsBrake {
-            get {return Main.GetGetBoolPropertyByName(this, "bReverseAsBrake"); }
-            set {Main.SetGetBoolPropertyByName(this, "bReverseAsBrake", value); }
         }
         ///<summary>Drag area in cm^2</summary>
         public unsafe float DragArea {
@@ -207,10 +227,6 @@ namespace UE4.PhysXVehicles {
         } }
         private ObjectArrayField<VehicleWheel> Wheels_store;
 
-        public bool bUseRVOAvoidance {
-            get {return Main.GetGetBoolPropertyByName(this, "bUseRVOAvoidance"); }
-            set {Main.SetGetBoolPropertyByName(this, "bUseRVOAvoidance", value); }
-        }
         ///<summary>Vehicle Radius to use for RVO avoidance (usually half of vehicle width)</summary>
         public unsafe float RVOAvoidanceRadius {
             get {return WheeledVehicleMovementComponent_ptr->RVOAvoidanceRadius;}
@@ -281,18 +297,6 @@ namespace UE4.PhysXVehicles {
             get {return WheeledVehicleMovementComponent_ptr->RawBrakeInput;}
             set {WheeledVehicleMovementComponent_ptr->RawBrakeInput = value;}
         }
-        public bool bRawHandbrakeInput {
-            get {return Main.GetGetBoolPropertyByName(this, "bRawHandbrakeInput"); }
-            set {Main.SetGetBoolPropertyByName(this, "bRawHandbrakeInput", value); }
-        }
-        public bool bRawGearUpInput {
-            get {return Main.GetGetBoolPropertyByName(this, "bRawGearUpInput"); }
-            set {Main.SetGetBoolPropertyByName(this, "bRawGearUpInput", value); }
-        }
-        public bool bRawGearDownInput {
-            get {return Main.GetGetBoolPropertyByName(this, "bRawGearDownInput"); }
-            set {Main.SetGetBoolPropertyByName(this, "bRawGearDownInput", value); }
-        }
         ///<summary>Steering output to physics system. Range -1...1</summary>
         public unsafe float SteeringInput {
             get {return WheeledVehicleMovementComponent_ptr->SteeringInput;}
@@ -347,10 +351,6 @@ namespace UE4.PhysXVehicles {
         public unsafe VehicleInputRate SteeringInputRate {
             get {return WheeledVehicleMovementComponent_ptr->SteeringInputRate;}
             set {WheeledVehicleMovementComponent_ptr->SteeringInputRate = value;}
-        }
-        public bool bWasAvoidanceUpdated {
-            get {return Main.GetGetBoolPropertyByName(this, "bWasAvoidanceUpdated"); }
-            set {Main.SetGetBoolPropertyByName(this, "bWasAvoidanceUpdated", value); }
         }
         ///<summary>Override Controller</summary>
         public unsafe Controller OverrideController {

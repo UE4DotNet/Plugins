@@ -20,5 +20,7 @@ namespace UE4.Engine{
 
             [FieldOffset(8)] public byte InitialOffset;
 
+            [FieldOffset(9)] byte Waveform; //TODO: enum EOscillatorWaveform Waveform
+
         }
 }

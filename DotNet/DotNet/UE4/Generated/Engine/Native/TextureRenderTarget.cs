@@ -13,7 +13,7 @@ using UE4.Native;
 namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=528 )]
     internal unsafe struct TextureRenderTarget_fields {
-        [FieldOffset(520)] public float TargetGamma;
+        [FieldOffset(512)] public float TargetGamma;
     }
     internal unsafe struct TextureRenderTarget_methods {
     }

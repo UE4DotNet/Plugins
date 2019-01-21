@@ -16,6 +16,10 @@ namespace UE4.Engine {
     ///<summary>Data Table Function Library</summary>
     public unsafe partial class DataTableFunctionLibrary : BlueprintFunctionLibrary  {
 
+        ///<summary>Returns whether or not Table contains a row named RowName</summary>
+        public static bool DoesDataTableRowExist(DataTable Table, Name RowName)  => 
+            DataTableFunctionLibrary_methods.DoesDataTableRowExist_method.Invoke(Table, RowName);
+
         ///<summary>Evaluate Curve Table Row</summary>
         public static (byte, float) EvaluateCurveTableRow(CurveTable CurveTable, Name RowName, float InXY, string ContextString)  => 
             DataTableFunctionLibrary_methods.EvaluateCurveTableRow_method.Invoke(CurveTable, RowName, InXY, ContextString);

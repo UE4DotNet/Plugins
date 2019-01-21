@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=144 )]
+    [StructLayout( LayoutKind.Explicit, Size=152 )]
     internal unsafe struct MovieScene3DConstraintTrack_fields {
-        [FieldOffset(128)] public NativeArray ConstraintSections;
+        [FieldOffset(136)] public NativeArray ConstraintSections;
     }
     internal unsafe struct MovieScene3DConstraintTrack_methods {
     }

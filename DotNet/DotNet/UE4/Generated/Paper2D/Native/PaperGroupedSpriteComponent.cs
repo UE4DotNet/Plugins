@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.Paper2D.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1616 )]
+    [StructLayout( LayoutKind.Explicit, Size=1600 )]
     internal unsafe struct PaperGroupedSpriteComponent_fields {
-        [FieldOffset(1560)] public NativeArray InstanceMaterials;
-        [FieldOffset(1576)] public NativeArray PerInstanceSpriteData;
+        [FieldOffset(1544)] public NativeArray InstanceMaterials;
+        [FieldOffset(1560)] public NativeArray PerInstanceSpriteData;
     }
     internal unsafe struct PaperGroupedSpriteComponent_methods {
         internal struct AddInstance_method {

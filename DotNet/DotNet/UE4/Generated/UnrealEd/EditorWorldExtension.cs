@@ -11,18 +11,11 @@ using UE4.Native;
 
 #pragma warning disable CS0108
 using UE4.UnrealEd.Native;
-using UE4.Engine;
 
 namespace UE4.UnrealEd {
     ///<summary>Editor World Extension</summary>
     public unsafe partial class EditorWorldExtension : UObject  {
-        ///<summary>Extension Actors</summary>
-        public ObjectArrayField<Actor> ExtensionActors{ get {
-            if(ExtensionActors_store == null) ExtensionActors_store = new ObjectArrayField<Actor> (&EditorWorldExtension_ptr->ExtensionActors);
-            return ExtensionActors_store;
-        } }
-        private ObjectArrayField<Actor> ExtensionActors_store;
-
+         //TODO: array not UObject TArray ExtensionActors
         static EditorWorldExtension() {
             StaticClass = Main.GetClass("EditorWorldExtension");
         }

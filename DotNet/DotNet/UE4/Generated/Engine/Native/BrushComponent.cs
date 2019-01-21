@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1552 )]
+    [StructLayout( LayoutKind.Explicit, Size=1536 )]
     internal unsafe struct BrushComponent_fields {
-        [FieldOffset(1520)]  public IntPtr  Brush;
-        [FieldOffset(1528)]  public IntPtr  BrushBodySetup;
+        [FieldOffset(1504)]  public IntPtr  Brush;
+        [FieldOffset(1512)]  public IntPtr  BrushBodySetup;
     }
     internal unsafe struct BrushComponent_methods {
     }

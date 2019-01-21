@@ -16,6 +16,10 @@ using UE4.Engine;
 namespace UE4.Landscape {
     ///<summary>ULandscapeSplinesComponent</summary>
     public unsafe partial class LandscapeSplinesComponent : PrimitiveComponent  {
+
+        ///<summary>Get a list of spline mesh components representing this landscape spline (Editor only)</summary>
+        public IReadOnlyCollection<SplineMeshComponent> GetSplineMeshComponents()  => 
+            LandscapeSplinesComponent_methods.GetSplineMeshComponents_method.Invoke(ObjPointer);
         ///<summary>Resolution of the spline, in distance per point</summary>
         public unsafe float SplineResolution {
             get {return LandscapeSplinesComponent_ptr->SplineResolution;}

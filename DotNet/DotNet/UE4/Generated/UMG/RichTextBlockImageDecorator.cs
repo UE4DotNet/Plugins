@@ -21,6 +21,8 @@ namespace UE4.UMG {
     ///<remarks>
     ///We recommend you subclass this
     ///as a blueprint to configure the instance.
+    ///
+    ///Understands the format <img id="NameOfBrushInTable"></>
     ///</remarks>
     public unsafe partial class RichTextBlockImageDecorator : RichTextBlockDecorator  {
         ///<summary>Image Set</summary>

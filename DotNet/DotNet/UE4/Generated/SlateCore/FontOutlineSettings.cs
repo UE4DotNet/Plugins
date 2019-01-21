@@ -12,11 +12,9 @@ using UE4.Native;
 
 namespace UE4.SlateCore{
         ///<summary>Settings for applying an outline to a font</summary>
-        [StructLayout( LayoutKind.Explicit, Size=32 )]
+        [StructLayout( LayoutKind.Explicit, Size=40 )]
         public unsafe struct FontOutlineSettings {
             [FieldOffset(0)] public int OutlineSize;
-
-            [FieldOffset(4)] public bool bSeparateFillAlpha;
 
             [FieldOffset(8)] 
             private IntPtr  OutlineMaterial_field;
@@ -28,6 +26,10 @@ namespace UE4.SlateCore{
 
             ///<summary>The color of the outline for any character in this font</summary>
             [FieldOffset(16)] LinearColor OutlineColor;
+
+            [FieldOffset(32)] public bool bSeparateFillAlpha;
+
+            [FieldOffset(32)] public bool bApplyOutlineToDropShadows;
 
         }
 }

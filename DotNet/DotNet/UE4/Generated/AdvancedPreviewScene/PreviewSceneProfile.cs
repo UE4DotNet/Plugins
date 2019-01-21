@@ -13,7 +13,7 @@ using UE4.Engine;
 
 namespace UE4.AdvancedPreviewScene{
         ///<summary>Preview scene profile settings structure.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=1488 )]
+        [StructLayout( LayoutKind.Explicit, Size=1456 )]
         public unsafe struct PreviewSceneProfile {
             [FieldOffset(0)] byte ProfileName; //TODO: string FString ProfileName
 
@@ -44,14 +44,14 @@ namespace UE4.AdvancedPreviewScene{
             ///<summary>Manual set post processing settings</summary>
             [FieldOffset(144)] PostProcessSettings PostProcessingSettings;
 
-            [FieldOffset(1456)] public bool bPostProcessingEnabled;
+            [FieldOffset(1424)] public bool bPostProcessingEnabled;
 
-            [FieldOffset(1460)] public float LightingRigRotation;
+            [FieldOffset(1428)] public float LightingRigRotation;
 
-            [FieldOffset(1464)] public float RotationSpeed;
+            [FieldOffset(1432)] public float RotationSpeed;
 
             ///<summary>Rotation for directional light</summary>
-            [FieldOffset(1468)] Rotator DirectionalLightRotation;
+            [FieldOffset(1436)] Rotator DirectionalLightRotation;
 
         }
 }

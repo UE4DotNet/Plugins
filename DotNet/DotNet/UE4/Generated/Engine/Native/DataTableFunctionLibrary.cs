@@ -15,6 +15,21 @@ namespace UE4.Engine.Native {
     internal unsafe struct DataTableFunctionLibrary_fields {
     }
     internal unsafe struct DataTableFunctionLibrary_methods {
+        internal struct DoesDataTableRowExist_method {
+            static internal IntPtr DoesDataTableRowExist_ptr;
+            static DoesDataTableRowExist_method() {
+                DoesDataTableRowExist_ptr = Main.GetMethodUFunction(DataTableFunctionLibrary.StaticClass, "DoesDataTableRowExist");
+            }
+
+            internal static unsafe bool Invoke(DataTable Table, Name RowName) {
+                long* p = stackalloc long[] {0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = Table;
+                *((Name*)(b+8)) = RowName;
+                Main.GetProcessEvent(DataTableFunctionLibrary.DefaultObject, DoesDataTableRowExist_ptr, new IntPtr(p)); ;
+                return *((bool*)(b+20));
+            }
+        }
         internal struct EvaluateCurveTableRow_method {
             static internal IntPtr EvaluateCurveTableRow_ptr;
             static EvaluateCurveTableRow_method() {

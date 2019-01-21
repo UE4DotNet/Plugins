@@ -23,7 +23,7 @@ namespace UE4.MagicLeapIdentity {
         ///@param AvailableAttributes Output parameter populated with the list of attributes available for the user's Magic Leap profile.
         ///@return Error code when getting the list of available attributes.
         ///</remarks>
-        public (IReadOnlyCollection<EMagicLeapIdentityAttribute>, EMagicLeapIdentityError) GetAllAvailableAttributes()  => 
+        public (IReadOnlyCollection<EMagicLeapIdentityKey>, EMagicLeapIdentityError) GetAllAvailableAttributes()  => 
             MagicLeapIdentity_methods.GetAllAvailableAttributes_method.Invoke(ObjPointer);
 
         ///<summary>Asynchronous call to get the attributes available for the user's Magic Leap profile.</summary>
@@ -34,14 +34,6 @@ namespace UE4.MagicLeapIdentity {
         ///</remarks>
         public void GetAllAvailableAttributesAsync(byte ResultDelegate /*TODO: delegate FAvailableIdentityAttributesDelegate */)  => 
             MagicLeapIdentity_methods.GetAllAvailableAttributesAsync_method.Invoke(ObjPointer, ResultDelegate);
-
-        ///<summary>Modify Attribute Value</summary>
-        public (IReadOnlyCollection<EMagicLeapIdentityAttribute>, EMagicLeapIdentityError) ModifyAttributeValue(byte UpdatedAttributeValueList /*TODO: array TArray */)  => 
-            MagicLeapIdentity_methods.ModifyAttributeValue_method.Invoke(ObjPointer, UpdatedAttributeValueList);
-
-        ///<summary>Modify Attribute Value Async</summary>
-        public EMagicLeapIdentityError ModifyAttributeValueAsync(byte UpdatedAttributeValueList /*TODO: array TArray */, byte ResultDelegate /*TODO: delegate FModifyIdentityAttributeValueDelegate */)  => 
-            MagicLeapIdentity_methods.ModifyAttributeValueAsync_method.Invoke(ObjPointer, UpdatedAttributeValueList, ResultDelegate);
 
         ///<summary>Get the values for the attributes of the user's Magic Leap profile.</summary>
         ///<remarks>

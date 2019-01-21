@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=432 )]
+    [StructLayout( LayoutKind.Explicit, Size=448 )]
     internal unsafe struct WidgetSwitcher_fields {
-        [FieldOffset(408)] public int ActiveWidgetIndex;
+        [FieldOffset(424)] public int ActiveWidgetIndex;
     }
     internal unsafe struct WidgetSwitcher_methods {
         internal struct GetActiveWidget_method {

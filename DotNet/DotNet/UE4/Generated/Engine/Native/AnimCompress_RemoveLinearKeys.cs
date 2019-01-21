@@ -11,17 +11,20 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=120 )]
+    [StructLayout( LayoutKind.Explicit, Size=128 )]
     internal unsafe struct AnimCompress_RemoveLinearKeys_fields {
-        [FieldOffset(88)] public float MaxPosDiff;
-        [FieldOffset(92)] public float MaxAngleDiff;
-        [FieldOffset(96)] public float MaxScaleDiff;
-        [FieldOffset(100)] public float MaxEffectorDiff;
-        [FieldOffset(104)] public float MinEffectorDiff;
-        [FieldOffset(108)] public float EffectorDiffSocket;
-        [FieldOffset(112)] public float ParentKeyScale;
-        [FieldOffset(116)] public bool bRetarget;
-        [FieldOffset(116)] public bool bActuallyFilterLinearKeys;
+        [FieldOffset(96)] public float MaxPosDiff;
+        [FieldOffset(100)] public float MaxAngleDiff;
+        [FieldOffset(104)] public float MaxScaleDiff;
+        [FieldOffset(108)] public float MaxEffectorDiff;
+        [FieldOffset(112)] public float MinEffectorDiff;
+        [FieldOffset(116)] public float EffectorDiffSocket;
+        [FieldOffset(120)] public float ParentKeyScale;
+        [FieldOffset(124)] public bool bRetarget;
+        [FieldOffset(124)] public bool bActuallyFilterLinearKeys;
+        [FieldOffset(124)] public bool bOptimizeForForwardPlayback;
+        [FieldOffset(124)] public bool bUseDecompression;
+        [FieldOffset(124)] public bool bUseMultithreading;
     }
     internal unsafe struct AnimCompress_RemoveLinearKeys_methods {
     }

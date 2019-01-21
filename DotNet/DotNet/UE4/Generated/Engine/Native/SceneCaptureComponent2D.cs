@@ -11,22 +11,22 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2240 )]
+    [StructLayout( LayoutKind.Explicit, Size=2224 )]
     internal unsafe struct SceneCaptureComponent2D_fields {
-        [FieldOffset(784)] public byte ProjectionType;
-        [FieldOffset(788)] public float FOVAngle;
-        [FieldOffset(792)] public float OrthoWidth;
-        [FieldOffset(800)]  public IntPtr  TextureTarget;
-        [FieldOffset(808)] public byte CaptureSource;
-        [FieldOffset(809)] public byte CompositeMode;
-        [FieldOffset(816)] public PostProcessSettings PostProcessSettings;
-        [FieldOffset(2128)] public float PostProcessBlendWeight;
-        [FieldOffset(2132)] public bool bUseCustomProjectionMatrix;
-        [FieldOffset(2144)] public Matrix CustomProjectionMatrix;
-        [FieldOffset(2208)] public bool bEnableClipPlane;
-        [FieldOffset(2212)] public Vector ClipPlaneBase;
-        [FieldOffset(2224)] public Vector ClipPlaneNormal;
-        [FieldOffset(2236)] public bool bCameraCutThisFrame;
+        [FieldOffset(792)] public byte ProjectionType;
+        [FieldOffset(796)] public float FOVAngle;
+        [FieldOffset(800)] public float OrthoWidth;
+        [FieldOffset(808)]  public IntPtr  TextureTarget;
+        [FieldOffset(816)] public byte CaptureSource;
+        [FieldOffset(817)] public byte CompositeMode;
+        [FieldOffset(832)] public PostProcessSettings PostProcessSettings;
+        [FieldOffset(2112)] public float PostProcessBlendWeight;
+        [FieldOffset(2116)] public bool bUseCustomProjectionMatrix;
+        [FieldOffset(2128)] public Matrix CustomProjectionMatrix;
+        [FieldOffset(2192)] public bool bEnableClipPlane;
+        [FieldOffset(2196)] public Vector ClipPlaneBase;
+        [FieldOffset(2208)] public Vector ClipPlaneNormal;
+        [FieldOffset(2220)] public bool bCameraCutThisFrame;
     }
     internal unsafe struct SceneCaptureComponent2D_methods {
         internal struct AddOrUpdateBlendable_method {

@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=96 )]
+    [StructLayout( LayoutKind.Explicit, Size=88 )]
     internal unsafe struct EditorSkeletonNotifyObj_fields {
-        [FieldOffset(64)] public Name Name;
+        [FieldOffset(72)] public Name Name;
     }
     internal unsafe struct EditorSkeletonNotifyObj_methods {
     }

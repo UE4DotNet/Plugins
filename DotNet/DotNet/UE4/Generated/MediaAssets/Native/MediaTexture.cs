@@ -11,13 +11,13 @@ using UE4.Native;
 
 
 namespace UE4.MediaAssets.Native {
-    [StructLayout( LayoutKind.Explicit, Size=672 )]
+    [StructLayout( LayoutKind.Explicit, Size=656 )]
     internal unsafe struct MediaTexture_fields {
-        [FieldOffset(520)] public byte AddressX;
-        [FieldOffset(521)] public byte AddressY;
-        [FieldOffset(522)] public bool AutoClear;
-        [FieldOffset(524)] public LinearColor ClearColor;
-        [FieldOffset(544)]  public IntPtr  MediaPlayer;
+        [FieldOffset(512)] public byte AddressX;
+        [FieldOffset(513)] public byte AddressY;
+        [FieldOffset(514)] public bool AutoClear;
+        [FieldOffset(516)] public LinearColor ClearColor;
+        [FieldOffset(536)]  public IntPtr  MediaPlayer;
     }
     internal unsafe struct MediaTexture_methods {
         internal struct GetAspectRatio_method {

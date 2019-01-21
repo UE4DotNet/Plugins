@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.BlueprintGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=216 )]
+    [StructLayout( LayoutKind.Explicit, Size=224 )]
     internal unsafe struct K2Node_InputTouch_fields {
-        [FieldOffset(208)] public bool bConsumeInput;
-        [FieldOffset(208)] public bool bExecuteWhenPaused;
-        [FieldOffset(208)] public bool bOverrideParentBinding;
+        [FieldOffset(216)] public bool bConsumeInput;
+        [FieldOffset(216)] public bool bExecuteWhenPaused;
+        [FieldOffset(216)] public bool bOverrideParentBinding;
     }
     internal unsafe struct K2Node_InputTouch_methods {
     }

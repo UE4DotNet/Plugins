@@ -37,42 +37,14 @@ namespace UE4.Engine {
             get {return ParticleEmitter_ptr->EmitterRenderMode;}
             set {ParticleEmitter_ptr->EmitterRenderMode = value;}
         }
-        ///<summary>The color of the emitter in the curve editor and debug rendering modes.</summary>
-        public unsafe Color EmitterEditorColor {
-            get {return ParticleEmitter_ptr->EmitterEditorColor;}
-            set {ParticleEmitter_ptr->EmitterEditorColor = value;}
+         //TODO: enum EParticleSignificanceLevel SignificanceLevel
+        public bool bUseLegacySpawningBehavior {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseLegacySpawningBehavior"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseLegacySpawningBehavior", value); }
         }
-        ///<summary>'Private' data - not required by the editor</summary>
-        public ObjectArrayField<ParticleLODLevel> LODLevels{ get {
-            if(LODLevels_store == null) LODLevels_store = new ObjectArrayField<ParticleLODLevel> (&ParticleEmitter_ptr->LODLevels);
-            return LODLevels_store;
-        } }
-        private ObjectArrayField<ParticleLODLevel> LODLevels_store;
-
         public bool ConvertedModules {
             get {return Main.GetGetBoolPropertyByName(this, "ConvertedModules"); }
             set {Main.SetGetBoolPropertyByName(this, "ConvertedModules", value); }
-        }
-        ///<summary>Peak Active Particles</summary>
-        public unsafe int PeakActiveParticles {
-            get {return ParticleEmitter_ptr->PeakActiveParticles;}
-            set {ParticleEmitter_ptr->PeakActiveParticles = value;}
-        }
-        ///<summary>Initial allocation count - overrides calculated peak count if > 0</summary>
-        public unsafe int InitialAllocationCount {
-            get {return ParticleEmitter_ptr->InitialAllocationCount;}
-            set {ParticleEmitter_ptr->InitialAllocationCount = value;}
-        }
-        ///<summary>Quality Level Spawn Rate Scale</summary>
-        public unsafe float QualityLevelSpawnRateScale {
-            get {return ParticleEmitter_ptr->QualityLevelSpawnRateScale;}
-            set {ParticleEmitter_ptr->QualityLevelSpawnRateScale = value;}
-        }
-         //TODO: numeric uint32 DetailModeBitmask
-         //TODO: string FString DetailModeDisplay
-        public bool bCollapsed {
-            get {return Main.GetGetBoolPropertyByName(this, "bCollapsed"); }
-            set {Main.SetGetBoolPropertyByName(this, "bCollapsed", value); }
         }
         public bool bIsSoloing {
             get {return Main.GetGetBoolPropertyByName(this, "bIsSoloing"); }
@@ -90,11 +62,39 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bDisableWhenInsignficant"); }
             set {Main.SetGetBoolPropertyByName(this, "bDisableWhenInsignficant", value); }
         }
-         //TODO: enum EParticleSignificanceLevel SignificanceLevel
-        public bool bUseLegacySpawningBehavior {
-            get {return Main.GetGetBoolPropertyByName(this, "bUseLegacySpawningBehavior"); }
-            set {Main.SetGetBoolPropertyByName(this, "bUseLegacySpawningBehavior", value); }
+        public bool bCollapsed {
+            get {return Main.GetGetBoolPropertyByName(this, "bCollapsed"); }
+            set {Main.SetGetBoolPropertyByName(this, "bCollapsed", value); }
         }
+        ///<summary>The color of the emitter in the curve editor and debug rendering modes.</summary>
+        public unsafe Color EmitterEditorColor {
+            get {return ParticleEmitter_ptr->EmitterEditorColor;}
+            set {ParticleEmitter_ptr->EmitterEditorColor = value;}
+        }
+        ///<summary>'Private' data - not required by the editor</summary>
+        public ObjectArrayField<ParticleLODLevel> LODLevels{ get {
+            if(LODLevels_store == null) LODLevels_store = new ObjectArrayField<ParticleLODLevel> (&ParticleEmitter_ptr->LODLevels);
+            return LODLevels_store;
+        } }
+        private ObjectArrayField<ParticleLODLevel> LODLevels_store;
+
+        ///<summary>Peak Active Particles</summary>
+        public unsafe int PeakActiveParticles {
+            get {return ParticleEmitter_ptr->PeakActiveParticles;}
+            set {ParticleEmitter_ptr->PeakActiveParticles = value;}
+        }
+        ///<summary>Initial allocation count - overrides calculated peak count if > 0</summary>
+        public unsafe int InitialAllocationCount {
+            get {return ParticleEmitter_ptr->InitialAllocationCount;}
+            set {ParticleEmitter_ptr->InitialAllocationCount = value;}
+        }
+        ///<summary>Quality Level Spawn Rate Scale</summary>
+        public unsafe float QualityLevelSpawnRateScale {
+            get {return ParticleEmitter_ptr->QualityLevelSpawnRateScale;}
+            set {ParticleEmitter_ptr->QualityLevelSpawnRateScale = value;}
+        }
+         //TODO: numeric uint32 DetailModeBitmask
+         //TODO: string FString DetailModeDisplay
         static ParticleEmitter() {
             StaticClass = Main.GetClass("ParticleEmitter");
         }

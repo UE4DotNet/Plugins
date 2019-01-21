@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=568 )]
+    [StructLayout( LayoutKind.Explicit, Size=552 )]
     internal unsafe struct AnimGraphNode_TwoWayBlend_fields {
         [FieldOffset(272)] public AnimNode_TwoWayBlend BlendNode;
     }

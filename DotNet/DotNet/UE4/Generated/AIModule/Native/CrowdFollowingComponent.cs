@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.AIModule.Native {
-    [StructLayout( LayoutKind.Explicit, Size=808 )]
+    [StructLayout( LayoutKind.Explicit, Size=776 )]
     internal unsafe struct CrowdFollowingComponent_fields {
-        [FieldOffset(736)] public Vector CrowdAgentMoveDirection;
-        [FieldOffset(752)]  public IntPtr  CharacterMovement;
+        [FieldOffset(712)]  public IntPtr  CharacterMovement;
+        [FieldOffset(720)] public Vector CrowdAgentMoveDirection;
     }
     internal unsafe struct CrowdFollowingComponent_methods {
         internal struct SuspendCrowdSteering_method {

@@ -183,6 +183,11 @@ namespace UE4.NavigationSystem {
             get {return RecastNavMesh_ptr->PolyRefSaltBits;}
             set {RecastNavMesh_ptr->PolyRefSaltBits = value;}
         }
+        ///<summary>Use this if you don't want your tiles to start at (0,0,0)</summary>
+        public unsafe Vector NavMeshOriginOffset {
+            get {return RecastNavMesh_ptr->NavMeshOriginOffset;}
+            set {RecastNavMesh_ptr->NavMeshOriginOffset = value;}
+        }
         ///<summary>navmesh draw distance in game (always visible in editor)</summary>
         public unsafe float DefaultDrawDistance {
             get {return RecastNavMesh_ptr->DefaultDrawDistance;}

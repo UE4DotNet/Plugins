@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1776 )]
+    [StructLayout( LayoutKind.Explicit, Size=1016 )]
     internal unsafe struct CookOnTheFlyServer_fields {
     }
     internal unsafe struct CookOnTheFlyServer_methods {

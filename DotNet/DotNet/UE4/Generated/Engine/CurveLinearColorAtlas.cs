@@ -16,10 +16,6 @@ namespace UE4.Engine {
     ///<summary>Manages gradient LUT textures for registered actors and assigns them to the corresponding materials on the actor</summary>
     public unsafe partial class CurveLinearColorAtlas : Texture2D  {
 
-        ///<summary>Get Curve Index</summary>
-        public (int, bool) GetCurveIndex(CurveLinearColor InCurve)  => 
-            CurveLinearColorAtlas_methods.GetCurveIndex_method.Invoke(ObjPointer, InCurve);
-
         ///<summary>Get Curve Position</summary>
         public (float, bool) GetCurvePosition(CurveLinearColor InCurve)  => 
             CurveLinearColorAtlas_methods.GetCurvePosition_method.Invoke(ObjPointer, InCurve);

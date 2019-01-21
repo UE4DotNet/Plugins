@@ -44,6 +44,15 @@ namespace UE4.UnrealEd {
             get {return PhysicsAssetEditorOptions_ptr->GravScale;}
             set {PhysicsAssetEditorOptions_ptr->GravScale = value;}
         }
+        ///<summary>Gravity override used in the simulation</summary>
+        public unsafe float GravityOverrideZ {
+            get {return PhysicsAssetEditorOptions_ptr->GravityOverrideZ;}
+            set {PhysicsAssetEditorOptions_ptr->GravityOverrideZ = value;}
+        }
+        public bool bUseGravityOverride {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseGravityOverride"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseGravityOverride", value); }
+        }
         ///<summary>Max FPS for simulation in PhysicsAssetEditor. This is helpful for targeting the same FPS as your game. -1 means disabled</summary>
         public unsafe int MaxFPS {
             get {return PhysicsAssetEditorOptions_ptr->MaxFPS;}

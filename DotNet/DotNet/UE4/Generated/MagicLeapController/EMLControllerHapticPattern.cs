@@ -12,15 +12,16 @@ using UE4.Native;
 namespace UE4.MagicLeapController {
     ///<summary>Haptic patterns supported on the controller.</summary>
     public enum EMLControllerHapticPattern {
-        Click = 0x00000000, 
-        Bump = 0x00000001, 
-        DoubleClick = 0x00000002, 
-        Buzz = 0x00000003, 
-        Tick = 0x00000004, 
-        ForceDown = 0x00000005, 
-        ForceUp = 0x00000006, 
-        ForceDwell = 0x00000007, 
-        SecondForceDown = 0x00000008, 
-        EMLControllerHapticPattern_MAX = 0x00000009
+        None = 0x00000000, 
+        Click = 0x00000001, 
+        Bump = 0x00000002, 
+        DoubleClick = 0x00000003, 
+        Buzz = 0x00000004, 
+        Tick = 0x00000005, 
+        ForceDown = 0x00000006, 
+        ForceUp = 0x00000007, 
+        ForceDwell = 0x00000008, 
+        SecondForceDown = 0x00000009, 
+        EMLControllerHapticPattern_MAX = 0x0000000a
     }
 }

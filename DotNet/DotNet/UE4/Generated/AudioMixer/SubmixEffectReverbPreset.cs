@@ -22,8 +22,8 @@ namespace UE4.AudioMixer {
             SubmixEffectReverbPreset_methods.SetSettings_method.Invoke(ObjPointer, InSettings);
 
         ///<summary>Set Settings with Reverb Effect</summary>
-        public void SetSettingsWithReverbEffect(ReverbEffect InReverbEffect, float WetLevel)  => 
-            SubmixEffectReverbPreset_methods.SetSettingsWithReverbEffect_method.Invoke(ObjPointer, InReverbEffect, WetLevel);
+        public void SetSettingsWithReverbEffect(ReverbEffect InReverbEffect, float WetLevel, float DryLevel)  => 
+            SubmixEffectReverbPreset_methods.SetSettingsWithReverbEffect_method.Invoke(ObjPointer, InReverbEffect, WetLevel, DryLevel);
         ///<summary>Settings</summary>
         public unsafe SubmixEffectReverbSettings Settings {
             get {return SubmixEffectReverbPreset_ptr->Settings;}

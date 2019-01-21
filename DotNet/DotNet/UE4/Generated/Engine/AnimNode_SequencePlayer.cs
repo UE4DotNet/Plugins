@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Sequence player node</summary>
-        [StructLayout( LayoutKind.Explicit, Size=184 )]
+        [StructLayout( LayoutKind.Explicit, Size=168 )]
         public unsafe struct AnimNode_SequencePlayer {
             [FieldOffset(96)] 
             private IntPtr  Sequence_field;
@@ -32,7 +32,7 @@ namespace UE4.Engine{
             ///<remarks>Performed after PlayRateBasis.</remarks>
             [FieldOffset(116)] InputScaleBiasClamp PlayRateScaleBiasClamp;
 
-            [FieldOffset(176)] public float StartPosition;
+            [FieldOffset(164)] public float StartPosition;
 
         }
 }

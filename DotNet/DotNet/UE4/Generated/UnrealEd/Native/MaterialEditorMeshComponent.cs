@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1760 )]
+    [StructLayout( LayoutKind.Explicit, Size=1744 )]
     internal unsafe struct MaterialEditorMeshComponent_fields {
     }
     internal unsafe struct MaterialEditorMeshComponent_methods {

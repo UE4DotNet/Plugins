@@ -16,6 +16,7 @@ namespace UE4.CryptoKeys {
     ///<summary>Implements the settings for imported Paper2D assets, such as sprite sheet textures.</summary>
     public unsafe partial class CryptoKeysSettings : UObject  {
          //TODO: string FString EncryptionKey
+         //TODO: array not UObject TArray SecondaryEncryptionKeys
         public bool bEncryptPakIniFiles {
             get {return Main.GetGetBoolPropertyByName(this, "bEncryptPakIniFiles"); }
             set {Main.SetGetBoolPropertyByName(this, "bEncryptPakIniFiles", value); }

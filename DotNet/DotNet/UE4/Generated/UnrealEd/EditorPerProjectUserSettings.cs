@@ -58,6 +58,10 @@ namespace UE4.UnrealEd {
             get {return Main.GetGetBoolPropertyByName(this, "bShowCompilerLogOnCompileError"); }
             set {Main.SetGetBoolPropertyByName(this, "bShowCompilerLogOnCompileError", value); }
         }
+        public bool bKeepFbxNamespace {
+            get {return Main.GetGetBoolPropertyByName(this, "bKeepFbxNamespace"); }
+            set {Main.SetGetBoolPropertyByName(this, "bKeepFbxNamespace", value); }
+        }
         public bool bShowImportDialogAtReimport {
             get {return Main.GetGetBoolPropertyByName(this, "bShowImportDialogAtReimport"); }
             set {Main.SetGetBoolPropertyByName(this, "bShowImportDialogAtReimport", value); }
@@ -124,6 +128,15 @@ namespace UE4.UnrealEd {
         public unsafe int MaterialQualityLevel {
             get {return EditorPerProjectUserSettings_ptr->MaterialQualityLevel;}
             set {EditorPerProjectUserSettings_ptr->MaterialQualityLevel = value;}
+        }
+        ///<summary>The name of the shader platform that will be used in the editor</summary>
+        public unsafe Name PreviewShaderPlatformName {
+            get {return EditorPerProjectUserSettings_ptr->PreviewShaderPlatformName;}
+            set {EditorPerProjectUserSettings_ptr->PreviewShaderPlatformName = value;}
+        }
+        public bool bIsMaterialQualityOverridePlatform {
+            get {return Main.GetGetBoolPropertyByName(this, "bIsMaterialQualityOverridePlatform"); }
+            set {Main.SetGetBoolPropertyByName(this, "bIsMaterialQualityOverridePlatform", value); }
         }
         static EditorPerProjectUserSettings() {
             StaticClass = Main.GetClass("EditorPerProjectUserSettings");

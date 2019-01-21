@@ -16,15 +16,12 @@ using UE4.Engine;
 namespace UE4.UMGEditor {
     ///<summary>Implements the settings for the UMG Editor Project Settings</summary>
     public unsafe partial class UMGEditorProjectSettings : DeveloperSettings  {
-        public bool bCookSlowConstructionWidgetTree {
-            get {return Main.GetGetBoolPropertyByName(this, "bCookSlowConstructionWidgetTree"); }
-            set {Main.SetGetBoolPropertyByName(this, "bCookSlowConstructionWidgetTree", value); }
+        ///<summary>Default Compiler Options</summary>
+        public unsafe WidgetCompilerOptions DefaultCompilerOptions {
+            get {return UMGEditorProjectSettings_ptr->DefaultCompilerOptions;}
+            set {UMGEditorProjectSettings_ptr->DefaultCompilerOptions = value;}
         }
-        public bool bWidgetSupportsDynamicCreation {
-            get {return Main.GetGetBoolPropertyByName(this, "bWidgetSupportsDynamicCreation"); }
-            set {Main.SetGetBoolPropertyByName(this, "bWidgetSupportsDynamicCreation", value); }
-        }
-         //TODO: array not UObject TArray DebugResolutions
+         //TODO: array not UObject TArray DirectoryCompilerOptions
         public bool bShowWidgetsFromEngineContent {
             get {return Main.GetGetBoolPropertyByName(this, "bShowWidgetsFromEngineContent"); }
             set {Main.SetGetBoolPropertyByName(this, "bShowWidgetsFromEngineContent", value); }
@@ -35,6 +32,12 @@ namespace UE4.UMGEditor {
         }
          //TODO: array not UObject TArray CategoriesToHide
          //TODO: array not UObject TArray WidgetClassesToHide
+         //TODO: array not UObject TArray DebugResolutions
+        ///<summary>Version</summary>
+        public unsafe int Version {
+            get {return UMGEditorProjectSettings_ptr->Version;}
+            set {UMGEditorProjectSettings_ptr->Version = value;}
+        }
         static UMGEditorProjectSettings() {
             StaticClass = Main.GetClass("UMGEditorProjectSettings");
         }

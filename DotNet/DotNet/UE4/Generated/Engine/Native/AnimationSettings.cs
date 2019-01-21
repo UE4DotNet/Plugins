@@ -25,13 +25,11 @@ namespace UE4.Engine.Native {
         [FieldOffset(126)] public bool bForceBelowThreshold;
         [FieldOffset(127)] public bool bFirstRecompressUsingCurrentOrDefault;
         [FieldOffset(128)] public bool bRaiseMaxErrorToExisting;
-        [FieldOffset(129)] public bool bTryFixedBitwiseCompression;
-        [FieldOffset(130)] public bool bTryPerTrackBitwiseCompression;
-        [FieldOffset(131)] public bool bTryLinearKeyRemovalCompression;
-        [FieldOffset(132)] public bool bTryIntervalKeyRemoval;
-        [FieldOffset(133)] public bool bEnablePerformanceLog;
-        [FieldOffset(134)] public bool bStripAnimationDataOnDedicatedServer;
-        [FieldOffset(135)] public bool bTickAnimationOnSkeletalMeshInit;
+        [FieldOffset(129)] public bool bTryExhaustiveSearch;
+        [FieldOffset(130)] public bool bEnableSegmenting;
+        [FieldOffset(131)] public bool bEnablePerformanceLog;
+        [FieldOffset(132)] public bool bStripAnimationDataOnDedicatedServer;
+        [FieldOffset(133)] public bool bTickAnimationOnSkeletalMeshInit;
     }
     internal unsafe struct AnimationSettings_methods {
     }

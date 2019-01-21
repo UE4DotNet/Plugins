@@ -23,6 +23,7 @@ namespace UE4.Engine.Native {
         [FieldOffset(186)] public bool bEditableWhenInherited;
         [FieldOffset(186)] public bool bCanEverAffectNavigation;
         [FieldOffset(187)] public bool bIsEditorOnly;
+        [FieldOffset(187)] public bool bIsVisualizationComponent;
         [FieldOffset(189)] byte CreationMethod; //TODO: enum EComponentCreationMethod CreationMethod
         [FieldOffset(192)] public NativeArray UCSModifiedProperties;
         [FieldOffset(208)] byte OnComponentActivated; //TODO: multicast delegate FActorComponentActivatedSignature OnComponentActivated

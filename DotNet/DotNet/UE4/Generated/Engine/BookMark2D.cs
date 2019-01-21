@@ -14,7 +14,7 @@ using UE4.Engine.Native;
 
 namespace UE4.Engine {
     ///<summary>Simple class to store 2D camera information.</summary>
-    public unsafe partial class BookMark2D : UObject  {
+    public unsafe partial class BookMark2D : BookmarkBase  {
         ///<summary>Zoom of the camera</summary>
         public unsafe float Zoom2D {
             get {return BookMark2D_ptr->Zoom2D;}

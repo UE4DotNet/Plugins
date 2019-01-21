@@ -16,21 +16,6 @@ namespace UE4.MagicLeapController.Native {
     internal unsafe struct MagicLeapControllerFunctionLibrary_fields {
     }
     internal unsafe struct MagicLeapControllerFunctionLibrary_methods {
-        internal struct CalibrateControllerNow_method {
-            static internal IntPtr CalibrateControllerNow_ptr;
-            static CalibrateControllerNow_method() {
-                CalibrateControllerNow_ptr = Main.GetMethodUFunction(MagicLeapControllerFunctionLibrary.StaticClass, "CalibrateControllerNow");
-            }
-
-            internal static unsafe void Invoke(EControllerHand Hand, Vector StartPosition, Rotator StartOrientation) {
-                long* p = stackalloc long[] {0L,0L,0L,0L,0L};
-                byte* b = (byte*) p;
-                *(b+0) = (byte)Hand;
-                *((Vector*)(b+4)) = StartPosition;
-                *((Rotator*)(b+16)) = StartOrientation;
-                Main.GetProcessEvent(MagicLeapControllerFunctionLibrary.DefaultObject, CalibrateControllerNow_ptr, new IntPtr(p)); ;
-            }
-        }
         internal struct GetControllerMapping_method {
             static internal IntPtr GetControllerMapping_ptr;
             static GetControllerMapping_method() {
@@ -43,6 +28,19 @@ namespace UE4.MagicLeapController.Native {
                 *((int*)(b+0)) = ControllerIndex;
                 Main.GetProcessEvent(MagicLeapControllerFunctionLibrary.DefaultObject, GetControllerMapping_ptr, new IntPtr(p)); ;
                 return (*((EControllerHand*)(b+4)),*((bool*)(b+5)));
+            }
+        }
+        internal struct GetControllerTrackingMode_method {
+            static internal IntPtr GetControllerTrackingMode_ptr;
+            static GetControllerTrackingMode_method() {
+                GetControllerTrackingMode_ptr = Main.GetMethodUFunction(MagicLeapControllerFunctionLibrary.StaticClass, "GetControllerTrackingMode");
+            }
+
+            internal static unsafe EMLControllerTrackingMode Invoke() {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(MagicLeapControllerFunctionLibrary.DefaultObject, GetControllerTrackingMode_ptr, new IntPtr(p)); ;
+                return *((EMLControllerTrackingMode*)(b+0));
             }
         }
         internal struct GetMLControllerType_method {
@@ -134,6 +132,20 @@ namespace UE4.MagicLeapController.Native {
                 *((float*)(b+8)) = DurationInSec;
                 Main.GetProcessEvent(MagicLeapControllerFunctionLibrary.DefaultObject, PlayControllerLEDEffect_ptr, new IntPtr(p)); ;
                 return *((bool*)(b+12));
+            }
+        }
+        internal struct SetControllerTrackingMode_method {
+            static internal IntPtr SetControllerTrackingMode_ptr;
+            static SetControllerTrackingMode_method() {
+                SetControllerTrackingMode_ptr = Main.GetMethodUFunction(MagicLeapControllerFunctionLibrary.StaticClass, "SetControllerTrackingMode");
+            }
+
+            internal static unsafe bool Invoke(EMLControllerTrackingMode TrackingMode) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                *(b+0) = (byte)TrackingMode;
+                Main.GetProcessEvent(MagicLeapControllerFunctionLibrary.DefaultObject, SetControllerTrackingMode_ptr, new IntPtr(p)); ;
+                return *((bool*)(b+1));
             }
         }
     }

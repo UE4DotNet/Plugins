@@ -136,9 +136,6 @@ namespace UE4.UMG {
         public bool bWrapWithInvalidationPanel {
             get {return Main.GetGetBoolPropertyByName(this, "bWrapWithInvalidationPanel"); }
         }
-        public bool bAutoWrapText {
-            get {return Main.GetGetBoolPropertyByName(this, "bAutoWrapText"); }
-        }
         static TextBlock() {
             StaticClass = Main.GetClass("TextBlock");
         }

@@ -17,6 +17,11 @@ using UE4.ViewportInteraction;
 namespace UE4.VREditor {
     ///<summary>An interactive floating UI panel that can be dragged around</summary>
     public unsafe partial class VREditorDockableWindow : VREditorFloatingUI  {
+        ///<summary>Mesh underneath the window for docking it to the world</summary>
+        public unsafe StaticMeshComponent DockButtonMeshComponent {
+            get {return VREditorDockableWindow_ptr->DockButtonMeshComponent;}
+            set {VREditorDockableWindow_ptr->DockButtonMeshComponent = value;}
+        }
         ///<summary>Mesh underneath the window for easy selecting and dragging</summary>
         public unsafe StaticMeshComponent SelectionBarMeshComponent {
             get {return VREditorDockableWindow_ptr->SelectionBarMeshComponent;}
@@ -26,6 +31,11 @@ namespace UE4.VREditor {
         public unsafe StaticMeshComponent CloseButtonMeshComponent {
             get {return VREditorDockableWindow_ptr->CloseButtonMeshComponent;}
             set {VREditorDockableWindow_ptr->CloseButtonMeshComponent = value;}
+        }
+        ///<summary>Dock Button dynamic material  (opaque)</summary>
+        public unsafe MaterialInstanceDynamic DockButtonMID {
+            get {return VREditorDockableWindow_ptr->DockButtonMID;}
+            set {VREditorDockableWindow_ptr->DockButtonMID = value;}
         }
         ///<summary>Selection bar dynamic material  (opaque)</summary>
         public unsafe MaterialInstanceDynamic SelectionBarMID {

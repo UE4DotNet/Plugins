@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.Landscape.Native {
-    [StructLayout( LayoutKind.Explicit, Size=688 )]
+    [StructLayout( LayoutKind.Explicit, Size=672 )]
     internal unsafe struct LandscapeSplineSegment_fields {
         [FieldOffset(56)] public LandscapeSplineSegmentConnection Connections;
         [FieldOffset(104)] public Name LayerName;
@@ -24,16 +24,17 @@ namespace UE4.Landscape.Native {
         [FieldOffset(156)] public int RandomSeed;
         [FieldOffset(160)] public float LDMaxDrawDistance;
         [FieldOffset(164)] public int TranslucencySortPriority;
+        [FieldOffset(168)] public bool bHiddenInGame;
         [FieldOffset(168)] public bool bPlaceSplineMeshesInStreamingLevels;
         [FieldOffset(176)] public BodyInstance BodyInstance;
-        [FieldOffset(560)] public bool bSelected;
-        [FieldOffset(560)] public bool bNavDirty;
-        [FieldOffset(568)] public InterpCurveVector SplineInfo;
-        [FieldOffset(592)] public NativeArray Points;
-        [FieldOffset(608)] public Box Bounds;
-        [FieldOffset(640)] public NativeArray LocalMeshComponents;
-        [FieldOffset(656)] public NativeArray ForeignWorlds;
-        [FieldOffset(672)] public FGuid ModificationKey;
+        [FieldOffset(544)] public bool bSelected;
+        [FieldOffset(544)] public bool bNavDirty;
+        [FieldOffset(552)] public InterpCurveVector SplineInfo;
+        [FieldOffset(576)] public NativeArray Points;
+        [FieldOffset(592)] public Box Bounds;
+        [FieldOffset(624)] public NativeArray LocalMeshComponents;
+        [FieldOffset(640)] public NativeArray ForeignWorlds;
+        [FieldOffset(656)] public FGuid ModificationKey;
     }
     internal unsafe struct LandscapeSplineSegment_methods {
     }

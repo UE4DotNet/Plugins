@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.HTML5Networking.Native {
-    [StructLayout( LayoutKind.Explicit, Size=6472 )]
+    [StructLayout( LayoutKind.Explicit, Size=6512 )]
     internal unsafe struct WebSocketConnection_fields {
     }
     internal unsafe struct WebSocketConnection_methods {

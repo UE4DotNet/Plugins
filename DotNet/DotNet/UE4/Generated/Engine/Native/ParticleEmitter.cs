@@ -11,26 +11,26 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=432 )]
+    [StructLayout( LayoutKind.Explicit, Size=400 )]
     internal unsafe struct ParticleEmitter_fields {
         [FieldOffset(56)] public Name EmitterName;
         [FieldOffset(68)] public int SubUVDataOffset;
         [FieldOffset(72)] public byte EmitterRenderMode;
-        [FieldOffset(76)] public Color EmitterEditorColor;
-        [FieldOffset(80)] public NativeArray LODLevels;
-        [FieldOffset(96)] public bool ConvertedModules;
-        [FieldOffset(100)] public int PeakActiveParticles;
-        [FieldOffset(104)] public int InitialAllocationCount;
+        [FieldOffset(73)] byte SignificanceLevel; //TODO: enum EParticleSignificanceLevel SignificanceLevel
+        [FieldOffset(75)] public bool bUseLegacySpawningBehavior;
+        [FieldOffset(75)] public bool ConvertedModules;
+        [FieldOffset(75)] public bool bIsSoloing;
+        [FieldOffset(75)] public bool bCookedOut;
+        [FieldOffset(75)] public bool bDisabledLODsKeepEmitterAlive;
+        [FieldOffset(76)] public bool bDisableWhenInsignficant;
+        [FieldOffset(76)] public bool bCollapsed;
+        [FieldOffset(80)] public Color EmitterEditorColor;
+        [FieldOffset(88)] public NativeArray LODLevels;
+        [FieldOffset(104)] public int PeakActiveParticles;
+        [FieldOffset(108)] public int InitialAllocationCount;
         [FieldOffset(112)] public float QualityLevelSpawnRateScale;
-        [FieldOffset(120)] byte DetailModeBitmask; //TODO: numeric uint32 DetailModeBitmask
-        [FieldOffset(128)] byte DetailModeDisplay; //TODO: string FString DetailModeDisplay
-        [FieldOffset(144)] public bool bCollapsed;
-        [FieldOffset(144)] public bool bIsSoloing;
-        [FieldOffset(144)] public bool bCookedOut;
-        [FieldOffset(144)] public bool bDisabledLODsKeepEmitterAlive;
-        [FieldOffset(144)] public bool bDisableWhenInsignficant;
-        [FieldOffset(148)] byte SignificanceLevel; //TODO: enum EParticleSignificanceLevel SignificanceLevel
-        [FieldOffset(152)] public bool bUseLegacySpawningBehavior;
+        [FieldOffset(116)] byte DetailModeBitmask; //TODO: numeric uint32 DetailModeBitmask
+        [FieldOffset(120)] byte DetailModeDisplay; //TODO: string FString DetailModeDisplay
     }
     internal unsafe struct ParticleEmitter_methods {
     }

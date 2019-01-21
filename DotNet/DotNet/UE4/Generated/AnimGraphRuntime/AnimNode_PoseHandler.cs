@@ -17,7 +17,7 @@ namespace UE4.AnimGraphRuntime{
         ///Typically the playback position of the animation for this node will represent something other than time, like jump height.
         ///This node will not trigger any notifies present in the associated sequence.
         ///</remarks>
-        [StructLayout( LayoutKind.Explicit, Size=168 )]
+        [StructLayout( LayoutKind.Explicit, Size=152 )]
         public unsafe struct AnimNode_PoseHandler {
             [FieldOffset(96)] 
             private IntPtr  PoseAsset_field;

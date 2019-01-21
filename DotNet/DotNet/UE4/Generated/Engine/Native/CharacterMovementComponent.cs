@@ -11,155 +11,155 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1952 )]
+    [StructLayout( LayoutKind.Explicit, Size=1888 )]
     internal unsafe struct CharacterMovementComponent_fields {
-        [FieldOffset(432)]  public IntPtr  CharacterOwner;
-        [FieldOffset(440)] public bool bApplyGravityWhileJumping;
-        [FieldOffset(444)] public float GravityScale;
-        [FieldOffset(448)] public float MaxStepHeight;
-        [FieldOffset(452)] public float JumpZVelocity;
-        [FieldOffset(456)] public float JumpOffJumpZFactor;
-        [FieldOffset(460)] public float WalkableFloorAngle;
-        [FieldOffset(464)] public float WalkableFloorZ;
-        [FieldOffset(468)] public byte MovementMode;
-        [FieldOffset(469)] public byte CustomMovementMode;
-        [FieldOffset(512)] public float GroundFriction;
-        [FieldOffset(516)] public float MaxWalkSpeed;
-        [FieldOffset(520)] public float MaxWalkSpeedCrouched;
-        [FieldOffset(524)] public float MaxSwimSpeed;
-        [FieldOffset(528)] public float MaxFlySpeed;
-        [FieldOffset(532)] public float MaxCustomMovementSpeed;
-        [FieldOffset(536)] public float MaxAcceleration;
-        [FieldOffset(540)] public float MinAnalogWalkSpeed;
-        [FieldOffset(544)] public float BrakingFrictionFactor;
-        [FieldOffset(548)] public float BrakingFriction;
-        [FieldOffset(552)] public bool bUseSeparateBrakingFriction;
-        [FieldOffset(556)] public float BrakingDecelerationWalking;
-        [FieldOffset(560)] public float BrakingDecelerationFalling;
-        [FieldOffset(564)] public float BrakingDecelerationSwimming;
-        [FieldOffset(568)] public float BrakingDecelerationFlying;
-        [FieldOffset(572)] public float AirControl;
-        [FieldOffset(576)] public float AirControlBoostMultiplier;
-        [FieldOffset(580)] public float AirControlBoostVelocityThreshold;
-        [FieldOffset(584)] public float FallingLateralFriction;
-        [FieldOffset(588)] public float CrouchedHalfHeight;
-        [FieldOffset(592)] public float Buoyancy;
-        [FieldOffset(596)] public float PerchRadiusThreshold;
-        [FieldOffset(600)] public float PerchAdditionalHeight;
-        [FieldOffset(604)] public Rotator RotationRate;
-        [FieldOffset(616)] public bool bUseControllerDesiredRotation;
-        [FieldOffset(616)] public bool bOrientRotationToMovement;
-        [FieldOffset(616)] public bool bSweepWhileNavWalking;
-        [FieldOffset(616)] public bool bMovementInProgress;
-        [FieldOffset(616)] public bool bEnableScopedMovementUpdates;
-        [FieldOffset(616)] public bool bForceMaxAccel;
-        [FieldOffset(616)] public bool bRunPhysicsWithNoController;
-        [FieldOffset(617)] public bool bForceNextFloorCheck;
-        [FieldOffset(617)] public bool bShrinkProxyCapsule;
-        [FieldOffset(617)] public bool bCanWalkOffLedges;
-        [FieldOffset(617)] public bool bCanWalkOffLedgesWhenCrouching;
-        [FieldOffset(617)] public bool bNetworkSkipProxyPredictionOnNetUpdate;
-        [FieldOffset(617)] public bool bNetworkAlwaysReplicateTransformUpdateTimestamp;
-        [FieldOffset(618)] public bool bDeferUpdateMoveComponent;
-        [FieldOffset(624)]  public IntPtr  DeferredUpdatedMoveComponent;
-        [FieldOffset(632)] public float MaxOutOfWaterStepHeight;
-        [FieldOffset(636)] public float OutofWaterZ;
-        [FieldOffset(640)] public float Mass;
-        [FieldOffset(644)] public bool bEnablePhysicsInteraction;
-        [FieldOffset(645)] public bool bTouchForceScaledToMass;
-        [FieldOffset(646)] public bool bPushForceScaledToMass;
-        [FieldOffset(647)] public bool bPushForceUsingZOffset;
-        [FieldOffset(648)] public bool bScalePushForceToVelocity;
-        [FieldOffset(652)] public float StandingDownwardForceScale;
-        [FieldOffset(656)] public float InitialPushForceFactor;
-        [FieldOffset(660)] public float PushForceFactor;
-        [FieldOffset(664)] public float PushForcePointZOffsetFactor;
-        [FieldOffset(668)] public float TouchForceFactor;
-        [FieldOffset(672)] public float MinTouchForce;
-        [FieldOffset(676)] public float MaxTouchForce;
-        [FieldOffset(680)] public float RepulsionForce;
-        [FieldOffset(696)] public Vector Acceleration;
-        [FieldOffset(708)] public Vector LastUpdateLocation;
-        [FieldOffset(720)] public Quat LastUpdateRotation;
-        [FieldOffset(736)] public Vector LastUpdateVelocity;
-        [FieldOffset(748)] public float ServerLastTransformUpdateTimeStamp;
-        [FieldOffset(752)] public float ServerLastClientGoodMoveAckTime;
-        [FieldOffset(756)] public float ServerLastClientAdjustmentTime;
-        [FieldOffset(760)] public Vector PendingImpulseToApply;
-        [FieldOffset(772)] public Vector PendingForceToApply;
-        [FieldOffset(784)] public float AnalogInputModifier;
-        [FieldOffset(796)] public float MaxSimulationTimeStep;
-        [FieldOffset(800)] public int MaxSimulationIterations;
-        [FieldOffset(804)] public float MaxDepenetrationWithGeometry;
-        [FieldOffset(808)] public float MaxDepenetrationWithGeometryAsProxy;
-        [FieldOffset(812)] public float MaxDepenetrationWithPawn;
-        [FieldOffset(816)] public float MaxDepenetrationWithPawnAsProxy;
-        [FieldOffset(820)] public float NetworkSimulatedSmoothLocationTime;
-        [FieldOffset(824)] public float NetworkSimulatedSmoothRotationTime;
-        [FieldOffset(828)] public float ListenServerNetworkSimulatedSmoothLocationTime;
-        [FieldOffset(832)] public float ListenServerNetworkSimulatedSmoothRotationTime;
-        [FieldOffset(836)] public float NetProxyShrinkRadius;
-        [FieldOffset(840)] public float NetProxyShrinkHalfHeight;
-        [FieldOffset(844)] public float NetworkMaxSmoothUpdateDistance;
-        [FieldOffset(848)] public float NetworkNoSmoothUpdateDistance;
-        [FieldOffset(852)] byte NetworkSmoothingMode; //TODO: enum ENetworkSmoothingMode NetworkSmoothingMode
-        [FieldOffset(856)] public float NetworkMinTimeBetweenClientAckGoodMoves;
-        [FieldOffset(860)] public float NetworkMinTimeBetweenClientAdjustments;
-        [FieldOffset(864)] public float NetworkMinTimeBetweenClientAdjustmentsLargeCorrection;
-        [FieldOffset(868)] public float NetworkLargeClientCorrectionDistance;
-        [FieldOffset(872)] public float LedgeCheckThreshold;
-        [FieldOffset(876)] public float JumpOutOfWaterPitch;
-        [FieldOffset(880)] public FindFloorResult CurrentFloor;
-        [FieldOffset(1036)] public byte DefaultLandMovementMode;
-        [FieldOffset(1037)] public byte DefaultWaterMovementMode;
-        [FieldOffset(1038)] public byte GroundMovementMode;
-        [FieldOffset(1040)] public bool bMaintainHorizontalGroundVelocity;
-        [FieldOffset(1040)] public bool bImpartBaseVelocityX;
-        [FieldOffset(1040)] public bool bImpartBaseVelocityY;
-        [FieldOffset(1040)] public bool bImpartBaseVelocityZ;
-        [FieldOffset(1040)] public bool bImpartBaseAngularVelocity;
-        [FieldOffset(1040)] public bool bJustTeleported;
-        [FieldOffset(1040)] public bool bNetworkUpdateReceived;
-        [FieldOffset(1040)] public bool bNetworkMovementModeChanged;
-        [FieldOffset(1041)] public bool bIgnoreClientMovementErrorChecksAndCorrection;
-        [FieldOffset(1041)] public bool bNotifyApex;
-        [FieldOffset(1041)] public bool bCheatFlying;
-        [FieldOffset(1041)] public bool bWantsToCrouch;
-        [FieldOffset(1041)] public bool bCrouchMaintainsBaseLocation;
-        [FieldOffset(1041)] public bool bIgnoreBaseRotation;
-        [FieldOffset(1041)] public bool bFastAttachedMove;
-        [FieldOffset(1041)] public bool bAlwaysCheckFloor;
-        [FieldOffset(1042)] public bool bUseFlatBaseForFloorChecks;
-        [FieldOffset(1042)] public bool bPerformingJumpOff;
-        [FieldOffset(1042)] public bool bWantsToLeaveNavWalking;
-        [FieldOffset(1042)] public bool bUseRVOAvoidance;
-        [FieldOffset(1042)] public bool bRequestedMoveUseAcceleration;
-        [FieldOffset(1042)] public bool bHasRequestedVelocity;
-        [FieldOffset(1042)] public bool bRequestedMoveWithMaxSpeed;
-        [FieldOffset(1043)] public bool bWasAvoidanceUpdated;
-        [FieldOffset(1043)] public bool bProjectNavMeshWalking;
-        [FieldOffset(1043)] public bool bProjectNavMeshOnBothWorldChannels;
-        [FieldOffset(1060)] public float AvoidanceConsiderationRadius;
-        [FieldOffset(1064)] public Vector RequestedVelocity;
-        [FieldOffset(1076)] public int AvoidanceUID;
-        [FieldOffset(1080)] public NavAvoidanceMask AvoidanceGroup;
-        [FieldOffset(1084)] public NavAvoidanceMask GroupsToAvoid;
-        [FieldOffset(1088)] public NavAvoidanceMask GroupsToIgnore;
-        [FieldOffset(1092)] public float AvoidanceWeight;
-        [FieldOffset(1096)] public Vector PendingLaunchVelocity;
-        [FieldOffset(1280)] public float NavMeshProjectionInterval;
-        [FieldOffset(1284)] public float NavMeshProjectionTimer;
-        [FieldOffset(1288)] public float NavMeshProjectionInterpSpeed;
-        [FieldOffset(1292)] public float NavMeshProjectionHeightScaleUp;
-        [FieldOffset(1296)] public float NavMeshProjectionHeightScaleDown;
-        [FieldOffset(1300)] public float NavWalkingFloorDistTolerance;
-        [FieldOffset(1304)] public CharacterMovementComponentPostPhysicsTickFunction PostPhysicsTickFunction;
-        [FieldOffset(1408)] public float MinTimeBetweenTimeStampResets;
-        [FieldOffset(1416)] public RootMotionSourceGroup CurrentRootMotion;
-        [FieldOffset(1824)] public RootMotionMovementParams RootMotionParams;
-        [FieldOffset(1888)] public Vector AnimRootMotionVelocity;
-        [FieldOffset(1900)] public bool bWasSimulatingRootMotion;
-        [FieldOffset(1904)] public bool bAllowPhysicsRotationDuringAnimRootMotion;
+        [FieldOffset(416)]  public IntPtr  CharacterOwner;
+        [FieldOffset(424)] public float GravityScale;
+        [FieldOffset(428)] public float MaxStepHeight;
+        [FieldOffset(432)] public float JumpZVelocity;
+        [FieldOffset(436)] public float JumpOffJumpZFactor;
+        [FieldOffset(440)] public float WalkableFloorAngle;
+        [FieldOffset(444)] public float WalkableFloorZ;
+        [FieldOffset(448)] public byte MovementMode;
+        [FieldOffset(449)] public byte CustomMovementMode;
+        [FieldOffset(450)] byte NetworkSmoothingMode; //TODO: enum ENetworkSmoothingMode NetworkSmoothingMode
+        [FieldOffset(452)] public float GroundFriction;
+        [FieldOffset(492)] public float MaxWalkSpeed;
+        [FieldOffset(496)] public float MaxWalkSpeedCrouched;
+        [FieldOffset(500)] public float MaxSwimSpeed;
+        [FieldOffset(504)] public float MaxFlySpeed;
+        [FieldOffset(508)] public float MaxCustomMovementSpeed;
+        [FieldOffset(512)] public float MaxAcceleration;
+        [FieldOffset(516)] public float MinAnalogWalkSpeed;
+        [FieldOffset(520)] public float BrakingFrictionFactor;
+        [FieldOffset(524)] public float BrakingFriction;
+        [FieldOffset(528)] public float BrakingDecelerationWalking;
+        [FieldOffset(532)] public float BrakingDecelerationFalling;
+        [FieldOffset(536)] public float BrakingDecelerationSwimming;
+        [FieldOffset(540)] public float BrakingDecelerationFlying;
+        [FieldOffset(544)] public float AirControl;
+        [FieldOffset(548)] public float AirControlBoostMultiplier;
+        [FieldOffset(552)] public float AirControlBoostVelocityThreshold;
+        [FieldOffset(556)] public float FallingLateralFriction;
+        [FieldOffset(560)] public float CrouchedHalfHeight;
+        [FieldOffset(564)] public float Buoyancy;
+        [FieldOffset(568)] public float PerchRadiusThreshold;
+        [FieldOffset(572)] public float PerchAdditionalHeight;
+        [FieldOffset(576)] public Rotator RotationRate;
+        [FieldOffset(588)] public bool bUseSeparateBrakingFriction;
+        [FieldOffset(588)] public bool bApplyGravityWhileJumping;
+        [FieldOffset(588)] public bool bUseControllerDesiredRotation;
+        [FieldOffset(588)] public bool bOrientRotationToMovement;
+        [FieldOffset(588)] public bool bSweepWhileNavWalking;
+        [FieldOffset(588)] public bool bMovementInProgress;
+        [FieldOffset(588)] public bool bEnableScopedMovementUpdates;
+        [FieldOffset(589)] public bool bForceMaxAccel;
+        [FieldOffset(589)] public bool bRunPhysicsWithNoController;
+        [FieldOffset(589)] public bool bForceNextFloorCheck;
+        [FieldOffset(589)] public bool bShrinkProxyCapsule;
+        [FieldOffset(589)] public bool bCanWalkOffLedges;
+        [FieldOffset(589)] public bool bCanWalkOffLedgesWhenCrouching;
+        [FieldOffset(590)] public bool bNetworkSkipProxyPredictionOnNetUpdate;
+        [FieldOffset(590)] public bool bNetworkAlwaysReplicateTransformUpdateTimestamp;
+        [FieldOffset(590)] public bool bDeferUpdateMoveComponent;
+        [FieldOffset(590)] public bool bEnablePhysicsInteraction;
+        [FieldOffset(590)] public bool bTouchForceScaledToMass;
+        [FieldOffset(590)] public bool bPushForceScaledToMass;
+        [FieldOffset(590)] public bool bPushForceUsingZOffset;
+        [FieldOffset(590)] public bool bScalePushForceToVelocity;
+        [FieldOffset(592)]  public IntPtr  DeferredUpdatedMoveComponent;
+        [FieldOffset(600)] public float MaxOutOfWaterStepHeight;
+        [FieldOffset(604)] public float OutofWaterZ;
+        [FieldOffset(608)] public float Mass;
+        [FieldOffset(612)] public float StandingDownwardForceScale;
+        [FieldOffset(616)] public float InitialPushForceFactor;
+        [FieldOffset(620)] public float PushForceFactor;
+        [FieldOffset(624)] public float PushForcePointZOffsetFactor;
+        [FieldOffset(628)] public float TouchForceFactor;
+        [FieldOffset(632)] public float MinTouchForce;
+        [FieldOffset(636)] public float MaxTouchForce;
+        [FieldOffset(640)] public float RepulsionForce;
+        [FieldOffset(656)] public Vector Acceleration;
+        [FieldOffset(672)] public Quat LastUpdateRotation;
+        [FieldOffset(688)] public Vector LastUpdateLocation;
+        [FieldOffset(700)] public Vector LastUpdateVelocity;
+        [FieldOffset(712)] public float ServerLastTransformUpdateTimeStamp;
+        [FieldOffset(716)] public float ServerLastClientGoodMoveAckTime;
+        [FieldOffset(720)] public float ServerLastClientAdjustmentTime;
+        [FieldOffset(724)] public Vector PendingImpulseToApply;
+        [FieldOffset(736)] public Vector PendingForceToApply;
+        [FieldOffset(748)] public float AnalogInputModifier;
+        [FieldOffset(760)] public float MaxSimulationTimeStep;
+        [FieldOffset(764)] public int MaxSimulationIterations;
+        [FieldOffset(768)] public float MaxDepenetrationWithGeometry;
+        [FieldOffset(772)] public float MaxDepenetrationWithGeometryAsProxy;
+        [FieldOffset(776)] public float MaxDepenetrationWithPawn;
+        [FieldOffset(780)] public float MaxDepenetrationWithPawnAsProxy;
+        [FieldOffset(784)] public float NetworkSimulatedSmoothLocationTime;
+        [FieldOffset(788)] public float NetworkSimulatedSmoothRotationTime;
+        [FieldOffset(792)] public float ListenServerNetworkSimulatedSmoothLocationTime;
+        [FieldOffset(796)] public float ListenServerNetworkSimulatedSmoothRotationTime;
+        [FieldOffset(800)] public float NetProxyShrinkRadius;
+        [FieldOffset(804)] public float NetProxyShrinkHalfHeight;
+        [FieldOffset(808)] public float NetworkMaxSmoothUpdateDistance;
+        [FieldOffset(812)] public float NetworkNoSmoothUpdateDistance;
+        [FieldOffset(816)] public float NetworkMinTimeBetweenClientAckGoodMoves;
+        [FieldOffset(820)] public float NetworkMinTimeBetweenClientAdjustments;
+        [FieldOffset(824)] public float NetworkMinTimeBetweenClientAdjustmentsLargeCorrection;
+        [FieldOffset(828)] public float NetworkLargeClientCorrectionDistance;
+        [FieldOffset(832)] public float LedgeCheckThreshold;
+        [FieldOffset(836)] public float JumpOutOfWaterPitch;
+        [FieldOffset(840)] public FindFloorResult CurrentFloor;
+        [FieldOffset(996)] public byte DefaultLandMovementMode;
+        [FieldOffset(997)] public byte DefaultWaterMovementMode;
+        [FieldOffset(998)] public byte GroundMovementMode;
+        [FieldOffset(999)] public bool bMaintainHorizontalGroundVelocity;
+        [FieldOffset(999)] public bool bImpartBaseVelocityX;
+        [FieldOffset(999)] public bool bImpartBaseVelocityY;
+        [FieldOffset(999)] public bool bImpartBaseVelocityZ;
+        [FieldOffset(999)] public bool bImpartBaseAngularVelocity;
+        [FieldOffset(999)] public bool bJustTeleported;
+        [FieldOffset(999)] public bool bNetworkUpdateReceived;
+        [FieldOffset(999)] public bool bNetworkMovementModeChanged;
+        [FieldOffset(1000)] public bool bIgnoreClientMovementErrorChecksAndCorrection;
+        [FieldOffset(1000)] public bool bNotifyApex;
+        [FieldOffset(1000)] public bool bCheatFlying;
+        [FieldOffset(1000)] public bool bWantsToCrouch;
+        [FieldOffset(1000)] public bool bCrouchMaintainsBaseLocation;
+        [FieldOffset(1000)] public bool bIgnoreBaseRotation;
+        [FieldOffset(1000)] public bool bFastAttachedMove;
+        [FieldOffset(1000)] public bool bAlwaysCheckFloor;
+        [FieldOffset(1001)] public bool bUseFlatBaseForFloorChecks;
+        [FieldOffset(1001)] public bool bPerformingJumpOff;
+        [FieldOffset(1001)] public bool bWantsToLeaveNavWalking;
+        [FieldOffset(1001)] public bool bUseRVOAvoidance;
+        [FieldOffset(1001)] public bool bRequestedMoveUseAcceleration;
+        [FieldOffset(1001)] public bool bWasSimulatingRootMotion;
+        [FieldOffset(1001)] public bool bAllowPhysicsRotationDuringAnimRootMotion;
+        [FieldOffset(1002)] public bool bHasRequestedVelocity;
+        [FieldOffset(1002)] public bool bRequestedMoveWithMaxSpeed;
+        [FieldOffset(1002)] public bool bWasAvoidanceUpdated;
+        [FieldOffset(1002)] public bool bProjectNavMeshWalking;
+        [FieldOffset(1002)] public bool bProjectNavMeshOnBothWorldChannels;
+        [FieldOffset(1020)] public float AvoidanceConsiderationRadius;
+        [FieldOffset(1024)] public Vector RequestedVelocity;
+        [FieldOffset(1036)] public int AvoidanceUID;
+        [FieldOffset(1040)] public NavAvoidanceMask AvoidanceGroup;
+        [FieldOffset(1044)] public NavAvoidanceMask GroupsToAvoid;
+        [FieldOffset(1048)] public NavAvoidanceMask GroupsToIgnore;
+        [FieldOffset(1052)] public float AvoidanceWeight;
+        [FieldOffset(1056)] public Vector PendingLaunchVelocity;
+        [FieldOffset(1240)] public float NavMeshProjectionInterval;
+        [FieldOffset(1244)] public float NavMeshProjectionTimer;
+        [FieldOffset(1248)] public float NavMeshProjectionInterpSpeed;
+        [FieldOffset(1252)] public float NavMeshProjectionHeightScaleUp;
+        [FieldOffset(1256)] public float NavMeshProjectionHeightScaleDown;
+        [FieldOffset(1260)] public float NavWalkingFloorDistTolerance;
+        [FieldOffset(1264)] public CharacterMovementComponentPostPhysicsTickFunction PostPhysicsTickFunction;
+        [FieldOffset(1368)] public float MinTimeBetweenTimeStampResets;
+        [FieldOffset(1376)] public RootMotionSourceGroup CurrentRootMotion;
+        [FieldOffset(1776)] public RootMotionMovementParams RootMotionParams;
+        [FieldOffset(1840)] public Vector AnimRootMotionVelocity;
     }
     internal unsafe struct CharacterMovementComponent_methods {
         internal struct AddForce_method {
@@ -278,6 +278,45 @@ namespace UE4.Engine.Native {
                 long* p = stackalloc long[] {0L,0L,0L};
                 byte* b = (byte*) p;
                 Main.GetProcessEvent(obj, GetImpartedMovementBaseVelocity_ptr, new IntPtr(p)); ;
+                return *((Vector*)(b+0));
+            }
+        }
+        internal struct GetLastUpdateLocation_method {
+            static internal IntPtr GetLastUpdateLocation_ptr;
+            static GetLastUpdateLocation_method() {
+                GetLastUpdateLocation_ptr = Main.GetMethodUFunction(CharacterMovementComponent.StaticClass, "GetLastUpdateLocation");
+            }
+
+            internal static unsafe Vector Invoke(IntPtr obj) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(obj, GetLastUpdateLocation_ptr, new IntPtr(p)); ;
+                return *((Vector*)(b+0));
+            }
+        }
+        internal struct GetLastUpdateRotation_method {
+            static internal IntPtr GetLastUpdateRotation_ptr;
+            static GetLastUpdateRotation_method() {
+                GetLastUpdateRotation_ptr = Main.GetMethodUFunction(CharacterMovementComponent.StaticClass, "GetLastUpdateRotation");
+            }
+
+            internal static unsafe Rotator Invoke(IntPtr obj) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(obj, GetLastUpdateRotation_ptr, new IntPtr(p)); ;
+                return *((Rotator*)(b+0));
+            }
+        }
+        internal struct GetLastUpdateVelocity_method {
+            static internal IntPtr GetLastUpdateVelocity_ptr;
+            static GetLastUpdateVelocity_method() {
+                GetLastUpdateVelocity_ptr = Main.GetMethodUFunction(CharacterMovementComponent.StaticClass, "GetLastUpdateVelocity");
+            }
+
+            internal static unsafe Vector Invoke(IntPtr obj) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(obj, GetLastUpdateVelocity_ptr, new IntPtr(p)); ;
                 return *((Vector*)(b+0));
             }
         }

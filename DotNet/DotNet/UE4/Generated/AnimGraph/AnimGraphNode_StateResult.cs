@@ -11,10 +11,16 @@ using UE4.Native;
 
 #pragma warning disable CS0108
 using UE4.AnimGraph.Native;
+using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph {
     ///<summary>Anim Graph Node State Result</summary>
-    public unsafe partial class AnimGraphNode_StateResult : AnimGraphNode_Root  {
+    public unsafe partial class AnimGraphNode_StateResult : AnimGraphNode_Base  {
+        ///<summary>Node</summary>
+        public unsafe AnimNode_StateResult Node {
+            get {return AnimGraphNode_StateResult_ptr->Node;}
+            set {AnimGraphNode_StateResult_ptr->Node = value;}
+        }
         static AnimGraphNode_StateResult() {
             StaticClass = Main.GetClass("AnimGraphNode_StateResult");
         }

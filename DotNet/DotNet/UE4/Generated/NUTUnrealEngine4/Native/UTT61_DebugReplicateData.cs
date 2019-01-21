@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.NUTUnrealEngine4.Native {
-    [StructLayout( LayoutKind.Explicit, Size=752 )]
+    [StructLayout( LayoutKind.Explicit, Size=760 )]
     internal unsafe struct UTT61_DebugReplicateData_fields {
     }
     internal unsafe struct UTT61_DebugReplicateData_methods {

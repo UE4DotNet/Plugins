@@ -15,7 +15,7 @@ using UE4.UnrealEd.Native;
 namespace UE4.UnrealEd {
     ///<summary>Editor Skeleton Notify Obj</summary>
     public unsafe partial class EditorSkeletonNotifyObj : UObject  {
-        ///<summary>Name</summary>
+        ///<summary>The name of the notify we represent</summary>
         public unsafe Name Name {
             get {return EditorSkeletonNotifyObj_ptr->Name;}
             set {EditorSkeletonNotifyObj_ptr->Name = value;}

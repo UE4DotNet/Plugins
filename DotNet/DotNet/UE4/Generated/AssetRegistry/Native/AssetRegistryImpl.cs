@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.AssetRegistry.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1920 )]
+    [StructLayout( LayoutKind.Explicit, Size=1936 )]
     internal unsafe struct AssetRegistryImpl_fields {
     }
     internal unsafe struct AssetRegistryImpl_methods {

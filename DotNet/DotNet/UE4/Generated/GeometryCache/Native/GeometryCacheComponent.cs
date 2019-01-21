@@ -11,17 +11,17 @@ using UE4.Native;
 
 
 namespace UE4.GeometryCache.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1648 )]
+    [StructLayout( LayoutKind.Explicit, Size=1632 )]
     internal unsafe struct GeometryCacheComponent_fields {
-        [FieldOffset(1560)]  public IntPtr  GeometryCache;
-        [FieldOffset(1568)] public bool bRunning;
-        [FieldOffset(1569)] public bool bLooping;
-        [FieldOffset(1572)] public float StartTimeOffset;
-        [FieldOffset(1576)] public float PlaybackSpeed;
-        [FieldOffset(1580)] public int NumTracks;
-        [FieldOffset(1584)] public float ElapsedTime;
-        [FieldOffset(1636)] public float Duration;
-        [FieldOffset(1640)] public bool bManualTick;
+        [FieldOffset(1544)]  public IntPtr  GeometryCache;
+        [FieldOffset(1552)] public bool bRunning;
+        [FieldOffset(1553)] public bool bLooping;
+        [FieldOffset(1556)] public float StartTimeOffset;
+        [FieldOffset(1560)] public float PlaybackSpeed;
+        [FieldOffset(1564)] public int NumTracks;
+        [FieldOffset(1568)] public float ElapsedTime;
+        [FieldOffset(1620)] public float Duration;
+        [FieldOffset(1624)] public bool bManualTick;
     }
     internal unsafe struct GeometryCacheComponent_methods {
         internal struct GetAnimationTime_method {

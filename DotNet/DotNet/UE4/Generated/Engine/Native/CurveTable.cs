@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=168 )]
+    [StructLayout( LayoutKind.Explicit, Size=192 )]
     internal unsafe struct CurveTable_fields {
         [FieldOffset(144)]  public IntPtr  AssetImportData;
     }

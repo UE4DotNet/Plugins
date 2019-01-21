@@ -17,21 +17,33 @@ using UE4.MediaAssets;
 namespace UE4.MediaCompositing {
     ///<summary>Implements a movie scene section for media playback.</summary>
     public unsafe partial class MovieSceneMediaSection : MovieSceneSection  {
-         //TODO: string FString Proxy
-        ///<summary>The media sound component that receives the track's audio output.</summary>
-        public unsafe MediaSoundComponent MediaSoundComponent {
-            get {return MovieSceneMediaSection_ptr->MediaSoundComponent;}
-            set {MovieSceneMediaSection_ptr->MediaSoundComponent = value;}
+        ///<summary>The source to play with this video track.</summary>
+        public unsafe MediaSource MediaSource {
+            get {return MovieSceneMediaSection_ptr->MediaSource;}
+            set {MovieSceneMediaSection_ptr->MediaSource = value;}
+        }
+        public bool bLooping {
+            get {return Main.GetGetBoolPropertyByName(this, "bLooping"); }
+            set {Main.SetGetBoolPropertyByName(this, "bLooping", value); }
         }
         ///<summary>The media texture that receives the track's video output.</summary>
         public unsafe MediaTexture MediaTexture {
             get {return MovieSceneMediaSection_ptr->MediaTexture;}
             set {MovieSceneMediaSection_ptr->MediaTexture = value;}
         }
-        ///<summary>The source to play with this video track.</summary>
-        public unsafe MediaSource MediaSource {
-            get {return MovieSceneMediaSection_ptr->MediaSource;}
-            set {MovieSceneMediaSection_ptr->MediaSource = value;}
+        ///<summary>The media sound component that receives the track's audio output.</summary>
+        public unsafe MediaSoundComponent MediaSoundComponent {
+            get {return MovieSceneMediaSection_ptr->MediaSoundComponent;}
+            set {MovieSceneMediaSection_ptr->MediaSoundComponent = value;}
+        }
+        public bool bUseExternalMediaPlayer {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseExternalMediaPlayer"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseExternalMediaPlayer", value); }
+        }
+        ///<summary>The external media player this track should control.</summary>
+        public unsafe MediaPlayer ExternalMediaPlayer {
+            get {return MovieSceneMediaSection_ptr->ExternalMediaPlayer;}
+            set {MovieSceneMediaSection_ptr->ExternalMediaPlayer = value;}
         }
         ///<summary>The reference frame offset for single thumbnail rendering</summary>
         public unsafe float ThumbnailReferenceOffset {

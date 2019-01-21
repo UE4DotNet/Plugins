@@ -82,11 +82,6 @@ namespace UE4.Engine {
         }
          //TODO: array not UObject TArray ChannelOffsets
          //TODO: array not UObject TArray ChannelSizes
-        ///<summary>Size of RawPCMData, or what RawPCMData would be if the sound was fully decompressed</summary>
-        public unsafe int RawPCMDataSize {
-            get {return SoundWave_ptr->RawPCMDataSize;}
-            set {SoundWave_ptr->RawPCMDataSize = value;}
-        }
         ///<summary>Cached sample rate for displaying in the tools</summary>
         public unsafe int SampleRate {
             get {return SoundWave_ptr->SampleRate;}

@@ -32,6 +32,19 @@ namespace UE4.Engine.Native {
         [FieldOffset(736)] public Name TimeStretchCurveName;
     }
     internal unsafe struct AnimMontage_methods {
+        internal struct GetDefaultBlendOutTime_method {
+            static internal IntPtr GetDefaultBlendOutTime_ptr;
+            static GetDefaultBlendOutTime_method() {
+                GetDefaultBlendOutTime_ptr = Main.GetMethodUFunction(AnimMontage.StaticClass, "GetDefaultBlendOutTime");
+            }
+
+            internal static unsafe float Invoke(IntPtr obj) {
+                long* p = stackalloc long[] {0L,0L};
+                byte* b = (byte*) p;
+                Main.GetProcessEvent(obj, GetDefaultBlendOutTime_ptr, new IntPtr(p)); ;
+                return *((float*)(b+0));
+            }
+        }
     }
     internal unsafe struct AnimMontage_events {
     }

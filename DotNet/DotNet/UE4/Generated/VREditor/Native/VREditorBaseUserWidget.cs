@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.VREditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=776 )]
+    [StructLayout( LayoutKind.Explicit, Size=792 )]
     internal unsafe struct VREditorBaseUserWidget_fields {
-        [FieldOffset(768)] byte Owner; //TODO: weak object TWeakObjectPtr<AVREditorFloatingUI> Owner
+        [FieldOffset(784)] byte Owner; //TODO: weak object TWeakObjectPtr<AVREditorFloatingUI> Owner
     }
     internal unsafe struct VREditorBaseUserWidget_methods {
     }

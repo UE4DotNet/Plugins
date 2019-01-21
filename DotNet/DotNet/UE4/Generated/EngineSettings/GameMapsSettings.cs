@@ -40,6 +40,7 @@ namespace UE4.EngineSettings {
             get {return GameMapsSettings_ptr->ThreePlayerSplitscreenLayout;}
             set {GameMapsSettings_ptr->ThreePlayerSplitscreenLayout = value;}
         }
+         //TODO: enum EFourPlayerSplitScreenType FourPlayerSplitscreenLayout
         public bool bOffsetPlayerGamepadIds {
             get {return Main.GetGetBoolPropertyByName(this, "bOffsetPlayerGamepadIds"); }
             set {Main.SetGetBoolPropertyByName(this, "bOffsetPlayerGamepadIds", value); }

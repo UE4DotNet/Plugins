@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.Slate.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2432 )]
+    [StructLayout( LayoutKind.Explicit, Size=2440 )]
     internal unsafe struct EditableTextBoxWidgetStyle_fields {
         [FieldOffset(64)] public EditableTextBoxStyle EditableTextBoxStyle;
     }

@@ -11,21 +11,21 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1600 )]
+    [StructLayout( LayoutKind.Explicit, Size=1584 )]
     internal unsafe struct TextRenderComponent_fields {
-        [FieldOffset(1520)] byte Text; //TODO: text FText Text
-        [FieldOffset(1544)]  public IntPtr  TextMaterial;
-        [FieldOffset(1552)]  public IntPtr  Font;
-        [FieldOffset(1560)] public byte HorizontalAlignment;
-        [FieldOffset(1561)] public byte VerticalAlignment;
-        [FieldOffset(1564)] public Color TextRenderColor;
-        [FieldOffset(1568)] public float XScale;
-        [FieldOffset(1572)] public float YScale;
-        [FieldOffset(1576)] public float WorldSize;
-        [FieldOffset(1580)] public float InvDefaultSize;
-        [FieldOffset(1584)] public float HorizSpacingAdjust;
-        [FieldOffset(1588)] public float VertSpacingAdjust;
-        [FieldOffset(1592)] public bool bAlwaysRenderAsText;
+        [FieldOffset(1504)] byte Text; //TODO: text FText Text
+        [FieldOffset(1528)]  public IntPtr  TextMaterial;
+        [FieldOffset(1536)]  public IntPtr  Font;
+        [FieldOffset(1544)] public byte HorizontalAlignment;
+        [FieldOffset(1545)] public byte VerticalAlignment;
+        [FieldOffset(1548)] public Color TextRenderColor;
+        [FieldOffset(1552)] public float XScale;
+        [FieldOffset(1556)] public float YScale;
+        [FieldOffset(1560)] public float WorldSize;
+        [FieldOffset(1564)] public float InvDefaultSize;
+        [FieldOffset(1568)] public float HorizSpacingAdjust;
+        [FieldOffset(1572)] public float VertSpacingAdjust;
+        [FieldOffset(1576)] public bool bAlwaysRenderAsText;
     }
     internal unsafe struct TextRenderComponent_methods {
         internal struct GetTextLocalSize_method {

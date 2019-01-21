@@ -386,6 +386,14 @@ namespace UE4.Engine {
         public static ReverbEffect GetCurrentReverbEffect(UObject WorldContextObject)  => 
             GameplayStatics_methods.GetCurrentReverbEffect_method.Invoke(WorldContextObject);
 
+        ///<summary>
+        ///Returns the world rendering state
+        ///@
+        ///</summary>
+        ///<remarks>return      Whether the world should be rendered or not</remarks>
+        public static bool GetEnableWorldRendering(UObject WorldContextObject)  => 
+            GameplayStatics_methods.GetEnableWorldRendering_method.Invoke(WorldContextObject);
+
         ///<summary>Returns the game instance object</summary>
         public static GameInstance GetGameInstance(UObject WorldContextObject)  => 
             GameplayStatics_methods.GetGameInstance_method.Invoke(WorldContextObject);
@@ -702,6 +710,14 @@ namespace UE4.Engine {
         ///<summary>Set the sound mix of the audio system for special EQing *</summary>
         public static void SetBaseSoundMix(UObject WorldContextObject, SoundMix InSoundMix)  => 
             GameplayStatics_methods.SetBaseSoundMix_method.Invoke(WorldContextObject, InSoundMix);
+
+        ///<summary>
+        ///Enabled rendering of the world
+        ///@
+        ///</summary>
+        ///<remarks>param       bEnable         Whether the world should be rendered or not</remarks>
+        public static void SetEnableWorldRendering(UObject WorldContextObject, bool bEnable)  => 
+            GameplayStatics_methods.SetEnableWorldRendering_method.Invoke(WorldContextObject, bEnable);
 
         ///<summary>
         ///Sets the game's paused state

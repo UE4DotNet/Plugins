@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=800 )]
+    [StructLayout( LayoutKind.Explicit, Size=848 )]
     internal unsafe struct SoundWaveProcedural_fields {
     }
     internal unsafe struct SoundWaveProcedural_methods {

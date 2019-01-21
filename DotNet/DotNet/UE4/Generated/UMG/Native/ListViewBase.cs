@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=656 )]
+    [StructLayout( LayoutKind.Explicit, Size=672 )]
     internal unsafe struct ListViewBase_fields {
-        [FieldOffset(384)] public IntPtr EntryWidgetClass;
-        [FieldOffset(392)] byte BP_OnEntryGenerated; //TODO: multicast delegate FOnListEntryGeneratedDynamic BP_OnEntryGenerated
-        [FieldOffset(408)] byte BP_OnEntryReleased; //TODO: multicast delegate FOnListEntryReleasedDynamic BP_OnEntryReleased
-        [FieldOffset(428)] public int NumDesignerPreviewEntries;
+        [FieldOffset(400)] public IntPtr EntryWidgetClass;
+        [FieldOffset(408)] byte BP_OnEntryGenerated; //TODO: multicast delegate FOnListEntryGeneratedDynamic BP_OnEntryGenerated
+        [FieldOffset(424)] byte BP_OnEntryReleased; //TODO: multicast delegate FOnListEntryReleasedDynamic BP_OnEntryReleased
+        [FieldOffset(444)] public int NumDesignerPreviewEntries;
     }
     internal unsafe struct ListViewBase_methods {
         internal struct GetDisplayedEntryWidgets_method {

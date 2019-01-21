@@ -11,14 +11,14 @@ using UE4.Native;
 
 
 namespace UE4.GameplayTasks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=384 )]
+    [StructLayout( LayoutKind.Explicit, Size=368 )]
     internal unsafe struct GameplayTasksComponent_fields {
-        [FieldOffset(264)] public bool bIsNetDirty;
+        [FieldOffset(268)] public bool bIsNetDirty;
         [FieldOffset(272)] public NativeArray SimulatedTasks;
         [FieldOffset(288)] public NativeArray TaskPriorityQueue;
         [FieldOffset(320)] public NativeArray TickingTasks;
         [FieldOffset(336)] public NativeArray KnownTasks;
-        [FieldOffset(360)] byte OnClaimedResourcesChange; //TODO: multicast delegate FOnClaimedResourcesChangeSignature OnClaimedResourcesChange
+        [FieldOffset(352)] byte OnClaimedResourcesChange; //TODO: multicast delegate FOnClaimedResourcesChangeSignature OnClaimedResourcesChange
     }
     internal unsafe struct GameplayTasksComponent_methods {
         internal struct K2_RunGameplayTask_method {

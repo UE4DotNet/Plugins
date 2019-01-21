@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=176 )]
+    [StructLayout( LayoutKind.Explicit, Size=184 )]
     internal unsafe struct MovieSceneSkeletalAnimationTrack_fields {
-        [FieldOffset(152)] public NativeArray AnimationSections;
-        [FieldOffset(168)] public bool bUseLegacySectionIndexBlend;
+        [FieldOffset(160)] public NativeArray AnimationSections;
+        [FieldOffset(176)] public bool bUseLegacySectionIndexBlend;
     }
     internal unsafe struct MovieSceneSkeletalAnimationTrack_methods {
     }

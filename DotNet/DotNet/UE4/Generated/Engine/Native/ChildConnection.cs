@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=6464 )]
+    [StructLayout( LayoutKind.Explicit, Size=6504 )]
     internal unsafe struct ChildConnection_fields {
-        [FieldOffset(6456)]  public IntPtr  Parent;
+        [FieldOffset(6496)]  public IntPtr  Parent;
     }
     internal unsafe struct ChildConnection_methods {
     }

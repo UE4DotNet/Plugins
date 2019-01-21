@@ -11,18 +11,19 @@ using UE4.Native;
 
 
 namespace UE4.VREditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=88 )]
+    [StructLayout( LayoutKind.Explicit, Size=96 )]
     internal unsafe struct VRModeSettings_fields {
-        [FieldOffset(56)] public bool bEnableAutoVREditMode;
-        [FieldOffset(60)] byte InteractorHand; //TODO: enum EInteractorHand InteractorHand
-        [FieldOffset(64)] public bool bShowWorldMovementGrid;
-        [FieldOffset(64)] public bool bShowWorldMovementPostProcess;
-        [FieldOffset(64)] public bool bShowWorldScaleProgressBar;
-        [FieldOffset(68)] public float UIBrightness;
-        [FieldOffset(72)] public float GizmoScale;
-        [FieldOffset(76)] public float DoubleClickTime;
-        [FieldOffset(80)] public float TriggerPressedThreshold_Vive;
-        [FieldOffset(84)] public float TriggerPressedThreshold_Rift;
+        [FieldOffset(64)] public bool bEnableAutoVREditMode;
+        [FieldOffset(64)] public bool bAutokeySequences;
+        [FieldOffset(68)] byte InteractorHand; //TODO: enum EInteractorHand InteractorHand
+        [FieldOffset(72)] public bool bShowWorldMovementGrid;
+        [FieldOffset(72)] public bool bShowWorldMovementPostProcess;
+        [FieldOffset(72)] public bool bShowWorldScaleProgressBar;
+        [FieldOffset(76)] public float UIBrightness;
+        [FieldOffset(80)] public float GizmoScale;
+        [FieldOffset(84)] public float DoubleClickTime;
+        [FieldOffset(88)] public float TriggerPressedThreshold_Vive;
+        [FieldOffset(92)] public float TriggerPressedThreshold_Rift;
     }
     internal unsafe struct VRModeSettings_methods {
     }

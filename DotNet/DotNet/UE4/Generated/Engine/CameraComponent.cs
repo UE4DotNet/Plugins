@@ -111,6 +111,11 @@ namespace UE4.Engine {
             get {return CameraComponent_ptr->ProjectionMode;}
             set {CameraComponent_ptr->ProjectionMode = value;}
         }
+        ///<summary>Camera Mesh</summary>
+        public unsafe StaticMesh CameraMesh {
+            get {return CameraComponent_ptr->CameraMesh;}
+            set {CameraComponent_ptr->CameraMesh = value;}
+        }
         ///<summary>Indicates if PostProcessSettings should be used when using this Camera to view through.</summary>
         public unsafe float PostProcessBlendWeight {
             get {return CameraComponent_ptr->PostProcessBlendWeight;}
@@ -120,11 +125,6 @@ namespace UE4.Engine {
         public unsafe PostProcessSettings PostProcessSettings {
             get {return CameraComponent_ptr->PostProcessSettings;}
             set {CameraComponent_ptr->PostProcessSettings = value;}
-        }
-        ///<summary>Camera Mesh</summary>
-        public unsafe StaticMesh CameraMesh {
-            get {return CameraComponent_ptr->CameraMesh;}
-            set {CameraComponent_ptr->CameraMesh = value;}
         }
         static CameraComponent() {
             StaticClass = Main.GetClass("CameraComponent");

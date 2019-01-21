@@ -13,7 +13,7 @@ using UE4.SlateCore;
 using UE4.Engine;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=384 )]
+    [StructLayout( LayoutKind.Explicit, Size=400 )]
     internal unsafe struct Widget_fields {
         [FieldOffset(56)]  public IntPtr  Slot;
         [FieldOffset(64)] byte bIsEnabledDelegate; //TODO: delegate FGetBool bIsEnabledDelegate
@@ -40,6 +40,7 @@ namespace UE4.UMG.Native {
         [FieldOffset(288)] public NativeArray NativeBindings;
         [FieldOffset(304)] public byte DesignerFlags;
         [FieldOffset(312)] byte DisplayLabel; //TODO: string FString DisplayLabel
+        [FieldOffset(344)] byte CategoryName; //TODO: string FString CategoryName
     }
     internal unsafe struct Widget_methods {
         internal struct ForceLayoutPrepass_method {

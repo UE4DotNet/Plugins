@@ -43,6 +43,16 @@ namespace UE4.Engine {
         TEXTUREGROUP_HierarchicalLOD = 0x0000001d, 
         TEXTUREGROUP_Impostor = 0x0000001e, 
         TEXTUREGROUP_ImpostorNormalDepth = 0x0000001f, 
-        TEXTUREGROUP_MAX = 0x00000020
+        TEXTUREGROUP_Project01 = 0x00000020, 
+        TEXTUREGROUP_Project02 = 0x00000021, 
+        TEXTUREGROUP_Project03 = 0x00000022, 
+        TEXTUREGROUP_Project04 = 0x00000023, 
+        TEXTUREGROUP_Project05 = 0x00000024, 
+        TEXTUREGROUP_Project06 = 0x00000025, 
+        TEXTUREGROUP_Project07 = 0x00000026, 
+        TEXTUREGROUP_Project08 = 0x00000027, 
+        TEXTUREGROUP_Project09 = 0x00000028, 
+        TEXTUREGROUP_Project10 = 0x00000029, 
+        TEXTUREGROUP_MAX = 0x0000002a
     }
 }

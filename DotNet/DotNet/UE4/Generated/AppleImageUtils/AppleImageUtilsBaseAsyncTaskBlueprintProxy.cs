@@ -26,9 +26,11 @@ namespace UE4.AppleImageUtils {
         ///@param Quality the quality level to compress to
         ///@param bWantColor whether the HEIF is color (true) or monochrome (false)
         ///@param bUseGpu whether to use the GPU (true) or the CPU (false) to compress
+        ///@param Scale whether to scale the image before conversion, defaults to no scaling
+        ///@param Rotate a direction to rotate the image in during conversion, defaults to none
         ///</remarks>
-        public static AppleImageUtilsBaseAsyncTaskBlueprintProxy CreateProxyObjectForConvertToHEIF(Texture SourceImage, int Quality, bool bWantColor, bool bUseGpu)  => 
-            AppleImageUtilsBaseAsyncTaskBlueprintProxy_methods.CreateProxyObjectForConvertToHEIF_method.Invoke(SourceImage, Quality, bWantColor, bUseGpu);
+        public static AppleImageUtilsBaseAsyncTaskBlueprintProxy CreateProxyObjectForConvertToHEIF(Texture SourceImage, int Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate)  => 
+            AppleImageUtilsBaseAsyncTaskBlueprintProxy_methods.CreateProxyObjectForConvertToHEIF_method.Invoke(SourceImage, Quality, bWantColor, bUseGpu, Scale, Rotate);
 
         ///<summary>
         ///Converts a image to an array of JPEG data in a background task
@@ -39,9 +41,11 @@ namespace UE4.AppleImageUtils {
         ///@param Quality the quality level to compress to
         ///@param bWantColor whether the JPEG is color (true) or monochrome (false)
         ///@param bUseGpu whether to use the GPU (true) or the CPU (false) to compress
+        ///@param Scale whether to scale the image before conversion, defaults to no scaling
+        ///@param Rotate a direction to rotate the image in during conversion, defaults to none
         ///</remarks>
-        public static AppleImageUtilsBaseAsyncTaskBlueprintProxy CreateProxyObjectForConvertToJPEG(Texture SourceImage, int Quality, bool bWantColor, bool bUseGpu)  => 
-            AppleImageUtilsBaseAsyncTaskBlueprintProxy_methods.CreateProxyObjectForConvertToJPEG_method.Invoke(SourceImage, Quality, bWantColor, bUseGpu);
+        public static AppleImageUtilsBaseAsyncTaskBlueprintProxy CreateProxyObjectForConvertToJPEG(Texture SourceImage, int Quality, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate)  => 
+            AppleImageUtilsBaseAsyncTaskBlueprintProxy_methods.CreateProxyObjectForConvertToJPEG_method.Invoke(SourceImage, Quality, bWantColor, bUseGpu, Scale, Rotate);
 
         ///<summary>
         ///Converts a image to an array of TIFF data in a background task
@@ -52,9 +56,11 @@ namespace UE4.AppleImageUtils {
         ///@param Quality the quality level to compress to
         ///@param bWantColor whether the PNG is color (true) or monochrome (false)
         ///@param bUseGpu whether to use the GPU (true) or the CPU (false) to compress
+        ///@param Scale whether to scale the image before conversion, defaults to no scaling
+        ///@param Rotate a direction to rotate the image in during conversion, defaults to none
         ///</remarks>
-        public static AppleImageUtilsBaseAsyncTaskBlueprintProxy CreateProxyObjectForConvertToPNG(Texture SourceImage, bool bWantColor, bool bUseGpu)  => 
-            AppleImageUtilsBaseAsyncTaskBlueprintProxy_methods.CreateProxyObjectForConvertToPNG_method.Invoke(SourceImage, bWantColor, bUseGpu);
+        public static AppleImageUtilsBaseAsyncTaskBlueprintProxy CreateProxyObjectForConvertToPNG(Texture SourceImage, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate)  => 
+            AppleImageUtilsBaseAsyncTaskBlueprintProxy_methods.CreateProxyObjectForConvertToPNG_method.Invoke(SourceImage, bWantColor, bUseGpu, Scale, Rotate);
 
         ///<summary>
         ///Converts a image to an array of TIFF data in a background task
@@ -65,9 +71,11 @@ namespace UE4.AppleImageUtils {
         ///@param Quality the quality level to compress to
         ///@param bWantColor whether the TIFF is color (true) or monochrome (false)
         ///@param bUseGpu whether to use the GPU (true) or the CPU (false) to compress
+        ///@param Scale whether to scale the image before conversion, defaults to no scaling
+        ///@param Rotate a direction to rotate the image in during conversion, defaults to none
         ///</remarks>
-        public static AppleImageUtilsBaseAsyncTaskBlueprintProxy CreateProxyObjectForConvertToTIFF(Texture SourceImage, bool bWantColor, bool bUseGpu)  => 
-            AppleImageUtilsBaseAsyncTaskBlueprintProxy_methods.CreateProxyObjectForConvertToTIFF_method.Invoke(SourceImage, bWantColor, bUseGpu);
+        public static AppleImageUtilsBaseAsyncTaskBlueprintProxy CreateProxyObjectForConvertToTIFF(Texture SourceImage, bool bWantColor, bool bUseGpu, float Scale, ETextureRotationDirection Rotate)  => 
+            AppleImageUtilsBaseAsyncTaskBlueprintProxy_methods.CreateProxyObjectForConvertToTIFF_method.Invoke(SourceImage, bWantColor, bUseGpu, Scale, Rotate);
          //TODO: multicast delegate FAppleImageConversionDelegate OnSuccess
          //TODO: multicast delegate FAppleImageConversionDelegate OnFailure
         ///<summary>Conversion Result</summary>

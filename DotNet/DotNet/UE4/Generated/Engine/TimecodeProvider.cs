@@ -14,6 +14,10 @@ using UE4.Engine.Native;
 
 namespace UE4.Engine {
     ///<summary>A class responsible of fetching a timecode from a source.</summary>
+    ///<remarks>
+    ///Note, FApp::GetTimecode and FApp::GetTimecodeFramerate should be used to retrieve
+    ///the current system Timecode and Framerate.
+    ///</remarks>
     public unsafe partial class TimecodeProvider : UObject  {
 
         ///<summary>Return the frame rate.</summary>

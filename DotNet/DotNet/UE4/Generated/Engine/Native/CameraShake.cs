@@ -35,14 +35,14 @@ namespace UE4.Engine.Native {
     internal unsafe struct CameraShake_methods {
     }
     internal unsafe struct CameraShake_events {
-        [StructLayout( LayoutKind.Explicit, Size=2800 )]
+        [StructLayout( LayoutKind.Explicit, Size=2736 )]
         internal unsafe struct BlueprintUpdateCameraShake_event {
             private static DelegateHolder<NativeFuncDelegate> BlueprintUpdateCameraShake_link;
             private static unsafe void BlueprintUpdateCameraShake_process_event(IntPtr context, Frame* theStack, IntPtr result) {
                 var obj = UObject.Make<CameraShake>(context);
                 var b = (byte*) theStack->Locals;
 
-                obj.on_BlueprintUpdateCameraShake(*(float*)(b+0), *(float*)(b+4), *(MinimalViewInfo*)(b+16), *(MinimalViewInfo*)(b+1408));
+                obj.on_BlueprintUpdateCameraShake(*(float*)(b+0), *(float*)(b+4), *(MinimalViewInfo*)(b+16), *(MinimalViewInfo*)(b+1376));
             }
             internal static void Setup() {
                 BlueprintUpdateCameraShake_link = new DelegateHolder<NativeFuncDelegate>(BlueprintUpdateCameraShake_process_event);

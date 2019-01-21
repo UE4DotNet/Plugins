@@ -74,21 +74,13 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bRaiseMaxErrorToExisting"); }
             set {Main.SetGetBoolPropertyByName(this, "bRaiseMaxErrorToExisting", value); }
         }
-        public bool bTryFixedBitwiseCompression {
-            get {return Main.GetGetBoolPropertyByName(this, "bTryFixedBitwiseCompression"); }
-            set {Main.SetGetBoolPropertyByName(this, "bTryFixedBitwiseCompression", value); }
+        public bool bTryExhaustiveSearch {
+            get {return Main.GetGetBoolPropertyByName(this, "bTryExhaustiveSearch"); }
+            set {Main.SetGetBoolPropertyByName(this, "bTryExhaustiveSearch", value); }
         }
-        public bool bTryPerTrackBitwiseCompression {
-            get {return Main.GetGetBoolPropertyByName(this, "bTryPerTrackBitwiseCompression"); }
-            set {Main.SetGetBoolPropertyByName(this, "bTryPerTrackBitwiseCompression", value); }
-        }
-        public bool bTryLinearKeyRemovalCompression {
-            get {return Main.GetGetBoolPropertyByName(this, "bTryLinearKeyRemovalCompression"); }
-            set {Main.SetGetBoolPropertyByName(this, "bTryLinearKeyRemovalCompression", value); }
-        }
-        public bool bTryIntervalKeyRemoval {
-            get {return Main.GetGetBoolPropertyByName(this, "bTryIntervalKeyRemoval"); }
-            set {Main.SetGetBoolPropertyByName(this, "bTryIntervalKeyRemoval", value); }
+        public bool bEnableSegmenting {
+            get {return Main.GetGetBoolPropertyByName(this, "bEnableSegmenting"); }
+            set {Main.SetGetBoolPropertyByName(this, "bEnableSegmenting", value); }
         }
         public bool bEnablePerformanceLog {
             get {return Main.GetGetBoolPropertyByName(this, "bEnablePerformanceLog"); }

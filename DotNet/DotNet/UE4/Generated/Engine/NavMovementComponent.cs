@@ -65,6 +65,11 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bUseFixedBrakingDistanceForPaths"); }
             set {Main.SetGetBoolPropertyByName(this, "bUseFixedBrakingDistanceForPaths", value); }
         }
+        ///<summary>Expresses runtime state of character's movement. Put all temporal changes to movement properties here</summary>
+        public unsafe MovementProperties MovementState {
+            get {return NavMovementComponent_ptr->MovementState;}
+            set {NavMovementComponent_ptr->MovementState = value;}
+        }
         ///<summary>object implementing IPathFollowingAgentInterface.</summary>
         ///<remarks>
         ///Is private to control access to it.
@@ -73,11 +78,6 @@ namespace UE4.Engine {
         public unsafe UObject PathFollowingComp {
             get {return NavMovementComponent_ptr->PathFollowingComp;}
             set {NavMovementComponent_ptr->PathFollowingComp = value;}
-        }
-        ///<summary>Expresses runtime state of character's movement. Put all temporal changes to movement properties here</summary>
-        public unsafe MovementProperties MovementState {
-            get {return NavMovementComponent_ptr->MovementState;}
-            set {NavMovementComponent_ptr->MovementState = value;}
         }
         static NavMovementComponent() {
             StaticClass = Main.GetClass("NavMovementComponent");

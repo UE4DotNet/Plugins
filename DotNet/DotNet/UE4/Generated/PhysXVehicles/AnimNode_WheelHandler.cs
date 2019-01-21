@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.PhysXVehicles{
         ///<summary>Simple controller that replaces or adds to the translation/rotation of a single bone.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=384 )]
+        [StructLayout( LayoutKind.Explicit, Size=360 )]
         public unsafe struct AnimNode_WheelHandler {
         }
 }

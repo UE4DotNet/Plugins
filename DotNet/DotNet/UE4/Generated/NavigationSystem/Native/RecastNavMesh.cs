@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.NavigationSystem.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1648 )]
+    [StructLayout( LayoutKind.Explicit, Size=1664 )]
     internal unsafe struct RecastNavMesh_fields {
         [FieldOffset(1480)] public bool bDrawTriangleEdges;
         [FieldOffset(1480)] public bool bDrawPolyEdges;
@@ -49,27 +49,28 @@ namespace UE4.NavigationSystem.Native {
         [FieldOffset(1548)] public int PolyRefTileBits;
         [FieldOffset(1552)] public int PolyRefNavPolyBits;
         [FieldOffset(1556)] public int PolyRefSaltBits;
-        [FieldOffset(1560)] public float DefaultDrawDistance;
-        [FieldOffset(1564)] public float DefaultMaxSearchNodes;
-        [FieldOffset(1568)] public float DefaultMaxHierarchicalSearchNodes;
-        [FieldOffset(1572)] public byte RegionPartitioning;
-        [FieldOffset(1573)] public byte LayerPartitioning;
-        [FieldOffset(1576)] public int RegionChunkSplits;
-        [FieldOffset(1580)] public int LayerChunkSplits;
-        [FieldOffset(1584)] public bool bSortNavigationAreasByCost;
-        [FieldOffset(1584)] public bool bPerformVoxelFiltering;
-        [FieldOffset(1584)] public bool bMarkLowHeightAreas;
-        [FieldOffset(1584)] public bool bFilterLowSpanSequences;
-        [FieldOffset(1584)] public bool bFilterLowSpanFromTileCache;
-        [FieldOffset(1584)] public bool bDoFullyAsyncNavDataGathering;
-        [FieldOffset(1584)] public bool bUseBetterOffsetsFromCorners;
-        [FieldOffset(1584)] public bool bStoreEmptyTileLayers;
-        [FieldOffset(1585)] public bool bUseVirtualFilters;
-        [FieldOffset(1585)] public bool bAllowNavLinkAsPathEnd;
-        [FieldOffset(1585)] public bool bUseVoxelCache;
-        [FieldOffset(1588)] public float TileSetUpdateInterval;
-        [FieldOffset(1592)] public float HeuristicScale;
-        [FieldOffset(1596)] public float VerticalDeviationFromGroundCompensation;
+        [FieldOffset(1560)] public Vector NavMeshOriginOffset;
+        [FieldOffset(1572)] public float DefaultDrawDistance;
+        [FieldOffset(1576)] public float DefaultMaxSearchNodes;
+        [FieldOffset(1580)] public float DefaultMaxHierarchicalSearchNodes;
+        [FieldOffset(1584)] public byte RegionPartitioning;
+        [FieldOffset(1585)] public byte LayerPartitioning;
+        [FieldOffset(1588)] public int RegionChunkSplits;
+        [FieldOffset(1592)] public int LayerChunkSplits;
+        [FieldOffset(1596)] public bool bSortNavigationAreasByCost;
+        [FieldOffset(1596)] public bool bPerformVoxelFiltering;
+        [FieldOffset(1596)] public bool bMarkLowHeightAreas;
+        [FieldOffset(1596)] public bool bFilterLowSpanSequences;
+        [FieldOffset(1596)] public bool bFilterLowSpanFromTileCache;
+        [FieldOffset(1596)] public bool bDoFullyAsyncNavDataGathering;
+        [FieldOffset(1596)] public bool bUseBetterOffsetsFromCorners;
+        [FieldOffset(1596)] public bool bStoreEmptyTileLayers;
+        [FieldOffset(1597)] public bool bUseVirtualFilters;
+        [FieldOffset(1597)] public bool bAllowNavLinkAsPathEnd;
+        [FieldOffset(1597)] public bool bUseVoxelCache;
+        [FieldOffset(1600)] public float TileSetUpdateInterval;
+        [FieldOffset(1604)] public float HeuristicScale;
+        [FieldOffset(1608)] public float VerticalDeviationFromGroundCompensation;
     }
     internal unsafe struct RecastNavMesh_methods {
     }

@@ -258,7 +258,7 @@ namespace UE4.Engine {
         public void FlushNetDormancy()  => 
             Actor_methods.FlushNetDormancy_method.Invoke(ObjPointer);
 
-        ///<summary>Force actor to be updated to clients</summary>
+        ///<summary>Force actor to be updated to clients/demo net drivers</summary>
         public void ForceNetUpdate()  => 
             Actor_methods.ForceNetUpdate_method.Invoke(ObjPointer);
 

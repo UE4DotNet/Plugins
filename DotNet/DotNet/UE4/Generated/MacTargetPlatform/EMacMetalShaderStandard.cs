@@ -14,6 +14,7 @@ namespace UE4.MacTargetPlatform {
     public enum EMacMetalShaderStandard {
         MacMetalSLStandard_1_2 = 0x00000002, 
         MacMetalSLStandard_2_0 = 0x00000003, 
-        MacMetalSLStandard_MAX = 0x00000004
+        MacMetalSLStandard_2_1 = 0x00000004, 
+        MacMetalSLStandard_MAX = 0x00000005
     }
 }

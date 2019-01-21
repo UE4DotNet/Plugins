@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=696 )]
+    [StructLayout( LayoutKind.Explicit, Size=672 )]
     internal unsafe struct AnimGraphNode_ObserveBone_fields {
         [FieldOffset(272)] public AnimNode_ObserveBone Node;
     }

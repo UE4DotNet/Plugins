@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Landscape.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1520 )]
+    [StructLayout( LayoutKind.Explicit, Size=1504 )]
     internal unsafe struct LandscapeGizmoRenderComponent_fields {
     }
     internal unsafe struct LandscapeGizmoRenderComponent_methods {

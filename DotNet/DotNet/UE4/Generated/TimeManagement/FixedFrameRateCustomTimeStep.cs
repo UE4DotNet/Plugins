@@ -16,7 +16,7 @@ using UE4.Engine;
 namespace UE4.TimeManagement {
     ///<summary>Class to control the Engine TimeStep via a FixedFrameRate</summary>
     public unsafe partial class FixedFrameRateCustomTimeStep : EngineCustomTimeStep  {
-        ///<summary>The fixed FrameRate</summary>
+        ///<summary>Fixed Frame Rate</summary>
         public unsafe FrameRate FixedFrameRate {
             get {return FixedFrameRateCustomTimeStep_ptr->FixedFrameRate;}
             set {FixedFrameRateCustomTimeStep_ptr->FixedFrameRate = value;}

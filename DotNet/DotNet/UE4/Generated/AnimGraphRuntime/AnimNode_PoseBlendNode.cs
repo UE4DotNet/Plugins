@@ -17,14 +17,14 @@ namespace UE4.AnimGraphRuntime{
         ///Typically the playback position of the animation for this node will represent something other than time, like jump height.
         ///This node will not trigger any notifies present in the associated sequence.
         ///</remarks>
-        [StructLayout( LayoutKind.Explicit, Size=208 )]
+        [StructLayout( LayoutKind.Explicit, Size=192 )]
         public unsafe struct AnimNode_PoseBlendNode {
             ///<summary>Source Pose</summary>
-            [FieldOffset(168)] PoseLink SourcePose;
+            [FieldOffset(152)] PoseLink SourcePose;
 
-            [FieldOffset(192)] byte BlendOption; //TODO: enum EAlphaBlendOption BlendOption
+            [FieldOffset(176)] byte BlendOption; //TODO: enum EAlphaBlendOption BlendOption
 
-            [FieldOffset(200)] 
+            [FieldOffset(184)] 
             private IntPtr  CustomCurve_field;
             ///<summary>If you're using Custom BlendOption, you can specify curve</summary>
             public CurveFloat CustomCurve {

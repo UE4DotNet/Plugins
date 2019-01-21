@@ -136,6 +136,11 @@ namespace UE4.AIModule {
         public void SetMoveBlockDetection(bool bEnable)  => 
             AIController_methods.SetMoveBlockDetection_method.Invoke(ObjPointer, bEnable);
 
+        ///<summary>Note that his function does not do any pathfollowing state transfer.</summary>
+        ///<remarks>Intended to be called as part of initialization/setup process</remarks>
+        public void SetPathFollowingComponent(PathFollowingComponent NewPFComponent)  => 
+            AIController_methods.SetPathFollowingComponent_method.Invoke(ObjPointer, NewPFComponent);
+
         ///<summary>Unclaim Task Resource</summary>
         public void UnclaimTaskResource(SubclassOf<GameplayTaskResource> ResourceClass)  => 
             AIController_methods.UnclaimTaskResource_method.Invoke(ObjPointer, ResourceClass);

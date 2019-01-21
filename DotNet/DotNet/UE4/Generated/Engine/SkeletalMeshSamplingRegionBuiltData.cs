@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Built data for sampling a single region of a skeletal mesh.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=104 )]
+        [StructLayout( LayoutKind.Explicit, Size=120 )]
         public unsafe struct SkeletalMeshSamplingRegionBuiltData {
         }
 }

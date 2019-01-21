@@ -11,14 +11,14 @@ using UE4.Native;
 
 
 namespace UE4.DatasmithContent.Native {
-    [StructLayout( LayoutKind.Explicit, Size=144 )]
+    [StructLayout( LayoutKind.Explicit, Size=160 )]
     internal unsafe struct DatasmithCineCameraComponentTemplate_fields {
         [FieldOffset(56)] public DatasmithCameraFilmbackSettingsTemplate FilmbackSettings;
         [FieldOffset(64)] public DatasmithCameraLensSettingsTemplate LensSettings;
         [FieldOffset(68)] public DatasmithCameraFocusSettingsTemplate FocusSettings;
-        [FieldOffset(72)] public float CurrentFocalLength;
-        [FieldOffset(76)] public float CurrentAperture;
-        [FieldOffset(80)] public DatasmithPostProcessSettingsTemplate PostProcessSettings;
+        [FieldOffset(76)] public float CurrentFocalLength;
+        [FieldOffset(80)] public float CurrentAperture;
+        [FieldOffset(96)] public DatasmithPostProcessSettingsTemplate PostProcessSettings;
     }
     internal unsafe struct DatasmithCineCameraComponentTemplate_methods {
     }

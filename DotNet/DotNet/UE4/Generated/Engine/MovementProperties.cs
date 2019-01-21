@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Movement capabilities, determining available movement options for Pawns and used by AI for reachability tests.</summary>
-        [StructLayout( LayoutKind.Explicit, Size=4 )]
+        [StructLayout( LayoutKind.Explicit, Size=1 )]
         public unsafe struct MovementProperties {
             [FieldOffset(0)] public bool bCanCrouch;
 

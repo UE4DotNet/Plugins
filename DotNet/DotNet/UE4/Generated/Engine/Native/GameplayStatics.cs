@@ -676,6 +676,20 @@ namespace UE4.Engine.Native {
                 return *((IntPtr*)(b+8));
             }
         }
+        internal struct GetEnableWorldRendering_method {
+            static internal IntPtr GetEnableWorldRendering_ptr;
+            static GetEnableWorldRendering_method() {
+                GetEnableWorldRendering_ptr = Main.GetMethodUFunction(GameplayStatics.StaticClass, "GetEnableWorldRendering");
+            }
+
+            internal static unsafe bool Invoke(UObject WorldContextObject) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = WorldContextObject;
+                Main.GetProcessEvent(GameplayStatics.DefaultObject, GetEnableWorldRendering_ptr, new IntPtr(p)); ;
+                return *((bool*)(b+8));
+            }
+        }
         internal struct GetGameInstance_method {
             static internal IntPtr GetGameInstance_ptr;
             static GetGameInstance_method() {
@@ -1373,6 +1387,20 @@ namespace UE4.Engine.Native {
                 *((IntPtr*)(b+0)) = WorldContextObject;
                 *((IntPtr*)(b+8)) = InSoundMix;
                 Main.GetProcessEvent(GameplayStatics.DefaultObject, SetBaseSoundMix_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct SetEnableWorldRendering_method {
+            static internal IntPtr SetEnableWorldRendering_ptr;
+            static SetEnableWorldRendering_method() {
+                SetEnableWorldRendering_ptr = Main.GetMethodUFunction(GameplayStatics.StaticClass, "SetEnableWorldRendering");
+            }
+
+            internal static unsafe void Invoke(UObject WorldContextObject, bool bEnable) {
+                long* p = stackalloc long[] {0L,0L,0L};
+                byte* b = (byte*) p;
+                *((IntPtr*)(b+0)) = WorldContextObject;
+                *((bool*)(b+8)) = bEnable;
+                Main.GetProcessEvent(GameplayStatics.DefaultObject, SetEnableWorldRendering_ptr, new IntPtr(p)); ;
             }
         }
         internal struct SetGamePaused_method {

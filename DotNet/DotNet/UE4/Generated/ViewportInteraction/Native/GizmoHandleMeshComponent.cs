@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.ViewportInteraction.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1760 )]
+    [StructLayout( LayoutKind.Explicit, Size=1744 )]
     internal unsafe struct GizmoHandleMeshComponent_fields {
     }
     internal unsafe struct GizmoHandleMeshComponent_methods {

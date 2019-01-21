@@ -20,9 +20,9 @@ namespace UE4.Engine.Native {
         [FieldOffset(1020)] public float BaseEyeHeight;
         [FieldOffset(1024)] public byte AutoPossessPlayer;
         [FieldOffset(1025)] byte AutoPossessAI; //TODO: enum EAutoPossessAI AutoPossessAI
+        [FieldOffset(1026)] public byte RemoteViewPitch;
         [FieldOffset(1032)] public IntPtr AIControllerClass;
         [FieldOffset(1040)]  public IntPtr  PlayerState;
-        [FieldOffset(1048)] public byte RemoteViewPitch;
         [FieldOffset(1056)]  public IntPtr  LastHitBy;
         [FieldOffset(1064)]  public IntPtr  Controller;
         [FieldOffset(1076)] public Vector ControlInputVector;

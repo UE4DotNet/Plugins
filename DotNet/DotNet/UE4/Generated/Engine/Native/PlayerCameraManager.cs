@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=9904 )]
+    [StructLayout( LayoutKind.Explicit, Size=9712 )]
     internal unsafe struct PlayerCameraManager_fields {
         [FieldOffset(1008)]  public IntPtr  PCOwner;
         [FieldOffset(1016)]  public IntPtr  TransformComponent;
@@ -19,34 +19,34 @@ namespace UE4.Engine.Native {
         [FieldOffset(1044)] public float DefaultOrthoWidth;
         [FieldOffset(1052)] public float DefaultAspectRatio;
         [FieldOffset(1120)] public CameraCacheEntry CameraCache;
-        [FieldOffset(2528)] public CameraCacheEntry LastFrameCameraCache;
-        [FieldOffset(3936)] public TViewTarget ViewTarget;
-        [FieldOffset(5360)] public TViewTarget PendingViewTarget;
-        [FieldOffset(6816)] public CameraCacheEntry CameraCachePrivate;
-        [FieldOffset(8224)] public CameraCacheEntry LastFrameCameraCachePrivate;
-        [FieldOffset(9632)] public NativeArray ModifierList;
-        [FieldOffset(9648)] public NativeArray DefaultModifiers;
-        [FieldOffset(9664)] public float FreeCamDistance;
-        [FieldOffset(9668)] public Vector FreeCamOffset;
-        [FieldOffset(9680)] public Vector ViewTargetOffset;
-        [FieldOffset(9712)] public NativeArray CameraLensEffects;
-        [FieldOffset(9728)]  public IntPtr  CachedCameraShakeMod;
-        [FieldOffset(9736)]  public IntPtr  AnimInstPool;
-        [FieldOffset(9800)] public NativeArray PostProcessBlendCache;
-        [FieldOffset(9832)] public NativeArray ActiveAnims;
-        [FieldOffset(9848)] public NativeArray FreeAnims;
-        [FieldOffset(9864)]  public IntPtr  AnimCameraActor;
-        [FieldOffset(9872)] public bool bIsOrthographic;
-        [FieldOffset(9872)] public bool bDefaultConstrainAspectRatio;
-        [FieldOffset(9872)] public bool bClientSimulatingViewTarget;
-        [FieldOffset(9872)] public bool bUseClientSideCameraUpdates;
-        [FieldOffset(9873)] public bool bGameCameraCutThisFrame;
-        [FieldOffset(9876)] public float ViewPitchMin;
-        [FieldOffset(9880)] public float ViewPitchMax;
-        [FieldOffset(9884)] public float ViewYawMin;
-        [FieldOffset(9888)] public float ViewYawMax;
-        [FieldOffset(9892)] public float ViewRollMin;
-        [FieldOffset(9896)] public float ViewRollMax;
+        [FieldOffset(2496)] public CameraCacheEntry LastFrameCameraCache;
+        [FieldOffset(3872)] public TViewTarget ViewTarget;
+        [FieldOffset(5264)] public TViewTarget PendingViewTarget;
+        [FieldOffset(6688)] public CameraCacheEntry CameraCachePrivate;
+        [FieldOffset(8064)] public CameraCacheEntry LastFrameCameraCachePrivate;
+        [FieldOffset(9440)] public NativeArray ModifierList;
+        [FieldOffset(9456)] public NativeArray DefaultModifiers;
+        [FieldOffset(9472)] public float FreeCamDistance;
+        [FieldOffset(9476)] public Vector FreeCamOffset;
+        [FieldOffset(9488)] public Vector ViewTargetOffset;
+        [FieldOffset(9520)] public NativeArray CameraLensEffects;
+        [FieldOffset(9536)]  public IntPtr  CachedCameraShakeMod;
+        [FieldOffset(9544)]  public IntPtr  AnimInstPool;
+        [FieldOffset(9608)] public NativeArray PostProcessBlendCache;
+        [FieldOffset(9640)] public NativeArray ActiveAnims;
+        [FieldOffset(9656)] public NativeArray FreeAnims;
+        [FieldOffset(9672)]  public IntPtr  AnimCameraActor;
+        [FieldOffset(9680)] public bool bIsOrthographic;
+        [FieldOffset(9680)] public bool bDefaultConstrainAspectRatio;
+        [FieldOffset(9680)] public bool bClientSimulatingViewTarget;
+        [FieldOffset(9680)] public bool bUseClientSideCameraUpdates;
+        [FieldOffset(9681)] public bool bGameCameraCutThisFrame;
+        [FieldOffset(9684)] public float ViewPitchMin;
+        [FieldOffset(9688)] public float ViewPitchMax;
+        [FieldOffset(9692)] public float ViewYawMin;
+        [FieldOffset(9696)] public float ViewYawMax;
+        [FieldOffset(9700)] public float ViewRollMin;
+        [FieldOffset(9704)] public float ViewRollMax;
     }
     internal unsafe struct PlayerCameraManager_methods {
         internal struct AddCameraLensEffect_method {

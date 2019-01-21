@@ -12,15 +12,15 @@ using UE4.Native;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Anim Node Leg IK</summary>
-        [StructLayout( LayoutKind.Explicit, Size=408 )]
+        [StructLayout( LayoutKind.Explicit, Size=384 )]
         public unsafe struct AnimNode_LegIK {
-            [FieldOffset(360)] public float ReachPrecision;
+            [FieldOffset(336)] public float ReachPrecision;
 
-            [FieldOffset(364)] public int MaxIterations;
+            [FieldOffset(340)] public int MaxIterations;
 
-            [FieldOffset(368)] byte LegsDefinition; //TODO: array TArray LegsDefinition
+            [FieldOffset(344)] byte LegsDefinition; //TODO: array TArray LegsDefinition
 
-            [FieldOffset(384)] byte LegsData; //TODO: array TArray LegsData
+            [FieldOffset(360)] byte LegsData; //TODO: array TArray LegsData
 
         }
 }

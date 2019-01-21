@@ -13,29 +13,29 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>RBF based orientation driver</summary>
-        [StructLayout( LayoutKind.Explicit, Size=384 )]
+        [StructLayout( LayoutKind.Explicit, Size=368 )]
         public unsafe struct AnimNode_PoseDriver {
             ///<summary>Bones to use for driving parameters based on their transform</summary>
-            [FieldOffset(168)] PoseLink SourcePose;
+            [FieldOffset(152)] PoseLink SourcePose;
 
-            [FieldOffset(192)] byte SourceBones; //TODO: array TArray SourceBones
+            [FieldOffset(176)] byte SourceBones; //TODO: array TArray SourceBones
 
-            [FieldOffset(208)] public bool bOnlyDriveSelectedBones;
+            [FieldOffset(192)] public bool bOnlyDriveSelectedBones;
 
-            [FieldOffset(216)] byte OnlyDriveBones; //TODO: array TArray OnlyDriveBones
+            [FieldOffset(200)] byte OnlyDriveBones; //TODO: array TArray OnlyDriveBones
 
             ///<summary>Optional other bone space to use when reading SourceBone transform.</summary>
             ///<remarks>If not specified, we just use local space of SourceBone (ie relative to parent bone)</remarks>
-            [FieldOffset(232)] BoneReference EvalSpaceBone;
+            [FieldOffset(216)] BoneReference EvalSpaceBone;
 
             ///<summary>Parameters used by RBF solver</summary>
-            [FieldOffset(256)] RBFParams RBFParams;
+            [FieldOffset(240)] RBFParams RBFParams;
 
-            [FieldOffset(272)] byte DriveSource; //TODO: enum EPoseDriverSource DriveSource
+            [FieldOffset(256)] byte DriveSource; //TODO: enum EPoseDriverSource DriveSource
 
-            [FieldOffset(273)] byte DriveOutput; //TODO: enum EPoseDriverOutput DriveOutput
+            [FieldOffset(257)] byte DriveOutput; //TODO: enum EPoseDriverOutput DriveOutput
 
-            [FieldOffset(280)] byte PoseTargets; //TODO: array TArray PoseTargets
+            [FieldOffset(264)] byte PoseTargets; //TODO: array TArray PoseTargets
 
         }
 }

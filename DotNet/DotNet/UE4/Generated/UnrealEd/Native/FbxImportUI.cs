@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=216 )]
+    [StructLayout( LayoutKind.Explicit, Size=520 )]
     internal unsafe struct FbxImportUI_fields {
         [FieldOffset(64)] public bool bIsObjImport;
         [FieldOffset(65)] public byte OriginalImportType;
@@ -43,6 +43,14 @@ namespace UE4.UnrealEd.Native {
         [FieldOffset(192)]  public IntPtr  AnimSequenceImportData;
         [FieldOffset(200)]  public IntPtr  TextureImportData;
         [FieldOffset(208)] public bool bAutomatedImportShouldDetectType;
+        [FieldOffset(392)] byte FileVersion; //TODO: string FString FileVersion
+        [FieldOffset(408)] byte FileCreator; //TODO: string FString FileCreator
+        [FieldOffset(424)] byte FileCreatorApplication; //TODO: string FString FileCreatorApplication
+        [FieldOffset(440)] byte FileUnits; //TODO: string FString FileUnits
+        [FieldOffset(456)] byte FileAxisDirection; //TODO: string FString FileAxisDirection
+        [FieldOffset(472)] byte FileSampleRate; //TODO: string FString FileSampleRate
+        [FieldOffset(488)] byte AnimStartFrame; //TODO: string FString AnimStartFrame
+        [FieldOffset(504)] byte AnimEndFrame; //TODO: string FString AnimEndFrame
     }
     internal unsafe struct FbxImportUI_methods {
         internal struct ResetToDefault_method {

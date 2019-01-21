@@ -11,14 +11,17 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=88 )]
+    [StructLayout( LayoutKind.Explicit, Size=96 )]
     internal unsafe struct AnimCompress_fields {
         [FieldOffset(56)] byte Description; //TODO: string FString Description
         [FieldOffset(72)] public bool bNeedsSkeleton;
-        [FieldOffset(76)] public byte TranslationCompressionFormat;
-        [FieldOffset(77)] public byte RotationCompressionFormat;
-        [FieldOffset(78)] public byte ScaleCompressionFormat;
-        [FieldOffset(80)] public float MaxCurveError;
+        [FieldOffset(72)] public bool bEnableSegmenting;
+        [FieldOffset(76)] byte IdealNumFramesPerSegment; //TODO: numeric uint32 IdealNumFramesPerSegment
+        [FieldOffset(80)] byte MaxNumFramesPerSegment; //TODO: numeric uint32 MaxNumFramesPerSegment
+        [FieldOffset(84)] public byte TranslationCompressionFormat;
+        [FieldOffset(85)] public byte RotationCompressionFormat;
+        [FieldOffset(86)] public byte ScaleCompressionFormat;
+        [FieldOffset(88)] public float MaxCurveError;
     }
     internal unsafe struct AnimCompress_methods {
     }

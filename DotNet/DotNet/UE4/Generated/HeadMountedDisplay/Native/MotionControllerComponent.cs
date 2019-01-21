@@ -13,17 +13,17 @@ using UE4.InputCore;
 using UE4.Engine;
 
 namespace UE4.HeadMountedDisplay.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1712 )]
+    [StructLayout( LayoutKind.Explicit, Size=1696 )]
     internal unsafe struct MotionControllerComponent_fields {
-        [FieldOffset(1520)] public int PlayerIndex;
-        [FieldOffset(1528)] public Name MotionSource;
-        [FieldOffset(1540)] public bool bDisableLowLatencyUpdate;
-        [FieldOffset(1544)] byte CurrentTrackingStatus; //TODO: enum ETrackingStatus CurrentTrackingStatus
-        [FieldOffset(1545)] public bool bDisplayDeviceModel;
-        [FieldOffset(1548)] public Name DisplayModelSource;
-        [FieldOffset(1560)]  public IntPtr  CustomDisplayMesh;
-        [FieldOffset(1568)] public NativeArray DisplayMeshMaterialOverrides;
-        [FieldOffset(1680)]  public IntPtr  DisplayComponent;
+        [FieldOffset(1504)] public int PlayerIndex;
+        [FieldOffset(1512)] public Name MotionSource;
+        [FieldOffset(1524)] public bool bDisableLowLatencyUpdate;
+        [FieldOffset(1528)] byte CurrentTrackingStatus; //TODO: enum ETrackingStatus CurrentTrackingStatus
+        [FieldOffset(1529)] public bool bDisplayDeviceModel;
+        [FieldOffset(1532)] public Name DisplayModelSource;
+        [FieldOffset(1544)]  public IntPtr  CustomDisplayMesh;
+        [FieldOffset(1552)] public NativeArray DisplayMeshMaterialOverrides;
+        [FieldOffset(1664)]  public IntPtr  DisplayComponent;
     }
     internal unsafe struct MotionControllerComponent_methods {
         internal struct GetParameterValue_method {

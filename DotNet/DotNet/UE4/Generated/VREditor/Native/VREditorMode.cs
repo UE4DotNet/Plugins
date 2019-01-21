@@ -11,17 +11,17 @@ using UE4.Native;
 
 
 namespace UE4.VREditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=440 )]
+    [StructLayout( LayoutKind.Explicit, Size=472 )]
     internal unsafe struct VREditorMode_fields {
-        [FieldOffset(232)]  public IntPtr  AvatarActor;
-        [FieldOffset(304)]  public IntPtr  UISystem;
-        [FieldOffset(312)]  public IntPtr  TeleportActor;
-        [FieldOffset(320)]  public IntPtr  AutoScalerSystem;
-        [FieldOffset(328)]  public IntPtr  WorldInteraction;
-        [FieldOffset(344)]  public IntPtr  PlacementSystem;
-        [FieldOffset(352)]  public IntPtr  LeftHandInteractor;
-        [FieldOffset(360)]  public IntPtr  RightHandInteractor;
-        [FieldOffset(408)]  public IntPtr  AssetContainer;
+        [FieldOffset(240)]  public IntPtr  AvatarActor;
+        [FieldOffset(336)]  public IntPtr  UISystem;
+        [FieldOffset(344)]  public IntPtr  TeleportActor;
+        [FieldOffset(352)]  public IntPtr  AutoScalerSystem;
+        [FieldOffset(360)]  public IntPtr  WorldInteraction;
+        [FieldOffset(376)]  public IntPtr  PlacementSystem;
+        [FieldOffset(384)]  public IntPtr  LeftHandInteractor;
+        [FieldOffset(392)]  public IntPtr  RightHandInteractor;
+        [FieldOffset(440)]  public IntPtr  AssetContainer;
     }
     internal unsafe struct VREditorMode_methods {
     }

@@ -20,6 +20,12 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bNeedsSkeleton"); }
             set {Main.SetGetBoolPropertyByName(this, "bNeedsSkeleton", value); }
         }
+        public bool bEnableSegmenting {
+            get {return Main.GetGetBoolPropertyByName(this, "bEnableSegmenting"); }
+            set {Main.SetGetBoolPropertyByName(this, "bEnableSegmenting", value); }
+        }
+         //TODO: numeric uint32 IdealNumFramesPerSegment
+         //TODO: numeric uint32 MaxNumFramesPerSegment
         ///<summary>Format for bitwise compression of translation data.</summary>
         public unsafe byte TranslationCompressionFormat {
             get {return AnimCompress_ptr->TranslationCompressionFormat;}

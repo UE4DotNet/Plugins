@@ -10,7 +10,7 @@ using UE4.InputCore;
 using UE4.Native;
 
 namespace UE4.OculusHMD {
-    ///<summary>Boundary types corresponding to ovrBoundaryType enum</summary>
+    ///<summary>Guardian boundary types</summary>
     public enum EBoundaryType {
         Boundary_Outer = 0x00000000, 
         Boundary_PlayArea = 0x00000001, 

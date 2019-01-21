@@ -19,7 +19,8 @@ namespace UE4.EngineSettings.Native {
         [FieldOffset(136)] public bool bUseSplitscreen;
         [FieldOffset(137)] public byte TwoPlayerSplitscreenLayout;
         [FieldOffset(138)] public byte ThreePlayerSplitscreenLayout;
-        [FieldOffset(139)] public bool bOffsetPlayerGamepadIds;
+        [FieldOffset(139)] byte FourPlayerSplitscreenLayout; //TODO: enum EFourPlayerSplitScreenType FourPlayerSplitscreenLayout
+        [FieldOffset(140)] public bool bOffsetPlayerGamepadIds;
         [FieldOffset(144)] public SoftClassPath GameInstanceClass;
         [FieldOffset(176)] public SoftObjectPath GameDefaultMap;
         [FieldOffset(208)] public SoftObjectPath ServerDefaultMap;

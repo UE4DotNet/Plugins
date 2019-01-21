@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.GameplayDebugger.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1616 )]
+    [StructLayout( LayoutKind.Explicit, Size=1600 )]
     internal unsafe struct GameplayDebuggerRenderingComponent_fields {
     }
     internal unsafe struct GameplayDebuggerRenderingComponent_methods {

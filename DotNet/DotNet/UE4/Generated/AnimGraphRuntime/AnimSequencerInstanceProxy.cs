@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Proxy override for this UAnimInstance-derived class</summary>
-        [StructLayout( LayoutKind.Explicit, Size=2160 )]
+        [StructLayout( LayoutKind.Explicit, Size=2144 )]
         public unsafe struct AnimSequencerInstanceProxy {
         }
 }

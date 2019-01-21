@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.AIModule.Native {
-    [StructLayout( LayoutKind.Explicit, Size=728 )]
+    [StructLayout( LayoutKind.Explicit, Size=704 )]
     internal unsafe struct PathFollowingComponent_fields {
         [FieldOffset(336)]  public IntPtr  MovementComp;
         [FieldOffset(352)]  public IntPtr  MyNavData;

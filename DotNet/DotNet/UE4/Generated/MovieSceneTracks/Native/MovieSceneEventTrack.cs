@@ -11,13 +11,13 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=192 )]
+    [StructLayout( LayoutKind.Explicit, Size=200 )]
     internal unsafe struct MovieSceneEventTrack_fields {
-        [FieldOffset(152)] public bool bFireEventsWhenForwards;
-        [FieldOffset(152)] public bool bFireEventsWhenBackwards;
-        [FieldOffset(156)] byte EventPosition; //TODO: enum EFireEventsAtPosition EventPosition
-        [FieldOffset(160)] public NativeArray EventReceivers;
-        [FieldOffset(176)] public NativeArray Sections;
+        [FieldOffset(160)] public bool bFireEventsWhenForwards;
+        [FieldOffset(160)] public bool bFireEventsWhenBackwards;
+        [FieldOffset(164)] byte EventPosition; //TODO: enum EFireEventsAtPosition EventPosition
+        [FieldOffset(168)] public NativeArray EventReceivers;
+        [FieldOffset(184)] public NativeArray Sections;
     }
     internal unsafe struct MovieSceneEventTrack_methods {
     }

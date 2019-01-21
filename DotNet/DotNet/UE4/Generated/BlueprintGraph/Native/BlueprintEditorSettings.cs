@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.BlueprintGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=184 )]
+    [StructLayout( LayoutKind.Explicit, Size=272 )]
     internal unsafe struct BlueprintEditorSettings_fields {
         [FieldOffset(56)] public bool bDrawMidpointArrowsInBlueprints;
         [FieldOffset(57)] public bool bShowGraphInstructionText;
@@ -33,14 +33,15 @@ namespace UE4.BlueprintGraph.Native {
         [FieldOffset(152)] public NativeArray BookmarkNodes;
         [FieldOffset(168)] public bool bIncludeCommentNodesInBookmarksTab;
         [FieldOffset(169)] public bool bShowBookmarksForCurrentDocumentOnlyInTab;
-        [FieldOffset(170)] public byte SaveOnCompile;
-        [FieldOffset(171)] public bool bJumpToNodeErrors;
-        [FieldOffset(172)] public bool bAllowExplicitImpureNodeDisabling;
-        [FieldOffset(173)] public bool bShowActionMenuItemSignatures;
-        [FieldOffset(174)] public bool bBlueprintNodeUniqueNames;
-        [FieldOffset(175)] public bool bShowDetailedCompileResults;
-        [FieldOffset(176)] public int CompileEventDisplayThresholdMs;
-        [FieldOffset(180)] public float NodeTemplateCacheCapMB;
+        [FieldOffset(176)] byte GraphEditorQuickJumps; //TODO: map TMap GraphEditorQuickJumps
+        [FieldOffset(256)] public byte SaveOnCompile;
+        [FieldOffset(257)] public bool bJumpToNodeErrors;
+        [FieldOffset(258)] public bool bAllowExplicitImpureNodeDisabling;
+        [FieldOffset(259)] public bool bShowActionMenuItemSignatures;
+        [FieldOffset(260)] public bool bBlueprintNodeUniqueNames;
+        [FieldOffset(261)] public bool bShowDetailedCompileResults;
+        [FieldOffset(264)] public int CompileEventDisplayThresholdMs;
+        [FieldOffset(268)] public float NodeTemplateCacheCapMB;
     }
     internal unsafe struct BlueprintEditorSettings_methods {
     }

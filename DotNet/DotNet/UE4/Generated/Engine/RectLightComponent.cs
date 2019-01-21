@@ -20,8 +20,7 @@ namespace UE4.Engine {
         public void SetSourceHeight(float NewValue)  => 
             RectLightComponent_methods.SetSourceHeight_method.Invoke(ObjPointer, NewValue);
 
-        ///<summary>Texture mapped to the light source rectangle //UPROPERTY(EditAnywhere, BlueprintReadWrite, AdvancedDisplay, Category=Light, AdvancedDisplay)</summary>
-        ///<remarks>//class UTexture* SourceTexture;</remarks>
+        ///<summary>Set Source Width</summary>
         public void SetSourceWidth(float bNewValue)  => 
             RectLightComponent_methods.SetSourceWidth_method.Invoke(ObjPointer, bNewValue);
         ///<summary>Width of light source rect.</summary>
@@ -33,6 +32,11 @@ namespace UE4.Engine {
         ///<remarks>Note that light sources shapes which intersect shadow casting geometry can cause shadowing artifacts.</remarks>
         public unsafe float SourceHeight {
             get {return RectLightComponent_ptr->SourceHeight;}
+        }
+        ///<summary>Texture mapped to the light source rectangle</summary>
+        public unsafe Texture SourceTexture {
+            get {return RectLightComponent_ptr->SourceTexture;}
+            set {RectLightComponent_ptr->SourceTexture = value;}
         }
         static RectLightComponent() {
             StaticClass = Main.GetClass("RectLightComponent");

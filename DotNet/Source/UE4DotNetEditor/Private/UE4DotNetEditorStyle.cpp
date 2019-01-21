@@ -44,7 +44,7 @@ const FVector2D Icon40x40(40.0f, 40.0f);
 TSharedRef< FSlateStyleSet > FUE4DotNetEditorStyle::Create()
 {
 	TSharedRef< FSlateStyleSet > Style = MakeShareable(new FSlateStyleSet("UE4DotNetEditorStyle"));
-	Style->SetContentRoot(IPluginManager::Get().FindPlugin("UE4DotNetEditor")->GetBaseDir() / TEXT("Resources"));
+	Style->SetContentRoot(IPluginManager::Get().FindPlugin("DotNet")->GetBaseDir() / TEXT("Resources"));
 
 	Style->Set("UE4DotNetEditor.PluginAction", new IMAGE_BRUSH(TEXT("ButtonIcon_40x"), Icon40x40));
 

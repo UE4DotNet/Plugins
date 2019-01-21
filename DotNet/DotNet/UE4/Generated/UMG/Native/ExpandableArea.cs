@@ -12,18 +12,18 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1016 )]
+    [StructLayout( LayoutKind.Explicit, Size=1032 )]
     internal unsafe struct ExpandableArea_fields {
-        [FieldOffset(392)] public ExpandableAreaStyle Style;
-        [FieldOffset(728)] public SlateBrush BorderBrush;
-        [FieldOffset(888)] public SlateColor BorderColor;
-        [FieldOffset(928)] public bool bIsExpanded;
-        [FieldOffset(932)] public float MaxHeight;
-        [FieldOffset(936)] public Margin HeaderPadding;
-        [FieldOffset(952)] public Margin AreaPadding;
-        [FieldOffset(968)] byte OnExpansionChanged; //TODO: multicast delegate FOnExpandableAreaExpansionChanged OnExpansionChanged
-        [FieldOffset(984)]  public IntPtr  HeaderContent;
-        [FieldOffset(992)]  public IntPtr  BodyContent;
+        [FieldOffset(408)] public ExpandableAreaStyle Style;
+        [FieldOffset(744)] public SlateBrush BorderBrush;
+        [FieldOffset(904)] public SlateColor BorderColor;
+        [FieldOffset(944)] public bool bIsExpanded;
+        [FieldOffset(948)] public float MaxHeight;
+        [FieldOffset(952)] public Margin HeaderPadding;
+        [FieldOffset(968)] public Margin AreaPadding;
+        [FieldOffset(984)] byte OnExpansionChanged; //TODO: multicast delegate FOnExpandableAreaExpansionChanged OnExpansionChanged
+        [FieldOffset(1000)]  public IntPtr  HeaderContent;
+        [FieldOffset(1008)]  public IntPtr  BodyContent;
     }
     internal unsafe struct ExpandableArea_methods {
         internal struct GetIsExpanded_method {

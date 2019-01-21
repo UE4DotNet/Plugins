@@ -15,6 +15,11 @@ using UE4.UnrealEd.Native;
 namespace UE4.UnrealEd {
     ///<summary>Import data and options used when importing a static mesh from fbx</summary>
     public unsafe partial class FbxSkeletalMeshImportData : FbxMeshImportData  {
+        ///<summary>Filter the content we want to import from the incoming FBX skeletal mesh.</summary>
+        public unsafe byte ImportContentType {
+            get {return FbxSkeletalMeshImportData_ptr->ImportContentType;}
+            set {FbxSkeletalMeshImportData_ptr->ImportContentType = value;}
+        }
         public bool bUpdateSkeletonReferencePose {
             get {return Main.GetGetBoolPropertyByName(this, "bUpdateSkeletonReferencePose"); }
             set {Main.SetGetBoolPropertyByName(this, "bUpdateSkeletonReferencePose", value); }

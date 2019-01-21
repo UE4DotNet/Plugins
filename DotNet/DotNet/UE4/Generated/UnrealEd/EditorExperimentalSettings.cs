@@ -109,10 +109,6 @@ namespace UE4.UnrealEd {
             get {return Main.GetGetBoolPropertyByName(this, "bFacialAnimationImporter"); }
             set {Main.SetGetBoolPropertyByName(this, "bFacialAnimationImporter", value); }
         }
-        public bool bEnableLiveRecompilationOfAnimationBlueprints {
-            get {return Main.GetGetBoolPropertyByName(this, "bEnableLiveRecompilationOfAnimationBlueprints"); }
-            set {Main.SetGetBoolPropertyByName(this, "bEnableLiveRecompilationOfAnimationBlueprints", value); }
-        }
         public bool bMobilePIEPreviewDeviceLaunch {
             get {return Main.GetGetBoolPropertyByName(this, "bMobilePIEPreviewDeviceLaunch"); }
             set {Main.SetGetBoolPropertyByName(this, "bMobilePIEPreviewDeviceLaunch", value); }
@@ -124,6 +120,10 @@ namespace UE4.UnrealEd {
         public bool bExampleLayersAndBlends {
             get {return Main.GetGetBoolPropertyByName(this, "bExampleLayersAndBlends"); }
             set {Main.SetGetBoolPropertyByName(this, "bExampleLayersAndBlends", value); }
+        }
+        public bool bEnableLongPathsSupport {
+            get {return Main.GetGetBoolPropertyByName(this, "bEnableLongPathsSupport"); }
+            set {Main.SetGetBoolPropertyByName(this, "bEnableLongPathsSupport", value); }
         }
         static EditorExperimentalSettings() {
             StaticClass = Main.GetClass("EditorExperimentalSettings");

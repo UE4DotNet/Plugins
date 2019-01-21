@@ -23,6 +23,10 @@ namespace UE4.Engine {
     ///</summary>
     ///<remarks>* If it does, please add the copy in the function RefreshParentAssetData</remarks>
     public unsafe partial class AnimMontage : AnimCompositeBase  {
+
+        ///<summary>Get Default Blend Out Time</summary>
+        public float GetDefaultBlendOutTime()  => 
+            AnimMontage_methods.GetDefaultBlendOutTime_method.Invoke(ObjPointer);
         ///<summary>Blend in option.</summary>
         public unsafe AlphaBlend BlendIn {
             get {return AnimMontage_ptr->BlendIn;}

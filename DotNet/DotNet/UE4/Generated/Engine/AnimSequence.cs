@@ -20,6 +20,16 @@ namespace UE4.Engine {
             get {return AnimSequence_ptr->NumFrames;}
             set {AnimSequence_ptr->NumFrames = value;}
         }
+        ///<summary>The DCC framerate of the imported file. UI information only, unit are Hz</summary>
+        public unsafe float ImportFileFramerate {
+            get {return AnimSequence_ptr->ImportFileFramerate;}
+            set {AnimSequence_ptr->ImportFileFramerate = value;}
+        }
+        ///<summary>The resample framerate that was computed during import. UI information only, unit are Hz</summary>
+        public unsafe int ImportResampleFramerate {
+            get {return AnimSequence_ptr->ImportResampleFramerate;}
+            set {AnimSequence_ptr->ImportResampleFramerate = value;}
+        }
          //TODO: array not UObject TArray TrackToSkeletonMapTable
         ///<summary>Update this if the contents of RawAnimationData changes;</summary>
         public unsafe FGuid RawDataGuid {
@@ -75,6 +85,10 @@ namespace UE4.Engine {
         public bool bForceRootLock {
             get {return Main.GetGetBoolPropertyByName(this, "bForceRootLock"); }
             set {Main.SetGetBoolPropertyByName(this, "bForceRootLock", value); }
+        }
+        public bool bUseNormalizedRootMotionScale {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseNormalizedRootMotionScale"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseNormalizedRootMotionScale", value); }
         }
         public bool bRootMotionSettingsCopiedFromMontage {
             get {return Main.GetGetBoolPropertyByName(this, "bRootMotionSettingsCopiedFromMontage"); }

@@ -456,6 +456,10 @@ namespace UE4.Engine {
         public void SetHiddenInGame(bool NewHidden, bool bPropagateToChildren)  => 
             SceneComponent_methods.SetHiddenInGame_method.Invoke(ObjPointer, NewHidden, bPropagateToChildren);
 
+        ///<summary>Set how often this component is allowed to move during runtime. Causes a component re-register if the component is already registered</summary>
+        public void SetMobility(byte NewMobility)  => 
+            SceneComponent_methods.SetMobility_method.Invoke(ObjPointer, NewMobility);
+
         ///<summary>Set the non-uniform scale of the component relative to its parent</summary>
         public void SetRelativeScale3D(Vector NewScale3D)  => 
             SceneComponent_methods.SetRelativeScale3D_method.Invoke(ObjPointer, NewScale3D);

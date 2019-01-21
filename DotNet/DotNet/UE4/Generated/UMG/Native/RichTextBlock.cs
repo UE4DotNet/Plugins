@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1064 )]
+    [StructLayout( LayoutKind.Explicit, Size=1088 )]
     internal unsafe struct RichTextBlock_fields {
-        [FieldOffset(416)] byte Text; //TODO: text FText Text
-        [FieldOffset(440)]  public IntPtr  TextStyleSet;
-        [FieldOffset(448)] public NativeArray DecoratorClasses;
-        [FieldOffset(1032)] public NativeArray InstanceDecorators;
+        [FieldOffset(432)] byte Text; //TODO: text FText Text
+        [FieldOffset(456)]  public IntPtr  TextStyleSet;
+        [FieldOffset(464)] public NativeArray DecoratorClasses;
+        [FieldOffset(1056)] public NativeArray InstanceDecorators;
     }
     internal unsafe struct RichTextBlock_methods {
         internal struct GetDecoratorByClass_method {

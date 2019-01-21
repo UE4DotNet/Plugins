@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1136 )]
+    [StructLayout( LayoutKind.Explicit, Size=1184 )]
     internal unsafe struct AnimGraphNode_Trail_fields {
         [FieldOffset(272)] public AnimNode_Trail Node;
     }

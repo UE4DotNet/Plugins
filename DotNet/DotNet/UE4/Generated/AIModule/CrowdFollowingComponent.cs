@@ -20,15 +20,15 @@ namespace UE4.AIModule {
         ///<summary>master switch for crowd steering & avoidance</summary>
         public void SuspendCrowdSteering(bool bSuspend)  => 
             CrowdFollowingComponent_methods.SuspendCrowdSteering_method.Invoke(ObjPointer, bSuspend);
-        ///<summary>Crowd Agent Move Direction</summary>
-        public unsafe Vector CrowdAgentMoveDirection {
-            get {return CrowdFollowingComponent_ptr->CrowdAgentMoveDirection;}
-            set {CrowdFollowingComponent_ptr->CrowdAgentMoveDirection = value;}
-        }
         ///<summary>Character Movement</summary>
         public unsafe CharacterMovementComponent CharacterMovement {
             get {return CrowdFollowingComponent_ptr->CharacterMovement;}
             set {CrowdFollowingComponent_ptr->CharacterMovement = value;}
+        }
+        ///<summary>Crowd Agent Move Direction</summary>
+        public unsafe Vector CrowdAgentMoveDirection {
+            get {return CrowdFollowingComponent_ptr->CrowdAgentMoveDirection;}
+            set {CrowdFollowingComponent_ptr->CrowdAgentMoveDirection = value;}
         }
         static CrowdFollowingComponent() {
             StaticClass = Main.GetClass("CrowdFollowingComponent");

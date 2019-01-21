@@ -11,18 +11,18 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2192 )]
+    [StructLayout( LayoutKind.Explicit, Size=2176 )]
     internal unsafe struct HierarchicalInstancedStaticMeshComponent_fields {
-        [FieldOffset(1952)] public NativeArray SortedInstances;
-        [FieldOffset(1968)] public int NumBuiltInstances;
-        [FieldOffset(1976)] public Box BuiltInstanceBounds;
-        [FieldOffset(2004)] public Box UnbuiltInstanceBounds;
-        [FieldOffset(2032)] public NativeArray UnbuiltInstanceBoundsList;
-        [FieldOffset(2048)] public bool bEnableDensityScaling;
-        [FieldOffset(2060)] public int OcclusionLayerNumNodes;
-        [FieldOffset(2064)] public BoxSphereBounds CacheMeshExtendedBounds;
-        [FieldOffset(2096)] public bool bDisableCollision;
-        [FieldOffset(2100)] public int InstanceCountToRender;
+        [FieldOffset(1936)] public NativeArray SortedInstances;
+        [FieldOffset(1952)] public int NumBuiltInstances;
+        [FieldOffset(1960)] public Box BuiltInstanceBounds;
+        [FieldOffset(1988)] public Box UnbuiltInstanceBounds;
+        [FieldOffset(2016)] public NativeArray UnbuiltInstanceBoundsList;
+        [FieldOffset(2032)] public bool bEnableDensityScaling;
+        [FieldOffset(2044)] public int OcclusionLayerNumNodes;
+        [FieldOffset(2048)] public BoxSphereBounds CacheMeshExtendedBounds;
+        [FieldOffset(2080)] public bool bDisableCollision;
+        [FieldOffset(2084)] public int InstanceCountToRender;
     }
     internal unsafe struct HierarchicalInstancedStaticMeshComponent_methods {
         internal struct RemoveInstances_method {

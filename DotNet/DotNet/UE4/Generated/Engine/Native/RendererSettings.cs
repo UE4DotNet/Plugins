@@ -18,6 +18,8 @@ namespace UE4.Engine.Native {
         [FieldOffset(84)] public int MaxMobileCascades;
         [FieldOffset(88)] public byte MobileMSAASampleCount;
         [FieldOffset(92)] public bool bMobileUseLegacyShadingModel;
+        [FieldOffset(92)] public bool bMobileAllowDitheredLODTransition;
+        [FieldOffset(92)] public bool bMobileAllowSoftwareOcclusionCulling;
         [FieldOffset(92)] public bool bDiscardUnusedQualityLevels;
         [FieldOffset(92)] public bool bOcclusionCulling;
         [FieldOffset(96)] public float MinScreenRadiusForLights;
@@ -45,19 +47,19 @@ namespace UE4.Engine.Native {
         [FieldOffset(148)] public bool bCustomDepthTaaJitter;
         [FieldOffset(152)] public byte bEnableAlphaChannelInPostProcessing;
         [FieldOffset(156)] public bool bUseNewAlgorithm;
-        [FieldOffset(156)] public bool bUsePreExposure;
         [FieldOffset(156)] public bool bDefaultFeatureBloom;
         [FieldOffset(156)] public bool bDefaultFeatureAmbientOcclusion;
         [FieldOffset(156)] public bool bDefaultFeatureAmbientOcclusionStaticFraction;
         [FieldOffset(156)] public bool bDefaultFeatureAutoExposure;
         [FieldOffset(160)] public byte DefaultFeatureAutoExposure;
+        [FieldOffset(164)] public bool bExtendDefaultLuminanceRangeInAutoExposureSettings;
+        [FieldOffset(164)] public bool bUsePreExposure;
         [FieldOffset(164)] public bool bDefaultFeatureMotionBlur;
         [FieldOffset(164)] public bool bDefaultFeatureLensFlare;
         [FieldOffset(164)] public bool bTemporalUpsampling;
         [FieldOffset(168)] public byte DefaultFeatureAntiAliasing;
-        [FieldOffset(169)] byte DefaultPointLightUnits; //TODO: enum ELightUnits DefaultPointLightUnits
-        [FieldOffset(170)] byte DefaultSpotLightUnits; //TODO: enum ELightUnits DefaultSpotLightUnits
-        [FieldOffset(171)] public byte DefaultBackBufferPixelFormat;
+        [FieldOffset(169)] byte DefaultLightUnits; //TODO: enum ELightUnits DefaultLightUnits
+        [FieldOffset(170)] public byte DefaultBackBufferPixelFormat;
         [FieldOffset(172)] public bool bRenderUnbuiltPreviewShadowsInGame;
         [FieldOffset(172)] public bool bStencilForLODDither;
         [FieldOffset(176)] public byte EarlyZPass;
@@ -79,8 +81,8 @@ namespace UE4.Engine.Native {
         [FieldOffset(208)] public bool bMobileMultiView;
         [FieldOffset(208)] public bool bMobileMultiViewDirect;
         [FieldOffset(208)] public bool bMonoscopicFarField;
-        [FieldOffset(208)] public bool bODSCapture;
-        [FieldOffset(209)] public bool bDebugCanvasInLayer;
+        [FieldOffset(208)] public bool bRoundRobinOcclusion;
+        [FieldOffset(209)] public bool bODSCapture;
         [FieldOffset(212)] public float WireframeCullThreshold;
         [FieldOffset(216)] public bool bSupportStationarySkylight;
         [FieldOffset(216)] public bool bSupportLowQualityLightmaps;

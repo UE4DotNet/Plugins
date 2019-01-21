@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=440 )]
+    [StructLayout( LayoutKind.Explicit, Size=456 )]
     internal unsafe struct ComboBox_fields {
-        [FieldOffset(384)] public NativeArray Items;
-        [FieldOffset(400)] byte OnGenerateWidgetEvent; //TODO: delegate FGenerateWidgetForObject OnGenerateWidgetEvent
-        [FieldOffset(420)] public bool bIsFocusable;
+        [FieldOffset(400)] public NativeArray Items;
+        [FieldOffset(416)] byte OnGenerateWidgetEvent; //TODO: delegate FGenerateWidgetForObject OnGenerateWidgetEvent
+        [FieldOffset(436)] public bool bIsFocusable;
     }
     internal unsafe struct ComboBox_methods {
     }

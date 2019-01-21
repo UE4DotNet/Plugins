@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2304 )]
+    [StructLayout( LayoutKind.Explicit, Size=2224 )]
     internal unsafe struct PoseableMeshComponent_fields {
     }
     internal unsafe struct PoseableMeshComponent_methods {

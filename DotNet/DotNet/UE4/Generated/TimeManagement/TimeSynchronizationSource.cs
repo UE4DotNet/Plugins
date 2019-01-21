@@ -13,21 +13,26 @@ using UE4.Native;
 using UE4.TimeManagement.Native;
 
 namespace UE4.TimeManagement {
-    ///<summary>Base class for sources to be used for time synchronization</summary>
+    ///<summary>Base class for sources to be used for time synchronization.</summary>
+    ///<remarks>
+    ///Subclasses don't need to directly contain data, nor provide access to the
+    ///data in any way (although they may).
+    ///
+    ///Currently, Synchronization does not work on the subframe level.
+    ///</remarks>
     public unsafe partial class TimeSynchronizationSource : UObject  {
         public bool bUseForSynchronization {
             get {return Main.GetGetBoolPropertyByName(this, "bUseForSynchronization"); }
             set {Main.SetGetBoolPropertyByName(this, "bUseForSynchronization", value); }
         }
-        ///<summary>Extra frame to buffered before allowing the Manager to by in synchronized mode.</summary>
-        public unsafe int NumberOfExtraBufferedFrame {
-            get {return TimeSynchronizationSource_ptr->NumberOfExtraBufferedFrame;}
-            set {TimeSynchronizationSource_ptr->NumberOfExtraBufferedFrame = value;}
-        }
-        ///<summary>Fixed delay in seconds to align with other sources.</summary>
-        public unsafe float TimeDelay {
-            get {return TimeSynchronizationSource_ptr->TimeDelay;}
-            set {TimeSynchronizationSource_ptr->TimeDelay = value;}
+        ///<summary>An additional offset in frames (relative to this source's frame rate) that should used.</summary>
+        ///<remarks>
+        ///This is mainly useful to help correct discrepancies between the reported Sample Times
+        ///and how the samples actually line up relative to other sources.
+        ///</remarks>
+        public unsafe int FrameOffset {
+            get {return TimeSynchronizationSource_ptr->FrameOffset;}
+            set {TimeSynchronizationSource_ptr->FrameOffset = value;}
         }
         static TimeSynchronizationSource() {
             StaticClass = Main.GetClass("TimeSynchronizationSource");

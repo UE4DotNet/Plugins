@@ -150,13 +150,6 @@ namespace UE4.Engine {
             get {return MovementComponent_ptr->Velocity;}
             set {MovementComponent_ptr->Velocity = value;}
         }
-        public bool bConstrainToPlane {
-            get {return Main.GetGetBoolPropertyByName(this, "bConstrainToPlane"); }
-        }
-        public bool bSnapToPlaneAtStart {
-            get {return Main.GetGetBoolPropertyByName(this, "bSnapToPlaneAtStart"); }
-        }
-         //TODO: enum EPlaneConstraintAxisSetting PlaneConstraintAxisSetting
         ///<summary>The normal or axis of the plane that constrains movement, if bConstrainToPlane is enabled.</summary>
         ///<remarks>
         ///If for example you wanted to constrain movement to the X-Z plane (so that Y cannot change), the normal would be set to X=0 Y=1 Z=0.
@@ -187,6 +180,19 @@ namespace UE4.Engine {
         public bool bAutoRegisterUpdatedComponent {
             get {return Main.GetGetBoolPropertyByName(this, "bAutoRegisterUpdatedComponent"); }
         }
+        public bool bConstrainToPlane {
+            get {return Main.GetGetBoolPropertyByName(this, "bConstrainToPlane"); }
+        }
+        public bool bSnapToPlaneAtStart {
+            get {return Main.GetGetBoolPropertyByName(this, "bSnapToPlaneAtStart"); }
+        }
+        public bool bAutoRegisterPhysicsVolumeUpdates {
+            get {return Main.GetGetBoolPropertyByName(this, "bAutoRegisterPhysicsVolumeUpdates"); }
+        }
+        public bool bComponentShouldUpdatePhysicsVolume {
+            get {return Main.GetGetBoolPropertyByName(this, "bComponentShouldUpdatePhysicsVolume"); }
+        }
+         //TODO: enum EPlaneConstraintAxisSetting PlaneConstraintAxisSetting
         static MovementComponent() {
             StaticClass = Main.GetClass("MovementComponent");
         }

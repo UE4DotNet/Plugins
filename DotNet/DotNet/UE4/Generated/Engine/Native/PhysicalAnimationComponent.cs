@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=320 )]
+    [StructLayout( LayoutKind.Explicit, Size=312 )]
     internal unsafe struct PhysicalAnimationComponent_fields {
         [FieldOffset(256)] public float StrengthMultiplyer;
         [FieldOffset(264)]  public IntPtr  SkeletalMeshComponent;

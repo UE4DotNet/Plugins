@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=424 )]
+    [StructLayout( LayoutKind.Explicit, Size=440 )]
     internal unsafe struct VerticalBox_fields {
     }
     internal unsafe struct VerticalBox_methods {

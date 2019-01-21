@@ -32,17 +32,9 @@ namespace UE4.OculusHMD {
         public static void AddLoadingSplashScreen(Texture2D Texture, Vector TranslationInMeters, Rotator Rotation, Vector2D SizeInMeters, Rotator DeltaRotation, bool bClearBeforeAdd)  => 
             OculusFunctionLibrary_methods.AddLoadingSplashScreen_method.Invoke(Texture, TranslationInMeters, Rotation, SizeInMeters, DeltaRotation, bClearBeforeAdd);
 
-        ///<summary>Are Head Phones Plugged In</summary>
-        public static bool AreHeadPhonesPluggedIn()  => 
-            OculusFunctionLibrary_methods.AreHeadPhonesPluggedIn_method.Invoke();
-
         ///<summary>Removes all the splash screens.</summary>
         public static void ClearLoadingSplashScreens()  => 
             OculusFunctionLibrary_methods.ClearLoadingSplashScreens_method.Invoke();
-
-        ///<summary>Enable Arm Model</summary>
-        public static void EnableArmModel(bool bArmModelEnable)  => 
-            OculusFunctionLibrary_methods.EnableArmModel_method.Invoke(bArmModelEnable);
 
         ///<summary>Enables/disables splash screen to be automatically shown when LoadMap is called.</summary>
         ///<remarks>
@@ -50,6 +42,14 @@ namespace UE4.OculusHMD {
         ///</remarks>
         public static void EnableAutoLoadingSplashScreen(bool bAutoShowEnabled)  => 
             OculusFunctionLibrary_methods.EnableAutoLoadingSplashScreen_method.Invoke(bAutoShowEnabled);
+
+        ///<summary>Enables/disables orientation tracking on devices that support it.</summary>
+        public static void EnableOrientationTracking(bool bOrientationTracking)  => 
+            OculusFunctionLibrary_methods.EnableOrientationTracking_method.Invoke(bOrientationTracking);
+
+        ///<summary>Enables/disables positional tracking on devices that support it.</summary>
+        public static void EnablePositionTracking(bool bPositionTracking)  => 
+            OculusFunctionLibrary_methods.EnablePositionTracking_method.Invoke(bPositionTracking);
 
         ///<summary>Returns the current available frequencies</summary>
         public static IReadOnlyCollection<float> GetAvailableDisplayFrequencies()  => 
@@ -76,10 +76,6 @@ namespace UE4.OculusHMD {
         public static (Rotator, Vector) GetBaseRotationAndPositionOffset()  => 
             OculusFunctionLibrary_methods.GetBaseRotationAndPositionOffset_method.Invoke();
 
-        ///<summary>Get Battery Level</summary>
-        public static float GetBatteryLevel()  => 
-            OculusFunctionLibrary_methods.GetBatteryLevel_method.Invoke();
-
         ///<summary>Returns the current display frequency</summary>
         public static float GetCurrentDisplayFrequency()  => 
             OculusFunctionLibrary_methods.GetCurrentDisplayFrequency_method.Invoke();
@@ -88,13 +84,29 @@ namespace UE4.OculusHMD {
         public static string GetDeviceName()  => 
             OculusFunctionLibrary_methods.GetDeviceName_method.Invoke();
 
-        ///<summary>Get Gear VRController Handedness</summary>
-        public static EGearVRControllerHandedness_DEPRECATED GetGearVRControllerHandedness()  => 
-            OculusFunctionLibrary_methods.GetGearVRControllerHandedness_method.Invoke();
+        ///<summary>Returns the GPU frame time on supported mobile platforms (Go for now)</summary>
+        public static float GetGPUFrameTime()  => 
+            OculusFunctionLibrary_methods.GetGPUFrameTime_method.Invoke();
 
         ///<summary>Returns the GPU utilization availability and value</summary>
         public static (bool, float) GetGPUUtilization()  => 
             OculusFunctionLibrary_methods.GetGPUUtilization_method.Invoke();
+
+        ///<summary>
+        ///Returns the dimensions in UE world space of the requested Boundary Type
+        ///@
+        ///</summary>
+        ///<remarks>param BoundaryType                   (in) An enum representing the boundary type requested, either Outer Boundary (exact guardian bounds) or PlayArea (rectangle inside the Outer Boundary)</remarks>
+        public static Vector GetGuardianDimensions(EBoundaryType BoundaryType)  => 
+            OculusFunctionLibrary_methods.GetGuardianDimensions_method.Invoke(BoundaryType);
+
+        ///<summary>
+        ///Returns the list of points in UE world space of the requested Boundary Type
+        ///@
+        ///</summary>
+        ///<remarks>param BoundaryType                   (in) An enum representing the boundary type requested, either Outer Boundary (exact guardian bounds) or PlayArea (rectangle inside the Outer Boundary)</remarks>
+        public static IReadOnlyCollection<Vector> GetGuardianPoints(EBoundaryType BoundaryType)  => 
+            OculusFunctionLibrary_methods.GetGuardianPoints_method.Invoke(BoundaryType);
 
         ///<summary>Returns loading splash screen parameters.</summary>
         ///<remarks>
@@ -106,6 +118,32 @@ namespace UE4.OculusHMD {
         ///</remarks>
         public static (string, Vector, Vector2D, Vector, float) GetLoadingSplashParams()  => 
             OculusFunctionLibrary_methods.GetLoadingSplashParams_method.Invoke();
+
+        ///<summary>
+        ///Get the intersection result between a tracked device (HMD or controllers) and a guardian boundary
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param DeviceType             (in) Tracked Device type to test against guardian boundaries
+        ///@param BoundaryType                   (in) An enum representing the boundary type requested, either Outer Boundary (exact guardian bounds) or PlayArea (rectangle inside the Outer Boundary)
+        ///</remarks>
+        public static GuardianTestResult GetNodeGuardianIntersection(ETrackedDeviceType DeviceType, EBoundaryType BoundaryType)  => 
+            OculusFunctionLibrary_methods.GetNodeGuardianIntersection_method.Invoke(DeviceType, BoundaryType);
+
+        ///<summary>Returns the transform of the play area rectangle, defining its position, rotation and scale to apply to a unit cube to match it with the play area.</summary>
+        public static Transform GetPlayAreaTransform()  => 
+            OculusFunctionLibrary_methods.GetPlayAreaTransform_method.Invoke();
+
+        ///<summary>
+        ///Get the intersection result between a UE4 coordinate and a guardian boundary
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param Point                                  (in) Point in UE space to test against guardian boundaries
+        ///@param BoundaryType                   (in) An enum representing the boundary type requested, either Outer Boundary (exact guardian bounds) or PlayArea (rectangle inside the Outer Boundary)
+        ///</remarks>
+        public static GuardianTestResult GetPointGuardianIntersection(Vector Point, EBoundaryType BoundaryType)  => 
+            OculusFunctionLibrary_methods.GetPointGuardianIntersection_method.Invoke(Point, BoundaryType);
 
         ///<summary>Grabs the current orientation and position for the HMD.</summary>
         ///<remarks>
@@ -133,10 +171,6 @@ namespace UE4.OculusHMD {
         ///</remarks>
         public static (Vector, Vector, Vector, Vector, float) GetRawSensorData(ETrackedDeviceType DeviceType)  => 
             OculusFunctionLibrary_methods.GetRawSensorData_method.Invoke(DeviceType);
-
-        ///<summary>Get Temperature in Celsius</summary>
-        public static float GetTemperatureInCelsius()  => 
-            OculusFunctionLibrary_methods.GetTemperatureInCelsius_method.Invoke();
 
         ///<summary>Returns the current multiresolution level</summary>
         public static ETiledMultiResLevel GetTiledMultiresLevel()  => 
@@ -173,25 +207,17 @@ namespace UE4.OculusHMD {
         public static bool IsAutoLoadingSplashScreenEnabled()  => 
             OculusFunctionLibrary_methods.IsAutoLoadingSplashScreenEnabled_method.Invoke();
 
-        ///<summary>Is Controller Active</summary>
-        public static bool IsControllerActive()  => 
-            OculusFunctionLibrary_methods.IsControllerActive_method.Invoke();
-
         ///<summary>Returns if the device is currently tracked by the runtime or not.</summary>
         public static bool IsDeviceTracked(ETrackedDeviceType DeviceType)  => 
             OculusFunctionLibrary_methods.IsDeviceTracked_method.Invoke(DeviceType);
 
+        ///<summary>Returns true if the Guardian Outer Boundary is being displayed</summary>
+        public static bool IsGuardianDisplayed()  => 
+            OculusFunctionLibrary_methods.IsGuardianDisplayed_method.Invoke();
+
         ///<summary>Returns true, if the splash screen is in loading icon mode.</summary>
         public static bool IsLoadingIconEnabled()  => 
             OculusFunctionLibrary_methods.IsLoadingIconEnabled_method.Invoke();
-
-        ///<summary>Is Power Level State Minimum</summary>
-        public static bool IsPowerLevelStateMinimum()  => 
-            OculusFunctionLibrary_methods.IsPowerLevelStateMinimum_method.Invoke();
-
-        ///<summary>Is Power Level State Throttled</summary>
-        public static bool IsPowerLevelStateThrottled()  => 
-            OculusFunctionLibrary_methods.IsPowerLevelStateThrottled_method.Invoke();
 
         ///<summary>
         ///Sets 'base rotation' - the rotation that will be subtracted from
@@ -234,6 +260,14 @@ namespace UE4.OculusHMD {
         public static void SetDisplayFrequency(float RequestedFrequency)  => 
             OculusFunctionLibrary_methods.SetDisplayFrequency_method.Invoke(RequestedFrequency);
 
+        ///<summary>
+        ///Forces the runtime to render guardian at all times or not
+        ///@
+        ///</summary>
+        ///<remarks>param GuardianVisible                        (in) True will display guardian, False will hide it</remarks>
+        public static void SetGuardianVisibility(bool GuardianVisible)  => 
+            OculusFunctionLibrary_methods.SetGuardianVisibility_method.Invoke(GuardianVisible);
+
         ///<summary>Sets loading splash screen parameters.</summary>
         ///<remarks>
         ///@param TexturePath           (in) A path to the texture asset to be used for the splash. Gear VR uses it as a path for loading icon; all other params are currently ignored by Gear VR.
@@ -251,6 +285,18 @@ namespace UE4.OculusHMD {
         ///</remarks>
         public static void SetPositionScale3D(Vector PosScale3D)  => 
             OculusFunctionLibrary_methods.SetPositionScale3D_method.Invoke(PosScale3D);
+
+        ///<summary>
+        ///Sets the HMD recenter behavior to a mode that specifies HMD recentering behavior when a
+        ///controller recenter is performed.
+        ///</summary>
+        ///<remarks>
+        ///If the recenterMode specified is 1, the HMD will recenter
+        ///on controller recenter; if it's 0, only the controller will recenter. Returns false if not
+        ///supported.
+        ///</remarks>
+        public static void SetReorientHMDOnControllerRecenter(bool recenterMode)  => 
+            OculusFunctionLibrary_methods.SetReorientHMDOnControllerRecenter_method.Invoke(recenterMode);
 
         ///<summary>Set the requested multiresolution level for the next frame</summary>
         public static void SetTiledMultiresLevel(ETiledMultiResLevel level)  => 

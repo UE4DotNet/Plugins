@@ -12,9 +12,9 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.AudioMixer.Native {
-    [StructLayout( LayoutKind.Explicit, Size=216 )]
+    [StructLayout( LayoutKind.Explicit, Size=224 )]
     internal unsafe struct SubmixEffectReverbPreset_fields {
-        [FieldOffset(168)] public SubmixEffectReverbSettings Settings;
+        [FieldOffset(172)] public SubmixEffectReverbSettings Settings;
     }
     internal unsafe struct SubmixEffectReverbPreset_methods {
         internal struct SetSettings_method {
@@ -24,7 +24,7 @@ namespace UE4.AudioMixer.Native {
             }
 
             internal static unsafe void Invoke(IntPtr obj, SubmixEffectReverbSettings InSettings) {
-                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L};
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L};
                 byte* b = (byte*) p;
                 *((SubmixEffectReverbSettings*)(b+0)) = InSettings;
                 Main.GetProcessEvent(obj, SetSettings_ptr, new IntPtr(p)); ;
@@ -36,11 +36,12 @@ namespace UE4.AudioMixer.Native {
                 SetSettingsWithReverbEffect_ptr = Main.GetMethodUFunction(SubmixEffectReverbPreset.StaticClass, "SetSettingsWithReverbEffect");
             }
 
-            internal static unsafe void Invoke(IntPtr obj, ReverbEffect InReverbEffect, float WetLevel) {
+            internal static unsafe void Invoke(IntPtr obj, ReverbEffect InReverbEffect, float WetLevel, float DryLevel) {
                 long* p = stackalloc long[] {0L,0L,0L};
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = InReverbEffect;
                 *((float*)(b+8)) = WetLevel;
+                *((float*)(b+12)) = DryLevel;
                 Main.GetProcessEvent(obj, SetSettingsWithReverbEffect_ptr, new IntPtr(p)); ;
             }
         }

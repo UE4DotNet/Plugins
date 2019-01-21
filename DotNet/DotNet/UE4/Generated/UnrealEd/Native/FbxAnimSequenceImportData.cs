@@ -11,21 +11,22 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=216 )]
+    [StructLayout( LayoutKind.Explicit, Size=224 )]
     internal unsafe struct FbxAnimSequenceImportData_fields {
         [FieldOffset(144)] public bool bImportMeshesInBoneHierarchy;
         [FieldOffset(145)] public byte AnimationLength;
         [FieldOffset(156)] public Int32Interval FrameImportRange;
         [FieldOffset(164)] public bool bUseDefaultSampleRate;
-        [FieldOffset(168)] byte SourceAnimationName; //TODO: string FString SourceAnimationName
-        [FieldOffset(184)] public bool bImportCustomAttribute;
-        [FieldOffset(185)] public bool bImportBoneTracks;
-        [FieldOffset(186)] public bool bSetMaterialDriveParameterOnCustomAttribute;
-        [FieldOffset(192)] public NativeArray MaterialCurveSuffixes;
-        [FieldOffset(208)] public bool bRemoveRedundantKeys;
-        [FieldOffset(209)] public bool bDeleteExistingMorphTargetCurves;
-        [FieldOffset(210)] public bool bDoNotImportCurveWithZero;
-        [FieldOffset(211)] public bool bPreserveLocalTransform;
+        [FieldOffset(168)] public int CustomSampleRate;
+        [FieldOffset(176)] byte SourceAnimationName; //TODO: string FString SourceAnimationName
+        [FieldOffset(192)] public bool bImportCustomAttribute;
+        [FieldOffset(193)] public bool bImportBoneTracks;
+        [FieldOffset(194)] public bool bSetMaterialDriveParameterOnCustomAttribute;
+        [FieldOffset(200)] public NativeArray MaterialCurveSuffixes;
+        [FieldOffset(216)] public bool bRemoveRedundantKeys;
+        [FieldOffset(217)] public bool bDeleteExistingMorphTargetCurves;
+        [FieldOffset(218)] public bool bDoNotImportCurveWithZero;
+        [FieldOffset(219)] public bool bPreserveLocalTransform;
     }
     internal unsafe struct FbxAnimSequenceImportData_methods {
     }

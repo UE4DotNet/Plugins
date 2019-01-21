@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=104 )]
+    [StructLayout( LayoutKind.Explicit, Size=112 )]
     internal unsafe struct AnimCompress_RemoveTrivialKeys_fields {
-        [FieldOffset(88)] public float MaxPosDiff;
-        [FieldOffset(92)] public float MaxAngleDiff;
-        [FieldOffset(96)] public float MaxScaleDiff;
+        [FieldOffset(96)] public float MaxPosDiff;
+        [FieldOffset(100)] public float MaxAngleDiff;
+        [FieldOffset(104)] public float MaxScaleDiff;
     }
     internal unsafe struct AnimCompress_RemoveTrivialKeys_methods {
     }

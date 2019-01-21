@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.Foliage.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1008 )]
+    [StructLayout( LayoutKind.Explicit, Size=992 )]
     internal unsafe struct FoliageType_fields {
         [FieldOffset(56)] public FGuid UpdateGuid;
         [FieldOffset(72)] public float Density;
@@ -50,45 +50,45 @@ namespace UE4.Foliage.Native {
         [FieldOffset(324)] byte LightmapType; //TODO: enum ELightmapType LightmapType
         [FieldOffset(328)] public bool bUseAsOccluder;
         [FieldOffset(336)] public BodyInstance BodyInstance;
-        [FieldOffset(720)] public byte CustomNavigableGeometry;
-        [FieldOffset(721)] public LightingChannels LightingChannels;
-        [FieldOffset(724)] public bool bRenderCustomDepth;
-        [FieldOffset(728)] public int CustomDepthStencilValue;
-        [FieldOffset(736)] byte HiddenEditorViews; //TODO: numeric uint64 HiddenEditorViews
-        [FieldOffset(744)] public bool IsSelected;
-        [FieldOffset(748)] public float CollisionRadius;
-        [FieldOffset(752)] public float ShadeRadius;
-        [FieldOffset(756)] public int NumSteps;
-        [FieldOffset(760)] public float InitialSeedDensity;
-        [FieldOffset(764)] public float AverageSpreadDistance;
-        [FieldOffset(768)] public float SpreadVariance;
-        [FieldOffset(772)] public int SeedsPerStep;
-        [FieldOffset(776)] public int DistributionSeed;
-        [FieldOffset(780)] public float MaxInitialSeedOffset;
-        [FieldOffset(784)] public bool bCanGrowInShade;
-        [FieldOffset(785)] public bool bSpawnsInShade;
-        [FieldOffset(788)] public float MaxInitialAge;
-        [FieldOffset(792)] public float MaxAge;
-        [FieldOffset(796)] public float OverlapPriority;
-        [FieldOffset(800)] public FloatInterval ProceduralScale;
-        [FieldOffset(808)] public RuntimeFloatCurve ScaleCurve;
-        [FieldOffset(928)] public int ChangeCount;
-        [FieldOffset(932)] public bool ReapplyDensity;
-        [FieldOffset(932)] public bool ReapplyRadius;
-        [FieldOffset(932)] public bool ReapplyAlignToNormal;
-        [FieldOffset(932)] public bool ReapplyRandomYaw;
-        [FieldOffset(932)] public bool ReapplyScaling;
-        [FieldOffset(932)] public bool ReapplyScaleX;
-        [FieldOffset(932)] public bool ReapplyScaleY;
-        [FieldOffset(932)] public bool ReapplyScaleZ;
-        [FieldOffset(933)] public bool ReapplyRandomPitchAngle;
-        [FieldOffset(933)] public bool ReapplyGroundSlope;
-        [FieldOffset(933)] public bool ReapplyHeight;
-        [FieldOffset(933)] public bool ReapplyLandscapeLayers;
-        [FieldOffset(933)] public bool ReapplyZOffset;
-        [FieldOffset(933)] public bool ReapplyCollisionWithWorld;
-        [FieldOffset(933)] public bool ReapplyVertexColorMask;
-        [FieldOffset(933)] public bool bEnableDensityScaling;
+        [FieldOffset(704)] public byte CustomNavigableGeometry;
+        [FieldOffset(705)] public LightingChannels LightingChannels;
+        [FieldOffset(708)] public bool bRenderCustomDepth;
+        [FieldOffset(712)] public int CustomDepthStencilValue;
+        [FieldOffset(720)] byte HiddenEditorViews; //TODO: numeric uint64 HiddenEditorViews
+        [FieldOffset(728)] public bool IsSelected;
+        [FieldOffset(732)] public float CollisionRadius;
+        [FieldOffset(736)] public float ShadeRadius;
+        [FieldOffset(740)] public int NumSteps;
+        [FieldOffset(744)] public float InitialSeedDensity;
+        [FieldOffset(748)] public float AverageSpreadDistance;
+        [FieldOffset(752)] public float SpreadVariance;
+        [FieldOffset(756)] public int SeedsPerStep;
+        [FieldOffset(760)] public int DistributionSeed;
+        [FieldOffset(764)] public float MaxInitialSeedOffset;
+        [FieldOffset(768)] public bool bCanGrowInShade;
+        [FieldOffset(769)] public bool bSpawnsInShade;
+        [FieldOffset(772)] public float MaxInitialAge;
+        [FieldOffset(776)] public float MaxAge;
+        [FieldOffset(780)] public float OverlapPriority;
+        [FieldOffset(784)] public FloatInterval ProceduralScale;
+        [FieldOffset(792)] public RuntimeFloatCurve ScaleCurve;
+        [FieldOffset(912)] public int ChangeCount;
+        [FieldOffset(916)] public bool ReapplyDensity;
+        [FieldOffset(916)] public bool ReapplyRadius;
+        [FieldOffset(916)] public bool ReapplyAlignToNormal;
+        [FieldOffset(916)] public bool ReapplyRandomYaw;
+        [FieldOffset(916)] public bool ReapplyScaling;
+        [FieldOffset(916)] public bool ReapplyScaleX;
+        [FieldOffset(916)] public bool ReapplyScaleY;
+        [FieldOffset(916)] public bool ReapplyScaleZ;
+        [FieldOffset(917)] public bool ReapplyRandomPitchAngle;
+        [FieldOffset(917)] public bool ReapplyGroundSlope;
+        [FieldOffset(917)] public bool ReapplyHeight;
+        [FieldOffset(917)] public bool ReapplyLandscapeLayers;
+        [FieldOffset(917)] public bool ReapplyZOffset;
+        [FieldOffset(917)] public bool ReapplyCollisionWithWorld;
+        [FieldOffset(917)] public bool ReapplyVertexColorMask;
+        [FieldOffset(917)] public bool bEnableDensityScaling;
     }
     internal unsafe struct FoliageType_methods {
     }

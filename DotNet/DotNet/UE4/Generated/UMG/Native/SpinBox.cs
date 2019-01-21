@@ -12,31 +12,31 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1560 )]
+    [StructLayout( LayoutKind.Explicit, Size=1584 )]
     internal unsafe struct SpinBox_fields {
-        [FieldOffset(384)] public float Value;
-        [FieldOffset(388)] byte ValueDelegate; //TODO: delegate FGetFloat ValueDelegate
-        [FieldOffset(408)] public SpinBoxStyle WidgetStyle;
-        [FieldOffset(1280)] public float Delta;
-        [FieldOffset(1284)] public float SliderExponent;
-        [FieldOffset(1288)] public SlateFontInfo Font;
-        [FieldOffset(1392)] public byte Justification;
-        [FieldOffset(1396)] public float MinDesiredWidth;
-        [FieldOffset(1400)] public bool ClearKeyboardFocusOnCommit;
-        [FieldOffset(1401)] public bool SelectAllTextOnCommit;
-        [FieldOffset(1408)] public SlateColor ForegroundColor;
-        [FieldOffset(1448)] byte OnValueChanged; //TODO: multicast delegate FOnSpinBoxValueChangedEvent OnValueChanged
-        [FieldOffset(1464)] byte OnValueCommitted; //TODO: multicast delegate FOnSpinBoxValueCommittedEvent OnValueCommitted
-        [FieldOffset(1480)] byte OnBeginSliderMovement; //TODO: multicast delegate FOnSpinBoxBeginSliderMovement OnBeginSliderMovement
-        [FieldOffset(1496)] byte OnEndSliderMovement; //TODO: multicast delegate FOnSpinBoxValueChangedEvent OnEndSliderMovement
-        [FieldOffset(1512)] public bool bOverride_MinValue;
-        [FieldOffset(1512)] public bool bOverride_MaxValue;
-        [FieldOffset(1512)] public bool bOverride_MinSliderValue;
-        [FieldOffset(1512)] public bool bOverride_MaxSliderValue;
-        [FieldOffset(1516)] public float MinValue;
-        [FieldOffset(1520)] public float MaxValue;
-        [FieldOffset(1524)] public float MinSliderValue;
-        [FieldOffset(1528)] public float MaxSliderValue;
+        [FieldOffset(400)] public float Value;
+        [FieldOffset(404)] byte ValueDelegate; //TODO: delegate FGetFloat ValueDelegate
+        [FieldOffset(424)] public SpinBoxStyle WidgetStyle;
+        [FieldOffset(1296)] public float Delta;
+        [FieldOffset(1300)] public float SliderExponent;
+        [FieldOffset(1304)] public SlateFontInfo Font;
+        [FieldOffset(1416)] public byte Justification;
+        [FieldOffset(1420)] public float MinDesiredWidth;
+        [FieldOffset(1424)] public bool ClearKeyboardFocusOnCommit;
+        [FieldOffset(1425)] public bool SelectAllTextOnCommit;
+        [FieldOffset(1432)] public SlateColor ForegroundColor;
+        [FieldOffset(1472)] byte OnValueChanged; //TODO: multicast delegate FOnSpinBoxValueChangedEvent OnValueChanged
+        [FieldOffset(1488)] byte OnValueCommitted; //TODO: multicast delegate FOnSpinBoxValueCommittedEvent OnValueCommitted
+        [FieldOffset(1504)] byte OnBeginSliderMovement; //TODO: multicast delegate FOnSpinBoxBeginSliderMovement OnBeginSliderMovement
+        [FieldOffset(1520)] byte OnEndSliderMovement; //TODO: multicast delegate FOnSpinBoxValueChangedEvent OnEndSliderMovement
+        [FieldOffset(1536)] public bool bOverride_MinValue;
+        [FieldOffset(1536)] public bool bOverride_MaxValue;
+        [FieldOffset(1536)] public bool bOverride_MinSliderValue;
+        [FieldOffset(1536)] public bool bOverride_MaxSliderValue;
+        [FieldOffset(1540)] public float MinValue;
+        [FieldOffset(1544)] public float MaxValue;
+        [FieldOffset(1548)] public float MinSliderValue;
+        [FieldOffset(1552)] public float MaxSliderValue;
     }
     internal unsafe struct SpinBox_methods {
         internal struct ClearMaxSliderValue_method {

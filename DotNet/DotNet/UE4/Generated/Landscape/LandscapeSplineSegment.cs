@@ -74,6 +74,10 @@ namespace UE4.Landscape {
             get {return LandscapeSplineSegment_ptr->TranslucencySortPriority;}
             set {LandscapeSplineSegment_ptr->TranslucencySortPriority = value;}
         }
+        public bool bHiddenInGame {
+            get {return Main.GetGetBoolPropertyByName(this, "bHiddenInGame"); }
+            set {Main.SetGetBoolPropertyByName(this, "bHiddenInGame", value); }
+        }
         public bool bPlaceSplineMeshesInStreamingLevels {
             get {return Main.GetGetBoolPropertyByName(this, "bPlaceSplineMeshesInStreamingLevels"); }
             set {Main.SetGetBoolPropertyByName(this, "bPlaceSplineMeshesInStreamingLevels", value); }

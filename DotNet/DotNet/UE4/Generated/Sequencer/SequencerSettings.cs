@@ -139,10 +139,6 @@ namespace UE4.Sequencer {
             get {return Main.GetGetBoolPropertyByName(this, "bShowChannelColors"); }
             set {Main.SetGetBoolPropertyByName(this, "bShowChannelColors", value); }
         }
-        public bool bShowViewportTransportControls {
-            get {return Main.GetGetBoolPropertyByName(this, "bShowViewportTransportControls"); }
-            set {Main.SetGetBoolPropertyByName(this, "bShowViewportTransportControls", value); }
-        }
         public bool bAllowPossessionOfPIEViewports {
             get {return Main.GetGetBoolPropertyByName(this, "bAllowPossessionOfPIEViewports"); }
             set {Main.SetGetBoolPropertyByName(this, "bAllowPossessionOfPIEViewports", value); }
@@ -166,6 +162,10 @@ namespace UE4.Sequencer {
         public bool bVisualizePreAndPostRoll {
             get {return Main.GetGetBoolPropertyByName(this, "bVisualizePreAndPostRoll"); }
             set {Main.SetGetBoolPropertyByName(this, "bVisualizePreAndPostRoll", value); }
+        }
+        public bool bCompileDirectorOnEvaluate {
+            get {return Main.GetGetBoolPropertyByName(this, "bCompileDirectorOnEvaluate"); }
+            set {Main.SetGetBoolPropertyByName(this, "bCompileDirectorOnEvaluate", value); }
         }
          //TODO: numeric uint32 TrajectoryPathCap
          //TODO: enum EFrameNumberDisplayFormats FrameNumberDisplayFormat

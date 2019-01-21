@@ -12,13 +12,13 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.PhysXVehicles.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1128 )]
+    [StructLayout( LayoutKind.Explicit, Size=1088 )]
     internal unsafe struct WheeledVehicleMovementComponent4W_fields {
-        [FieldOffset(776)] public VehicleEngineData EngineSetup;
-        [FieldOffset(920)] public VehicleDifferential4WData DifferentialSetup;
-        [FieldOffset(952)] public VehicleTransmissionData TransmissionSetup;
-        [FieldOffset(1000)] public RuntimeFloatCurve SteeringCurve;
-        [FieldOffset(1120)] public float AckermannAccuracy;
+        [FieldOffset(744)] public VehicleEngineData EngineSetup;
+        [FieldOffset(888)] public VehicleDifferential4WData DifferentialSetup;
+        [FieldOffset(916)] public float AckermannAccuracy;
+        [FieldOffset(920)] public VehicleTransmissionData TransmissionSetup;
+        [FieldOffset(968)] public RuntimeFloatCurve SteeringCurve;
     }
     internal unsafe struct WheeledVehicleMovementComponent4W_methods {
     }

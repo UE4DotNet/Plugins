@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.CinematicCamera.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2432 )]
+    [StructLayout( LayoutKind.Explicit, Size=2400 )]
     internal unsafe struct CineCameraActor_fields {
-        [FieldOffset(2368)] public CameraLookatTrackingSettings LookatTrackingSettings;
+        [FieldOffset(2336)] public CameraLookatTrackingSettings LookatTrackingSettings;
     }
     internal unsafe struct CineCameraActor_methods {
         internal struct GetCineCameraComponent_method {

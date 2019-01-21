@@ -13,19 +13,19 @@ using UE4.SlateCore;
 using UE4.Slate;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=3648 )]
+    [StructLayout( LayoutKind.Explicit, Size=3688 )]
     internal unsafe struct MultiLineEditableTextBox_fields {
-        [FieldOffset(416)] byte Text; //TODO: text FText Text
-        [FieldOffset(440)] byte HintText; //TODO: text FText HintText
-        [FieldOffset(464)] byte HintTextDelegate; //TODO: delegate FGetText HintTextDelegate
-        [FieldOffset(488)] public EditableTextBoxStyle WidgetStyle;
-        [FieldOffset(2856)] public TextBlockStyle TextStyle;
-        [FieldOffset(3408)] public bool bIsReadOnly;
-        [FieldOffset(3409)] public bool AllowContextMenu;
-        [FieldOffset(3410)] public VirtualKeyboardOptions VirtualKeyboardOptions;
-        [FieldOffset(3411)] byte VirtualKeyboardDismissAction; //TODO: enum EVirtualKeyboardDismissAction VirtualKeyboardDismissAction
-        [FieldOffset(3576)] byte OnTextChanged; //TODO: multicast delegate FOnMultiLineEditableTextBoxChangedEvent OnTextChanged
-        [FieldOffset(3592)] byte OnTextCommitted; //TODO: multicast delegate FOnMultiLineEditableTextBoxCommittedEvent OnTextCommitted
+        [FieldOffset(432)] byte Text; //TODO: text FText Text
+        [FieldOffset(456)] byte HintText; //TODO: text FText HintText
+        [FieldOffset(480)] byte HintTextDelegate; //TODO: delegate FGetText HintTextDelegate
+        [FieldOffset(504)] public EditableTextBoxStyle WidgetStyle;
+        [FieldOffset(2880)] public TextBlockStyle TextStyle;
+        [FieldOffset(3440)] public bool bIsReadOnly;
+        [FieldOffset(3441)] public bool AllowContextMenu;
+        [FieldOffset(3442)] public VirtualKeyboardOptions VirtualKeyboardOptions;
+        [FieldOffset(3443)] byte VirtualKeyboardDismissAction; //TODO: enum EVirtualKeyboardDismissAction VirtualKeyboardDismissAction
+        [FieldOffset(3616)] byte OnTextChanged; //TODO: multicast delegate FOnMultiLineEditableTextBoxChangedEvent OnTextChanged
+        [FieldOffset(3632)] byte OnTextCommitted; //TODO: multicast delegate FOnMultiLineEditableTextBoxCommittedEvent OnTextCommitted
     }
     internal unsafe struct MultiLineEditableTextBox_methods {
         internal struct GetText_method {

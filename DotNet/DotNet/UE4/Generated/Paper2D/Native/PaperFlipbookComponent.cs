@@ -11,18 +11,18 @@ using UE4.Native;
 
 
 namespace UE4.Paper2D.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1632 )]
+    [StructLayout( LayoutKind.Explicit, Size=1616 )]
     internal unsafe struct PaperFlipbookComponent_fields {
-        [FieldOffset(1560)]  public IntPtr  SourceFlipbook;
-        [FieldOffset(1576)] public float PlayRate;
-        [FieldOffset(1580)] public bool bLooping;
-        [FieldOffset(1580)] public bool bReversePlayback;
-        [FieldOffset(1580)] public bool bPlaying;
-        [FieldOffset(1584)] public float AccumulatedTime;
-        [FieldOffset(1588)] public int CachedFrameIndex;
-        [FieldOffset(1592)] public LinearColor SpriteColor;
-        [FieldOffset(1608)]  public IntPtr  CachedBodySetup;
-        [FieldOffset(1616)] byte OnFinishedPlaying; //TODO: multicast delegate FFlipbookFinishedPlaySignature OnFinishedPlaying
+        [FieldOffset(1544)]  public IntPtr  SourceFlipbook;
+        [FieldOffset(1560)] public float PlayRate;
+        [FieldOffset(1564)] public bool bLooping;
+        [FieldOffset(1564)] public bool bReversePlayback;
+        [FieldOffset(1564)] public bool bPlaying;
+        [FieldOffset(1568)] public float AccumulatedTime;
+        [FieldOffset(1572)] public int CachedFrameIndex;
+        [FieldOffset(1576)] public LinearColor SpriteColor;
+        [FieldOffset(1592)]  public IntPtr  CachedBodySetup;
+        [FieldOffset(1600)] byte OnFinishedPlaying; //TODO: multicast delegate FFlipbookFinishedPlaySignature OnFinishedPlaying
     }
     internal unsafe struct PaperFlipbookComponent_methods {
         internal struct GetFlipbook_method {

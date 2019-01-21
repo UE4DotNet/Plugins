@@ -52,16 +52,16 @@ namespace UE4.CoreUObject {
         Gigabytes = 0x00000025, 
         Terabytes = 0x00000026, 
         Lumens = 0x00000027, 
-        Milliseconds = 0x00000028, 
-        Seconds = 0x00000029, 
-        Minutes = 0x0000002a, 
-        Hours = 0x0000002b, 
-        Days = 0x0000002c, 
-        Months = 0x0000002d, 
-        Years = 0x0000002e, 
-        Multiplier = 0x00000031, 
-        Percentage = 0x00000030, 
-        Unspecified = 0x00000032, 
-        EUnit_MAX = 0x00000033
+        Milliseconds = 0x0000002b, 
+        Seconds = 0x0000002c, 
+        Minutes = 0x0000002d, 
+        Hours = 0x0000002e, 
+        Days = 0x0000002f, 
+        Months = 0x00000030, 
+        Years = 0x00000031, 
+        Multiplier = 0x00000034, 
+        Percentage = 0x00000033, 
+        Unspecified = 0x00000035, 
+        EUnit_MAX = 0x00000036
     }
 }

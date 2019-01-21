@@ -12,22 +12,22 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=3920 )]
+    [StructLayout( LayoutKind.Explicit, Size=3944 )]
     internal unsafe struct ComboBoxString_fields {
-        [FieldOffset(384)] public NativeArray DefaultOptions;
-        [FieldOffset(400)] byte SelectedOption; //TODO: string FString SelectedOption
-        [FieldOffset(416)] public ComboBoxStyle WidgetStyle;
-        [FieldOffset(1624)] public TableRowStyle ItemStyle;
-        [FieldOffset(3632)] public Margin ContentPadding;
-        [FieldOffset(3648)] public float MaxListHeight;
-        [FieldOffset(3652)] public bool HasDownArrow;
-        [FieldOffset(3653)] public bool EnableGamepadNavigationMode;
-        [FieldOffset(3656)] public SlateFontInfo Font;
-        [FieldOffset(3760)] public SlateColor ForegroundColor;
-        [FieldOffset(3800)] public bool bIsFocusable;
-        [FieldOffset(3804)] byte OnGenerateWidgetEvent; //TODO: delegate FGenerateWidgetForString OnGenerateWidgetEvent
-        [FieldOffset(3824)] byte OnSelectionChanged; //TODO: multicast delegate FOnSelectionChangedEvent OnSelectionChanged
-        [FieldOffset(3840)] byte OnOpening; //TODO: multicast delegate FOnOpeningEvent OnOpening
+        [FieldOffset(400)] public NativeArray DefaultOptions;
+        [FieldOffset(416)] byte SelectedOption; //TODO: string FString SelectedOption
+        [FieldOffset(432)] public ComboBoxStyle WidgetStyle;
+        [FieldOffset(1640)] public TableRowStyle ItemStyle;
+        [FieldOffset(3648)] public Margin ContentPadding;
+        [FieldOffset(3664)] public float MaxListHeight;
+        [FieldOffset(3668)] public bool HasDownArrow;
+        [FieldOffset(3669)] public bool EnableGamepadNavigationMode;
+        [FieldOffset(3672)] public SlateFontInfo Font;
+        [FieldOffset(3784)] public SlateColor ForegroundColor;
+        [FieldOffset(3824)] public bool bIsFocusable;
+        [FieldOffset(3828)] byte OnGenerateWidgetEvent; //TODO: delegate FGenerateWidgetForString OnGenerateWidgetEvent
+        [FieldOffset(3848)] byte OnSelectionChanged; //TODO: multicast delegate FOnSelectionChangedEvent OnSelectionChanged
+        [FieldOffset(3864)] byte OnOpening; //TODO: multicast delegate FOnOpeningEvent OnOpening
     }
     internal unsafe struct ComboBoxString_methods {
         internal struct AddOption_method {

@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=456 )]
+    [StructLayout( LayoutKind.Explicit, Size=472 )]
     internal unsafe struct GridPanel_fields {
-        [FieldOffset(408)] public NativeArray ColumnFill;
-        [FieldOffset(424)] public NativeArray RowFill;
+        [FieldOffset(424)] public NativeArray ColumnFill;
+        [FieldOffset(440)] public NativeArray RowFill;
     }
     internal unsafe struct GridPanel_methods {
         internal struct AddChildToGrid_method {

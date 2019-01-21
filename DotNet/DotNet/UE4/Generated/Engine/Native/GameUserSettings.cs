@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=288 )]
+    [StructLayout( LayoutKind.Explicit, Size=296 )]
     internal unsafe struct GameUserSettings_fields {
         [FieldOffset(56)] public bool bUseVSync;
         [FieldOffset(57)] public bool bUseDynamicResolution;
@@ -26,22 +26,23 @@ namespace UE4.Engine.Native {
         [FieldOffset(168)] public int PreferredFullscreenMode;
         [FieldOffset(172)] byte Version; //TODO: numeric uint32 Version
         [FieldOffset(176)] public int AudioQualityLevel;
-        [FieldOffset(180)] public float FrameRateLimit;
-        [FieldOffset(188)] public int DesiredScreenWidth;
-        [FieldOffset(192)] public bool bUseDesiredScreenHeight;
-        [FieldOffset(196)] public int DesiredScreenHeight;
-        [FieldOffset(200)] public int LastUserConfirmedDesiredScreenWidth;
-        [FieldOffset(204)] public int LastUserConfirmedDesiredScreenHeight;
-        [FieldOffset(208)] public float LastRecommendedScreenWidth;
-        [FieldOffset(212)] public float LastRecommendedScreenHeight;
-        [FieldOffset(216)] public float LastCPUBenchmarkResult;
-        [FieldOffset(220)] public float LastGPUBenchmarkResult;
-        [FieldOffset(224)] public NativeArray LastCPUBenchmarkSteps;
-        [FieldOffset(240)] public NativeArray LastGPUBenchmarkSteps;
-        [FieldOffset(256)] public float LastGPUBenchmarkMultiplier;
-        [FieldOffset(260)] public bool bUseHDRDisplayOutput;
-        [FieldOffset(264)] public int HDRDisplayOutputNits;
-        [FieldOffset(272)] byte OnGameUserSettingsUINeedsUpdate; //TODO: multicast delegate FOnGameUserSettingsUINeedsUpdate OnGameUserSettingsUINeedsUpdate
+        [FieldOffset(180)] public int LastConfirmedAudioQualityLevel;
+        [FieldOffset(184)] public float FrameRateLimit;
+        [FieldOffset(192)] public int DesiredScreenWidth;
+        [FieldOffset(196)] public bool bUseDesiredScreenHeight;
+        [FieldOffset(200)] public int DesiredScreenHeight;
+        [FieldOffset(204)] public int LastUserConfirmedDesiredScreenWidth;
+        [FieldOffset(208)] public int LastUserConfirmedDesiredScreenHeight;
+        [FieldOffset(212)] public float LastRecommendedScreenWidth;
+        [FieldOffset(216)] public float LastRecommendedScreenHeight;
+        [FieldOffset(220)] public float LastCPUBenchmarkResult;
+        [FieldOffset(224)] public float LastGPUBenchmarkResult;
+        [FieldOffset(232)] public NativeArray LastCPUBenchmarkSteps;
+        [FieldOffset(248)] public NativeArray LastGPUBenchmarkSteps;
+        [FieldOffset(264)] public float LastGPUBenchmarkMultiplier;
+        [FieldOffset(268)] public bool bUseHDRDisplayOutput;
+        [FieldOffset(272)] public int HDRDisplayOutputNits;
+        [FieldOffset(280)] byte OnGameUserSettingsUINeedsUpdate; //TODO: multicast delegate FOnGameUserSettingsUINeedsUpdate OnGameUserSettingsUINeedsUpdate
     }
     internal unsafe struct GameUserSettings_methods {
         internal struct ApplyHardwareBenchmarkResults_method {

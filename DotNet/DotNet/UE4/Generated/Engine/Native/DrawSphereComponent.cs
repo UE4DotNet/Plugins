@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1568 )]
+    [StructLayout( LayoutKind.Explicit, Size=1536 )]
     internal unsafe struct DrawSphereComponent_fields {
     }
     internal unsafe struct DrawSphereComponent_methods {

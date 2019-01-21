@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.VREditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=400 )]
+    [StructLayout( LayoutKind.Explicit, Size=408 )]
     internal unsafe struct VREditorAssetContainer_fields {
         [FieldOffset(64)]  public IntPtr  DockableWindowCloseSound;
         [FieldOffset(72)]  public IntPtr  DockableWindowOpenSound;
@@ -42,19 +42,20 @@ namespace UE4.VREditor.Native {
         [FieldOffset(272)]  public IntPtr  PointerCursorMesh;
         [FieldOffset(280)]  public IntPtr  LineSegmentCylinderMesh;
         [FieldOffset(288)]  public IntPtr  JointSphereMesh;
-        [FieldOffset(296)]  public IntPtr  GridMaterial;
-        [FieldOffset(304)]  public IntPtr  LaserPointerMaterial;
-        [FieldOffset(312)]  public IntPtr  LaserPointerTranslucentMaterial;
-        [FieldOffset(320)]  public IntPtr  WorldMovementPostProcessMaterial;
-        [FieldOffset(328)]  public IntPtr  TextMaterial;
-        [FieldOffset(336)]  public IntPtr  VivePreControllerMaterial;
-        [FieldOffset(344)]  public IntPtr  OculusControllerMaterial;
-        [FieldOffset(352)]  public IntPtr  TeleportMaterial;
-        [FieldOffset(360)]  public IntPtr  WindowMaterial;
-        [FieldOffset(368)]  public IntPtr  WindowTranslucentMaterial;
-        [FieldOffset(376)]  public IntPtr  LineMaterial;
-        [FieldOffset(384)]  public IntPtr  TranslucentTextMaterial;
-        [FieldOffset(392)]  public IntPtr  TextFont;
+        [FieldOffset(296)]  public IntPtr  DockingButtonMesh;
+        [FieldOffset(304)]  public IntPtr  GridMaterial;
+        [FieldOffset(312)]  public IntPtr  LaserPointerMaterial;
+        [FieldOffset(320)]  public IntPtr  LaserPointerTranslucentMaterial;
+        [FieldOffset(328)]  public IntPtr  WorldMovementPostProcessMaterial;
+        [FieldOffset(336)]  public IntPtr  TextMaterial;
+        [FieldOffset(344)]  public IntPtr  VivePreControllerMaterial;
+        [FieldOffset(352)]  public IntPtr  OculusControllerMaterial;
+        [FieldOffset(360)]  public IntPtr  TeleportMaterial;
+        [FieldOffset(368)]  public IntPtr  WindowMaterial;
+        [FieldOffset(376)]  public IntPtr  WindowTranslucentMaterial;
+        [FieldOffset(384)]  public IntPtr  LineMaterial;
+        [FieldOffset(392)]  public IntPtr  TranslucentTextMaterial;
+        [FieldOffset(400)]  public IntPtr  TextFont;
     }
     internal unsafe struct VREditorAssetContainer_methods {
     }

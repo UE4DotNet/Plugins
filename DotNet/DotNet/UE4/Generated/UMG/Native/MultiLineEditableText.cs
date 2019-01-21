@@ -13,22 +13,22 @@ using UE4.SlateCore;
 using UE4.Slate;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1232 )]
+    [StructLayout( LayoutKind.Explicit, Size=1264 )]
     internal unsafe struct MultiLineEditableText_fields {
-        [FieldOffset(416)] byte Text; //TODO: text FText Text
-        [FieldOffset(440)] byte HintText; //TODO: text FText HintText
-        [FieldOffset(464)] byte HintTextDelegate; //TODO: delegate FGetText HintTextDelegate
-        [FieldOffset(488)] public TextBlockStyle WidgetStyle;
-        [FieldOffset(1040)] public bool bIsReadOnly;
-        [FieldOffset(1152)] public bool SelectAllTextWhenFocused;
-        [FieldOffset(1153)] public bool ClearTextSelectionOnFocusLoss;
-        [FieldOffset(1154)] public bool RevertTextOnEscape;
-        [FieldOffset(1155)] public bool ClearKeyboardFocusOnCommit;
-        [FieldOffset(1156)] public bool AllowContextMenu;
-        [FieldOffset(1157)] public VirtualKeyboardOptions VirtualKeyboardOptions;
-        [FieldOffset(1158)] byte VirtualKeyboardDismissAction; //TODO: enum EVirtualKeyboardDismissAction VirtualKeyboardDismissAction
-        [FieldOffset(1160)] byte OnTextChanged; //TODO: multicast delegate FOnMultiLineEditableTextChangedEvent OnTextChanged
-        [FieldOffset(1176)] byte OnTextCommitted; //TODO: multicast delegate FOnMultiLineEditableTextCommittedEvent OnTextCommitted
+        [FieldOffset(432)] byte Text; //TODO: text FText Text
+        [FieldOffset(456)] byte HintText; //TODO: text FText HintText
+        [FieldOffset(480)] byte HintTextDelegate; //TODO: delegate FGetText HintTextDelegate
+        [FieldOffset(504)] public TextBlockStyle WidgetStyle;
+        [FieldOffset(1064)] public bool bIsReadOnly;
+        [FieldOffset(1184)] public bool SelectAllTextWhenFocused;
+        [FieldOffset(1185)] public bool ClearTextSelectionOnFocusLoss;
+        [FieldOffset(1186)] public bool RevertTextOnEscape;
+        [FieldOffset(1187)] public bool ClearKeyboardFocusOnCommit;
+        [FieldOffset(1188)] public bool AllowContextMenu;
+        [FieldOffset(1189)] public VirtualKeyboardOptions VirtualKeyboardOptions;
+        [FieldOffset(1190)] byte VirtualKeyboardDismissAction; //TODO: enum EVirtualKeyboardDismissAction VirtualKeyboardDismissAction
+        [FieldOffset(1192)] byte OnTextChanged; //TODO: multicast delegate FOnMultiLineEditableTextChangedEvent OnTextChanged
+        [FieldOffset(1208)] byte OnTextCommitted; //TODO: multicast delegate FOnMultiLineEditableTextCommittedEvent OnTextCommitted
     }
     internal unsafe struct MultiLineEditableText_methods {
         internal struct GetText_method {

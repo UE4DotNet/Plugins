@@ -12,108 +12,108 @@ using UE4.Native;
 
 namespace UE4.Engine{
         ///<summary>Container for a physics representation of an object</summary>
-        [StructLayout( LayoutKind.Explicit, Size=384 )]
+        [StructLayout( LayoutKind.Explicit, Size=368 )]
         public unsafe struct BodyInstance {
-            [FieldOffset(10)] public byte ObjectType;
+            [FieldOffset(6)] public byte ObjectType;
 
-            [FieldOffset(12)] public byte CollisionEnabled;
+            [FieldOffset(8)] public byte CollisionEnabled;
 
-            [FieldOffset(14)] byte SleepFamily; //TODO: enum ESleepFamily SleepFamily
+            [FieldOffset(10)] byte SleepFamily; //TODO: enum ESleepFamily SleepFamily
 
-            [FieldOffset(15)] public byte DOFMode;
+            [FieldOffset(11)] public byte DOFMode;
 
-            [FieldOffset(16)] public bool bUseCCD;
+            [FieldOffset(12)] public bool bUseCCD;
 
-            [FieldOffset(16)] public bool bNotifyRigidBodyCollision;
+            [FieldOffset(12)] public bool bNotifyRigidBodyCollision;
 
-            [FieldOffset(16)] public bool bSimulatePhysics;
+            [FieldOffset(12)] public bool bSimulatePhysics;
 
-            [FieldOffset(16)] public bool bOverrideMass;
+            [FieldOffset(12)] public bool bOverrideMass;
 
-            [FieldOffset(16)] public bool bEnableGravity;
+            [FieldOffset(12)] public bool bEnableGravity;
 
-            [FieldOffset(16)] public bool bAutoWeld;
+            [FieldOffset(12)] public bool bAutoWeld;
 
-            [FieldOffset(16)] public bool bStartAwake;
+            [FieldOffset(12)] public bool bStartAwake;
 
-            [FieldOffset(17)] public bool bGenerateWakeEvents;
+            [FieldOffset(13)] public bool bGenerateWakeEvents;
 
-            [FieldOffset(17)] public bool bUpdateMassWhenScaleChanges;
+            [FieldOffset(13)] public bool bUpdateMassWhenScaleChanges;
 
-            [FieldOffset(17)] public bool bLockTranslation;
+            [FieldOffset(13)] public bool bLockTranslation;
 
-            [FieldOffset(17)] public bool bLockRotation;
+            [FieldOffset(13)] public bool bLockRotation;
 
-            [FieldOffset(17)] public bool bLockXTranslation;
+            [FieldOffset(13)] public bool bLockXTranslation;
 
-            [FieldOffset(17)] public bool bLockYTranslation;
+            [FieldOffset(13)] public bool bLockYTranslation;
 
-            [FieldOffset(17)] public bool bLockZTranslation;
+            [FieldOffset(13)] public bool bLockZTranslation;
 
-            [FieldOffset(17)] public bool bLockXRotation;
+            [FieldOffset(13)] public bool bLockXRotation;
 
-            [FieldOffset(18)] public bool bLockYRotation;
+            [FieldOffset(14)] public bool bLockYRotation;
 
-            [FieldOffset(18)] public bool bLockZRotation;
+            [FieldOffset(14)] public bool bLockZRotation;
 
-            [FieldOffset(18)] public bool bOverrideMaxAngularVelocity;
+            [FieldOffset(14)] public bool bOverrideMaxAngularVelocity;
 
-            [FieldOffset(18)] public bool bUseAsyncScene;
+            [FieldOffset(14)] public bool bUseAsyncScene;
 
-            [FieldOffset(18)] public bool bOverrideMaxDepenetrationVelocity;
+            [FieldOffset(14)] public bool bOverrideMaxDepenetrationVelocity;
 
-            [FieldOffset(18)] public bool bOverrideWalkableSlopeOnInstance;
+            [FieldOffset(14)] public bool bOverrideWalkableSlopeOnInstance;
 
-            [FieldOffset(19)] public bool bInterpolateWhenSubStepping;
+            [FieldOffset(15)] public bool bInterpolateWhenSubStepping;
 
-            [FieldOffset(64)] public Name CollisionProfileName;
+            [FieldOffset(60)] public Name CollisionProfileName;
 
             ///<summary>Custom Channels for Responses</summary>
-            [FieldOffset(80)] CollisionResponse CollisionResponses;
+            [FieldOffset(72)] CollisionResponse CollisionResponses;
 
-            [FieldOffset(128)] public float MaxDepenetrationVelocity;
+            [FieldOffset(120)] public float MaxDepenetrationVelocity;
 
-            [FieldOffset(132)] public float MassInKgOverride;
+            [FieldOffset(124)] public float MassInKgOverride;
 
-            [FieldOffset(144)] public float LinearDamping;
+            [FieldOffset(136)] public float LinearDamping;
 
-            [FieldOffset(148)] public float AngularDamping;
+            [FieldOffset(140)] public float AngularDamping;
 
             ///<summary>Locks physical movement along a custom plane for a given normal.</summary>
-            [FieldOffset(152)] Vector CustomDOFPlaneNormal;
+            [FieldOffset(144)] Vector CustomDOFPlaneNormal;
 
             ///<summary>User specified offset for the center of mass of this object, from the calculated location</summary>
-            [FieldOffset(164)] Vector COMNudge;
+            [FieldOffset(156)] Vector COMNudge;
 
-            [FieldOffset(176)] public float MassScale;
+            [FieldOffset(168)] public float MassScale;
 
             ///<summary>Per-instance scaling of inertia (bigger number means  it'll be harder to rotate)</summary>
-            [FieldOffset(180)] Vector InertiaTensorScale;
+            [FieldOffset(172)] Vector InertiaTensorScale;
 
             ///<summary>Custom walkable slope override setting for this instance.</summary>
             ///<remarks>
             ///@see GetWalkableSlopeOverride(), SetWalkableSlopeOverride()
             ///</remarks>
-            [FieldOffset(208)] WalkableSlopeOverride WalkableSlopeOverride;
+            [FieldOffset(200)] WalkableSlopeOverride WalkableSlopeOverride;
 
-            [FieldOffset(224)] 
+            [FieldOffset(216)] 
             private IntPtr  PhysMaterialOverride_field;
             ///<summary>Allows you to override the PhysicalMaterial to use for simple collision on this body.</summary>
             public PhysicalMaterial PhysMaterialOverride {
                 get {return PhysMaterialOverride_field;}
             }
 
-            [FieldOffset(232)] public float MaxAngularVelocity;
+            [FieldOffset(224)] public float MaxAngularVelocity;
 
-            [FieldOffset(236)] public float CustomSleepThresholdMultiplier;
+            [FieldOffset(228)] public float CustomSleepThresholdMultiplier;
 
-            [FieldOffset(240)] public float StabilizationThresholdMultiplier;
+            [FieldOffset(232)] public float StabilizationThresholdMultiplier;
 
-            [FieldOffset(244)] public float PhysicsBlendWeight;
+            [FieldOffset(236)] public float PhysicsBlendWeight;
 
-            [FieldOffset(248)] public int PositionSolverIterationCount;
+            [FieldOffset(240)] public int PositionSolverIterationCount;
 
-            [FieldOffset(252)] public int VelocitySolverIterationCount;
+            [FieldOffset(244)] public int VelocitySolverIterationCount;
 
         }
 }

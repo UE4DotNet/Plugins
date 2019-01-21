@@ -16,6 +16,14 @@ namespace UE4.MovieSceneCapture {
     ///<summary>Movie Scene Capture Environment</summary>
     public unsafe partial class MovieSceneCaptureEnvironment : UObject  {
 
+        ///<summary>Attempt to locate a capture protocol - may not be in a capturing state</summary>
+        public static MovieSceneAudioCaptureProtocolBase FindAudioCaptureProtocol()  => 
+            MovieSceneCaptureEnvironment_methods.FindAudioCaptureProtocol_method.Invoke();
+
+        ///<summary>Attempt to locate a capture protocol - may not be in a capturing state</summary>
+        public static MovieSceneImageCaptureProtocolBase FindImageCaptureProtocol()  => 
+            MovieSceneCaptureEnvironment_methods.FindImageCaptureProtocol_method.Invoke();
+
         ///<summary>Get the total elapsed time of the current capture in seconds</summary>
         public static float GetCaptureElapsedTime()  => 
             MovieSceneCaptureEnvironment_methods.GetCaptureElapsedTime_method.Invoke();
@@ -23,6 +31,11 @@ namespace UE4.MovieSceneCapture {
         ///<summary>Get the frame number of the current capture</summary>
         public static int GetCaptureFrameNumber()  => 
             MovieSceneCaptureEnvironment_methods.GetCaptureFrameNumber_method.Invoke();
+
+        ///<summary>Return true if there is any capture currently active (even in a warm-up state).</summary>
+        ///<remarks>Useful for checking whether to do certain operations in BeginPlay</remarks>
+        public static bool IsCaptureInProgress()  => 
+            MovieSceneCaptureEnvironment_methods.IsCaptureInProgress_method.Invoke();
         static MovieSceneCaptureEnvironment() {
             StaticClass = Main.GetClass("MovieSceneCaptureEnvironment");
         }

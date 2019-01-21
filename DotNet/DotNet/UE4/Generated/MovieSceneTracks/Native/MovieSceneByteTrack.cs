@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=216 )]
+    [StructLayout( LayoutKind.Explicit, Size=224 )]
     internal unsafe struct MovieSceneByteTrack_fields {
-        [FieldOffset(208)]  public IntPtr  UEnum;
+        [FieldOffset(216)]  public IntPtr  UEnum;
     }
     internal unsafe struct MovieSceneByteTrack_methods {
     }

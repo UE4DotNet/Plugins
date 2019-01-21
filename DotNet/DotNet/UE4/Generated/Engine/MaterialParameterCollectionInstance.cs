@@ -21,11 +21,6 @@ namespace UE4.Engine {
             get {return MaterialParameterCollectionInstance_ptr->Collection;}
             set {MaterialParameterCollectionInstance_ptr->Collection = value;}
         }
-        ///<summary>World that owns this instance.</summary>
-        public unsafe World World {
-            get {return MaterialParameterCollectionInstance_ptr->World;}
-            set {MaterialParameterCollectionInstance_ptr->World = value;}
-        }
         static MaterialParameterCollectionInstance() {
             StaticClass = Main.GetClass("MaterialParameterCollectionInstance");
         }

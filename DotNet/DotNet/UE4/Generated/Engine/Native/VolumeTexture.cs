@@ -13,10 +13,10 @@ using UE4.Native;
 namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=640 )]
     internal unsafe struct VolumeTexture_fields {
-        [FieldOffset(608)]  public IntPtr  Source2DTexture;
-        [FieldOffset(616)] public FGuid SourceLightingGuid;
-        [FieldOffset(632)] public int Source2DTileSizeX;
-        [FieldOffset(636)] public int Source2DTileSizeY;
+        [FieldOffset(600)]  public IntPtr  Source2DTexture;
+        [FieldOffset(608)] public FGuid SourceLightingGuid;
+        [FieldOffset(624)] public int Source2DTileSizeX;
+        [FieldOffset(628)] public int Source2DTileSizeY;
     }
     internal unsafe struct VolumeTexture_methods {
     }

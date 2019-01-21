@@ -13,7 +13,7 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>@TODO: Comment</summary>
-        [StructLayout( LayoutKind.Explicit, Size=232 )]
+        [StructLayout( LayoutKind.Explicit, Size=208 )]
         public unsafe struct AnimNode_RotateRootBone {
             ///<summary>Base Pose</summary>
             [FieldOffset(56)] PoseLink BasePose;
@@ -26,14 +26,14 @@ namespace UE4.AnimGraphRuntime{
             [FieldOffset(88)] InputScaleBiasClamp PitchScaleBiasClamp;
 
             ///<summary>Yaw Scale Bias Clamp</summary>
-            [FieldOffset(148)] InputScaleBiasClamp YawScaleBiasClamp;
+            [FieldOffset(136)] InputScaleBiasClamp YawScaleBiasClamp;
 
             ///<summary>Mesh to Component</summary>
-            [FieldOffset(208)] Rotator MeshToComponent;
+            [FieldOffset(184)] Rotator MeshToComponent;
 
-            [FieldOffset(220)] public float ActualPitch;
+            [FieldOffset(196)] public float ActualPitch;
 
-            [FieldOffset(224)] public float ActualYaw;
+            [FieldOffset(200)] public float ActualYaw;
 
         }
 }

@@ -11,19 +11,19 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1920 )]
+    [StructLayout( LayoutKind.Explicit, Size=1904 )]
     internal unsafe struct SplineMeshComponent_fields {
-        [FieldOffset(1768)] public SplineMeshParams SplineParams;
-        [FieldOffset(1856)] public Vector SplineUpDir;
-        [FieldOffset(1868)] public bool bAllowSplineEditingPerInstance;
-        [FieldOffset(1868)] public bool bSmoothInterpRollScale;
-        [FieldOffset(1872)] public byte ForwardAxis;
-        [FieldOffset(1876)] public float SplineBoundaryMin;
-        [FieldOffset(1880)] public float SplineBoundaryMax;
-        [FieldOffset(1888)]  public IntPtr  BodySetup;
-        [FieldOffset(1896)] public FGuid CachedMeshBodySetupGuid;
-        [FieldOffset(1912)] public bool bSelected;
-        [FieldOffset(1912)] public bool bMeshDirty;
+        [FieldOffset(1752)] public SplineMeshParams SplineParams;
+        [FieldOffset(1840)] public Vector SplineUpDir;
+        [FieldOffset(1852)] public bool bAllowSplineEditingPerInstance;
+        [FieldOffset(1852)] public bool bSmoothInterpRollScale;
+        [FieldOffset(1856)] public byte ForwardAxis;
+        [FieldOffset(1860)] public float SplineBoundaryMin;
+        [FieldOffset(1864)] public float SplineBoundaryMax;
+        [FieldOffset(1872)]  public IntPtr  BodySetup;
+        [FieldOffset(1880)] public FGuid CachedMeshBodySetupGuid;
+        [FieldOffset(1896)] public bool bSelected;
+        [FieldOffset(1896)] public bool bMeshDirty;
     }
     internal unsafe struct SplineMeshComponent_methods {
         internal struct GetBoundaryMax_method {

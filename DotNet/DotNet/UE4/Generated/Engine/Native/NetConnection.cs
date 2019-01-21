@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=6456 )]
+    [StructLayout( LayoutKind.Explicit, Size=6496 )]
     internal unsafe struct NetConnection_fields {
         [FieldOffset(88)] public NativeArray Children;
         [FieldOffset(104)]  public IntPtr  Driver;
@@ -25,7 +25,7 @@ namespace UE4.Engine.Native {
         [FieldOffset(180)] public bool InternalAck;
         [FieldOffset(360)] public UniqueNetIdRepl PlayerId;
         [FieldOffset(504)] public double LastReceiveTime;
-        [FieldOffset(6112)] public NativeArray ChannelsToTick;
+        [FieldOffset(6136)] public NativeArray ChannelsToTick;
     }
     internal unsafe struct NetConnection_methods {
     }

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.NavigationSystem.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1728 )]
+    [StructLayout( LayoutKind.Explicit, Size=1712 )]
     internal unsafe struct NavTestRenderingComponent_fields {
     }
     internal unsafe struct NavTestRenderingComponent_methods {

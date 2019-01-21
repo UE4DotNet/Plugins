@@ -12,7 +12,7 @@ using UE4.Native;
 using UE4.AnimGraphRuntime;
 
 namespace UE4.AnimGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=752 )]
+    [StructLayout( LayoutKind.Explicit, Size=728 )]
     internal unsafe struct AnimGraphNode_BoneDrivenController_fields {
         [FieldOffset(272)] public AnimNode_BoneDrivenController Node;
     }

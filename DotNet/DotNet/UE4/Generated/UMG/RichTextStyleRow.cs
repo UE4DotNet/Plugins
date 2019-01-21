@@ -13,7 +13,7 @@ using UE4.SlateCore;
 
 namespace UE4.UMG{
         ///<summary>Simple struct for rich text styles</summary>
-        [StructLayout( LayoutKind.Explicit, Size=560 )]
+        [StructLayout( LayoutKind.Explicit, Size=568 )]
         public unsafe struct RichTextStyleRow {
             ///<summary>Text Style</summary>
             [FieldOffset(8)] TextBlockStyle TextStyle;

@@ -12,7 +12,7 @@ using UE4.Native;
 
 namespace UE4.SlateCore{
         ///<summary>Represents the appearance of an SWindow</summary>
-        [StructLayout( LayoutKind.Explicit, Size=4832 )]
+        [StructLayout( LayoutKind.Explicit, Size=4840 )]
         public unsafe struct WindowStyle {
             ///<summary>Style used to draw the window minimize button</summary>
             [FieldOffset(8)] ButtonStyle MinimizeButtonStyle;
@@ -30,31 +30,31 @@ namespace UE4.SlateCore{
             [FieldOffset(3080)] TextBlockStyle TitleTextStyle;
 
             ///<summary>Brush used to draw the window title area when the window is active</summary>
-            [FieldOffset(3632)] SlateBrush ActiveTitleBrush;
+            [FieldOffset(3640)] SlateBrush ActiveTitleBrush;
 
             ///<summary>Brush used to draw the window title area when the window is inactive</summary>
-            [FieldOffset(3792)] SlateBrush InactiveTitleBrush;
+            [FieldOffset(3800)] SlateBrush InactiveTitleBrush;
 
             ///<summary>Brush used to draw the window title area when the window is flashing</summary>
-            [FieldOffset(3952)] SlateBrush FlashTitleBrush;
+            [FieldOffset(3960)] SlateBrush FlashTitleBrush;
 
             ///<summary>Color used to draw the window background</summary>
-            [FieldOffset(4112)] SlateColor BackgroundColor;
+            [FieldOffset(4120)] SlateColor BackgroundColor;
 
             ///<summary>Brush used to draw the window outline</summary>
-            [FieldOffset(4152)] SlateBrush OutlineBrush;
+            [FieldOffset(4160)] SlateBrush OutlineBrush;
 
             ///<summary>Color used to draw the window outline</summary>
-            [FieldOffset(4312)] SlateColor OutlineColor;
+            [FieldOffset(4320)] SlateColor OutlineColor;
 
             ///<summary>Brush used to draw the window border</summary>
-            [FieldOffset(4352)] SlateBrush BorderBrush;
+            [FieldOffset(4360)] SlateBrush BorderBrush;
 
             ///<summary>Brush used to draw the window background</summary>
-            [FieldOffset(4512)] SlateBrush BackgroundBrush;
+            [FieldOffset(4520)] SlateBrush BackgroundBrush;
 
             ///<summary>Brush used to draw the background of child windows</summary>
-            [FieldOffset(4672)] SlateBrush ChildBackgroundBrush;
+            [FieldOffset(4680)] SlateBrush ChildBackgroundBrush;
 
         }
 }

@@ -21,7 +21,7 @@ namespace UE4.Engine{
                 get {return MaterialInterface_field;}
             }
 
-            [FieldOffset(12)] public Name MaterialSlotName;
+            [FieldOffset(8)] public Name MaterialSlotName;
 
             [FieldOffset(24)] public Name ImportedMaterialSlotName;
 

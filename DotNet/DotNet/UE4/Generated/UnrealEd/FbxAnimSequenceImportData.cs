@@ -33,6 +33,11 @@ namespace UE4.UnrealEd {
             get {return Main.GetGetBoolPropertyByName(this, "bUseDefaultSampleRate"); }
             set {Main.SetGetBoolPropertyByName(this, "bUseDefaultSampleRate", value); }
         }
+        ///<summary>Sample fbx animation data at the specified sample rate, 0 find automaticaly the best sample rate</summary>
+        public unsafe int CustomSampleRate {
+            get {return FbxAnimSequenceImportData_ptr->CustomSampleRate;}
+            set {FbxAnimSequenceImportData_ptr->CustomSampleRate = value;}
+        }
          //TODO: string FString SourceAnimationName
         public bool bImportCustomAttribute {
             get {return Main.GetGetBoolPropertyByName(this, "bImportCustomAttribute"); }

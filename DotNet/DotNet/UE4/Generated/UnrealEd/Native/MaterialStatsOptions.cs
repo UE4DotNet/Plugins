@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.UnrealEd.Native {
-    [StructLayout( LayoutKind.Explicit, Size=192 )]
+    [StructLayout( LayoutKind.Explicit, Size=200 )]
     internal unsafe struct MaterialStatsOptions_fields {
         [FieldOffset(56)] public int bPlatformUsed;
-        [FieldOffset(176)] public int bMaterialQualityUsed;
+        [FieldOffset(184)] public int bMaterialQualityUsed;
     }
     internal unsafe struct MaterialStatsOptions_methods {
     }

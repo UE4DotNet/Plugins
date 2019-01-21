@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1024 )]
+    [StructLayout( LayoutKind.Explicit, Size=1056 )]
     internal unsafe struct TreeView_fields {
-        [FieldOffset(944)] byte BP_OnGetItemChildren; //TODO: delegate FOnGetItemChildrenDynamic BP_OnGetItemChildren
-        [FieldOffset(968)] byte BP_OnItemExpansionChanged; //TODO: multicast delegate FOnItemExpansionChangedDynamic BP_OnItemExpansionChanged
+        [FieldOffset(976)] byte BP_OnGetItemChildren; //TODO: delegate FOnGetItemChildrenDynamic BP_OnGetItemChildren
+        [FieldOffset(1000)] byte BP_OnItemExpansionChanged; //TODO: multicast delegate FOnItemExpansionChangedDynamic BP_OnItemExpansionChanged
     }
     internal unsafe struct TreeView_methods {
         internal struct CollapseAll_method {

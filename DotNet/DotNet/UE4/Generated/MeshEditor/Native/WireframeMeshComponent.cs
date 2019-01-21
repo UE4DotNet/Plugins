@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.MeshEditor.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1648 )]
+    [StructLayout( LayoutKind.Explicit, Size=1632 )]
     internal unsafe struct WireframeMeshComponent_fields {
-        [FieldOffset(1560)]  public IntPtr  WireframeMesh;
+        [FieldOffset(1544)]  public IntPtr  WireframeMesh;
     }
     internal unsafe struct WireframeMeshComponent_methods {
     }

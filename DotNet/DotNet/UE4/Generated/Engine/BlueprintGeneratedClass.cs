@@ -55,11 +55,6 @@ namespace UE4.Engine {
             get {return BlueprintGeneratedClass_ptr->InheritableComponentHandler;}
             set {BlueprintGeneratedClass_ptr->InheritableComponentHandler = value;}
         }
-        ///<summary>Uber Graph Frame Pointer Property</summary>
-        public unsafe StructProperty UberGraphFramePointerProperty {
-            get {return BlueprintGeneratedClass_ptr->UberGraphFramePointerProperty;}
-            set {BlueprintGeneratedClass_ptr->UberGraphFramePointerProperty = value;}
-        }
         ///<summary>Uber Graph Function</summary>
         public unsafe Function UberGraphFunction {
             get {return BlueprintGeneratedClass_ptr->UberGraphFunction;}

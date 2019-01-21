@@ -12,11 +12,11 @@ using UE4.Native;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Anim Node Apply Limits</summary>
-        [StructLayout( LayoutKind.Explicit, Size=392 )]
+        [StructLayout( LayoutKind.Explicit, Size=368 )]
         public unsafe struct AnimNode_ApplyLimits {
-            [FieldOffset(360)] byte AngularRangeLimits; //TODO: array TArray AngularRangeLimits
+            [FieldOffset(336)] byte AngularRangeLimits; //TODO: array TArray AngularRangeLimits
 
-            [FieldOffset(376)] byte AngularOffsets; //TODO: array TArray AngularOffsets
+            [FieldOffset(352)] byte AngularOffsets; //TODO: array TArray AngularOffsets
 
         }
 }

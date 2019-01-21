@@ -11,14 +11,14 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=472 )]
+    [StructLayout( LayoutKind.Explicit, Size=488 )]
     internal unsafe struct MenuAnchor_fields {
-        [FieldOffset(408)] public IntPtr MenuClass;
-        [FieldOffset(416)] byte OnGetMenuContentEvent; //TODO: delegate FGetWidget OnGetMenuContentEvent
-        [FieldOffset(436)] public byte Placement;
-        [FieldOffset(437)] public bool ShouldDeferPaintingAfterWindowContent;
-        [FieldOffset(438)] public bool UseApplicationMenuStack;
-        [FieldOffset(440)] byte OnMenuOpenChanged; //TODO: multicast delegate FOnMenuOpenChangedEvent OnMenuOpenChanged
+        [FieldOffset(424)] public IntPtr MenuClass;
+        [FieldOffset(432)] byte OnGetMenuContentEvent; //TODO: delegate FGetWidget OnGetMenuContentEvent
+        [FieldOffset(452)] public byte Placement;
+        [FieldOffset(453)] public bool ShouldDeferPaintingAfterWindowContent;
+        [FieldOffset(454)] public bool UseApplicationMenuStack;
+        [FieldOffset(456)] byte OnMenuOpenChanged; //TODO: multicast delegate FOnMenuOpenChangedEvent OnMenuOpenChanged
     }
     internal unsafe struct MenuAnchor_methods {
         internal struct Close_method {

@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=608 )]
+    [StructLayout( LayoutKind.Explicit, Size=592 )]
     internal unsafe struct CanvasRenderTarget2D_fields {
-        [FieldOffset(568)] byte OnCanvasRenderTargetUpdate; //TODO: multicast delegate FOnCanvasRenderTargetUpdate OnCanvasRenderTargetUpdate
-        [FieldOffset(584)] byte World; //TODO: weak object TWeakObjectPtr<UWorld> World
-        [FieldOffset(592)] public bool bShouldClearRenderTargetOnReceiveUpdate;
+        [FieldOffset(560)] byte OnCanvasRenderTargetUpdate; //TODO: multicast delegate FOnCanvasRenderTargetUpdate OnCanvasRenderTargetUpdate
+        [FieldOffset(576)] byte World; //TODO: weak object TWeakObjectPtr<UWorld> World
+        [FieldOffset(584)] public bool bShouldClearRenderTargetOnReceiveUpdate;
     }
     internal unsafe struct CanvasRenderTarget2D_methods {
         internal struct CreateCanvasRenderTarget2D_method {

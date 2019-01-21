@@ -15,8 +15,10 @@ namespace UE4.InputCore {
         Began = 0x00000000, 
         Moved = 0x00000001, 
         Stationary = 0x00000002, 
-        Ended = 0x00000003, 
-        NumTypes = 0x00000004, 
-        ETouchType_MAX = 0x00000005
+        ForceChanged = 0x00000003, 
+        FirstMove = 0x00000004, 
+        Ended = 0x00000005, 
+        NumTypes = 0x00000006, 
+        ETouchType_MAX = 0x00000007
     }
 }

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.BlueprintGraph.Native {
-    [StructLayout( LayoutKind.Explicit, Size=336 )]
+    [StructLayout( LayoutKind.Explicit, Size=328 )]
     internal unsafe struct K2Node_AssignDelegate_fields {
     }
     internal unsafe struct K2Node_AssignDelegate_methods {

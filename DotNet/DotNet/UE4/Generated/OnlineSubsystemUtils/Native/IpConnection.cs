@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.OnlineSubsystemUtils.Native {
-    [StructLayout( LayoutKind.Explicit, Size=6488 )]
+    [StructLayout( LayoutKind.Explicit, Size=6592 )]
     internal unsafe struct IpConnection_fields {
     }
     internal unsafe struct IpConnection_methods {

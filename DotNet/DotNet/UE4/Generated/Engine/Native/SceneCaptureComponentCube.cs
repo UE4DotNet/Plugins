@@ -13,11 +13,11 @@ using UE4.Native;
 namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=832 )]
     internal unsafe struct SceneCaptureComponentCube_fields {
-        [FieldOffset(784)]  public IntPtr  TextureTarget;
-        [FieldOffset(792)]  public IntPtr  TextureTargetLeft;
-        [FieldOffset(800)]  public IntPtr  TextureTargetRight;
-        [FieldOffset(808)]  public IntPtr  TextureTargetODS;
-        [FieldOffset(816)] public float IPD;
+        [FieldOffset(792)]  public IntPtr  TextureTarget;
+        [FieldOffset(800)]  public IntPtr  TextureTargetLeft;
+        [FieldOffset(808)]  public IntPtr  TextureTargetRight;
+        [FieldOffset(816)]  public IntPtr  TextureTargetODS;
+        [FieldOffset(824)] public float IPD;
     }
     internal unsafe struct SceneCaptureComponentCube_methods {
         internal struct CaptureScene_method {

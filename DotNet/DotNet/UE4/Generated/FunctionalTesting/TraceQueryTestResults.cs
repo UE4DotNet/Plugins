@@ -34,6 +34,11 @@ namespace UE4.FunctionalTesting {
             get {return TraceQueryTestResults_ptr->ProfileResults;}
             set {TraceQueryTestResults_ptr->ProfileResults = value;}
         }
+        ///<summary>Batch Options</summary>
+        public unsafe TraceChannelTestBatchOptions BatchOptions {
+            get {return TraceQueryTestResults_ptr->BatchOptions;}
+            set {TraceQueryTestResults_ptr->BatchOptions = value;}
+        }
         static TraceQueryTestResults() {
             StaticClass = Main.GetClass("TraceQueryTestResults");
         }

@@ -12,16 +12,16 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1032 )]
+    [StructLayout( LayoutKind.Explicit, Size=1048 )]
     internal unsafe struct ProgressBar_fields {
-        [FieldOffset(384)] public ProgressBarStyle WidgetStyle;
-        [FieldOffset(904)] public float Percent;
-        [FieldOffset(908)] public byte BarFillType;
-        [FieldOffset(909)] public bool bIsMarquee;
-        [FieldOffset(912)] public Vector2D BorderPadding;
-        [FieldOffset(920)] byte PercentDelegate; //TODO: delegate FGetFloat PercentDelegate
-        [FieldOffset(940)] public LinearColor FillColorAndOpacity;
-        [FieldOffset(956)] byte FillColorAndOpacityDelegate; //TODO: delegate FGetLinearColor FillColorAndOpacityDelegate
+        [FieldOffset(400)] public ProgressBarStyle WidgetStyle;
+        [FieldOffset(920)] public float Percent;
+        [FieldOffset(924)] public byte BarFillType;
+        [FieldOffset(925)] public bool bIsMarquee;
+        [FieldOffset(928)] public Vector2D BorderPadding;
+        [FieldOffset(936)] byte PercentDelegate; //TODO: delegate FGetFloat PercentDelegate
+        [FieldOffset(956)] public LinearColor FillColorAndOpacity;
+        [FieldOffset(972)] byte FillColorAndOpacityDelegate; //TODO: delegate FGetLinearColor FillColorAndOpacityDelegate
     }
     internal unsafe struct ProgressBar_methods {
         internal struct SetFillColorAndOpacity_method {

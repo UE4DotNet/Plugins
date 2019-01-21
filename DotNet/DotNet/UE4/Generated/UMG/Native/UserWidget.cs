@@ -14,29 +14,29 @@ using UE4.Slate;
 using UE4.Engine;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=768 )]
+    [StructLayout( LayoutKind.Explicit, Size=784 )]
     internal unsafe struct UserWidget_fields {
-        [FieldOffset(392)] public LinearColor ColorAndOpacity;
-        [FieldOffset(408)] byte ColorAndOpacityDelegate; //TODO: delegate FGetLinearColor ColorAndOpacityDelegate
-        [FieldOffset(432)] public SlateColor ForegroundColor;
-        [FieldOffset(472)] byte ForegroundColorDelegate; //TODO: delegate FGetSlateColor ForegroundColorDelegate
-        [FieldOffset(492)] public Margin Padding;
-        [FieldOffset(512)] public NativeArray ActiveSequencePlayers;
-        [FieldOffset(528)] public NativeArray StoppedSequencePlayers;
-        [FieldOffset(544)] public NativeArray NamedSlotBindings;
-        [FieldOffset(560)]  public IntPtr  WidgetTree;
-        [FieldOffset(568)] public Vector2D DesignTimeSize;
-        [FieldOffset(576)] byte DesignSizeMode; //TODO: enum EDesignPreviewSizeMode DesignSizeMode
-        [FieldOffset(584)] byte PaletteCategory; //TODO: text FText PaletteCategory
-        [FieldOffset(608)]  public IntPtr  PreviewBackground;
-        [FieldOffset(616)] public int Priority;
-        [FieldOffset(620)] public bool bIsFocusable;
-        [FieldOffset(620)] public bool bStopAction;
-        [FieldOffset(620)] public bool bHasScriptImplementedTick;
-        [FieldOffset(620)] public bool bHasScriptImplementedPaint;
-        [FieldOffset(620)] public bool bCookedWidgetTree;
-        [FieldOffset(621)] byte TickFrequency; //TODO: enum EWidgetTickFrequency TickFrequency
-        [FieldOffset(624)]  public IntPtr  InputComponent;
+        [FieldOffset(408)] public LinearColor ColorAndOpacity;
+        [FieldOffset(424)] byte ColorAndOpacityDelegate; //TODO: delegate FGetLinearColor ColorAndOpacityDelegate
+        [FieldOffset(448)] public SlateColor ForegroundColor;
+        [FieldOffset(488)] byte ForegroundColorDelegate; //TODO: delegate FGetSlateColor ForegroundColorDelegate
+        [FieldOffset(508)] public Margin Padding;
+        [FieldOffset(528)] public NativeArray ActiveSequencePlayers;
+        [FieldOffset(544)] public NativeArray StoppedSequencePlayers;
+        [FieldOffset(560)] public NativeArray NamedSlotBindings;
+        [FieldOffset(576)]  public IntPtr  WidgetTree;
+        [FieldOffset(584)] public Vector2D DesignTimeSize;
+        [FieldOffset(592)] byte DesignSizeMode; //TODO: enum EDesignPreviewSizeMode DesignSizeMode
+        [FieldOffset(600)] byte PaletteCategory; //TODO: text FText PaletteCategory
+        [FieldOffset(624)]  public IntPtr  PreviewBackground;
+        [FieldOffset(632)] public int Priority;
+        [FieldOffset(636)] public bool bIsFocusable;
+        [FieldOffset(636)] public bool bStopAction;
+        [FieldOffset(636)] public bool bHasScriptImplementedTick;
+        [FieldOffset(636)] public bool bHasScriptImplementedPaint;
+        [FieldOffset(636)] public bool bCookedWidgetTree;
+        [FieldOffset(637)] byte TickFrequency; //TODO: enum EWidgetTickFrequency TickFrequency
+        [FieldOffset(640)]  public IntPtr  InputComponent;
     }
     internal unsafe struct UserWidget_methods {
         internal struct AddToPlayerScreen_method {
@@ -798,6 +798,23 @@ namespace UE4.UMG.Native {
                 func.SetNativeFunc(Marshal.GetFunctionPointerForDelegate(OnFocusReceived_link.Delegate));
             }
         }
+        [StructLayout( LayoutKind.Explicit, Size=0 )]
+        internal unsafe struct OnInitialized_event {
+            private static DelegateHolder<NativeFuncDelegate> OnInitialized_link;
+            private static unsafe void OnInitialized_process_event(IntPtr context, Frame* theStack, IntPtr result) {
+                var obj = UObject.Make<UserWidget>(context);
+                var b = (byte*) theStack->Locals;
+
+                obj.on_OnInitialized();
+            }
+            internal static void Setup() {
+                OnInitialized_link = new DelegateHolder<NativeFuncDelegate>(OnInitialized_process_event);
+                var uf = Main.GetUFunction("OnInitialized");
+                var func = UObject.Make<Function>(uf);
+                func.SetFlags(func.GetFlags() | EFunctionFlags.FUNC_Native);
+                func.SetNativeFunc(Marshal.GetFunctionPointerForDelegate(OnInitialized_link.Delegate));
+            }
+        }
         [StructLayout( LayoutKind.Explicit, Size=280 )]
         internal unsafe struct OnKeyChar_event {
             private static DelegateHolder<NativeFuncDelegate> OnKeyChar_link;
@@ -1085,6 +1102,23 @@ namespace UE4.UMG.Native {
                 var func = UObject.Make<Function>(uf);
                 func.SetFlags(func.GetFlags() | EFunctionFlags.FUNC_Native);
                 func.SetNativeFunc(Marshal.GetFunctionPointerForDelegate(OnTouchEnded_link.Delegate));
+            }
+        }
+        [StructLayout( LayoutKind.Explicit, Size=368 )]
+        internal unsafe struct OnTouchForceChanged_event {
+            private static DelegateHolder<NativeFuncDelegate> OnTouchForceChanged_link;
+            private static unsafe void OnTouchForceChanged_process_event(IntPtr context, Frame* theStack, IntPtr result) {
+                var obj = UObject.Make<UserWidget>(context);
+                var b = (byte*) theStack->Locals;
+
+                obj.on_OnTouchForceChanged(*(Geometry*)(b+0), *(PointerEvent*)(b+56), *(EventReply*)(b+176));
+            }
+            internal static void Setup() {
+                OnTouchForceChanged_link = new DelegateHolder<NativeFuncDelegate>(OnTouchForceChanged_process_event);
+                var uf = Main.GetUFunction("OnTouchForceChanged");
+                var func = UObject.Make<Function>(uf);
+                func.SetFlags(func.GetFlags() | EFunctionFlags.FUNC_Native);
+                func.SetNativeFunc(Marshal.GetFunctionPointerForDelegate(OnTouchForceChanged_link.Delegate));
             }
         }
         [StructLayout( LayoutKind.Explicit, Size=368 )]

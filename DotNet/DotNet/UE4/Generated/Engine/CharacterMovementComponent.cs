@@ -93,6 +93,18 @@ namespace UE4.Engine {
         public Vector GetImpartedMovementBaseVelocity()  => 
             CharacterMovementComponent_methods.GetImpartedMovementBaseVelocity_method.Invoke(ObjPointer);
 
+        ///<summary>Returns the location at the end of the last tick.</summary>
+        public Vector GetLastUpdateLocation()  => 
+            CharacterMovementComponent_methods.GetLastUpdateLocation_method.Invoke(ObjPointer);
+
+        ///<summary>Returns the rotation at the end of the last tick.</summary>
+        public Rotator GetLastUpdateRotation()  => 
+            CharacterMovementComponent_methods.GetLastUpdateRotation_method.Invoke(ObjPointer);
+
+        ///<summary>Returns the velocity at the end of the last tick.</summary>
+        public Vector GetLastUpdateVelocity()  => 
+            CharacterMovementComponent_methods.GetLastUpdateVelocity_method.Invoke(ObjPointer);
+
         ///<summary>@return Maximum acceleration for the current state.</summary>
         public float GetMaxAcceleration()  => 
             CharacterMovementComponent_methods.GetMaxAcceleration_method.Invoke(ObjPointer);
@@ -221,10 +233,6 @@ namespace UE4.Engine {
             get {return CharacterMovementComponent_ptr->CharacterOwner;}
             set {CharacterMovementComponent_ptr->CharacterOwner = value;}
         }
-        public bool bApplyGravityWhileJumping {
-            get {return Main.GetGetBoolPropertyByName(this, "bApplyGravityWhileJumping"); }
-            set {Main.SetGetBoolPropertyByName(this, "bApplyGravityWhileJumping", value); }
-        }
         ///<summary>Custom gravity scale. Gravity is multiplied by this amount for the character.</summary>
         public unsafe float GravityScale {
             get {return CharacterMovementComponent_ptr->GravityScale;}
@@ -276,6 +284,7 @@ namespace UE4.Engine {
         public unsafe byte CustomMovementMode {
             get {return CharacterMovementComponent_ptr->CustomMovementMode;}
         }
+         //TODO: enum ENetworkSmoothingMode NetworkSmoothingMode
         ///<summary>Setting that affects movement control.</summary>
         ///<remarks>
         ///Higher values allow faster changes in direction.
@@ -344,10 +353,6 @@ namespace UE4.Engine {
         public unsafe float BrakingFriction {
             get {return CharacterMovementComponent_ptr->BrakingFriction;}
             set {CharacterMovementComponent_ptr->BrakingFriction = value;}
-        }
-        public bool bUseSeparateBrakingFriction {
-            get {return Main.GetGetBoolPropertyByName(this, "bUseSeparateBrakingFriction"); }
-            set {Main.SetGetBoolPropertyByName(this, "bUseSeparateBrakingFriction", value); }
         }
         ///<summary>Deceleration when walking and not applying acceleration.</summary>
         ///<remarks>
@@ -438,6 +443,14 @@ namespace UE4.Engine {
             get {return CharacterMovementComponent_ptr->RotationRate;}
             set {CharacterMovementComponent_ptr->RotationRate = value;}
         }
+        public bool bUseSeparateBrakingFriction {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseSeparateBrakingFriction"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseSeparateBrakingFriction", value); }
+        }
+        public bool bApplyGravityWhileJumping {
+            get {return Main.GetGetBoolPropertyByName(this, "bApplyGravityWhileJumping"); }
+            set {Main.SetGetBoolPropertyByName(this, "bApplyGravityWhileJumping", value); }
+        }
         public bool bUseControllerDesiredRotation {
             get {return Main.GetGetBoolPropertyByName(this, "bUseControllerDesiredRotation"); }
             set {Main.SetGetBoolPropertyByName(this, "bUseControllerDesiredRotation", value); }
@@ -494,26 +507,6 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bDeferUpdateMoveComponent"); }
             set {Main.SetGetBoolPropertyByName(this, "bDeferUpdateMoveComponent", value); }
         }
-        ///<summary>What to update CharacterOwner and UpdatedComponent after movement ends</summary>
-        public unsafe SceneComponent DeferredUpdatedMoveComponent {
-            get {return CharacterMovementComponent_ptr->DeferredUpdatedMoveComponent;}
-            set {CharacterMovementComponent_ptr->DeferredUpdatedMoveComponent = value;}
-        }
-        ///<summary>Maximum step height for getting out of water</summary>
-        public unsafe float MaxOutOfWaterStepHeight {
-            get {return CharacterMovementComponent_ptr->MaxOutOfWaterStepHeight;}
-            set {CharacterMovementComponent_ptr->MaxOutOfWaterStepHeight = value;}
-        }
-        ///<summary>Z velocity applied when pawn tries to get out of water</summary>
-        public unsafe float OutofWaterZ {
-            get {return CharacterMovementComponent_ptr->OutofWaterZ;}
-            set {CharacterMovementComponent_ptr->OutofWaterZ = value;}
-        }
-        ///<summary>Mass of pawn (for when momentum is imparted to it).</summary>
-        public unsafe float Mass {
-            get {return CharacterMovementComponent_ptr->Mass;}
-            set {CharacterMovementComponent_ptr->Mass = value;}
-        }
         public bool bEnablePhysicsInteraction {
             get {return Main.GetGetBoolPropertyByName(this, "bEnablePhysicsInteraction"); }
             set {Main.SetGetBoolPropertyByName(this, "bEnablePhysicsInteraction", value); }
@@ -533,6 +526,26 @@ namespace UE4.Engine {
         public bool bScalePushForceToVelocity {
             get {return Main.GetGetBoolPropertyByName(this, "bScalePushForceToVelocity"); }
             set {Main.SetGetBoolPropertyByName(this, "bScalePushForceToVelocity", value); }
+        }
+        ///<summary>What to update CharacterOwner and UpdatedComponent after movement ends</summary>
+        public unsafe SceneComponent DeferredUpdatedMoveComponent {
+            get {return CharacterMovementComponent_ptr->DeferredUpdatedMoveComponent;}
+            set {CharacterMovementComponent_ptr->DeferredUpdatedMoveComponent = value;}
+        }
+        ///<summary>Maximum step height for getting out of water</summary>
+        public unsafe float MaxOutOfWaterStepHeight {
+            get {return CharacterMovementComponent_ptr->MaxOutOfWaterStepHeight;}
+            set {CharacterMovementComponent_ptr->MaxOutOfWaterStepHeight = value;}
+        }
+        ///<summary>Z velocity applied when pawn tries to get out of water</summary>
+        public unsafe float OutofWaterZ {
+            get {return CharacterMovementComponent_ptr->OutofWaterZ;}
+            set {CharacterMovementComponent_ptr->OutofWaterZ = value;}
+        }
+        ///<summary>Mass of pawn (for when momentum is imparted to it).</summary>
+        public unsafe float Mass {
+            get {return CharacterMovementComponent_ptr->Mass;}
+            set {CharacterMovementComponent_ptr->Mass = value;}
         }
         ///<summary>Force applied to objects we stand on (due to Mass and Gravity) is scaled by this amount.</summary>
         public unsafe float StandingDownwardForceScale {
@@ -580,15 +593,15 @@ namespace UE4.Engine {
             get {return CharacterMovementComponent_ptr->Acceleration;}
             set {CharacterMovementComponent_ptr->Acceleration = value;}
         }
-        ///<summary>Location after last PerformMovement or SimulateMovement update. Used internally to detect changes in position from outside character movement to try to validate the current floor.</summary>
-        public unsafe Vector LastUpdateLocation {
-            get {return CharacterMovementComponent_ptr->LastUpdateLocation;}
-            set {CharacterMovementComponent_ptr->LastUpdateLocation = value;}
-        }
         ///<summary>Rotation after last PerformMovement or SimulateMovement update.</summary>
         public unsafe Quat LastUpdateRotation {
             get {return CharacterMovementComponent_ptr->LastUpdateRotation;}
             set {CharacterMovementComponent_ptr->LastUpdateRotation = value;}
+        }
+        ///<summary>Location after last PerformMovement or SimulateMovement update. Used internally to detect changes in position from outside character movement to try to validate the current floor.</summary>
+        public unsafe Vector LastUpdateLocation {
+            get {return CharacterMovementComponent_ptr->LastUpdateLocation;}
+            set {CharacterMovementComponent_ptr->LastUpdateLocation = value;}
         }
         ///<summary>Velocity after last PerformMovement or SimulateMovement update. Used internally to detect changes in velocity from external sources.</summary>
         public unsafe Vector LastUpdateVelocity {
@@ -732,7 +745,6 @@ namespace UE4.Engine {
             get {return CharacterMovementComponent_ptr->NetworkNoSmoothUpdateDistance;}
             set {CharacterMovementComponent_ptr->NetworkNoSmoothUpdateDistance = value;}
         }
-         //TODO: enum ENetworkSmoothingMode NetworkSmoothingMode
         ///<summary>Minimum time on the server between acknowledging good client moves. This can save on bandwidth. Set to 0 to disable throttling.</summary>
         public unsafe float NetworkMinTimeBetweenClientAckGoodMoves {
             get {return CharacterMovementComponent_ptr->NetworkMinTimeBetweenClientAckGoodMoves;}
@@ -890,6 +902,14 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bRequestedMoveUseAcceleration"); }
             set {Main.SetGetBoolPropertyByName(this, "bRequestedMoveUseAcceleration", value); }
         }
+        public bool bWasSimulatingRootMotion {
+            get {return Main.GetGetBoolPropertyByName(this, "bWasSimulatingRootMotion"); }
+            set {Main.SetGetBoolPropertyByName(this, "bWasSimulatingRootMotion", value); }
+        }
+        public bool bAllowPhysicsRotationDuringAnimRootMotion {
+            get {return Main.GetGetBoolPropertyByName(this, "bAllowPhysicsRotationDuringAnimRootMotion"); }
+            set {Main.SetGetBoolPropertyByName(this, "bAllowPhysicsRotationDuringAnimRootMotion", value); }
+        }
         public bool bHasRequestedVelocity {
             get {return Main.GetGetBoolPropertyByName(this, "bHasRequestedVelocity"); }
             set {Main.SetGetBoolPropertyByName(this, "bHasRequestedVelocity", value); }
@@ -1011,14 +1031,6 @@ namespace UE4.Engine {
         public unsafe Vector AnimRootMotionVelocity {
             get {return CharacterMovementComponent_ptr->AnimRootMotionVelocity;}
             set {CharacterMovementComponent_ptr->AnimRootMotionVelocity = value;}
-        }
-        public bool bWasSimulatingRootMotion {
-            get {return Main.GetGetBoolPropertyByName(this, "bWasSimulatingRootMotion"); }
-            set {Main.SetGetBoolPropertyByName(this, "bWasSimulatingRootMotion", value); }
-        }
-        public bool bAllowPhysicsRotationDuringAnimRootMotion {
-            get {return Main.GetGetBoolPropertyByName(this, "bAllowPhysicsRotationDuringAnimRootMotion"); }
-            set {Main.SetGetBoolPropertyByName(this, "bAllowPhysicsRotationDuringAnimRootMotion", value); }
         }
         static CharacterMovementComponent() {
             StaticClass = Main.GetClass("CharacterMovementComponent");

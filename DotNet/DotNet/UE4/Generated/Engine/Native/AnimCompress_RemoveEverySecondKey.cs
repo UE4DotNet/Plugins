@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=96 )]
+    [StructLayout( LayoutKind.Explicit, Size=104 )]
     internal unsafe struct AnimCompress_RemoveEverySecondKey_fields {
-        [FieldOffset(88)] public int MinKeys;
-        [FieldOffset(92)] public bool bStartAtSecondKey;
+        [FieldOffset(96)] public int MinKeys;
+        [FieldOffset(100)] public bool bStartAtSecondKey;
     }
     internal unsafe struct AnimCompress_RemoveEverySecondKey_methods {
     }

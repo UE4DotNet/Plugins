@@ -12,21 +12,27 @@ using UE4.Native;
 
 namespace UE4.SlateCore{
         ///<summary>Represents the appearance of an SSlider</summary>
-        [StructLayout( LayoutKind.Explicit, Size=656 )]
+        [StructLayout( LayoutKind.Explicit, Size=976 )]
         public unsafe struct SliderStyle {
             ///<summary>Image to use when the slider bar is in its normal state</summary>
             [FieldOffset(8)] SlateBrush NormalBarImage;
 
+            ///<summary>Image to use when the slider bar is in its hovered state</summary>
+            [FieldOffset(168)] SlateBrush HoveredBarImage;
+
             ///<summary>Image to use when the slider bar is in its disabled state</summary>
-            [FieldOffset(168)] SlateBrush DisabledBarImage;
+            [FieldOffset(328)] SlateBrush DisabledBarImage;
 
             ///<summary>Image to use when the slider thumb is in its normal state</summary>
-            [FieldOffset(328)] SlateBrush NormalThumbImage;
+            [FieldOffset(488)] SlateBrush NormalThumbImage;
+
+            ///<summary>Image to use when the slider thumb is in its hovered state</summary>
+            [FieldOffset(648)] SlateBrush HoveredThumbImage;
 
             ///<summary>Image to use when the slider thumb is in its disabled state</summary>
-            [FieldOffset(488)] SlateBrush DisabledThumbImage;
+            [FieldOffset(808)] SlateBrush DisabledThumbImage;
 
-            [FieldOffset(648)] public float BarThickness;
+            [FieldOffset(968)] public float BarThickness;
 
         }
 }

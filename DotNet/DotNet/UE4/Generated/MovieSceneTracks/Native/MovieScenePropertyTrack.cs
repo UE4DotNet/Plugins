@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.MovieSceneTracks.Native {
-    [StructLayout( LayoutKind.Explicit, Size=208 )]
+    [StructLayout( LayoutKind.Explicit, Size=216 )]
     internal unsafe struct MovieScenePropertyTrack_fields {
-        [FieldOffset(152)] public Name UniqueTrackName;
-        [FieldOffset(164)] public Name PropertyName;
-        [FieldOffset(176)] byte PropertyPath; //TODO: string FString PropertyPath
-        [FieldOffset(192)] public NativeArray Sections;
+        [FieldOffset(160)] public Name UniqueTrackName;
+        [FieldOffset(172)] public Name PropertyName;
+        [FieldOffset(184)] byte PropertyPath; //TODO: string FString PropertyPath
+        [FieldOffset(200)] public NativeArray Sections;
     }
     internal unsafe struct MovieScenePropertyTrack_methods {
     }

@@ -21,9 +21,10 @@ namespace UE4.Engine.Native {
         [FieldOffset(804)] public bool bShouldAcquireMissingChunksOnLoad;
         [FieldOffset(805)] public bool bOnlyCookProductionAssets;
         [FieldOffset(806)] public bool bIsBulkScanning;
-        [FieldOffset(807)] public bool bIsManagementDatabaseCurrent;
-        [FieldOffset(808)] public bool bUpdateManagementDatabaseAfterScan;
-        [FieldOffset(809)] public bool bIncludeOnlyOnDiskAssets;
+        [FieldOffset(807)] public bool bIsPrimaryAssetDirectoryCurrent;
+        [FieldOffset(808)] public bool bIsManagementDatabaseCurrent;
+        [FieldOffset(809)] public bool bUpdateManagementDatabaseAfterScan;
+        [FieldOffset(810)] public bool bIncludeOnlyOnDiskAssets;
         [FieldOffset(812)] public int NumberOfSpawnedNotifications;
     }
     internal unsafe struct AssetManager_methods {

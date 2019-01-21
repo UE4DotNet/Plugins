@@ -36,6 +36,10 @@ namespace UE4.Engine {
         public unsafe Vector BoxExtent {
             get {return BoxComponent_ptr->BoxExtent;}
         }
+        ///<summary>Used to control the line thickness when rendering</summary>
+        public unsafe float LineThickness {
+            get {return BoxComponent_ptr->LineThickness;}
+        }
         static BoxComponent() {
             StaticClass = Main.GetClass("BoxComponent");
         }

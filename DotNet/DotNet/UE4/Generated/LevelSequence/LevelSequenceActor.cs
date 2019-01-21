@@ -18,7 +18,15 @@ namespace UE4.LevelSequence {
     ///<summary>Actor responsible for controlling a specific level sequence in the world.</summary>
     public unsafe partial class LevelSequenceActor : Actor  {
 
-        ///<summary>Adds the specified actor to the overridden bindings for the specified binding ID, optionally still allowing the bindings defined in the Level Sequence asset</summary>
+        ///<summary>
+        ///Adds the specified actor to the overridden bindings for the specified binding ID, optionally still allowing the bindings defined in the Level Sequence asset
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param Binding Binding to modify
+        ///@param Actor Actor to bind
+        ///@param bAllowBindingsFromAsset Allow bindings from the level sequence asset
+        ///</remarks>
         public void AddBinding(MovieSceneObjectBindingID Binding, Actor Actor, bool bAllowBindingsFromAsset)  => 
             LevelSequenceActor_methods.AddBinding_method.Invoke(ObjPointer, Binding, Actor, bAllowBindingsFromAsset);
 
@@ -44,7 +52,15 @@ namespace UE4.LevelSequence {
         public void ResetBindings()  => 
             LevelSequenceActor_methods.ResetBindings_method.Invoke(ObjPointer);
 
-        ///<summary>Overrides the specified binding with the specified actors, optionally still allowing the bindings defined in the Level Sequence asset</summary>
+        ///<summary>
+        ///Overrides the specified binding with the specified actors, optionally still allowing the bindings defined in the Level Sequence asset
+        ///@
+        ///</summary>
+        ///<remarks>
+        ///param Binding Binding to modify
+        ///@param Actors Actors to bind
+        ///@param bAllowBindingsFromAsset Allow bindings from the level sequence asset
+        ///</remarks>
         public void SetBinding(MovieSceneObjectBindingID Binding, byte Actors /*TODO: array TArray */, bool bAllowBindingsFromAsset)  => 
             LevelSequenceActor_methods.SetBinding_method.Invoke(ObjPointer, Binding, Actors, bAllowBindingsFromAsset);
 

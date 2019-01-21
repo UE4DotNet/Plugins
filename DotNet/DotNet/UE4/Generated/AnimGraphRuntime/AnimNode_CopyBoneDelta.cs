@@ -14,27 +14,27 @@ using UE4.Engine;
 namespace UE4.AnimGraphRuntime{
         ///<summary>Simple controller to copy a transform relative to the ref pose to the target bone,</summary>
         ///<remarks>instead of the copy bone node which copies the absolute transform</remarks>
-        [StructLayout( LayoutKind.Explicit, Size=424 )]
+        [StructLayout( LayoutKind.Explicit, Size=400 )]
         public unsafe struct AnimNode_CopyBoneDelta {
             ///<summary>Source Bone</summary>
-            [FieldOffset(360)] BoneReference SourceBone;
+            [FieldOffset(336)] BoneReference SourceBone;
 
             ///<summary>Target Bone</summary>
-            [FieldOffset(384)] BoneReference TargetBone;
+            [FieldOffset(360)] BoneReference TargetBone;
 
-            [FieldOffset(408)] public bool bCopyTranslation;
+            [FieldOffset(384)] public bool bCopyTranslation;
 
-            [FieldOffset(409)] public bool bCopyRotation;
+            [FieldOffset(385)] public bool bCopyRotation;
 
-            [FieldOffset(410)] public bool bCopyScale;
+            [FieldOffset(386)] public bool bCopyScale;
 
-            [FieldOffset(411)] byte CopyMode; //TODO: enum CopyBoneDeltaMode CopyMode
+            [FieldOffset(387)] byte CopyMode; //TODO: enum CopyBoneDeltaMode CopyMode
 
-            [FieldOffset(412)] public float TranslationMultiplier;
+            [FieldOffset(388)] public float TranslationMultiplier;
 
-            [FieldOffset(416)] public float RotationMultiplier;
+            [FieldOffset(392)] public float RotationMultiplier;
 
-            [FieldOffset(420)] public float ScaleMultiplier;
+            [FieldOffset(396)] public float ScaleMultiplier;
 
         }
 }

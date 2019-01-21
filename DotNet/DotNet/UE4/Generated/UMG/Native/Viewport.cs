@@ -12,9 +12,9 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=464 )]
+    [StructLayout( LayoutKind.Explicit, Size=480 )]
     internal unsafe struct Viewport_fields {
-        [FieldOffset(408)] public LinearColor BackgroundColor;
+        [FieldOffset(424)] public LinearColor BackgroundColor;
     }
     internal unsafe struct Viewport_methods {
         internal struct GetViewLocation_method {

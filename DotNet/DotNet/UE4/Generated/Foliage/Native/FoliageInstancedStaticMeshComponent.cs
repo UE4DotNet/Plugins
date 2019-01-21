@@ -11,11 +11,11 @@ using UE4.Native;
 
 
 namespace UE4.Foliage.Native {
-    [StructLayout( LayoutKind.Explicit, Size=2224 )]
+    [StructLayout( LayoutKind.Explicit, Size=2208 )]
     internal unsafe struct FoliageInstancedStaticMeshComponent_fields {
-        [FieldOffset(2184)] byte OnInstanceTakePointDamage; //TODO: multicast delegate FInstancePointDamageSignature OnInstanceTakePointDamage
-        [FieldOffset(2200)] byte OnInstanceTakeRadialDamage; //TODO: multicast delegate FInstanceRadialDamageSignature OnInstanceTakeRadialDamage
-        [FieldOffset(2216)] byte FoliageHiddenEditorViews; //TODO: numeric uint64 FoliageHiddenEditorViews
+        [FieldOffset(2168)] byte OnInstanceTakePointDamage; //TODO: multicast delegate FInstancePointDamageSignature OnInstanceTakePointDamage
+        [FieldOffset(2184)] byte OnInstanceTakeRadialDamage; //TODO: multicast delegate FInstanceRadialDamageSignature OnInstanceTakeRadialDamage
+        [FieldOffset(2200)] byte FoliageHiddenEditorViews; //TODO: numeric uint64 FoliageHiddenEditorViews
     }
     internal unsafe struct FoliageInstancedStaticMeshComponent_methods {
     }

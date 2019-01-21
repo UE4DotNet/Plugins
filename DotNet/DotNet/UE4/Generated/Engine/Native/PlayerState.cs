@@ -14,20 +14,21 @@ namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=1224 )]
     internal unsafe struct PlayerState_fields {
         [FieldOffset(1016)] public float Score;
-        [FieldOffset(1020)] public byte Ping;
         [FieldOffset(1024)] byte PlayerName; //TODO: string FString PlayerName
         [FieldOffset(1056)] public int PlayerId;
-        [FieldOffset(1060)] public bool bIsSpectator;
-        [FieldOffset(1060)] public bool bOnlySpectator;
-        [FieldOffset(1060)] public bool bIsABot;
-        [FieldOffset(1060)] public bool bIsInactive;
-        [FieldOffset(1060)] public bool bFromPreviousLevel;
+        [FieldOffset(1060)] public byte Ping;
+        [FieldOffset(1062)] public bool bShouldUpdateReplicatedPing;
+        [FieldOffset(1062)] public bool bIsSpectator;
+        [FieldOffset(1062)] public bool bOnlySpectator;
+        [FieldOffset(1062)] public bool bIsABot;
+        [FieldOffset(1062)] public bool bIsInactive;
+        [FieldOffset(1062)] public bool bFromPreviousLevel;
         [FieldOffset(1064)] public int StartTime;
         [FieldOffset(1072)] public IntPtr EngineMessageClass;
         [FieldOffset(1088)] byte SavedNetworkAddress; //TODO: string FString SavedNetworkAddress
         [FieldOffset(1104)] public UniqueNetIdRepl UniqueId;
-        [FieldOffset(1184)] byte PlayerNamePrivate; //TODO: string FString PlayerNamePrivate
-        [FieldOffset(1216)] public bool bShouldUpdateReplicatedPing;
+        [FieldOffset(1160)]  public IntPtr  PawnPrivate;
+        [FieldOffset(1192)] byte PlayerNamePrivate; //TODO: string FString PlayerNamePrivate
     }
     internal unsafe struct PlayerState_methods {
         internal struct GetPlayerName_method {

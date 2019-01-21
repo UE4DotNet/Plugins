@@ -11,10 +11,10 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=672 )]
+    [StructLayout( LayoutKind.Explicit, Size=656 )]
     internal unsafe struct TextureLightProfile_fields {
-        [FieldOffset(656)] public float Brightness;
-        [FieldOffset(660)] public float TextureMultiplier;
+        [FieldOffset(648)] public float Brightness;
+        [FieldOffset(652)] public float TextureMultiplier;
     }
     internal unsafe struct TextureLightProfile_methods {
     }

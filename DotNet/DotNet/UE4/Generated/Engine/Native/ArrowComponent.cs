@@ -11,16 +11,16 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1632 )]
+    [StructLayout( LayoutKind.Explicit, Size=1616 )]
     internal unsafe struct ArrowComponent_fields {
-        [FieldOffset(1520)] public Color ArrowColor;
-        [FieldOffset(1524)] public float ArrowSize;
-        [FieldOffset(1528)] public bool bIsScreenSizeScaled;
-        [FieldOffset(1532)] public float ScreenSize;
-        [FieldOffset(1536)] public bool bTreatAsASprite;
-        [FieldOffset(1552)] public SpriteCategoryInfo SpriteInfo;
-        [FieldOffset(1616)] public bool bLightAttachment;
-        [FieldOffset(1620)] public bool bUseInEditorScaling;
+        [FieldOffset(1504)] public Color ArrowColor;
+        [FieldOffset(1508)] public float ArrowSize;
+        [FieldOffset(1512)] public bool bIsScreenSizeScaled;
+        [FieldOffset(1516)] public float ScreenSize;
+        [FieldOffset(1520)] public bool bTreatAsASprite;
+        [FieldOffset(1536)] public SpriteCategoryInfo SpriteInfo;
+        [FieldOffset(1600)] public bool bLightAttachment;
+        [FieldOffset(1604)] public bool bUseInEditorScaling;
     }
     internal unsafe struct ArrowComponent_methods {
         internal struct SetArrowColor_method {

@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Engine.Native {
-    [StructLayout( LayoutKind.Explicit, Size=736 )]
+    [StructLayout( LayoutKind.Explicit, Size=728 )]
     internal unsafe struct BodySetup_fields {
         [FieldOffset(56)] public KAggregateGeom AggGeom;
         [FieldOffset(144)] public Name BoneName;
@@ -27,7 +27,7 @@ namespace UE4.Engine.Native {
         [FieldOffset(168)]  public IntPtr  PhysMaterial;
         [FieldOffset(176)] public WalkableSlopeOverride WalkableSlopeOverride;
         [FieldOffset(328)] public BodyInstance DefaultInstance;
-        [FieldOffset(720)] public Vector BuildScale3D;
+        [FieldOffset(704)] public Vector BuildScale3D;
     }
     internal unsafe struct BodySetup_methods {
     }

@@ -195,6 +195,14 @@ namespace UE4.Engine {
         public Vector GetSkeletalCenterOfMass()  => 
             SkeletalMeshComponent_methods.GetSkeletalCenterOfMass_method.Invoke(ObjPointer);
 
+        ///<summary>Returns the a tagged sub-instance node.</summary>
+        ///<remarks>
+        ///If non sub instances are found or none are tagged with the
+        ///supplied name, this will return NULL.
+        ///</remarks>
+        public AnimInstance GetSubInstanceByName(Name InName)  => 
+            SkeletalMeshComponent_methods.GetSubInstanceByName_method.Invoke(ObjPointer, InName);
+
         ///<summary>Gets the teleportation distance threshold.</summary>
         ///<remarks>
         ///@return Threshold value.
@@ -576,10 +584,6 @@ namespace UE4.Engine {
             get {return SkeletalMeshComponent_ptr->PostProcessAnimInstance;}
             set {SkeletalMeshComponent_ptr->PostProcessAnimInstance = value;}
         }
-        public bool bDisablePostProcessBlueprint {
-            get {return Main.GetGetBoolPropertyByName(this, "bDisablePostProcessBlueprint"); }
-            set {Main.SetGetBoolPropertyByName(this, "bDisablePostProcessBlueprint", value); }
-        }
         ///<summary>Animation Data</summary>
         public unsafe SingleAnimationPlayData AnimationData {
             get {return SkeletalMeshComponent_ptr->AnimationData;}
@@ -616,6 +620,14 @@ namespace UE4.Engine {
         ///<summary>Whether to use Animation Blueprint or play Single Animation Asset.</summary>
         public unsafe byte AnimationMode {
             get {return SkeletalMeshComponent_ptr->AnimationMode;}
+        }
+        public bool bDisablePostProcessBlueprint {
+            get {return Main.GetGetBoolPropertyByName(this, "bDisablePostProcessBlueprint"); }
+            set {Main.SetGetBoolPropertyByName(this, "bDisablePostProcessBlueprint", value); }
+        }
+        public bool bUpdateOverlapsOnAnimationFinalize {
+            get {return Main.GetGetBoolPropertyByName(this, "bUpdateOverlapsOnAnimationFinalize"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUpdateOverlapsOnAnimationFinalize", value); }
         }
         public bool bHasValidBodies {
             get {return Main.GetGetBoolPropertyByName(this, "bHasValidBodies"); }
@@ -656,9 +668,6 @@ namespace UE4.Engine {
         public bool bResetAfterTeleport {
             get {return Main.GetGetBoolPropertyByName(this, "bResetAfterTeleport"); }
             set {Main.SetGetBoolPropertyByName(this, "bResetAfterTeleport", value); }
-        }
-        public bool bDeferMovementFromSceneQueries {
-            get {return Main.GetGetBoolPropertyByName(this, "bDeferMovementFromSceneQueries"); }
         }
         public bool bNoSkeletonUpdate {
             get {return Main.GetGetBoolPropertyByName(this, "bNoSkeletonUpdate"); }
@@ -710,6 +719,26 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bEnableLineCheckWithBounds"); }
             set {Main.SetGetBoolPropertyByName(this, "bEnableLineCheckWithBounds", value); }
         }
+        public bool bUseBendingElements {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseBendingElements"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseBendingElements", value); }
+        }
+        public bool bUseTetrahedralConstraints {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseTetrahedralConstraints"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseTetrahedralConstraints", value); }
+        }
+        public bool bUseThinShellVolumeConstraints {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseThinShellVolumeConstraints"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseThinShellVolumeConstraints", value); }
+        }
+        public bool bUseSelfCollisions {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseSelfCollisions"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseSelfCollisions", value); }
+        }
+        public bool bUseContinuousCollisionDetection {
+            get {return Main.GetGetBoolPropertyByName(this, "bUseContinuousCollisionDetection"); }
+            set {Main.SetGetBoolPropertyByName(this, "bUseContinuousCollisionDetection", value); }
+        }
         public bool bUpdateAnimationInEditor {
             get {return Main.GetGetBoolPropertyByName(this, "bUpdateAnimationInEditor"); }
             set {Main.SetGetBoolPropertyByName(this, "bUpdateAnimationInEditor", value); }
@@ -718,7 +747,6 @@ namespace UE4.Engine {
             get {return Main.GetGetBoolPropertyByName(this, "bNeedsQueuedAnimEventsDispatched"); }
             set {Main.SetGetBoolPropertyByName(this, "bNeedsQueuedAnimEventsDispatched", value); }
         }
-         //TODO: array not UObject TArray DisallowedAnimCurves
          //TODO: numeric uint16 CachedAnimCurveUidVersion
         ///<summary>
         ///weight to blend between simulated results and key-framed positions
@@ -759,26 +787,7 @@ namespace UE4.Engine {
             get {return SkeletalMeshComponent_ptr->ShapeTargetStiffness;}
             set {SkeletalMeshComponent_ptr->ShapeTargetStiffness = value;}
         }
-        public bool bUseBendingElements {
-            get {return Main.GetGetBoolPropertyByName(this, "bUseBendingElements"); }
-            set {Main.SetGetBoolPropertyByName(this, "bUseBendingElements", value); }
-        }
-        public bool bUseTetrahedralConstraints {
-            get {return Main.GetGetBoolPropertyByName(this, "bUseTetrahedralConstraints"); }
-            set {Main.SetGetBoolPropertyByName(this, "bUseTetrahedralConstraints", value); }
-        }
-        public bool bUseThinShellVolumeConstraints {
-            get {return Main.GetGetBoolPropertyByName(this, "bUseThinShellVolumeConstraints"); }
-            set {Main.SetGetBoolPropertyByName(this, "bUseThinShellVolumeConstraints", value); }
-        }
-        public bool bUseSelfCollisions {
-            get {return Main.GetGetBoolPropertyByName(this, "bUseSelfCollisions"); }
-            set {Main.SetGetBoolPropertyByName(this, "bUseSelfCollisions", value); }
-        }
-        public bool bUseContinuousCollisionDetection {
-            get {return Main.GetGetBoolPropertyByName(this, "bUseContinuousCollisionDetection"); }
-            set {Main.SetGetBoolPropertyByName(this, "bUseContinuousCollisionDetection", value); }
-        }
+         //TODO: array not UObject TArray DisallowedAnimCurves
         ///<summary>Used for per poly collision.</summary>
         ///<remarks>
         ///In 99% of cases you will be better off using a Physics Asset.

@@ -11,9 +11,9 @@ using UE4.Native;
 
 
 namespace UE4.Landscape.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1776 )]
+    [StructLayout( LayoutKind.Explicit, Size=1760 )]
     internal unsafe struct ControlPointMeshComponent_fields {
-        [FieldOffset(1760)] public bool bSelected;
+        [FieldOffset(1744)] public bool bSelected;
     }
     internal unsafe struct ControlPointMeshComponent_methods {
     }

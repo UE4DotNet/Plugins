@@ -13,23 +13,23 @@ using UE4.SlateCore;
 using UE4.Engine;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=808 )]
+    [StructLayout( LayoutKind.Explicit, Size=824 )]
     internal unsafe struct Border_fields {
-        [FieldOffset(408)] public byte HorizontalAlignment;
-        [FieldOffset(409)] public byte VerticalAlignment;
-        [FieldOffset(410)] public bool bShowEffectWhenDisabled;
-        [FieldOffset(412)] public LinearColor ContentColorAndOpacity;
-        [FieldOffset(428)] byte ContentColorAndOpacityDelegate; //TODO: delegate FGetLinearColor ContentColorAndOpacityDelegate
-        [FieldOffset(448)] public Margin Padding;
-        [FieldOffset(464)] public SlateBrush Background;
-        [FieldOffset(624)] byte BackgroundDelegate; //TODO: delegate FGetSlateBrush BackgroundDelegate
-        [FieldOffset(644)] public LinearColor BrushColor;
-        [FieldOffset(660)] byte BrushColorDelegate; //TODO: delegate FGetLinearColor BrushColorDelegate
-        [FieldOffset(680)] public Vector2D DesiredSizeScale;
-        [FieldOffset(688)] byte OnMouseButtonDownEvent; //TODO: delegate FOnPointerEvent OnMouseButtonDownEvent
-        [FieldOffset(708)] byte OnMouseButtonUpEvent; //TODO: delegate FOnPointerEvent OnMouseButtonUpEvent
-        [FieldOffset(728)] byte OnMouseMoveEvent; //TODO: delegate FOnPointerEvent OnMouseMoveEvent
-        [FieldOffset(748)] byte OnMouseDoubleClickEvent; //TODO: delegate FOnPointerEvent OnMouseDoubleClickEvent
+        [FieldOffset(424)] public byte HorizontalAlignment;
+        [FieldOffset(425)] public byte VerticalAlignment;
+        [FieldOffset(426)] public bool bShowEffectWhenDisabled;
+        [FieldOffset(428)] public LinearColor ContentColorAndOpacity;
+        [FieldOffset(444)] byte ContentColorAndOpacityDelegate; //TODO: delegate FGetLinearColor ContentColorAndOpacityDelegate
+        [FieldOffset(464)] public Margin Padding;
+        [FieldOffset(480)] public SlateBrush Background;
+        [FieldOffset(640)] byte BackgroundDelegate; //TODO: delegate FGetSlateBrush BackgroundDelegate
+        [FieldOffset(660)] public LinearColor BrushColor;
+        [FieldOffset(676)] byte BrushColorDelegate; //TODO: delegate FGetLinearColor BrushColorDelegate
+        [FieldOffset(696)] public Vector2D DesiredSizeScale;
+        [FieldOffset(704)] byte OnMouseButtonDownEvent; //TODO: delegate FOnPointerEvent OnMouseButtonDownEvent
+        [FieldOffset(724)] byte OnMouseButtonUpEvent; //TODO: delegate FOnPointerEvent OnMouseButtonUpEvent
+        [FieldOffset(744)] byte OnMouseMoveEvent; //TODO: delegate FOnPointerEvent OnMouseMoveEvent
+        [FieldOffset(764)] byte OnMouseDoubleClickEvent; //TODO: delegate FOnPointerEvent OnMouseDoubleClickEvent
     }
     internal unsafe struct Border_methods {
         internal struct GetDynamicMaterial_method {

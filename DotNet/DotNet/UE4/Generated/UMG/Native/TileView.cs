@@ -11,12 +11,12 @@ using UE4.Native;
 
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=960 )]
+    [StructLayout( LayoutKind.Explicit, Size=992 )]
     internal unsafe struct TileView_fields {
-        [FieldOffset(928)] public float EntryHeight;
-        [FieldOffset(932)] public float EntryWidth;
-        [FieldOffset(936)] byte TileAlignment; //TODO: enum EListItemAlignment TileAlignment
-        [FieldOffset(937)] public bool bWrapHorizontalNavigation;
+        [FieldOffset(960)] public float EntryHeight;
+        [FieldOffset(964)] public float EntryWidth;
+        [FieldOffset(968)] byte TileAlignment; //TODO: enum EListItemAlignment TileAlignment
+        [FieldOffset(969)] public bool bWrapHorizontalNavigation;
     }
     internal unsafe struct TileView_methods {
         internal struct SetEntryHeight_method {

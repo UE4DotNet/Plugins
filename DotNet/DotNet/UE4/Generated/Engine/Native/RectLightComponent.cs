@@ -13,8 +13,9 @@ using UE4.Native;
 namespace UE4.Engine.Native {
     [StructLayout( LayoutKind.Explicit, Size=992 )]
     internal unsafe struct RectLightComponent_fields {
-        [FieldOffset(984)] public float SourceWidth;
-        [FieldOffset(988)] public float SourceHeight;
+        [FieldOffset(976)] public float SourceWidth;
+        [FieldOffset(980)] public float SourceHeight;
+        [FieldOffset(984)]  public IntPtr  SourceTexture;
     }
     internal unsafe struct RectLightComponent_methods {
         internal struct SetSourceHeight_method {

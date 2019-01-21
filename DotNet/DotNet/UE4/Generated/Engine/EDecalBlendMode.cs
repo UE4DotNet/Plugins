@@ -23,9 +23,12 @@ namespace UE4.Engine {
         DBM_DBuffer_Normal = 0x00000008, 
         DBM_DBuffer_NormalRoughness = 0x00000009, 
         DBM_DBuffer_Roughness = 0x0000000a, 
-        DBM_Volumetric_DistanceFunction = 0x0000000b, 
-        DBM_AlphaComposite = 0x0000000c, 
-        DBM_AmbientOcclusion = 0x0000000d, 
-        DBM_MAX = 0x0000000e
+        DBM_DBuffer_Emissive = 0x0000000b, 
+        DBM_DBuffer_AlphaComposite = 0x0000000c, 
+        DBM_DBuffer_EmissiveAlphaComposite = 0x0000000d, 
+        DBM_Volumetric_DistanceFunction = 0x0000000e, 
+        DBM_AlphaComposite = 0x0000000f, 
+        DBM_AmbientOcclusion = 0x00000010, 
+        DBM_MAX = 0x00000011
     }
 }

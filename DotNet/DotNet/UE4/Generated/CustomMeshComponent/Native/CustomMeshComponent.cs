@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.CustomMeshComponent.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1584 )]
+    [StructLayout( LayoutKind.Explicit, Size=1568 )]
     internal unsafe struct CustomMeshComponent_fields {
     }
     internal unsafe struct CustomMeshComponent_methods {

@@ -30,11 +30,6 @@ namespace UE4.Engine {
             get {return SCS_Node_ptr->CookedComponentInstancingData;}
             set {SCS_Node_ptr->CookedComponentInstancingData = value;}
         }
-        ///<summary>Variable Name</summary>
-        public unsafe Name VariableName {
-            get {return SCS_Node_ptr->VariableName;}
-            set {SCS_Node_ptr->VariableName = value;}
-        }
          //TODO: text FText CategoryName
         ///<summary>Socket/Bone that Node might attach to</summary>
         public unsafe Name AttachToName {

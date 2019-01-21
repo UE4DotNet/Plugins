@@ -12,20 +12,20 @@ using UE4.Native;
 using UE4.SlateCore;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1320 )]
+    [StructLayout( LayoutKind.Explicit, Size=1336 )]
     internal unsafe struct Button_fields {
-        [FieldOffset(416)] public ButtonStyle WidgetStyle;
-        [FieldOffset(1184)] public LinearColor ColorAndOpacity;
-        [FieldOffset(1200)] public LinearColor BackgroundColor;
-        [FieldOffset(1216)] public byte ClickMethod;
-        [FieldOffset(1217)] public byte TouchMethod;
-        [FieldOffset(1218)] public byte PressMethod;
-        [FieldOffset(1219)] public bool IsFocusable;
-        [FieldOffset(1224)] byte OnClicked; //TODO: multicast delegate FOnButtonClickedEvent OnClicked
-        [FieldOffset(1240)] byte OnPressed; //TODO: multicast delegate FOnButtonPressedEvent OnPressed
-        [FieldOffset(1256)] byte OnReleased; //TODO: multicast delegate FOnButtonReleasedEvent OnReleased
-        [FieldOffset(1272)] byte OnHovered; //TODO: multicast delegate FOnButtonHoverEvent OnHovered
-        [FieldOffset(1288)] byte OnUnhovered; //TODO: multicast delegate FOnButtonHoverEvent OnUnhovered
+        [FieldOffset(432)] public ButtonStyle WidgetStyle;
+        [FieldOffset(1200)] public LinearColor ColorAndOpacity;
+        [FieldOffset(1216)] public LinearColor BackgroundColor;
+        [FieldOffset(1232)] public byte ClickMethod;
+        [FieldOffset(1233)] public byte TouchMethod;
+        [FieldOffset(1234)] public byte PressMethod;
+        [FieldOffset(1235)] public bool IsFocusable;
+        [FieldOffset(1240)] byte OnClicked; //TODO: multicast delegate FOnButtonClickedEvent OnClicked
+        [FieldOffset(1256)] byte OnPressed; //TODO: multicast delegate FOnButtonPressedEvent OnPressed
+        [FieldOffset(1272)] byte OnReleased; //TODO: multicast delegate FOnButtonReleasedEvent OnReleased
+        [FieldOffset(1288)] byte OnHovered; //TODO: multicast delegate FOnButtonHoverEvent OnHovered
+        [FieldOffset(1304)] byte OnUnhovered; //TODO: multicast delegate FOnButtonHoverEvent OnUnhovered
     }
     internal unsafe struct Button_methods {
         internal struct IsPressed_method {

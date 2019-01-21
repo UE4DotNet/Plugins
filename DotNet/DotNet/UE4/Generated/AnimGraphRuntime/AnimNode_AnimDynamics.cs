@@ -13,80 +13,94 @@ using UE4.Engine;
 
 namespace UE4.AnimGraphRuntime{
         ///<summary>Anim Node Anim Dynamics</summary>
-        [StructLayout( LayoutKind.Explicit, Size=992 )]
+        [StructLayout( LayoutKind.Explicit, Size=1008 )]
         public unsafe struct AnimNode_AnimDynamics {
-            [FieldOffset(360)] byte SimulationSpace; //TODO: enum AnimPhysSimSpaceType SimulationSpace
+            [FieldOffset(336)] byte SimulationSpace; //TODO: enum AnimPhysSimSpaceType SimulationSpace
 
             ///<summary>When in BoneRelative sim space, the simulation will use this bone as the origin</summary>
-            [FieldOffset(364)] BoneReference RelativeSpaceBone;
+            [FieldOffset(340)] BoneReference RelativeSpaceBone;
 
-            [FieldOffset(388)] public bool bChain;
+            [FieldOffset(364)] public bool bChain;
 
             ///<summary>The bone to attach the physics body to, if bChain is true this is the top of the chain</summary>
-            [FieldOffset(392)] BoneReference BoundBone;
+            [FieldOffset(368)] BoneReference BoundBone;
 
             ///<summary>If bChain is true this is the bottom of the chain, otherwise ignored</summary>
-            [FieldOffset(416)] BoneReference ChainEnd;
+            [FieldOffset(392)] BoneReference ChainEnd;
 
             ///<summary>Extents of the box to use for simulation</summary>
-            [FieldOffset(440)] Vector BoxExtents;
+            [FieldOffset(416)] Vector BoxExtents;
 
             ///<summary>Vector relative to the body being simulated to attach the constraint to</summary>
-            [FieldOffset(452)] Vector LocalJointOffset;
+            [FieldOffset(428)] Vector LocalJointOffset;
 
-            [FieldOffset(464)] public float GravityScale;
+            [FieldOffset(440)] public float GravityScale;
 
-            [FieldOffset(468)] public bool bLinearSpring;
+            ///<summary>Gravity Override Value</summary>
+            [FieldOffset(444)] Vector GravityOverride;
 
-            [FieldOffset(469)] public bool bAngularSpring;
+            [FieldOffset(456)] public bool bUseGravityOverride;
 
-            [FieldOffset(472)] public float LinearSpringConstant;
+            [FieldOffset(457)] public bool bLinearSpring;
 
-            [FieldOffset(476)] public float AngularSpringConstant;
+            [FieldOffset(458)] public bool bAngularSpring;
 
-            [FieldOffset(480)] public bool bEnableWind;
+            [FieldOffset(460)] public float LinearSpringConstant;
 
-            [FieldOffset(481)] public bool bWindWasEnabled;
+            [FieldOffset(464)] public float AngularSpringConstant;
 
-            [FieldOffset(484)] public float WindScale;
+            [FieldOffset(468)] public bool bEnableWind;
 
-            [FieldOffset(488)] public bool bOverrideLinearDamping;
+            [FieldOffset(469)] public bool bWindWasEnabled;
 
-            [FieldOffset(492)] public float LinearDampingOverride;
+            [FieldOffset(472)] public float WindScale;
 
-            [FieldOffset(496)] public bool bOverrideAngularDamping;
+            ///<summary>When using non-world-space sim, this controls how much of the components world-space acceleration is passed on to the local-space simulation.</summary>
+            [FieldOffset(476)] Vector ComponentLinearAccScale;
 
-            [FieldOffset(500)] public float AngularDampingOverride;
+            ///<summary>When using non-world-space sim, this applies a 'drag' to the bodies in the local space simulation, based on the components world-space velocity.</summary>
+            [FieldOffset(488)] Vector ComponentLinearVelScale;
 
-            [FieldOffset(504)] public bool bOverrideAngularBias;
+            ///<summary>When using non-world-space sim, this is an overall clamp on acceleration derived from ComponentLinearAccScale and ComponentLinearVelScale, to ensure it is not too large.</summary>
+            [FieldOffset(500)] Vector ComponentAppliedLinearAccClamp;
 
-            [FieldOffset(508)] public float AngularBiasOverride;
+            [FieldOffset(512)] public bool bOverrideLinearDamping;
 
-            [FieldOffset(512)] public bool bDoUpdate;
+            [FieldOffset(516)] public float LinearDampingOverride;
 
-            [FieldOffset(513)] public bool bDoEval;
+            [FieldOffset(520)] public bool bOverrideAngularDamping;
 
-            [FieldOffset(516)] public int NumSolverIterationsPreUpdate;
+            [FieldOffset(524)] public float AngularDampingOverride;
 
-            [FieldOffset(520)] public int NumSolverIterationsPostUpdate;
+            [FieldOffset(528)] public bool bOverrideAngularBias;
+
+            [FieldOffset(532)] public float AngularBiasOverride;
+
+            [FieldOffset(536)] public bool bDoUpdate;
+
+            [FieldOffset(537)] public bool bDoEval;
+
+            [FieldOffset(540)] public int NumSolverIterationsPreUpdate;
+
+            [FieldOffset(544)] public int NumSolverIterationsPostUpdate;
 
             ///<summary>Data describing the constraints we will apply to the body</summary>
-            [FieldOffset(524)] AnimPhysConstraintSetup ConstraintSetup;
+            [FieldOffset(548)] AnimPhysConstraintSetup ConstraintSetup;
 
-            [FieldOffset(616)] public bool bUsePlanarLimit;
+            [FieldOffset(640)] public bool bUsePlanarLimit;
 
-            [FieldOffset(624)] byte PlanarLimits; //TODO: array TArray PlanarLimits
+            [FieldOffset(648)] byte PlanarLimits; //TODO: array TArray PlanarLimits
 
-            [FieldOffset(640)] public bool bUseSphericalLimits;
+            [FieldOffset(664)] public bool bUseSphericalLimits;
 
-            [FieldOffset(648)] byte SphericalLimits; //TODO: array TArray SphericalLimits
+            [FieldOffset(672)] byte SphericalLimits; //TODO: array TArray SphericalLimits
 
-            [FieldOffset(664)] byte CollisionType; //TODO: enum AnimPhysCollisionType CollisionType
+            [FieldOffset(688)] byte CollisionType; //TODO: enum AnimPhysCollisionType CollisionType
 
-            [FieldOffset(668)] public float SphereCollisionRadius;
+            [FieldOffset(692)] public float SphereCollisionRadius;
 
             ///<summary>An external force to apply to all bodies in the simulation when ticked, specified in world space</summary>
-            [FieldOffset(672)] Vector ExternalForce;
+            [FieldOffset(696)] Vector ExternalForce;
 
         }
 }

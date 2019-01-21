@@ -196,6 +196,10 @@ namespace UE4.Engine {
         public bool bIsEditorOnly {
             get {return Main.GetGetBoolPropertyByName(this, "bIsEditorOnly"); }
         }
+        public bool bIsVisualizationComponent {
+            get {return Main.GetGetBoolPropertyByName(this, "bIsVisualizationComponent"); }
+            set {Main.SetGetBoolPropertyByName(this, "bIsVisualizationComponent", value); }
+        }
          //TODO: enum EComponentCreationMethod CreationMethod
          //TODO: array not UObject TArray UCSModifiedProperties
          //TODO: multicast delegate FActorComponentActivatedSignature OnComponentActivated

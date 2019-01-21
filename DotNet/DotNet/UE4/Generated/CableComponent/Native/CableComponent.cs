@@ -12,25 +12,25 @@ using UE4.Native;
 using UE4.Engine;
 
 namespace UE4.CableComponent.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1696 )]
+    [StructLayout( LayoutKind.Explicit, Size=1680 )]
     internal unsafe struct CableComponent_fields {
-        [FieldOffset(1560)] public bool bAttachStart;
-        [FieldOffset(1561)] public bool bAttachEnd;
-        [FieldOffset(1568)] public ComponentReference AttachEndTo;
-        [FieldOffset(1600)] public Name AttachEndToSocketName;
-        [FieldOffset(1612)] public Vector EndLocation;
-        [FieldOffset(1624)] public float CableLength;
-        [FieldOffset(1628)] public int NumSegments;
-        [FieldOffset(1632)] public float SubstepTime;
-        [FieldOffset(1636)] public int SolverIterations;
-        [FieldOffset(1640)] public bool bEnableStiffness;
-        [FieldOffset(1641)] public bool bEnableCollision;
-        [FieldOffset(1644)] public float CollisionFriction;
-        [FieldOffset(1648)] public Vector CableForce;
-        [FieldOffset(1660)] public float CableGravityScale;
-        [FieldOffset(1664)] public float CableWidth;
-        [FieldOffset(1668)] public int NumSides;
-        [FieldOffset(1672)] public float TileMaterial;
+        [FieldOffset(1544)] public bool bAttachStart;
+        [FieldOffset(1545)] public bool bAttachEnd;
+        [FieldOffset(1552)] public ComponentReference AttachEndTo;
+        [FieldOffset(1584)] public Name AttachEndToSocketName;
+        [FieldOffset(1596)] public Vector EndLocation;
+        [FieldOffset(1608)] public float CableLength;
+        [FieldOffset(1612)] public int NumSegments;
+        [FieldOffset(1616)] public float SubstepTime;
+        [FieldOffset(1620)] public int SolverIterations;
+        [FieldOffset(1624)] public bool bEnableStiffness;
+        [FieldOffset(1625)] public bool bEnableCollision;
+        [FieldOffset(1628)] public float CollisionFriction;
+        [FieldOffset(1632)] public Vector CableForce;
+        [FieldOffset(1644)] public float CableGravityScale;
+        [FieldOffset(1648)] public float CableWidth;
+        [FieldOffset(1652)] public int NumSides;
+        [FieldOffset(1656)] public float TileMaterial;
     }
     internal unsafe struct CableComponent_methods {
         internal struct GetAttachedActor_method {

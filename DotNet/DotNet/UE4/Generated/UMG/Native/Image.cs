@@ -13,13 +13,13 @@ using UE4.SlateCore;
 using UE4.Engine;
 
 namespace UE4.UMG.Native {
-    [StructLayout( LayoutKind.Explicit, Size=688 )]
+    [StructLayout( LayoutKind.Explicit, Size=720 )]
     internal unsafe struct Image_fields {
-        [FieldOffset(392)] public SlateBrush Brush;
-        [FieldOffset(552)] byte BrushDelegate; //TODO: delegate FGetSlateBrush BrushDelegate
-        [FieldOffset(572)] public LinearColor ColorAndOpacity;
-        [FieldOffset(588)] byte ColorAndOpacityDelegate; //TODO: delegate FGetLinearColor ColorAndOpacityDelegate
-        [FieldOffset(608)] byte OnMouseButtonDownEvent; //TODO: delegate FOnPointerEvent OnMouseButtonDownEvent
+        [FieldOffset(408)] public SlateBrush Brush;
+        [FieldOffset(568)] byte BrushDelegate; //TODO: delegate FGetSlateBrush BrushDelegate
+        [FieldOffset(588)] public LinearColor ColorAndOpacity;
+        [FieldOffset(604)] byte ColorAndOpacityDelegate; //TODO: delegate FGetLinearColor ColorAndOpacityDelegate
+        [FieldOffset(624)] byte OnMouseButtonDownEvent; //TODO: delegate FOnPointerEvent OnMouseButtonDownEvent
     }
     internal unsafe struct Image_methods {
         internal struct GetDynamicMaterial_method {
@@ -87,6 +87,21 @@ namespace UE4.UMG.Native {
                 byte* b = (byte*) p;
                 *((IntPtr*)(b+0)) = Material;
                 Main.GetProcessEvent(obj, SetBrushFromMaterial_ptr, new IntPtr(p)); ;
+            }
+        }
+        internal struct SetBrushFromSoftTexture_method {
+            static internal IntPtr SetBrushFromSoftTexture_ptr;
+            static SetBrushFromSoftTexture_method() {
+                SetBrushFromSoftTexture_ptr = Main.GetMethodUFunction(Image.StaticClass, "SetBrushFromSoftTexture");
+            }
+
+            internal static unsafe void Invoke(IntPtr obj, byte SoftTexture /*TODO: soft object TSoftObjectPtr<UTexture2D> */, bool bMatchSize) {
+                long* p = stackalloc long[] {0L,0L,0L,0L,0L,0L,0L,0L};
+                byte* b = (byte*) p;
+                throw new NotImplementedException(); //TODO: soft object TSoftObjectPtr<UTexture2D> SoftTexture
+                *((bool*)(b+48)) = bMatchSize;
+                Main.GetProcessEvent(obj, SetBrushFromSoftTexture_ptr, new IntPtr(p)); ;
+                 //TODO: soft object TSoftObjectPtr<UTexture2D> SoftTexture
             }
         }
         internal struct SetBrushFromTexture_method {

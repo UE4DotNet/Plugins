@@ -11,7 +11,7 @@ using UE4.Native;
 
 
 namespace UE4.Paper2D.Native {
-    [StructLayout( LayoutKind.Explicit, Size=1808 )]
+    [StructLayout( LayoutKind.Explicit, Size=1792 )]
     internal unsafe struct PaperTerrainSplineComponent_fields {
     }
     internal unsafe struct PaperTerrainSplineComponent_methods {
